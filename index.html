@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>StackStrat - Outbound Sales Stack That Fills Your Calendar | Book 40+ Demos/Month</title>
+    <meta name="title" content="StackStrat - Outbound Sales Stack That Fills Your Calendar">
+    <meta name="description" content="The exact curated tool stack I use to automate lead gen and book 40+ demos a month. Built for solopreneurs and small teams. Under $500/mo vs. hiring SDRs.">
+    <meta name="keywords" content="outbound sales, cold email, sales stack, Clay.com, Reply.io, Mailforge, sales automation, lead generation, B2B sales">
+    <meta name="author" content="David Varan">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stackstrat.com/">
+    <meta property="og:title" content="StackStrat - Outbound Sales Stack That Fills Your Calendar">
+    <meta property="og:description" content="The exact curated tool stack I use to automate lead gen and book 40+ demos a month. Built for solopreneurs and small teams.">
+    <meta property="og:image" content="https://stackstrat.com/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://stackstrat.com/">
+    <meta property="twitter:title" content="StackStrat - Outbound Sales Stack That Fills Your Calendar">
+    <meta property="twitter:description" content="The exact curated tool stack I use to automate lead gen and book 40+ demos a month. Built for solopreneurs and small teams.">
+    <meta property="twitter:image" content="https://stackstrat.com/og-image.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=TXidQt"></script>
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #020617; /* Slate-950 */
+        color: #f8fafc; /* Slate-50 */
+      }
+      /* Hide scrollbar for clean UI */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Klaviyo Form Dark Theme Override */
+      .klaviyo-form-RxC3FU {
+        background: transparent !important;
+        padding: 0 !important;
+      }
+      .klaviyo-form-RxC3FU * {
+        color: #f8fafc !important;
+      }
+      .klaviyo-form-RxC3FU form {
+        background: transparent !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .klaviyo-form-RxC3FU input[type="email"] {
+        background-color: #0f172a !important; /* slate-900 */
+        border: 1px solid #334155 !important; /* slate-700 */
+        border-radius: 0.5rem !important;
+        color: white !important;
+        font-size: 0.875rem !important;
+      }
+      .klaviyo-form-RxC3FU input[type="email"]:focus {
+        outline: none !important;
+        ring: 1px !important;
+        ring-color: #4f46e5 !important; /* indigo-600 */
+      }
+      .klaviyo-form-RxC3FU input[type="email"]::placeholder {
+        color: #64748b !important; /* slate-500 */
+      }
+      .klaviyo-form-RxC3FU button[type="submit"] {
+        background-color: #4f46e5 !important; /* indigo-600 */
+        color: white !important;
+        border-radius: 0.5rem !important;
+        font-weight: bold !important;
+        transition: all 0.2s !important;
+        box-shadow: 0 0 10px rgba(79, 70, 229, 0.3) !important;
+      }
+      .klaviyo-form-RxC3FU button[type="submit"]:hover {
+        background-color: #6366f1 !important; /* indigo-500 */
+      }
+
+      /* Calendly Widget Custom Styling */
+      .calendly-inline-widget {
+        border-radius: 0.75rem;
+      }
+
+      /* Cookie Consent Dark Theme */
+      :root {
+        --cc-bg: #0f172a;
+        --cc-text: #f8fafc;
+        --cc-btn-primary-bg: #4f46e5;
+        --cc-btn-primary-text: #ffffff;
+        --cc-btn-primary-hover-bg: #6366f1;
+        --cc-btn-secondary-bg: #1e293b;
+        --cc-btn-secondary-text: #f8fafc;
+        --cc-btn-secondary-hover-bg: #334155;
+        --cc-separator-border-color: #1e293b;
+        --cc-toggle-bg-off: #475569;
+        --cc-toggle-bg-on: #4f46e5;
+        --cc-toggle-bg-readonly: #334155;
+        --cc-toggle-knob-bg: #ffffff;
+        --cc-cookie-category-block-bg: #020617;
+        --cc-cookie-category-block-bg-hover: #1e293b;
+        --cc-section-border: #1e293b;
+        --cc-cookie-table-border: #1e293b;
+        --cc-overlay-bg: rgba(2, 6, 23, 0.95);
+        --cc-webkit-scrollbar-bg: #1e293b;
+        --cc-webkit-scrollbar-bg-hover: #334155;
+      }
+
+      #cc-main .cm {
+        background: #0f172a !important;
+        border: 1px solid #1e293b !important;
+        box-shadow: 0 0 20px rgba(79, 70, 229, 0.15) !important;
+      }
+
+      #cc-main .pm {
+        background: #0f172a !important;
+        border: 1px solid #1e293b !important;
+      }
+
+      #cc-main .cm__title,
+      #cc-main .pm__title {
+        color: #f8fafc !important;
+      }
+
+      #cc-main .cm__desc,
+      #cc-main .pm__section-desc,
+      #cc-main .section__desc {
+        color: #cbd5e1 !important;
+      }
+
+      #cc-main .section__title {
+        color: #f8fafc !important;
+      }
+
+      #cc-main .pm__badge {
+        background: #4f46e5 !important;
+        color: #ffffff !important;
+      }
+
+      #cc-main a.cc__link,
+      #cc-main .cm__footer a {
+        color: #818cf8 !important;
+      }
+
+      #cc-main a.cc__link:hover,
+      #cc-main .cm__footer a:hover {
+        color: #a5b4fc !important;
+      }
+    </style>
+
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css">
+    <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.umd.js"></script>
+
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+
+  <!-- Cookie Consent Configuration -->
+  <script>
+    window.addEventListener('load', function() {
+      if (window.CookieConsent) {
+        window.CookieConsent.run({
+          guiOptions: {
+            consentModal: {
+              layout: "box inline",
+              position: "bottom left",
+              equalWeightButtons: true,
+              flipButtons: false
+            },
+            preferencesModal: {
+              layout: "box",
+              position: "right",
+              equalWeightButtons: true,
+              flipButtons: false
+            }
+          },
+          categories: {
+            necessary: {
+              readOnly: true,
+              enabled: true
+            },
+            analytics: {},
+            functionality: {}
+          },
+          language: {
+            default: "en",
+            translations: {
+              en: {
+                consentModal: {
+                  title: "We use cookies",
+                  description: "We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking 'Accept all', you consent to our use of cookies.",
+                  acceptAllBtn: "Accept all",
+                  acceptNecessaryBtn: "Reject all",
+                  showPreferencesBtn: "Manage preferences",
+                  footer: '<a href="#/privacy">Privacy Policy</a>'
+                },
+                preferencesModal: {
+                  title: "Cookie Preferences",
+                  acceptAllBtn: "Accept all",
+                  acceptNecessaryBtn: "Reject all",
+                  savePreferencesBtn: "Save preferences",
+                  closeIconLabel: "Close",
+                  serviceCounterLabel: "Service|Services",
+                  sections: [
+                    {
+                      title: "Cookie Usage",
+                      description: "We use cookies to optimize your experience on our site. You can customize your preferences below."
+                    },
+                    {
+                      title: "Strictly Necessary Cookies <span class=\"pm__badge\">Always Enabled</span>",
+                      description: "These cookies are essential for the website to function properly. They cannot be disabled.",
+                      linkedCategory: "necessary"
+                    },
+                    {
+                      title: "Analytics Cookies",
+                      description: "These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. We use Klaviyo for email marketing analytics.",
+                      linkedCategory: "analytics"
+                    },
+                    {
+                      title: "Functionality Cookies",
+                      description: "These cookies enable enhanced functionality and personalization, such as scheduling meetings through Calendly.",
+                      linkedCategory: "functionality"
+                    },
+                    {
+                      title: "More information",
+                      description: 'For more details about our cookie policy, please visit our <a class="cc__link" href="#/privacy">Privacy Policy</a>.'
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
