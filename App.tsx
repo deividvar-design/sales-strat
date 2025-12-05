@@ -218,18 +218,17 @@ const HomePage = () => {
                 
                 {/* Left Column: Copy */}
                 <div className="text-left">
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1]">
-                        The Stack That <br/>
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-300 animate-gradient">Fills Your Calendar.</span>
+                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1] text-white">
+                        The Tools I Use to Run Outbound at Scale
                     </h1>
-                    
+
                     <p className="text-xl text-slate-400 max-w-lg mb-8 leading-relaxed font-light">
-                        I've tested hundreds of tools so you don't have to. Here is the exact curated library I use to automate lead gen and book 40+ demos a month.
+                        Here's the exact stack I use to scale outbound for B2B SaaS companies and consistently generate pipeline — whether you're a founder, solopreneur, or running sales alone.
                     </p>
                     
                     <div className="flex flex-col sm:flex-row items-start gap-4">
                         <a href="#featured-stack" className="px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white text-lg font-bold rounded-xl shadow-[0_0_20px_rgba(79,70,229,0.4)] transition-all transform hover:-translate-y-1 flex items-center gap-2 border border-indigo-500">
-                            See The Stack <ArrowRight className="w-5 h-5" />
+                            Build My Outbound System <ArrowRight className="w-5 h-5" />
                         </a>
                         <Link to="/strategies" className="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold rounded-xl border border-slate-700 transition-all flex items-center gap-2">
                             Read The Playbook
@@ -1739,7 +1738,7 @@ const ConsultingPage = () => {
                             <span className="text-indigo-400 font-bold">✓</span>
                         </div>
                         <div>
-                            <h3 className="text-lg font-bold text-white mb-2">Founders & Solopreneurs</h3>
+                            <h3 className="text-lg font-bold text-white mb-2">Founders</h3>
                             <p className="text-slate-400 text-sm">
                                 You know your product solves a real problem, but you don't have time to become a sales ops expert. You need a system that runs while you focus on delivery.
                             </p>
