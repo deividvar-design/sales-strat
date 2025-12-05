@@ -293,6 +293,42 @@ const HomePage = () => {
         </div>
     </section>
 
+    {/* Social Proof - Companies */}
+    <section className="py-20 bg-gradient-to-b from-slate-900/50 to-slate-950 border-b border-slate-800 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(79,70,229,0.05),transparent_70%)]"></div>
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+            <div className="text-center mb-12">
+                <h3 className="text-2xl md:text-3xl font-bold text-white">
+                    I've worked with
+                </h3>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                {[
+                    'SORSEO',
+                    'Whatagraph',
+                    'RoyaltyRange',
+                    'GPSWOX',
+                    'Walk15',
+                    'CTO2B',
+                    'HEMES',
+                    'Glassique Cadeau',
+                    'Finfra',
+                    '+ 10 other'
+                ].map((company) => (
+                    <div
+                        key={company}
+                        className="group relative bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-xl p-6 hover:border-indigo-500/50 hover:bg-slate-800/50 transition-all duration-300 flex items-center justify-center text-center"
+                    >
+                        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/0 to-purple-500/0 group-hover:from-indigo-500/5 group-hover:to-purple-500/5 rounded-xl transition-all duration-300"></div>
+                        <span className="text-white font-semibold text-sm md:text-base transition-colors duration-300 relative z-10">
+                            {company}
+                        </span>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
     {/* Featured Tools Teaser (Moved UP) */}
     <section id="featured-stack" className="py-24 bg-slate-950 text-white px-6 border-b border-slate-900 relative">
         <div className="absolute inset-0 bg-indigo-950/10"></div>
