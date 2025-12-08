@@ -412,7 +412,10 @@ const HomePage = () => {
                                 <strong className="text-white">I’m a Head of Sales + RevOps consultant</strong> with 5 years of Marketing experience and 6 years of Sales experience. I’ve built B2B teams and outbound systems targeting North America, LATAM, and EMEA.
                             </p>
                             <p>
-                                I built Sales House because I got tired of seeing founders burn cash on bloated teams and "all-in-one" tools that don't work. I share exactly what I use to book meetings.
+                                First, the volume of questions I kept getting about tool stacks and outbound setups was getting more frequent. It made sense to put everything in one place so people can find answers fast in this library.
+                            </p>
+                            <p>
+                                Second, founders waste too much time and money on modular, gimmicky tools. Outbound is simpler than you think. With the right setup, anyone can run it themselves and feel confident doing it.
                             </p>
                         </div>
                     </div>
