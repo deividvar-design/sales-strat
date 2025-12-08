@@ -158,7 +158,7 @@ const Footer = () => (
                <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-[0_0_15px_rgba(79,70,229,0.5)]">
                   S
               </div>
-              <span className="text-xl font-bold tracking-tight text-white">StackStrat</span>
+              <span className="text-xl font-bold tracking-tight text-white">Sales House</span>
           </Link>
           <div className="flex gap-4">
             <a href="https://www.linkedin.com/in/davidvaran/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors"><Linkedin className="w-5 h-5" /></a>
@@ -178,6 +178,7 @@ const Footer = () => (
           <ul className="space-y-2 text-sm">
             <li><a href="#" className="hover:text-indigo-400 transition-colors">Free Outbound Playbook</a></li>
             <li><Link to="/consulting" className="hover:text-indigo-400 transition-colors">Consulting</Link></li>
+            <li><Link to="/faq" className="hover:text-indigo-400 transition-colors">FAQ</Link></li>
             <li><Link to="/privacy" className="hover:text-indigo-400 transition-colors">Privacy Policy</Link></li>
             <li><Link to="/terms" className="hover:text-indigo-400 transition-colors">Terms of Service</Link></li>
           </ul>
@@ -191,11 +192,11 @@ const Footer = () => (
       </div>
 
       <div className="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-        <p>&copy; 2025 StackStrat by David Varan. All rights reserved.</p>
+        <p>&copy; 2025 Sales House by David Varan. All rights reserved.</p>
         <div className="flex items-start gap-2 max-w-lg text-slate-600">
            <ShieldCheck className="w-4 h-4 shrink-0 mt-0.5" />
            <p>
-             <strong>Affiliate Disclosure:</strong> StackStrat is reader-supported. When you buy through links on my site, I may earn an affiliate commission at no extra cost to you. I only recommend tools I personally use and verify.
+             <strong>Affiliate Disclosure:</strong> Sales House is reader-supported. When you buy through links on my site, I may earn an affiliate commission at no extra cost to you. I only recommend tools I personally use and verify.
            </p>
         </div>
       </div>
@@ -223,7 +224,7 @@ const HomePage = () => {
                     </h1>
 
                     <p className="text-xl text-slate-400 max-w-lg mb-8 leading-relaxed font-light">
-                        Here's the exact stack I use to scale outbound for B2B SaaS companies and consistently generate pipeline — whether you're a founder, solopreneur, or running sales alone.
+                        Here's the exact stack I use to scale outbound for B2B SaaS companies and consistently generate pipeline - whether you're a founder, solopreneur, or running sales alone.
                     </p>
                     
                     <div className="flex flex-col sm:flex-row items-start gap-4">
@@ -298,9 +299,9 @@ const HomePage = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(79,70,229,0.05),transparent_70%)]"></div>
         <div className="max-w-6xl mx-auto px-6 relative z-10">
             <div className="text-center mb-12">
-                <h3 className="text-2xl md:text-3xl font-bold text-white">
+                <h2 className="text-2xl md:text-3xl font-bold text-white">
                     I've worked with
-                </h3>
+                </h2>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                 {[
@@ -411,7 +412,7 @@ const HomePage = () => {
                                 <strong className="text-white">I’m a Head of Sales + RevOps consultant</strong> with 5 years of Marketing experience and 6 years of Sales experience. I’ve built B2B teams and outbound systems targeting North America, LATAM, and EMEA.
                             </p>
                             <p>
-                                I built StackStrat because I got tired of seeing founders burn cash on bloated teams and "all-in-one" tools that don't work. I share exactly what I use to book meetings.
+                                I built Sales House because I got tired of seeing founders burn cash on bloated teams and "all-in-one" tools that don't work. I share exactly what I use to book meetings.
                             </p>
                         </div>
                     </div>
@@ -440,7 +441,7 @@ const HomePage = () => {
                         <div className="absolute inset-0">
                              <img
                                 src="/sales-strat/david-profile.jpg"
-                                alt="David Varan"
+                                alt="David Varan, Sales Operations Consultant and Founder of Sales House"
                                 className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                                 style={{ objectPosition: 'center 20%' }}
                             />
@@ -592,7 +593,7 @@ const HomePage = () => {
                         All popular modern channels where you can run marketing, you can safely run outbound via messaging as well: Instagram, Facebook, Twitter, TikTok, LinkedIn, X (Twitter).
                     </p>
                     
-                    <h3 className="text-xl font-bold text-white mt-8">The Vibecoder Advantage</h3>
+                    <h2 className="text-xl font-bold text-white mt-8">The Vibecoder Advantage</h2>
                     <p>
                         Also, if you're a serial entrepreneur, vibecoder, or running affiliate programs - the whole tool stack is reusable. You probably won't want to re-use the CRM, as different products = different markets, but the whole outbound strategy can be re-used.
                     </p>
@@ -603,7 +604,7 @@ const HomePage = () => {
                     <div className="flex items-start gap-4">
                         <Heart className="w-6 h-6 text-rose-500 shrink-0 mt-1 fill-rose-500/10" />
                         <div>
-                        <h3 className="text-lg font-bold text-white mb-2">Full Transparency: What's in it for me?</h3>
+                        <h2 className="text-lg font-bold text-white mb-2">Full Transparency: What's in it for me?</h2>
                         <p className="text-slate-400 text-sm leading-relaxed">
                             Generally, as I've been getting more and more questions on these topics, writing the same messages and sharing the same insights, I decided it just makes sense to put together a form of a library where I can share what tools I've used and what are my thoughts about them. All I'm getting in return from this is a small kickback from some of the affiliate programs if you do decide to trust my judgement and use the tools I recommend.
                         </p>
@@ -681,6 +682,15 @@ const HomePage = () => {
                     question="Can I do this with a smaller budget?"
                     answer="This setup costs under $500 a month. An SDR will cost you 30-50k annually. You do the math."
                 />
+            </div>
+
+            <div className="text-center mt-8">
+                <Link
+                    to="/faq"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-500 transition-colors"
+                >
+                    See All FAQs
+                </Link>
             </div>
         </div>
     </section>
@@ -782,7 +792,7 @@ const LibraryPage = () => {
              <div className="mt-16 mb-8 text-center">
                 <div className="bg-slate-900 border border-slate-800 rounded-xl p-8">
                     <Mail className="w-8 h-8 text-indigo-400 mx-auto mb-4" />
-                    <h3 className="text-xl font-bold text-white mb-2">Want Your Tool Featured?</h3>
+                    <h2 className="text-xl font-bold text-white mb-2">Want Your Tool Featured?</h2>
                     <p className="text-slate-400 mb-4">
                         Do you want your tool to be tested and listed here? Drop me an email.
                     </p>
@@ -954,7 +964,7 @@ const StrategiesPage = () => {
     // State to track checked items - load from localStorage on mount
     const [checkedItems, setCheckedItems] = useState<{[key: string]: boolean}>(() => {
         if (typeof window !== 'undefined') {
-            const saved = localStorage.getItem('stackstrat-checklist-progress');
+            const saved = localStorage.getItem('saleshouse-checklist-progress');
             return saved ? JSON.parse(saved) : {};
         }
         return {};
@@ -963,7 +973,7 @@ const StrategiesPage = () => {
     // Save to localStorage whenever checkedItems changes
     React.useEffect(() => {
         if (typeof window !== 'undefined') {
-            localStorage.setItem('stackstrat-checklist-progress', JSON.stringify(checkedItems));
+            localStorage.setItem('saleshouse-checklist-progress', JSON.stringify(checkedItems));
         }
     }, [checkedItems]);
 
@@ -979,7 +989,7 @@ const StrategiesPage = () => {
             <div className="mb-10 text-center md:text-left px-6 max-w-7xl mx-auto pt-6">
                 <h1 className="text-3xl font-bold text-white mb-4">From Zero to Booked Calendar</h1>
                 <p className="text-xl text-slate-400 max-w-3xl">
-                    The playbook that generates 50 qualified leads per month for B2B SaaS companies—without cold calling or manual prospecting.
+                    The playbook that generates 50 qualified leads per month for B2B SaaS companies - without cold calling or manual prospecting.
                 </p>
             </div>
 
@@ -1099,7 +1109,7 @@ const StrategiesPage = () => {
                         <div className="flex items-start gap-3 mb-6">
                             <BarChart3 className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
                             <div>
-                                <h3 className="text-lg font-bold text-white mb-1">What Can I Expect?</h3>
+                                <h2 className="text-lg font-bold text-white mb-1">What Can I Expect?</h2>
                                 <p className="text-slate-400 text-sm">Interactive calculator - adjust inputs to see your potential results</p>
                             </div>
                         </div>
@@ -1118,7 +1128,7 @@ const StrategiesPage = () => {
                     <div className="p-6 bg-slate-900/50 border border-slate-800 rounded-xl">
                         <div className="flex items-start gap-3 mb-4">
                             <AlertCircle className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
-                            <h3 className="text-lg font-bold text-white">What Happens Next?</h3>
+                            <h2 className="text-lg font-bold text-white">What Happens Next?</h2>
                         </div>
                         <div className="space-y-4 text-slate-300 text-sm leading-relaxed">
                             <p>
@@ -1127,15 +1137,15 @@ const StrategiesPage = () => {
 
                             <div className="grid md:grid-cols-2 gap-4 my-4">
                                 <div className="p-4 bg-slate-950/50 rounded-lg border border-slate-800">
-                                    <h4 className="font-bold text-white mb-2 flex items-center gap-2">
+                                    <h3 className="font-bold text-white mb-2 flex items-center gap-2">
                                         <span className="text-indigo-400">→</span> Self-Service Path
-                                    </h4>
+                                    </h3>
                                     <p className="text-xs text-slate-400">For lower ACV products (&lt;$1.5k). Direct leads to sign-up or trial pages.</p>
                                 </div>
                                 <div className="p-4 bg-slate-950/50 rounded-lg border border-slate-800">
-                                    <h4 className="font-bold text-white mb-2 flex items-center gap-2">
+                                    <h3 className="font-bold text-white mb-2 flex items-center gap-2">
                                         <span className="text-indigo-400">→</span> Demo/Discovery Path
-                                    </h4>
+                                    </h3>
                                     <p className="text-xs text-slate-400">For higher ACV ($1.5k+). Book demos to understand needs and qualify prospects.</p>
                                 </div>
                             </div>
@@ -1253,10 +1263,10 @@ const PrivacyPolicyPage = () => {
                 {/* Introduction */}
                 <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
                     <p className="text-slate-300 leading-relaxed">
-                        StackStrat ("we," "us," or "our") operates stackstrat.com. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+                        Sales House ("we," "us," or "our") operates saleshousestack.com. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
                     </p>
                     <p className="text-slate-300 leading-relaxed mt-4">
-                        By using StackStrat, you agree to the collection and use of information in accordance with this policy. If you do not agree with our policies and practices, do not use our services.
+                        By using Sales House, you agree to the collection and use of information in accordance with this policy. If you do not agree with our policies and practices, do not use our services.
                     </p>
                 </section>
 
@@ -1379,7 +1389,7 @@ const PrivacyPolicyPage = () => {
                         <span className="text-indigo-400">5.</span> Affiliate Links and Commissions
                     </h2>
                     <p className="text-slate-300 leading-relaxed">
-                        StackStrat is reader-supported. Our website contains affiliate links to third-party products and services. When you click on these links and make a purchase, we may earn a commission at no extra cost to you.
+                        Sales House is reader-supported. Our website contains affiliate links to third-party products and services. When you click on these links and make a purchase, we may earn a commission at no extra cost to you.
                     </p>
                     <p className="text-slate-300 leading-relaxed mt-3">
                         We only recommend tools and services that we personally use, test, and verify. Our affiliate relationships do not influence our editorial content or recommendations.
@@ -1479,7 +1489,7 @@ const PrivacyPolicyPage = () => {
                             <strong className="text-white">Email:</strong> <a href="mailto:david@saleshousestack.com" className="text-indigo-400 hover:underline">david@saleshousestack.com</a>
                         </p>
                         <p className="text-slate-300 leading-relaxed mt-2">
-                            <strong className="text-white">Website:</strong> <a href="https://stackstrat.com" className="text-indigo-400 hover:underline">https://stackstrat.com</a>
+                            <strong className="text-white">Website:</strong> <a href="https://saleshousestack.com" className="text-indigo-400 hover:underline">https://saleshousestack.com</a>
                         </p>
                     </div>
                 </section>
@@ -1507,7 +1517,7 @@ const TermsOfServicePage = () => {
                 {/* Introduction */}
                 <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
                     <p className="text-slate-300 leading-relaxed">
-                        Welcome to StackStrat ("we," "us," or "our"). These Terms of Service ("Terms") govern your access to and use of stackstrat.com (the "Website") and all related services, content, and materials provided by us.
+                        Welcome to Sales House ("we," "us," or "our"). These Terms of Service ("Terms") govern your access to and use of saleshousestack.com (the "Website") and all related services, content, and materials provided by us.
                     </p>
                     <p className="text-slate-300 leading-relaxed mt-4">
                         By accessing or using our Website, you agree to be bound by these Terms. If you do not agree with any part of these Terms, you must not use our services.
@@ -1520,7 +1530,7 @@ const TermsOfServicePage = () => {
                         <span className="text-indigo-400">1.</span> Acceptance of Terms
                     </h2>
                     <p className="text-slate-300 leading-relaxed mb-3">
-                        By accessing and using StackStrat, you acknowledge that you have read, understood, and agree to be bound by these Terms and our Privacy Policy. These Terms apply to all visitors, users, and others who access or use the Website.
+                        By accessing and using Sales House, you acknowledge that you have read, understood, and agree to be bound by these Terms and our Privacy Policy. These Terms apply to all visitors, users, and others who access or use the Website.
                     </p>
                     <p className="text-slate-300 leading-relaxed">
                         If you are using our services on behalf of an organization, you represent and warrant that you have the authority to bind that organization to these Terms.
@@ -1565,13 +1575,13 @@ const TermsOfServicePage = () => {
                         <span className="text-indigo-400">3.</span> Intellectual Property Rights
                     </h2>
                     <p className="text-slate-300 leading-relaxed mb-3">
-                        All content on StackStrat, including but not limited to text, graphics, logos, images, software, and other materials, is the property of StackStrat or its licensors and is protected by copyright, trademark, and other intellectual property laws.
+                        All content on Sales House, including but not limited to text, graphics, logos, images, software, and other materials, is the property of Sales House or its licensors and is protected by copyright, trademark, and other intellectual property laws.
                     </p>
                     <p className="text-slate-300 leading-relaxed mb-3">
                         You may not reproduce, distribute, modify, create derivative works of, publicly display, or exploit any content from our Website without our prior written permission.
                     </p>
                     <p className="text-slate-300 leading-relaxed">
-                        The StackStrat name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of StackStrat. You may not use these marks without our prior written permission.
+                        The Sales House name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of Sales House. You may not use these marks without our prior written permission.
                     </p>
                 </section>
 
@@ -1607,7 +1617,7 @@ const TermsOfServicePage = () => {
                         <span className="text-indigo-400">6.</span> Affiliate Relationships
                     </h2>
                     <p className="text-slate-300 leading-relaxed mb-3">
-                        StackStrat participates in affiliate marketing programs. We may earn commissions from purchases made through affiliate links on our Website. These affiliate relationships do not influence our editorial content or recommendations.
+                        Sales House participates in affiliate marketing programs. We may earn commissions from purchases made through affiliate links on our Website. These affiliate relationships do not influence our editorial content or recommendations.
                     </p>
                     <p className="text-slate-300 leading-relaxed">
                         We only recommend products and services that we have personally tested and believe will provide value to our users. However, we cannot guarantee specific results from using any recommended tools or services.
@@ -1639,7 +1649,7 @@ const TermsOfServicePage = () => {
                         <span className="text-indigo-400">8.</span> Limitation of Liability
                     </h2>
                     <p className="text-slate-300 leading-relaxed mb-4">
-                        TO THE MAXIMUM EXTENT PERMITTED BY LAW, STACKSTRAT AND ITS OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES RESULTING FROM:
+                        TO THE MAXIMUM EXTENT PERMITTED BY LAW, SALES HOUSE AND ITS OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES RESULTING FROM:
                     </p>
                     <ul className="list-disc list-inside text-slate-300 space-y-2 ml-4 mb-4">
                         <li>Your use or inability to use the Website</li>
@@ -1660,7 +1670,7 @@ const TermsOfServicePage = () => {
                         <span className="text-indigo-400">9.</span> Indemnification
                     </h2>
                     <p className="text-slate-300 leading-relaxed">
-                        You agree to indemnify, defend, and hold harmless StackStrat and its officers, directors, employees, agents, and affiliates from and against any claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising from:
+                        You agree to indemnify, defend, and hold harmless Sales House and its officers, directors, employees, agents, and affiliates from and against any claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising from:
                     </p>
                     <ul className="list-disc list-inside text-slate-300 space-y-2 ml-4 mt-3">
                         <li>Your use of the Website</li>
@@ -1741,7 +1751,7 @@ const TermsOfServicePage = () => {
                         <span className="text-indigo-400">15.</span> Entire Agreement
                     </h2>
                     <p className="text-slate-300 leading-relaxed">
-                        These Terms, together with our Privacy Policy, constitute the entire agreement between you and StackStrat regarding your use of the Website and supersede all prior agreements and understandings.
+                        These Terms, together with our Privacy Policy, constitute the entire agreement between you and Sales House regarding your use of the Website and supersede all prior agreements and understandings.
                     </p>
                 </section>
 
@@ -1758,7 +1768,7 @@ const TermsOfServicePage = () => {
                             <strong className="text-white">Email:</strong> <a href="mailto:david@saleshousestack.com" className="text-indigo-400 hover:underline">david@saleshousestack.com</a>
                         </p>
                         <p className="text-slate-300 leading-relaxed mt-2">
-                            <strong className="text-white">Website:</strong> <a href="https://stackstrat.com" className="text-indigo-400 hover:underline">https://stackstrat.com</a>
+                            <strong className="text-white">Website:</strong> <a href="https://saleshousestack.com" className="text-indigo-400 hover:underline">https://saleshousestack.com</a>
                         </p>
                     </div>
                 </section>
@@ -1792,7 +1802,7 @@ const ConsultingPage = () => {
                     <div className="w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4">
                         <Target className="w-6 h-6 text-indigo-400" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">Stack Setup & Advisory</h3>
+                    <h2 className="text-xl font-bold text-white mb-3">Stack Setup & Advisory</h2>
                     <p className="text-slate-400 leading-relaxed mb-4">
                         Complete sales stack implementation with ongoing optimization. From initial setup to continuous campaign refinement and scaling support.
                     </p>
@@ -1816,7 +1826,7 @@ const ConsultingPage = () => {
                     <div className="w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4">
                         <TrendingUp className="w-6 h-6 text-indigo-400" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">RevOps Strategy</h3>
+                    <h2 className="text-xl font-bold text-white mb-3">RevOps Strategy</h2>
                     <p className="text-slate-400 leading-relaxed mb-4">
                         End-to-end revenue operations design: from lead routing and pipeline stages to reporting dashboards and forecasting models.
                     </p>
@@ -1840,7 +1850,7 @@ const ConsultingPage = () => {
                     <div className="w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4">
                         <BarChart3 className="w-6 h-6 text-indigo-400" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">Sales Strategy</h3>
+                    <h2 className="text-xl font-bold text-white mb-3">Sales Strategy</h2>
                     <p className="text-slate-400 leading-relaxed mb-4">
                         Comprehensive go-to-market strategy and sales motion design tailored to your ICP, deal size, and growth stage.
                     </p>
@@ -1929,7 +1939,7 @@ const ConsultingPage = () => {
                                     <strong className="text-white">I'm a Head of Sales + RevOps consultant</strong> with 5 years of Marketing experience and 6 years of Sales experience. I've built B2B teams and outbound systems targeting North America, LATAM, and EMEA.
                                 </p>
                                 <p>
-                                    I built StackStrat because I got tired of seeing founders burn cash on bloated teams and "all-in-one" tools that don't work. I share exactly what I use to book meetings.
+                                    I built Sales House because I got tired of seeing founders burn cash on bloated teams and "all-in-one" tools that don't work. I share exactly what I use to book meetings.
                                 </p>
                             </div>
                         </div>
@@ -1958,7 +1968,7 @@ const ConsultingPage = () => {
                             <div className="absolute inset-0">
                                 <img
                                     src="/sales-strat/david-profile.jpg"
-                                    alt="David Varan"
+                                    alt="David Varan, Sales Operations Consultant and Founder of Sales House"
                                     className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                                     style={{ objectPosition: 'center 20%' }}
                                 />
@@ -2043,7 +2053,7 @@ const ConsultingPage = () => {
             <div className="bg-gradient-to-br from-indigo-950/50 to-purple-950/30 rounded-2xl border border-indigo-500/30 p-12 text-center">
                 <h2 className="text-3xl font-bold text-white mb-4">Ready to Scale Your Outbound?</h2>
                 <p className="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
-                    Book a 30-minute discovery call to see if we're a good fit. No sales pitch—just a real conversation about your challenges and goals.
+                    Book a 30-minute discovery call to see if we're a good fit. No sales pitch - just a real conversation about your challenges and goals.
                 </p>
                 <div className="max-w-4xl mx-auto min-h-[950px]">
                     <CalendlyEmbed />
@@ -2060,12 +2070,121 @@ const ConsultingPage = () => {
     );
 };
 
+const FAQPage = () => {
+    return (
+        <div className="max-w-4xl mx-auto px-6 py-16">
+            {/* Header */}
+            <div className="text-center mb-16">
+                <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Frequently Asked Questions</h1>
+                <p className="text-slate-400 text-lg">
+                    Everything you need to know about building your outbound sales stack
+                </p>
+            </div>
+
+            {/* FAQ Items */}
+            <div className="space-y-4 mb-16">
+                <FAQItem
+                    question="How much does the complete outbound sales stack cost per month?"
+                    answer="Up to $500 per month. If you skip a CRM, you can squeeze in under $350. However, when building a sales funnel, you'll want to follow up, create reminders, and track potential deals. If you're thinking long-term, don't skip the CRM. Most sales aren't accomplished through the first outreach - you'll be following up with the same contacts multiple times throughout a year until you land them."
+                />
+
+                <FAQItem
+                    question="How long does it take to set up the full sales stack from scratch?"
+                    answer="With my experience, I could get it up and running in under 5-6 hours. For most people who haven't worked with these platforms, I'd say a safe bet is under 2 working days. Take it easy, don't rush things, and do it properly so you won't have to redo everything."
+                />
+
+                <FAQItem
+                    question="Do I need technical skills to set up these tools?"
+                    answer="No, all the tools are fairly easy to use. It's pretty much like setting up your laptop or phone for the first time. It's really not rocket science."
+                />
+
+                <FAQItem
+                    question="Can I start with just a few tools and add more later?"
+                    answer="Yes, I recommend starting with Reply.io + Clay OR Apollo. This gives you a tool to outreach with plus contacts to work with. You'll need to buy a domain for outbound, but you'll be limited by the volume of emails you can send initially."
+                />
+
+                <FAQItem
+                    question="How many demos per month can I realistically expect to book?"
+                    answer="I won't make empty promises - this really depends on market, messaging, and targeting. It can be as low as 5, it can be as high as hundreds a month. From my experience in a market where you have some competition and you add 40-50 new contacts monthly, 15 to 20 demos is a healthy target."
+                />
+
+                <FAQItem
+                    question="How long before I see results from outbound?"
+                    answer="You'll see open rates the same day, reply rates within a few days. Realistically, within the first week, if you haven't gotten answers and your open rate is lower than 40%, work on the messaging - you probably have issues there."
+                />
+
+                <FAQItem
+                    question="What's a good reply rate for cold emails?"
+                    answer="3-5% is a good benchmark for cold email reply rates."
+                />
+
+                <FAQItem
+                    question="What's included in your fractional sales leadership?"
+                    answer="Audit, review, insights, recommendations, my hands-on work, and strategies. Every consultation I do is very case-by-case. We might be building just an outbound system, or in other cases, I might be helping you improve conversion rates, win rates, or recycle previous contacts. No company is identical, and I don't do cookie-cutter strategies."
+                />
+
+                <FAQItem
+                    question="Do you set up the tools for me or just advise?"
+                    answer="Either or both. I can consult, I can set everything up for you, or we can work together on implementation. It's flexible based on your needs."
+                />
+
+                <FAQItem
+                    question="Should I hire an SDR or build this myself?"
+                    answer="I would always recommend starting yourself first. Calculate how much an SDR costs locally. A good rule of thumb is if an SDR costs $2,000/month, they need to bring enough opportunities to generate $6,000 of revenue monthly - essentially a 3:1 ratio."
+                />
+
+                <FAQItem
+                    question="What's the #1 mistake founders make with outbound sales?"
+                    answer="Writing emails that read like a marketing campaign. Your goal is to message like a friend and say 'Hey, I see you're having issues with this, I have a solution, worth a chat?' Less is more."
+                />
+
+                <FAQItem
+                    question="Do I need a big email list to get started?"
+                    answer="It's subjective and depends on what verticals you're targeting. You might not have the privilege of a lot of contacts, so you need to be a bit more reserved on the scale of outreach and focus more on quality and follow-ups. But generally, we're speaking about thousands of contacts you can get from Clay, Apollo, or Lusha, so practically this isn't an area of concern."
+                />
+            </div>
+
+            {/* CTA Section */}
+            <div className="bg-gradient-to-br from-indigo-950/50 to-purple-950/30 rounded-2xl border border-indigo-500/30 p-8 text-center">
+                <h2 className="text-2xl font-bold text-white mb-3">Still Have Questions?</h2>
+                <p className="text-slate-400 mb-6">
+                    Book a free consultation call to discuss your specific situation
+                </p>
+                <Link
+                    to="/consulting"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg transition-colors"
+                >
+                    Book a Call
+                </Link>
+            </div>
+
+            {/* Back to Home Link */}
+            <div className="mt-12 text-center">
+                <Link to="/" className="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-colors">
+                    ← Back to Home
+                </Link>
+            </div>
+        </div>
+    );
+};
+
+// Scroll to top on route change
+const ScrollToTop = () => {
+  const location = useLocation();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  return null;
+};
 
 const App = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-[#020617] font-sans text-slate-100">
         
         {/* Top Navigation Bar */}
@@ -2078,7 +2197,7 @@ const App = () => {
                              <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-[0_0_15px_rgba(79,70,229,0.5)] group-hover:bg-indigo-500 transition-colors">
                                 S
                              </div>
-                             <span className="text-xl font-bold tracking-tight text-white">StackStrat</span>
+                             <span className="text-xl font-bold tracking-tight text-white">Sales House</span>
                          </Link>
                     </div>
 
@@ -2136,6 +2255,7 @@ const App = () => {
               <Route path="/" element={<HomePage />} />
               <Route path="/library" element={<LibraryPage />} />
               <Route path="/strategies" element={<StrategiesPage />} />
+              <Route path="/faq" element={<FAQPage />} />
               <Route path="/privacy" element={<PrivacyPolicyPage />} />
               <Route path="/terms" element={<TermsOfServicePage />} />
               <Route path="/consulting" element={<ConsultingPage />} />

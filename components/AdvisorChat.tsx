@@ -77,7 +77,7 @@ export const AdvisorChat: React.FC = () => {
              <Bot className="w-5 h-5 text-indigo-400" />
           </div>
           <div>
-            <h2 className="text-white font-bold text-lg">StackStrat Advisor</h2>
+            <h2 className="text-white font-bold text-lg">Sales House Advisor</h2>
             <p className="text-slate-500 text-xs flex items-center gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
                 Online
