@@ -93,7 +93,7 @@ const CalendlyEmbed = () => {
           prefill: {},
           utm: {},
           styles: {
-            height: '700px'
+            height: '950px'
           }
         });
         setInitialized(true);
@@ -116,7 +116,7 @@ const CalendlyEmbed = () => {
     }
   }, [initialized]);
 
-  return <div ref={embedRef} style={{ minWidth: '320px', height: '700px' }} />;
+  return <div ref={embedRef} style={{ minWidth: '320px', height: '950px' }} />;
 };
 
 const FAQItem = ({ question, answer }: { question: string; answer: string }) => {
