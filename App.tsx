@@ -439,7 +439,7 @@ const HomePage = () => {
                         {/* Background Image - Full Size */}
                         <div className="absolute inset-0">
                              <img
-                                src="/david-profile.jpg"
+                                src="/sales-strat/david-profile.jpg"
                                 alt="David Varan"
                                 className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                                 style={{ objectPosition: 'center 20%' }}
@@ -1957,7 +1957,7 @@ const ConsultingPage = () => {
                             {/* Background Image */}
                             <div className="absolute inset-0">
                                 <img
-                                    src="/david-profile.jpg"
+                                    src="/sales-strat/david-profile.jpg"
                                     alt="David Varan"
                                     className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                                     style={{ objectPosition: 'center 20%' }}
