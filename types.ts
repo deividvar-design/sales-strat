@@ -1,6 +1,6 @@
 
 export enum TeamSize {
-  SOLOPRENEUR = 'Solopreneur',
+  SOLOPRENEUR = 'Founders',
   SMALL_TEAM = 'Small Team (2-10)',
   MID_SCALE = 'Mid-Scale (10-20)'
 }

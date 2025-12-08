@@ -227,11 +227,11 @@ const HomePage = () => {
                     </p>
                     
                     <div className="flex flex-col sm:flex-row items-start gap-4">
-                        <a href="#featured-stack" className="px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white text-lg font-bold rounded-xl shadow-[0_0_20px_rgba(79,70,229,0.4)] transition-all transform hover:-translate-y-1 flex items-center gap-2 border border-indigo-500">
+                        <Link to="/strategies" className="px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white text-lg font-bold rounded-xl shadow-[0_0_20px_rgba(79,70,229,0.4)] transition-all transform hover:-translate-y-1 flex items-center gap-2 border border-indigo-500">
                             Build My Outbound System <ArrowRight className="w-5 h-5" />
-                        </a>
-                        <Link to="/strategies" className="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold rounded-xl border border-slate-700 transition-all flex items-center gap-2">
-                            Read The Playbook
+                        </Link>
+                        <Link to="/library" className="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold rounded-xl border border-slate-700 transition-all flex items-center gap-2">
+                            View Recommendations
                         </Link>
                     </div>
                 </div>
@@ -457,7 +457,7 @@ const HomePage = () => {
                                  <a href="https://www.linkedin.com/in/davidvaran/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 w-full py-2.5 bg-[#0077b5] hover:bg-[#006399] text-white rounded-lg font-bold text-sm transition-all shadow-lg shadow-blue-900/20">
                                     <Linkedin className="w-4 h-4" /> Connect on LinkedIn
                                 </a>
-                                <a href="mailto:contact@stackstrat.com" className="flex items-center justify-center gap-2 w-full py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white rounded-lg font-bold text-sm transition-all border border-white/10">
+                                <a href="mailto:david@saleshousestack.com" className="flex items-center justify-center gap-2 w-full py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white rounded-lg font-bold text-sm transition-all border border-white/10">
                                     <Mail className="w-4 h-4" /> Email Me
                                 </a>
                             </div>
@@ -788,7 +788,7 @@ const LibraryPage = () => {
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                         <a
-                            href="mailto:david@stackstrat.com"
+                            href="mailto:david@saleshousestack.com"
                             className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg transition-colors"
                         >
                             <Mail className="w-4 h-4" />
@@ -814,7 +814,7 @@ const MetricsCalculator = () => {
     const [emailsPerDay, setEmailsPerDay] = useState(50);
     const [numDomains, setNumDomains] = useState(3);
     const [acv, setAcv] = useState(1500);
-    const [closeRate, setCloseRate] = useState(20);
+    const [closeRate, setCloseRate] = useState(15);
 
     // Calculations
     const emailsPerMonth = emailsPerDay * 22; // 22 working days
@@ -896,16 +896,16 @@ const MetricsCalculator = () => {
                         </label>
                         <input
                             type="range"
-                            min="10"
-                            max="50"
+                            min="1"
+                            max="20"
                             value={closeRate}
                             onChange={(e) => setCloseRate(Number(e.target.value))}
                             className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-500"
                         />
                         <div className="flex justify-between mt-1">
-                            <span className="text-xs text-slate-500">10%</span>
+                            <span className="text-xs text-slate-500">1%</span>
                             <span className="text-sm font-bold text-indigo-400">{closeRate}%</span>
-                            <span className="text-xs text-slate-500">50%</span>
+                            <span className="text-xs text-slate-500">20%</span>
                         </div>
                     </div>
                 </div>
@@ -975,13 +975,15 @@ const StrategiesPage = () => {
     };
 
     return (
-        <div className="p-6 max-w-7xl mx-auto bg-[#020617] min-h-screen">
-            <div className="mb-10 text-center md:text-left">
-                <h1 className="text-3xl font-bold text-white mb-2">Launchpad Playbook</h1>
-                <p className="text-slate-400">Don't just read about it. Execute the plan step-by-step.</p>
+        <div className="bg-[#020617] min-h-screen">
+            <div className="mb-10 text-center md:text-left px-6 max-w-7xl mx-auto pt-6">
+                <h1 className="text-3xl font-bold text-white mb-4">From Zero to Booked Calendar</h1>
+                <p className="text-xl text-slate-400 max-w-3xl">
+                    The playbook that generates 50 qualified leads per month for B2B SaaS companies—without cold calling or manual prospecting.
+                </p>
             </div>
 
-            <div className="grid grid-cols-1 gap-6">
+            <div className="grid grid-cols-1 gap-6 px-6 max-w-7xl mx-auto">
             {STRATEGIES.map(strategy => {
                 const totalSteps = strategy.steps?.length || 0;
                 const completedSteps = strategy.steps?.filter((_, idx) => checkedItems[`${strategy.id}-${idx}`]).length || 0;
@@ -994,9 +996,6 @@ const StrategiesPage = () => {
                         <div className="flex-1">
                             <div className="flex items-center gap-3 mb-2">
                                 <h2 className="text-xl font-bold text-white">{strategy.title}</h2>
-                                <span className="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-400">
-                                    {strategy.teamSize}
-                                </span>
                             </div>
                             <p className="text-slate-400 text-sm">{strategy.summary}</p>
                         </div>
@@ -1086,61 +1085,158 @@ const StrategiesPage = () => {
                                     </div>
                                 </div>
                             </div>
-
-                            {/* Interactive Metrics Calculator */}
-                            <div className="mt-8 p-6 bg-gradient-to-br from-slate-900 to-slate-950 border border-indigo-500/20 rounded-xl">
-                                <div className="flex items-start gap-3 mb-6">
-                                    <BarChart3 className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
-                                    <div>
-                                        <h3 className="text-lg font-bold text-white mb-1">What Can I Expect?</h3>
-                                        <p className="text-slate-400 text-sm">Interactive calculator - adjust inputs to see your potential results</p>
-                                    </div>
-                                </div>
-
-                                {/* Calculator Component */}
-                                <MetricsCalculator />
-                            </div>
-
-                            {/* Disclaimer Section */}
-                            <div className="mt-8 p-6 bg-slate-900/50 border border-slate-800 rounded-xl">
-                                <div className="flex items-start gap-3 mb-4">
-                                    <AlertCircle className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
-                                    <h3 className="text-lg font-bold text-white">What Happens Next?</h3>
-                                </div>
-                                <div className="space-y-4 text-slate-300 text-sm leading-relaxed">
-                                    <p>
-                                        Once you complete this setup, you have the <strong className="text-white">fundamentals for an outbound top-of-funnel engine</strong>. The only remaining decision is your conversion path based on ticket size.
-                                    </p>
-
-                                    <div className="grid md:grid-cols-2 gap-4 my-4">
-                                        <div className="p-4 bg-slate-950/50 rounded-lg border border-slate-800">
-                                            <h4 className="font-bold text-white mb-2 flex items-center gap-2">
-                                                <span className="text-indigo-400">→</span> Self-Service Path
-                                            </h4>
-                                            <p className="text-xs text-slate-400">For lower ACV products (&lt;$1.5k). Direct leads to sign-up or trial pages.</p>
-                                        </div>
-                                        <div className="p-4 bg-slate-950/50 rounded-lg border border-slate-800">
-                                            <h4 className="font-bold text-white mb-2 flex items-center gap-2">
-                                                <span className="text-indigo-400">→</span> Demo/Discovery Path
-                                            </h4>
-                                            <p className="text-xs text-slate-400">For higher ACV ($1.5k+). Book demos to understand needs and qualify prospects.</p>
-                                        </div>
-                                    </div>
-
-                                    <p>
-                                        <strong className="text-white">Why demos matter at $1.5k+ ACV:</strong> Beyond the revenue, discovery calls give you critical insights into your audience's pain points, buying process, and objections. This intelligence loop refines your messaging over time.
-                                    </p>
-
-                                    <p className="text-slate-400 italic">
-                                        If you're a senior sales professional, you already know this. You're using this playbook to <strong className="text-slate-300">scale top-funnel volume</strong> while maintaining quality conversations.
-                                    </p>
-                                </div>
-                            </div>
                         </div>
-                    </div>
+                </div>
                 )
             })}
             </div>
+
+            {/* Interactive Metrics Calculator - Separate Container */}
+            <div className="px-6 max-w-7xl mx-auto">
+            <div className="mt-6 bg-slate-900 rounded-xl border border-indigo-500 shadow-xl shadow-indigo-500/10 overflow-hidden">
+                <div className="p-6 md:p-8">
+                    <div className="p-6 bg-gradient-to-br from-slate-900 to-slate-950 border border-indigo-500/20 rounded-xl">
+                        <div className="flex items-start gap-3 mb-6">
+                            <BarChart3 className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
+                            <div>
+                                <h3 className="text-lg font-bold text-white mb-1">What Can I Expect?</h3>
+                                <p className="text-slate-400 text-sm">Interactive calculator - adjust inputs to see your potential results</p>
+                            </div>
+                        </div>
+
+                        {/* Calculator Component */}
+                        <MetricsCalculator />
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            {/* What Happens Next - Separate Container */}
+            <div className="px-6 max-w-7xl mx-auto">
+            <div className="mt-6 bg-slate-900 rounded-xl border border-indigo-500 shadow-xl shadow-indigo-500/10 overflow-hidden">
+                <div className="p-6 md:p-8">
+                    <div className="p-6 bg-slate-900/50 border border-slate-800 rounded-xl">
+                        <div className="flex items-start gap-3 mb-4">
+                            <AlertCircle className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
+                            <h3 className="text-lg font-bold text-white">What Happens Next?</h3>
+                        </div>
+                        <div className="space-y-4 text-slate-300 text-sm leading-relaxed">
+                            <p>
+                                Once you complete this setup, you have the <strong className="text-white">fundamentals for an outbound top-of-funnel engine</strong>. The only remaining decision is your conversion path based on ticket size.
+                            </p>
+
+                            <div className="grid md:grid-cols-2 gap-4 my-4">
+                                <div className="p-4 bg-slate-950/50 rounded-lg border border-slate-800">
+                                    <h4 className="font-bold text-white mb-2 flex items-center gap-2">
+                                        <span className="text-indigo-400">→</span> Self-Service Path
+                                    </h4>
+                                    <p className="text-xs text-slate-400">For lower ACV products (&lt;$1.5k). Direct leads to sign-up or trial pages.</p>
+                                </div>
+                                <div className="p-4 bg-slate-950/50 rounded-lg border border-slate-800">
+                                    <h4 className="font-bold text-white mb-2 flex items-center gap-2">
+                                        <span className="text-indigo-400">→</span> Demo/Discovery Path
+                                    </h4>
+                                    <p className="text-xs text-slate-400">For higher ACV ($1.5k+). Book demos to understand needs and qualify prospects.</p>
+                                </div>
+                            </div>
+
+                            <p>
+                                <strong className="text-white">Why demos matter at $1.5k+ ACV:</strong> Beyond the revenue, discovery calls give you critical insights into your audience's pain points, buying process, and objections. This intelligence loop refines your messaging over time.
+                            </p>
+
+                            <p className="text-slate-400 italic">
+                                If you're a senior sales professional, you already know this. You're using this playbook to <strong className="text-slate-300">scale top-funnel volume</strong> while maintaining quality conversations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            {/* My Current Favourite Sales Stack */}
+            <section id="featured-stack" className="mt-6 py-16 bg-slate-950 text-white px-6 border-b border-slate-900 relative">
+                <div className="absolute inset-0 bg-indigo-950/10"></div>
+                <div className="max-w-6xl mx-auto relative z-10">
+                    <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                        <div>
+                            <h2 className="text-3xl font-bold mb-4">My Current Favourite Sales Stack</h2>
+                            <p className="text-slate-400 max-w-xl text-lg">
+                                A lean, proven system that actually works. No bloat, no vendor lock-in, just tools that do their job.
+                            </p>
+                        </div>
+                        <Link to="/library" className="flex items-center gap-2 text-indigo-400 hover:text-indigo-300 font-semibold transition-colors">
+                            View All Tools <ArrowRight className="w-4 h-4" />
+                        </Link>
+                    </div>
+
+                    <div className="grid md:grid-cols-4 gap-6">
+                        {TOOLS.filter(t => ['clay', 'reply', 'hubspot', 'mailforge'].includes(t.id)).map(tool => (
+                            <ToolCard key={tool.id} tool={tool} showChannels={false} />
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Contact Section */}
+            <section className="py-16 px-6">
+                <div className="max-w-4xl mx-auto bg-slate-900 rounded-xl border border-slate-800 p-8 md:p-12 text-center">
+                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Need Help or Have Questions?</h2>
+                    <p className="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
+                        Feel free to drop me an email or a message on LinkedIn if you need some ideas or suggestions.
+                    </p>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a
+                            href="mailto:david@saleshousestack.com"
+                            className="flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg transition-colors"
+                        >
+                            <Mail className="w-5 h-5" />
+                            Send Email
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/davidvaran/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-lg border border-slate-700 transition-colors"
+                        >
+                            <Linkedin className="w-5 h-5" />
+                            Connect on LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            {/* Get The Full Playbook */}
+            <section className="py-24 bg-gradient-to-br from-indigo-900 to-purple-900 text-white px-6 border-t border-slate-900">
+                <div className="max-w-4xl mx-auto bg-slate-950/50 backdrop-blur-lg border border-white/10 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/20 rounded-full blur-[80px] -mr-16 -mt-16 pointer-events-none"></div>
+
+                    <div className="flex-1 relative z-10">
+                        <div className="inline-block px-3 py-1 bg-white/10 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-white/10">
+                            Free Resource
+                        </div>
+                        <h2 className="text-3xl font-bold mb-4">Get The Full Playbook</h2>
+                        <p className="text-indigo-200 text-lg mb-6 leading-relaxed">
+                            It's a full Notion setup for getting started with outbound, including message templates, Clay setup, checklist.
+                        </p>
+                        <a
+                            href="https://tally.so/r/mDOGeq"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-2 px-6 py-3 bg-white text-indigo-900 font-bold rounded-lg hover:bg-indigo-50 transition-colors shadow-lg shadow-white/10"
+                        >
+                            <Download className="w-4 h-4" /> Get The Playbook
+                        </a>
+                    </div>
+                    <div className="w-full md:w-1/3 relative z-10">
+                        <div className="bg-slate-900/50 p-1 rounded-xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 border border-white/10 backdrop-blur-sm">
+                            <div className="bg-slate-950 border border-slate-800 rounded-lg p-6 min-h-[200px] flex flex-col items-center justify-center text-slate-500">
+                                <FileText className="w-12 h-12 mb-2 text-indigo-400" />
+                                <span className="font-mono text-xs text-slate-400">Notion</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };
@@ -1320,7 +1416,7 @@ const PrivacyPolicyPage = () => {
                         <li><strong className="text-white">Objection:</strong> Object to processing of your personal data</li>
                     </ul>
                     <p className="text-slate-300 leading-relaxed mt-4">
-                        To exercise any of these rights, please contact us at <a href="mailto:david@stackstrat.com" className="text-indigo-400 hover:underline">david@stackstrat.com</a>
+                        To exercise any of these rights, please contact us at <a href="mailto:david@saleshousestack.com" className="text-indigo-400 hover:underline">david@saleshousestack.com</a>
                     </p>
                 </section>
 
@@ -1380,7 +1476,7 @@ const PrivacyPolicyPage = () => {
                     </p>
                     <div className="p-4 bg-slate-950/50 rounded-lg border border-slate-800">
                         <p className="text-slate-300 leading-relaxed">
-                            <strong className="text-white">Email:</strong> <a href="mailto:david@stackstrat.com" className="text-indigo-400 hover:underline">david@stackstrat.com</a>
+                            <strong className="text-white">Email:</strong> <a href="mailto:david@saleshousestack.com" className="text-indigo-400 hover:underline">david@saleshousestack.com</a>
                         </p>
                         <p className="text-slate-300 leading-relaxed mt-2">
                             <strong className="text-white">Website:</strong> <a href="https://stackstrat.com" className="text-indigo-400 hover:underline">https://stackstrat.com</a>
@@ -1659,7 +1755,7 @@ const TermsOfServicePage = () => {
                     </p>
                     <div className="p-4 bg-slate-950/50 rounded-lg border border-slate-800">
                         <p className="text-slate-300 leading-relaxed">
-                            <strong className="text-white">Email:</strong> <a href="mailto:david@stackstrat.com" className="text-indigo-400 hover:underline">david@stackstrat.com</a>
+                            <strong className="text-white">Email:</strong> <a href="mailto:david@saleshousestack.com" className="text-indigo-400 hover:underline">david@saleshousestack.com</a>
                         </p>
                         <p className="text-slate-300 leading-relaxed mt-2">
                             <strong className="text-white">Website:</strong> <a href="https://stackstrat.com" className="text-indigo-400 hover:underline">https://stackstrat.com</a>
@@ -1879,7 +1975,7 @@ const ConsultingPage = () => {
                                     <a href="https://www.linkedin.com/in/davidvaran/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 w-full py-2.5 bg-[#0077b5] hover:bg-[#006399] text-white rounded-lg font-bold text-sm transition-all shadow-lg shadow-blue-900/20">
                                         <Linkedin className="w-4 h-4" /> Connect on LinkedIn
                                     </a>
-                                    <a href="mailto:contact@stackstrat.com" className="flex items-center justify-center gap-2 w-full py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white rounded-lg font-bold text-sm transition-all border border-white/10">
+                                    <a href="mailto:david@saleshousestack.com" className="flex items-center justify-center gap-2 w-full py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white rounded-lg font-bold text-sm transition-all border border-white/10">
                                         <Mail className="w-4 h-4" /> Email Me
                                     </a>
                                 </div>
