@@ -335,13 +335,8 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
     <section id="featured-stack" className="py-24 bg-slate-950 text-white px-6 border-b border-slate-900 relative">
         <div className="absolute inset-0 bg-indigo-950/10"></div>
         <div className="max-w-6xl mx-auto relative z-10">
-             <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-                <div>
-                    <h2 className="text-3xl font-bold mb-4">My Current Favourite Sales Stack</h2>
-                    <p className="text-slate-400 max-w-xl text-lg">
-                        A lean, proven system that actually works. No bloat, no vendor lock-in, just tools that do their job.
-                    </p>
-                </div>
+             <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
+                <h2 className="text-3xl font-bold">My Current Favourite Sales Stack</h2>
                 <Link to="/library" className="flex items-center gap-2 text-indigo-400 hover:text-indigo-300 font-semibold transition-colors">
                     View All Tools <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -1180,13 +1175,8 @@ const StrategiesPage = () => {
             <section id="featured-stack" className="mt-6 py-16 bg-slate-950 text-white px-6 border-b border-slate-900 relative">
                 <div className="absolute inset-0 bg-indigo-950/10"></div>
                 <div className="max-w-6xl mx-auto relative z-10">
-                    <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-                        <div>
-                            <h2 className="text-3xl font-bold mb-4">My Current Favourite Sales Stack</h2>
-                            <p className="text-slate-400 max-w-xl text-lg">
-                                A lean, proven system that actually works. No bloat, no vendor lock-in, just tools that do their job.
-                            </p>
-                        </div>
+                    <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
+                        <h2 className="text-3xl font-bold">My Current Favourite Sales Stack</h2>
                         <Link to="/library" className="flex items-center gap-2 text-indigo-400 hover:text-indigo-300 font-semibold transition-colors">
                             View All Tools <ArrowRight className="w-4 h-4" />
                         </Link>
