@@ -2273,7 +2273,7 @@ const App = () => {
           onClick={() => setIsPlaybookModalOpen(false)}
         >
           <div
-            className="relative bg-slate-900 rounded-2xl p-8 max-w-md w-full mx-4 border border-slate-800 shadow-2xl"
+            className="relative bg-[#020617] rounded-2xl p-8 max-w-md w-full mx-4 border border-slate-800 shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
@@ -2283,12 +2283,6 @@ const App = () => {
             >
               <X className="w-6 h-6" />
             </button>
-
-            {/* Modal Content */}
-            <div className="mb-6">
-              <h3 className="text-2xl font-bold text-white mb-2">Get the Playbook</h3>
-              <p className="text-slate-400 text-sm">Enter your details to download the complete sales playbook</p>
-            </div>
 
             {/* Klaviyo Form */}
             <div className="klaviyo-form-SDqh4i"></div>
