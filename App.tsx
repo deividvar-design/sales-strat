@@ -155,19 +155,20 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto px-6">
       <div className="grid md:grid-cols-3 gap-8 mb-12">
         <div className="col-span-1 md:col-span-1">
-           <div className="flex items-center gap-2 mb-3">
-              <Link to="/" className="flex items-center gap-2 group">
-                  <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-[0_0_15px_rgba(79,70,229,0.5)]">
-                     S
-                  </div>
-                  <span className="text-xl font-bold tracking-tight text-white">Sales House</span>
-              </Link>
-              <a href="https://www.linkedin.com/in/davidvaran/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors ml-2"><Linkedin className="w-5 h-5" /></a>
-           </div>
+           <Link to="/" className="flex items-center gap-2 group mb-3">
+               <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-[0_0_15px_rgba(79,70,229,0.5)]">
+                  S
+              </div>
+              <span className="text-xl font-bold tracking-tight text-white">Sales House</span>
+          </Link>
            <p className="text-sm text-slate-400 max-w-xs mb-3">Build your outbound engine. Simpler than you think. No agencies needed.</p>
-           <a href="mailto:david@saleshousestack.com" className="text-sm text-slate-400 hover:text-indigo-400 transition-colors flex items-center gap-2">
+           <a href="mailto:david@saleshousestack.com" className="text-sm text-slate-400 hover:text-indigo-400 transition-colors flex items-center gap-2 mb-3">
               <Mail className="w-4 h-4" />
               david@saleshousestack.com
+           </a>
+           <a href="https://www.linkedin.com/in/davidvaran/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-indigo-400 transition-colors inline-flex items-center gap-2">
+              <Linkedin className="w-5 h-5" />
+              <span className="text-sm">LinkedIn</span>
            </a>
         </div>
 
