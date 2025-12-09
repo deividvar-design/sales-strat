@@ -164,7 +164,11 @@ const Footer = () => (
               </Link>
               <a href="https://www.linkedin.com/in/davidvaran/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors ml-2"><Linkedin className="w-5 h-5" /></a>
            </div>
-           <p className="text-sm text-slate-400 max-w-xs">Build your outbound engine. Simpler than you think. No agencies needed.</p>
+           <p className="text-sm text-slate-400 max-w-xs mb-3">Build your outbound engine. Simpler than you think. No agencies needed.</p>
+           <a href="mailto:david@saleshousestack.com" className="text-sm text-slate-400 hover:text-indigo-400 transition-colors flex items-center gap-2">
+              <Mail className="w-4 h-4" />
+              david@saleshousestack.com
+           </a>
         </div>
 
         <div>
