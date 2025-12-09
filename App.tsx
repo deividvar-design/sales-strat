@@ -710,14 +710,12 @@ const HomePage = () => {
                 <p className="text-indigo-200 text-lg mb-6 leading-relaxed">
                     It's a full Notion setup for getting started with outbound, including message templates, Clay setup, checklist.
                 </p>
-                <a 
-                  href="https://tally.so/r/mDOGeq" 
-                  target="_blank" 
-                  rel="noreferrer"
+                <button
+                  onClick={() => setIsPlaybookModalOpen(true)}
                   className="inline-flex items-center gap-2 px-6 py-3 bg-white text-indigo-900 font-bold rounded-lg hover:bg-indigo-50 transition-colors shadow-lg shadow-white/10"
                 >
                    <Download className="w-4 h-4" /> Get The Playbook
-                </a>
+                </button>
             </div>
             <div className="w-full md:w-1/3 relative z-10">
                  <div className="bg-slate-900/50 p-1 rounded-xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 border border-white/10 backdrop-blur-sm">
