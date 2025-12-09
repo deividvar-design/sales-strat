@@ -2265,28 +2265,26 @@ const App = () => {
       </div>
 
       {/* Playbook Modal */}
-      {isPlaybookModalOpen && (
+      <div
+        className={`fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm transition-opacity ${isPlaybookModalOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        onClick={() => setIsPlaybookModalOpen(false)}
+      >
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
-          onClick={() => setIsPlaybookModalOpen(false)}
+          className="relative bg-[#020617] rounded-2xl p-8 max-w-md w-full mx-4 border border-slate-800 shadow-2xl"
+          onClick={(e) => e.stopPropagation()}
         >
-          <div
-            className="relative bg-[#020617] rounded-2xl p-8 max-w-md w-full mx-4 border border-slate-800 shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
+          {/* Close Button */}
+          <button
+            onClick={() => setIsPlaybookModalOpen(false)}
+            className="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors"
           >
-            {/* Close Button */}
-            <button
-              onClick={() => setIsPlaybookModalOpen(false)}
-              className="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors"
-            >
-              <X className="w-6 h-6" />
-            </button>
+            <X className="w-6 h-6" />
+          </button>
 
-            {/* Klaviyo Form */}
-            <div className="klaviyo-form-SDqh4i"></div>
-          </div>
+          {/* Klaviyo Form */}
+          <div className="klaviyo-form-SDqh4i"></div>
         </div>
-      )}
+      </div>
     </Router>
   );
 };
