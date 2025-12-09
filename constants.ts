@@ -112,9 +112,9 @@ export const TOOLS: Tool[] = [
   },
   {
     id: 'instantly',
-    name: 'Instantly.io',
+    name: 'Instantly',
     category: ToolCategory.SALES_ENGAGEMENT,
-    description: 'Cold email platform built for unlimited scale. Warm-up included, simple UI, aggressive inbox management.',
+    description: 'Cold email platform built for unlimited scale. Warm-up included, simple UI, extensive mailbox management.',
     bestFor: [TeamSize.SOLOPRENEUR, TeamSize.SMALL_TEAM],
     pricingTier: 'Low',
     website: 'https://www.instantly.ai',
