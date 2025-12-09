@@ -111,6 +111,18 @@ export const TOOLS: Tool[] = [
     channels: ['Calls', 'Emails', 'LinkedIn', 'WhatsApp']
   },
   {
+    id: 'instantly',
+    name: 'Instantly.io',
+    category: ToolCategory.SALES_ENGAGEMENT,
+    description: 'Cold email platform built for unlimited scale. Warm-up included, simple UI, aggressive inbox management.',
+    bestFor: [TeamSize.SOLOPRENEUR, TeamSize.SMALL_TEAM],
+    pricingTier: 'Low',
+    website: 'https://www.instantly.ai',
+    pros: ['Unlimited email accounts', 'Built-in warm-up', 'Simple interface', 'Affordable pricing', 'Fast campaign setup'],
+    cons: ['Email only (no multichannel)', 'Basic reporting', 'Limited personalization features'],
+    channels: ['Emails']
+  },
+  {
     id: 'dripify',
     name: 'Dripify',
     category: ToolCategory.SALES_ENGAGEMENT,
