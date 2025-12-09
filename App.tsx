@@ -204,7 +204,7 @@ const Footer = () => (
   </footer>
 );
 
-const HomePage = () => {
+const HomePage = ({ setIsPlaybookModalOpen }: { setIsPlaybookModalOpen: (open: boolean) => void }) => {
   const [showFullManifesto, setShowFullManifesto] = useState(false);
 
   return (
@@ -2251,7 +2251,7 @@ const App = () => {
         {/* Main Content Area - Full Width */}
         <main className="w-full">
             <Routes>
-              <Route path="/" element={<HomePage />} />
+              <Route path="/" element={<HomePage setIsPlaybookModalOpen={setIsPlaybookModalOpen} />} />
               <Route path="/library" element={<LibraryPage />} />
               <Route path="/strategies" element={<StrategiesPage />} />
               <Route path="/faq" element={<FAQPage />} />
