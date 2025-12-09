@@ -2183,6 +2183,7 @@ const ScrollToTop = () => {
 
 const App = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isPlaybookModalOpen, setIsPlaybookModalOpen] = useState(false);
 
   return (
     <Router>
@@ -2209,15 +2210,13 @@ const App = () => {
                         <NavLink to="/library" icon={Library} label="Library" />
                         <NavLink to="/strategies" icon={Layers} label="Playbook" />
                         <NavLink to="/consulting" icon={Briefcase} label="Consulting" />
-                        <div className="h-6 w-px bg-slate-800 mx-2 hidden"></div>
-                        <a
-                            href="https://tally.so/r/mDOGeq"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="hidden px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-bold rounded-lg transition-colors items-center gap-2 shadow-[0_0_15px_rgba(79,70,229,0.3)]"
+                        <div className="h-6 w-px bg-slate-800 mx-2"></div>
+                        <button
+                            onClick={() => setIsPlaybookModalOpen(true)}
+                            className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-bold rounded-lg transition-colors flex items-center gap-2 shadow-[0_0_15px_rgba(79,70,229,0.3)]"
                         >
                             <Download className="w-4 h-4" /> Get Playbook
-                        </a>
+                        </button>
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -2266,6 +2265,36 @@ const App = () => {
 
         <Footer />
       </div>
+
+      {/* Playbook Modal */}
+      {isPlaybookModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
+          onClick={() => setIsPlaybookModalOpen(false)}
+        >
+          <div
+            className="relative bg-slate-900 rounded-2xl p-8 max-w-md w-full mx-4 border border-slate-800 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setIsPlaybookModalOpen(false)}
+              className="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            {/* Modal Content */}
+            <div className="mb-6">
+              <h3 className="text-2xl font-bold text-white mb-2">Get the Playbook</h3>
+              <p className="text-slate-400 text-sm">Enter your details to download the complete sales playbook</p>
+            </div>
+
+            {/* Klaviyo Form */}
+            <div className="klaviyo-form-SDqh4i"></div>
+          </div>
+        </div>
+      )}
     </Router>
   );
 };
