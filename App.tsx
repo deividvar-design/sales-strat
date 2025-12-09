@@ -1,11 +1,12 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
 
-// Declare Calendly on window object
+// Declare Calendly and Klaviyo on window object
 declare global {
   interface Window {
     Calendly: any;
+    _klOnsite: any[];
   }
 }
 import {
@@ -2182,6 +2183,14 @@ const ScrollToTop = () => {
 const App = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isPlaybookModalOpen, setIsPlaybookModalOpen] = useState(false);
+
+  // Trigger Klaviyo form when modal opens
+  useEffect(() => {
+    if (isPlaybookModalOpen && window._klOnsite) {
+      window._klOnsite = window._klOnsite || [];
+      window._klOnsite.push(['openForm', 'SDqh4i']);
+    }
+  }, [isPlaybookModalOpen]);
 
   return (
     <Router>
