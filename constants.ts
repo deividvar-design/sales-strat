@@ -24,7 +24,7 @@ export const TOOLS: Tool[] = [
     website: 'https://get.reply.io/scaleoutbound',
     pros: ['Native LinkedIn automation', 'Easy A/B testing', 'Robust reporting', 'Cloud calling included'],
     cons: ['UI can be dense'],
-    channels: ['Calls', 'Emails', 'LinkedIn', 'LinkedIn Sales Nav', 'WhatsApp']
+    channels: ['Calls', 'Emails', 'LinkedIn', 'InMail', 'WhatsApp']
   },
   {
     id: 'mailforge',
