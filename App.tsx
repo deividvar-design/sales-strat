@@ -201,7 +201,7 @@ const Footer = () => (
   </footer>
 );
 
-const HomePage = ({ setIsPlaybookModalOpen }: { setIsPlaybookModalOpen: (open: boolean) => void }) => {
+const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
   const [showFullManifesto, setShowFullManifesto] = useState(false);
 
   return (
@@ -376,8 +376,8 @@ const HomePage = ({ setIsPlaybookModalOpen }: { setIsPlaybookModalOpen: (open: b
                         { name: 'Mailforge', cost: '$79', period: '/mo', icon: ShieldCheck },
                         { name: 'Apollo', cost: '$0 - $119', period: '/mo', icon: Target },
                     ].map((item, idx) => (
-                        <div key={idx} className="p-6 flex flex-col items-center text-center hover:bg-slate-800/50 transition-colors group">
-                            <div className="mb-4 p-3 bg-slate-800 rounded-full text-slate-400 group-hover:text-indigo-400 group-hover:bg-indigo-500/10 transition-colors" aria-hidden="true">
+                        <div key={idx} className="p-6 flex flex-col items-center text-center hover:bg-slate-800/70 transition-all duration-300 group cursor-pointer">
+                            <div className="mb-4 p-3 bg-slate-800 rounded-full text-slate-400 group-hover:text-indigo-400 group-hover:bg-indigo-500/10 transition-all duration-300" aria-hidden="true">
                                 <item.icon className="w-6 h-6" />
                             </div>
                             <h3 className="text-white font-bold mb-1">{item.name}</h3>
@@ -712,7 +712,7 @@ const HomePage = ({ setIsPlaybookModalOpen }: { setIsPlaybookModalOpen: (open: b
                     It's a full Notion setup for getting started with outbound, including message templates, Clay setup, checklist.
                 </p>
                 <button
-                  onClick={() => setIsPlaybookModalOpen(true)}
+                  onClick={openPlaybookForm}
                   className="inline-flex items-center gap-2 px-6 py-3 bg-white text-indigo-900 font-bold rounded-lg hover:bg-indigo-50 transition-colors shadow-lg shadow-white/10"
                 >
                    <Download className="w-4 h-4" /> Get The Playbook
@@ -2204,15 +2204,11 @@ const ScrollToTop = () => {
 
 const App = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isPlaybookModalOpen, setIsPlaybookModalOpen] = useState(false);
 
-  // Trigger Klaviyo form when modal opens
-  useEffect(() => {
-    if (isPlaybookModalOpen && window._klOnsite) {
-      window._klOnsite = window._klOnsite || [];
-      window._klOnsite.push(['openForm', 'SDqh4i']);
-    }
-  }, [isPlaybookModalOpen]);
+  const openPlaybookForm = () => {
+    window._klOnsite = window._klOnsite || [];
+    window._klOnsite.push(['openForm', 'SDqh4i']);
+  };
 
   return (
     <Router>
@@ -2241,7 +2237,7 @@ const App = () => {
                         <NavLink to="/consulting" icon={Briefcase} label="Consulting" />
                         <div className="h-6 w-px bg-slate-800 mx-2"></div>
                         <button
-                            onClick={() => setIsPlaybookModalOpen(true)}
+                            onClick={openPlaybookForm}
                             className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-bold rounded-lg transition-colors flex items-center gap-2 shadow-[0_0_15px_rgba(79,70,229,0.3)]"
                         >
                             <Download className="w-4 h-4" /> Get Playbook
@@ -2282,7 +2278,7 @@ const App = () => {
         {/* Main Content Area - Full Width */}
         <main className="w-full">
             <Routes>
-              <Route path="/" element={<HomePage setIsPlaybookModalOpen={setIsPlaybookModalOpen} />} />
+              <Route path="/" element={<HomePage openPlaybookForm={openPlaybookForm} />} />
               <Route path="/library" element={<LibraryPage />} />
               <Route path="/strategies" element={<StrategiesPage />} />
               <Route path="/faq" element={<FAQPage />} />
@@ -2293,28 +2289,6 @@ const App = () => {
         </main>
 
         <Footer />
-      </div>
-
-      {/* Playbook Modal */}
-      <div
-        className={`fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm transition-opacity ${isPlaybookModalOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-        onClick={() => setIsPlaybookModalOpen(false)}
-      >
-        <div
-          className="relative bg-[#020617] rounded-2xl p-8 max-w-md w-full mx-4 border border-slate-800 shadow-2xl"
-          onClick={(e) => e.stopPropagation()}
-        >
-          {/* Close Button */}
-          <button
-            onClick={() => setIsPlaybookModalOpen(false)}
-            className="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors"
-          >
-            <X className="w-6 h-6" />
-          </button>
-
-          {/* Klaviyo Form */}
-          <div className="klaviyo-form-SDqh4i"></div>
-        </div>
       </div>
     </Router>
   );
