@@ -155,15 +155,16 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto px-6">
       <div className="grid md:grid-cols-4 gap-8 mb-12">
         <div className="col-span-1 md:col-span-1">
-           <Link to="/" className="flex items-center gap-2 group mb-4">
-               <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-[0_0_15px_rgba(79,70,229,0.5)]">
-                  S
-              </div>
-              <span className="text-xl font-bold tracking-tight text-white">Sales House</span>
-          </Link>
-          <div className="flex gap-4">
-            <a href="https://www.linkedin.com/in/davidvaran/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors"><Linkedin className="w-5 h-5" /></a>
-          </div>
+           <div className="flex items-center gap-2 mb-3">
+              <Link to="/" className="flex items-center gap-2 group">
+                  <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-[0_0_15px_rgba(79,70,229,0.5)]">
+                     S
+                  </div>
+                  <span className="text-xl font-bold tracking-tight text-white">Sales House</span>
+              </Link>
+              <a href="https://www.linkedin.com/in/davidvaran/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors ml-2"><Linkedin className="w-5 h-5" /></a>
+           </div>
+           <p className="text-sm text-slate-400 max-w-xs">Outbound sales tools, vetted and simplified.</p>
         </div>
 
         <div>
