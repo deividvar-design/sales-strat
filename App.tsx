@@ -153,7 +153,7 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
 const Footer = () => (
   <footer className="bg-slate-950 text-slate-500 py-12 border-t border-slate-800/50">
     <div className="max-w-7xl mx-auto px-6">
-      <div className="grid md:grid-cols-4 gap-8 mb-12">
+      <div className="grid md:grid-cols-3 gap-8 mb-12">
         <div className="col-span-1 md:col-span-1">
            <div className="flex items-center gap-2 mb-3">
               <Link to="/" className="flex items-center gap-2 group">
@@ -184,12 +184,6 @@ const Footer = () => (
             <li><Link to="/privacy" className="hover:text-indigo-400 transition-colors">Privacy Policy</Link></li>
             <li><Link to="/terms" className="hover:text-indigo-400 transition-colors">Terms of Service</Link></li>
           </ul>
-        </div>
-
-        <div>
-          <h4 className="text-white font-bold mb-4 uppercase text-xs tracking-wider">Weekly Intel</h4>
-          <p className="text-xs mb-3">Get the exact tactics I use to book 40+ demos/mo.</p>
-          <div className="klaviyo-form-RxC3FU"></div>
         </div>
       </div>
 
