@@ -476,8 +476,7 @@ const HomePage = () => {
     <section className="py-20 px-6 bg-[#020617] border-b border-slate-900">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white mb-4">The Philosophy</h2>
-          <p className="text-slate-400">Why I built this instead of another agency.</p>
+          <h2 className="text-3xl font-bold text-white mb-4">Why Outbound?</h2>
         </div>
         
         {/* Condensed Comparison Grid - Always Visible */}
