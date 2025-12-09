@@ -194,12 +194,6 @@ const Footer = () => (
 
       <div className="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
         <p>&copy; 2025 Sales House by David Varan. All rights reserved.</p>
-        <div className="flex items-start gap-2 max-w-lg text-slate-600">
-           <ShieldCheck className="w-4 h-4 shrink-0 mt-0.5" />
-           <p>
-             <strong>Affiliate Disclosure:</strong> Sales House is reader-supported. When you buy through links on my site, I may earn an affiliate commission at no extra cost to you. I only recommend tools I personally use and verify.
-           </p>
-        </div>
       </div>
     </div>
   </footer>
