@@ -53,6 +53,7 @@ import {
 import { TOOLS, STRATEGIES } from './constants';
 import { TeamSize, ToolCategory, Tool } from './types';
 import { ToolCard } from './components/ToolCard';
+import Breadcrumb from './components/Breadcrumb';
 
 // --- Components within App.tsx ---
 
@@ -749,6 +750,7 @@ const LibraryPage = () => {
                <title>Sales Tool Library - Compare 15+ Vetted Sales Engagement & CRM Tools | Sales House</title>
                <meta name="description" content="Compare 15+ vetted sales engagement, CRM, and contact tools. Pricing, pros, cons, and channels—find your perfect sales stack." />
              </Helmet>
+             <Breadcrumb />
              <div className="mb-8">
                  <h1 className="text-3xl font-bold text-white mb-2">Tool Library</h1>
                  <p className="text-slate-400">Curated stack for modern sales teams.</p>
@@ -994,6 +996,9 @@ const StrategiesPage = () => {
               <title>Free Outbound Playbook - Complete Cold Email Setup Guide | Sales House</title>
               <meta name="description" content="Free Notion template with proven cold email sequences, Clay workflows, and deliverability checklists. Built by sales operators." />
             </Helmet>
+            <div className="max-w-7xl mx-auto px-6 pt-6">
+                <Breadcrumb />
+            </div>
             <div className="mb-10 text-center md:text-left px-6 max-w-7xl mx-auto pt-6">
                 <h1 className="text-3xl font-bold text-white mb-4">From Zero to Booked Calendar</h1>
                 <p className="text-xl text-slate-400 max-w-3xl">
@@ -1799,6 +1804,7 @@ const ConsultingPage = () => {
               <title>Sales Operations Consulting - Expert Outbound Strategy & Setup | Sales House</title>
               <meta name="description" content="Expert sales operations consulting. Set up your outbound engine, optimize deliverability, and scale to 40+ demos/month." />
             </Helmet>
+            <Breadcrumb />
             {/* Hero Section */}
             <div className="mb-16 text-center">
                 <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">Fractional Sales Leadership</h1>
@@ -2089,6 +2095,7 @@ const FAQPage = () => {
               <title>FAQ - Cold Email & Sales Stack Questions Answered | Sales House</title>
               <meta name="description" content="Answers to cold email, tool selection, and outbound strategy questions. Learn how to build your sales stack for under $500/mo." />
             </Helmet>
+            <Breadcrumb />
             {/* Header */}
             <div className="text-center mb-16">
                 <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Frequently Asked Questions</h1>
