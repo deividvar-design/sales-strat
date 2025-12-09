@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 // Declare Calendly and Klaviyo on window object
 declare global {
@@ -204,6 +205,10 @@ const HomePage = ({ setIsPlaybookModalOpen }: { setIsPlaybookModalOpen: (open: b
 
   return (
   <div className="flex flex-col">
+    <Helmet>
+      <title>Sales House - Outbound Sales Stack That Fills Your Calendar | Book 40+ Demos/Month</title>
+      <meta name="description" content="Curated outbound sales tools used by 500+ founders. Build your cold email engine with Clay, Reply.io & more. Start booking 40+ demos/month." />
+    </Helmet>
     {/* Hero Section - The Outcome Architecture (Concept 1) */}
     <section className="relative bg-[#020617] text-white pt-24 pb-20 px-6 overflow-hidden border-b border-slate-900">
         <div className="absolute top-0 right-0 -mt-20 -mr-20 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none"></div>
@@ -740,6 +745,10 @@ const LibraryPage = () => {
 
     return (
         <div className="p-6 max-w-7xl mx-auto min-h-screen bg-[#020617]">
+             <Helmet>
+               <title>Sales Tool Library - Compare 15+ Vetted Sales Engagement & CRM Tools | Sales House</title>
+               <meta name="description" content="Compare 15+ vetted sales engagement, CRM, and contact tools. Pricing, pros, cons, and channels—find your perfect sales stack." />
+             </Helmet>
              <div className="mb-8">
                  <h1 className="text-3xl font-bold text-white mb-2">Tool Library</h1>
                  <p className="text-slate-400">Curated stack for modern sales teams.</p>
@@ -981,6 +990,10 @@ const StrategiesPage = () => {
 
     return (
         <div className="bg-[#020617] min-h-screen">
+            <Helmet>
+              <title>Free Outbound Playbook - Complete Cold Email Setup Guide | Sales House</title>
+              <meta name="description" content="Free Notion template with proven cold email sequences, Clay workflows, and deliverability checklists. Built by sales operators." />
+            </Helmet>
             <div className="mb-10 text-center md:text-left px-6 max-w-7xl mx-auto pt-6">
                 <h1 className="text-3xl font-bold text-white mb-4">From Zero to Booked Calendar</h1>
                 <p className="text-xl text-slate-400 max-w-3xl">
@@ -1782,6 +1795,10 @@ const TermsOfServicePage = () => {
 const ConsultingPage = () => {
     return (
         <div className="p-6 max-w-6xl mx-auto bg-[#020617] min-h-screen">
+            <Helmet>
+              <title>Sales Operations Consulting - Expert Outbound Strategy & Setup | Sales House</title>
+              <meta name="description" content="Expert sales operations consulting. Set up your outbound engine, optimize deliverability, and scale to 40+ demos/month." />
+            </Helmet>
             {/* Hero Section */}
             <div className="mb-16 text-center">
                 <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">Fractional Sales Leadership</h1>
@@ -2068,6 +2085,10 @@ const ConsultingPage = () => {
 const FAQPage = () => {
     return (
         <div className="max-w-4xl mx-auto px-6 py-16">
+            <Helmet>
+              <title>FAQ - Cold Email & Sales Stack Questions Answered | Sales House</title>
+              <meta name="description" content="Answers to cold email, tool selection, and outbound strategy questions. Learn how to build your sales stack for under $500/mo." />
+            </Helmet>
             {/* Header */}
             <div className="text-center mb-16">
                 <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Frequently Asked Questions</h1>
