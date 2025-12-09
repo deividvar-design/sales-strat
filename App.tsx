@@ -2210,12 +2210,12 @@ const App = () => {
                         <NavLink to="/library" icon={Library} label="Library" />
                         <NavLink to="/strategies" icon={Layers} label="Playbook" />
                         <NavLink to="/consulting" icon={Briefcase} label="Consulting" />
-                        <div className="h-6 w-px bg-slate-800 mx-2"></div>
-                        <a 
-                            href="https://tally.so/r/mDOGeq" 
-                            target="_blank" 
+                        <div className="h-6 w-px bg-slate-800 mx-2 hidden"></div>
+                        <a
+                            href="https://tally.so/r/mDOGeq"
+                            target="_blank"
                             rel="noreferrer"
-                            className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-bold rounded-lg transition-colors flex items-center gap-2 shadow-[0_0_15px_rgba(79,70,229,0.3)]"
+                            className="hidden px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-bold rounded-lg transition-colors items-center gap-2 shadow-[0_0_15px_rgba(79,70,229,0.3)]"
                         >
                             <Download className="w-4 h-4" /> Get Playbook
                         </a>
