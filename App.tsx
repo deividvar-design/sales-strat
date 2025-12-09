@@ -371,7 +371,7 @@ const HomePage = ({ setIsPlaybookModalOpen }: { setIsPlaybookModalOpen: (open: b
                         { name: 'Apollo', cost: '$0 - $119', period: '/mo', icon: Target },
                     ].map((item, idx) => (
                         <div key={idx} className="p-6 flex flex-col items-center text-center hover:bg-slate-800/50 transition-colors group">
-                            <div className="mb-4 p-3 bg-slate-800 rounded-full text-slate-400 group-hover:text-indigo-400 group-hover:bg-indigo-500/10 transition-colors">
+                            <div className="mb-4 p-3 bg-slate-800 rounded-full text-slate-400 group-hover:text-indigo-400 group-hover:bg-indigo-500/10 transition-colors" aria-hidden="true">
                                 <item.icon className="w-6 h-6" />
                             </div>
                             <h3 className="text-white font-bold mb-1">{item.name}</h3>
@@ -715,7 +715,7 @@ const HomePage = ({ setIsPlaybookModalOpen }: { setIsPlaybookModalOpen: (open: b
             <div className="w-full md:w-1/3 relative z-10">
                  <div className="bg-slate-900/50 p-1 rounded-xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 border border-white/10 backdrop-blur-sm">
                     <div className="bg-slate-950 border border-slate-800 rounded-lg p-6 min-h-[200px] flex flex-col items-center justify-center text-slate-500">
-                        <FileText className="w-12 h-12 mb-2 text-indigo-400" />
+                        <FileText className="w-12 h-12 mb-2 text-indigo-400" aria-hidden="true" />
                         <span className="font-mono text-xs text-slate-400">Notion</span>
                     </div>
                  </div>
