@@ -143,7 +143,7 @@ export const TOOLS: Tool[] = [
     description: 'A powerhouse for B2B contact data. The best bang-for-buck database for broad targeting.',
     bestFor: [TeamSize.SOLOPRENEUR, TeamSize.SMALL_TEAM, TeamSize.MID_SCALE],
     pricingTier: 'Low',
-    website: 'https://www.apollo.io',
+    website: 'https://get.apollo.io/scaleoutbound',
     pros: ['Massive database', 'Very affordable', 'Chrome extension is great', 'Includes sequencing'],
     cons: ['Data accuracy varies', 'Support can be slow']
   },
