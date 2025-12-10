@@ -117,7 +117,7 @@ export const TOOLS: Tool[] = [
     description: 'Cold email platform built for unlimited scale. Warm-up included, simple UI, extensive mailbox management.',
     bestFor: [TeamSize.SOLOPRENEUR, TeamSize.SMALL_TEAM],
     pricingTier: 'Low',
-    website: 'https://www.instantly.ai',
+    website: 'https://instantly.ai/?via=outboundsales',
     pros: ['Unlimited email accounts', 'Built-in warm-up', 'Simple interface', 'Affordable pricing', 'Fast campaign setup'],
     cons: ['Email only (no multichannel)', 'Basic reporting', 'Limited personalization features'],
     channels: ['Emails']
