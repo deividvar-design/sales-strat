@@ -221,11 +221,11 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                 {/* Left Column: Copy */}
                 <div className="text-left">
                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1] text-white">
-                        The Tools I Use to Run Outbound at Scale
+                        Sales Stack Library with Playbook
                     </h1>
 
                     <p className="text-xl text-slate-400 max-w-lg mb-8 leading-relaxed font-light">
-                        Here's the exact stack I use to scale outbound for B2B SaaS companies and consistently generate pipeline - whether you're a founder, solopreneur, or running sales alone.
+                        Unbiased reviews of sales tools plus a free step-by-step playbook. Find your stack, follow the guide, fill your calendar.
                     </p>
                     
                     <div className="flex flex-col sm:flex-row items-start gap-4">
