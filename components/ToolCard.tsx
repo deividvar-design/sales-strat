@@ -32,6 +32,8 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, showChannels = true })
       case 'clay': return Database;
       case 'reply': return Megaphone;
       case 'mailforge': return ShieldCheck;
+      case 'infraforge': return ShieldCheck;
+      case 'mailreef': return ShieldCheck;
       case 'salesforge': return Zap;
       case 'outreach': return Target;
       case 'hubspot': return LayoutDashboard;

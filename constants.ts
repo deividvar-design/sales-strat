@@ -36,7 +36,7 @@ export const TOOLS: Tool[] = [
     id: 'mailforge',
     name: 'Mailforge.ai',
     category: ToolCategory.INFRASTRUCTURE,
-    description: 'Infrastructure for cold email. Warms up inboxes and auto-rotates domains to maintain deliverability.',
+    description: 'Infrastructure for cold email. Warms up inboxes and auto-rotates domains to maintain deliverability. $29/mo',
     bestFor: [TeamSize.SOLOPRENEUR, TeamSize.SMALL_TEAM],
     pricingTier: 'Low',
     website: 'https://www.mailforge.ai/?via=outboundsales',
@@ -44,6 +44,32 @@ export const TOOLS: Tool[] = [
     cons: ['DNS setup required'],
     badge: 'Recommended',
     useCaseTags: ['Budget'],
+    learningCurve: 'Beginner'
+  },
+  {
+    id: 'infraforge',
+    name: 'Infraforge',
+    category: ToolCategory.INFRASTRUCTURE,
+    description: 'Email infrastructure platform for deliverability and domain management.',
+    bestFor: [TeamSize.SMALL_TEAM, TeamSize.MID_SCALE],
+    pricingTier: 'Low',
+    website: 'https://www.infraforge.io',
+    pros: ['Domain management', 'Deliverability monitoring', 'Easy setup', 'Reliable infrastructure'],
+    cons: ['Limited advanced features', 'Newer platform'],
+    useCaseTags: ['Infrastructure'],
+    learningCurve: 'Intermediate'
+  },
+  {
+    id: 'mailreef',
+    name: 'Mailreef',
+    category: ToolCategory.INFRASTRUCTURE,
+    description: 'Simple email infrastructure for cold outreach. Easy domain setup and warm-up.',
+    bestFor: [TeamSize.SMALL_TEAM, TeamSize.MID_SCALE],
+    pricingTier: 'Low',
+    website: 'https://www.mailreef.com',
+    pros: ['Beginner-friendly', 'Quick setup', 'Affordable', 'Good support'],
+    cons: ['Basic features only', 'Limited scalability'],
+    useCaseTags: ['Infrastructure', 'Beginner-Friendly'],
     learningCurve: 'Beginner'
   },
   {
