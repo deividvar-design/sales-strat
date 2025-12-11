@@ -108,6 +108,20 @@ export const TOOLS: Tool[] = [
 
   // --- SALES ENGAGEMENT ---
   {
+    id: 'outreach',
+    name: 'Outreach.io',
+    category: ToolCategory.SALES_ENGAGEMENT,
+    description: 'Enterprise sales engagement platform. Powerful workflows, analytics, and integrations for large teams. Wants to be Salesforce, but isn\'t.',
+    bestFor: [TeamSize.MID_SCALE, TeamSize.ENTERPRISE],
+    pricingTier: 'High',
+    website: 'https://www.outreach.io',
+    pros: ['Enterprise-grade features', 'Advanced analytics', 'Robust workflows', 'Deep CRM integration', 'Team collaboration'],
+    cons: ['Very expensive', 'Complex setup', 'Steep learning curve', 'Overkill for small teams'],
+    channels: ['Emails', 'Calls', 'LinkedIn', 'SMS'],
+    useCaseTags: ['Outreach', 'Multichannel', 'Enterprise', 'AI-Powered'],
+    learningCurve: 'Expert'
+  },
+  {
     id: 'mixmax',
     name: 'Mixmax',
     category: ToolCategory.SALES_ENGAGEMENT,
