@@ -12,7 +12,10 @@ export const TOOLS: Tool[] = [
     pricingTier: 'Medium',
     website: 'https://clay.com?via=c74a80',
     pros: ['Replaces manual scraping', 'Waterfall enrichment', 'AI research agent', 'Deep personalized signals'],
-    cons: ['Steep learning curve']
+    cons: ['Steep learning curve'],
+    badge: 'Recommended',
+    useCaseTags: ['Data-Driven', 'AI-Powered'],
+    learningCurve: 'Expert'
   },
   {
     id: 'reply',
@@ -24,7 +27,10 @@ export const TOOLS: Tool[] = [
     website: 'https://get.reply.io/scaleoutbound',
     pros: ['Native LinkedIn automation', 'Easy A/B testing', 'Robust reporting', 'Cloud calling included'],
     cons: ['UI can be dense'],
-    channels: ['Calls', 'Emails', 'LinkedIn', 'InMail', 'WhatsApp']
+    channels: ['Calls', 'Emails', 'LinkedIn', 'InMail', 'WhatsApp'],
+    badge: 'Recommended',
+    useCaseTags: ['Multichannel', 'AI-Powered'],
+    learningCurve: 'Intermediate'
   },
   {
     id: 'mailforge',
@@ -35,7 +41,10 @@ export const TOOLS: Tool[] = [
     pricingTier: 'Low',
     website: 'https://www.mailforge.ai/?via=outboundsales',
     pros: ['Auto-rotates domains', 'Prevents spam landing', 'Scalable infrastructure', 'Low maintenance'],
-    cons: ['DNS setup required']
+    cons: ['DNS setup required'],
+    badge: 'Recommended',
+    useCaseTags: ['Budget'],
+    learningCurve: 'Beginner'
   },
   {
     id: 'salesforge',
@@ -47,7 +56,10 @@ export const TOOLS: Tool[] = [
     website: 'https://salesforge.ai/?via=outboundsales',
     pros: ['AI personalization', 'Built-in warm-up', 'Multi-language support', 'Inbox rotation'],
     cons: ['Email only (no native LinkedIn)'],
-    channels: ['Emails', 'LinkedIn']
+    channels: ['Emails', 'LinkedIn'],
+    badge: 'Best Value',
+    useCaseTags: ['AI-Powered', 'Budget'],
+    learningCurve: 'Beginner'
   },
 
   // --- CRM ---
@@ -56,11 +68,14 @@ export const TOOLS: Tool[] = [
     name: 'HubSpot Sales Hub',
     category: ToolCategory.CRM,
     description: 'All-in-one CRM platform. Great entry point that scales well up to mid-market.',
-    bestFor: [TeamSize.SOLOPRENEUR, TeamSize.SMALL_TEAM, TeamSize.MID_SCALE],
+    bestFor: [TeamSize.SOLOPRENEUR, TeamSize.SMALL_TEAM, TeamSize.MID_SCALE, TeamSize.ENTERPRISE],
     pricingTier: 'Medium',
     website: 'https://www.hubspot.com',
     pros: ['Free tier available', 'Excellent UI/UX', 'Marketing integration', 'Huge ecosystem'],
-    cons: ['Enterprise tiers are expensive']
+    cons: ['Enterprise tiers are expensive'],
+    badge: 'Recommended',
+    useCaseTags: ['All-in-One', 'Beginner-Friendly'],
+    learningCurve: 'Intermediate'
   },
   {
     id: 'pipedrive',
@@ -71,18 +86,24 @@ export const TOOLS: Tool[] = [
     pricingTier: 'Low',
     website: 'https://www.pipedrive.com',
     pros: ['Visual pipeline view', 'Very easy to use', 'Affordable', 'Strong mobile app'],
-    cons: ['Limited marketing features', 'Reporting is basic']
+    cons: ['Limited marketing features', 'Reporting is basic'],
+    badge: 'Best Value',
+    useCaseTags: ['Beginner-Friendly', 'Budget'],
+    learningCurve: 'Beginner'
   },
   {
     id: 'salesforce',
     name: 'Salesforce Sales Cloud',
     category: ToolCategory.CRM,
-    description: 'The industry standard CRM. Highly customizable but requires admin overhead.',
-    bestFor: [TeamSize.MID_SCALE],
+    description: 'The industry standard CRM. Highly customizable but requires admin overhead. Only buy if you\'re thinking of Sales Ops in the future, or sales team is above 20',
+    bestFor: [TeamSize.MID_SCALE, TeamSize.ENTERPRISE],
     pricingTier: 'High',
     website: 'https://www.salesforce.com',
     pros: ['Infinite customization', 'Standard for enterprise', 'Advanced reporting'],
-    cons: ['Steep learning curve', 'Expensive', 'Requires dedicated admin']
+    cons: ['Steep learning curve', 'Expensive', 'Requires dedicated admin'],
+    badge: 'Enterprise',
+    useCaseTags: ['Industry Standard'],
+    learningCurve: 'Expert'
   },
 
   // --- SALES ENGAGEMENT ---
@@ -96,7 +117,9 @@ export const TOOLS: Tool[] = [
     website: 'https://www.mixmax.com',
     pros: ['Lives in Gmail', 'One-click scheduling', 'Email polls/surveys', 'Simple sequences'],
     cons: ['Gmail only', 'Limited reporting'],
-    channels: ['Emails']
+    channels: ['Emails'],
+    useCaseTags: ['Beginner-Friendly'],
+    learningCurve: 'Beginner'
   },
   {
     id: 'lemlist',
@@ -108,7 +131,9 @@ export const TOOLS: Tool[] = [
     website: 'https://www.lemlist.com',
     pros: ['Dynamic image personalization', 'Video prospecting', 'Built-in email warm-up', 'LinkedIn automation'],
     cons: ['Limited multichannel features', 'Reporting could be more robust'],
-    channels: ['Calls', 'Emails', 'LinkedIn', 'WhatsApp']
+    channels: ['Calls', 'Emails', 'LinkedIn', 'WhatsApp'],
+    useCaseTags: ['Creative', 'Multichannel', 'AI-Powered'],
+    learningCurve: 'Intermediate'
   },
   {
     id: 'instantly',
@@ -120,7 +145,10 @@ export const TOOLS: Tool[] = [
     website: 'https://instantly.ai/?via=outboundsales',
     pros: ['Unlimited email accounts', 'Built-in warm-up', 'Simple interface', 'Affordable pricing', 'Fast campaign setup'],
     cons: ['Email only (no multichannel)', 'Basic reporting', 'Limited personalization features'],
-    channels: ['Emails']
+    channels: ['Emails'],
+    badge: 'Best Value',
+    useCaseTags: ['Budget', 'AI-Powered'],
+    learningCurve: 'Beginner'
   },
   {
     id: 'dripify',
@@ -132,7 +160,10 @@ export const TOOLS: Tool[] = [
     website: 'https://www.dripify.io',
     pros: ['Affordable LinkedIn automation', 'Advanced drip campaigns', 'Team collaboration', 'Safety features to avoid bans'],
     cons: ['LinkedIn only', 'Requires LinkedIn Premium', 'No email integration'],
-    channels: ['Emails', 'LinkedIn']
+    channels: ['Emails', 'LinkedIn'],
+    badge: 'Best Value',
+    useCaseTags: ['Specialized', 'Budget'],
+    learningCurve: 'Beginner'
   },
 
   // --- CONTACTS ---
@@ -145,7 +176,10 @@ export const TOOLS: Tool[] = [
     pricingTier: 'Low',
     website: 'https://get.apollo.io/scaleoutbound',
     pros: ['Massive database', 'Very affordable', 'Chrome extension is great', 'Includes sequencing'],
-    cons: ['Data accuracy varies', 'Support can be slow']
+    cons: ['Data accuracy varies', 'Support can be slow'],
+    badge: 'Best Value',
+    useCaseTags: ['Budget'],
+    learningCurve: 'Beginner'
   },
   {
     id: 'lusha',
@@ -156,29 +190,38 @@ export const TOOLS: Tool[] = [
     pricingTier: 'Medium',
     website: 'https://www.lusha.com',
     pros: ['High mobile accuracy', 'Easy to use extension', 'CCPA/GDPR compliant'],
-    cons: ['Credit limits can be tight', 'Less comprehensive than ZoomInfo']
+    cons: ['Credit limits can be tight', 'Less comprehensive than ZoomInfo'],
+    badge: 'Specialized',
+    useCaseTags: ['Data Quality'],
+    learningCurve: 'Beginner'
   },
   {
     id: 'zoominfo',
     name: 'ZoomInfo',
     category: ToolCategory.CONTACTS,
     description: 'The market leader in B2B intelligence. Deepest data, org charts, and intent signals.',
-    bestFor: [TeamSize.MID_SCALE],
+    bestFor: [TeamSize.MID_SCALE, TeamSize.ENTERPRISE],
     pricingTier: 'High',
-    website: 'https://www.zoominfo.com',
+    website: 'https://try.zoominfo.com/outboundsales',
     pros: ['Unmatched data depth', 'Intent data', 'Org charts', 'Integrations'],
-    cons: ['Very expensive', 'Annual contracts', 'Aggressive sales team']
+    cons: ['Very expensive', 'Annual contracts', 'Aggressive sales team'],
+    badge: 'Enterprise',
+    useCaseTags: ['Data-Driven'],
+    learningCurve: 'Intermediate'
   },
   {
     id: 'cognism',
     name: 'Cognism',
     category: ToolCategory.CONTACTS,
     description: 'Global data leader with a focus on EMEA and mobile number compliance.',
-    bestFor: [TeamSize.SMALL_TEAM, TeamSize.MID_SCALE],
+    bestFor: [TeamSize.SMALL_TEAM, TeamSize.MID_SCALE, TeamSize.ENTERPRISE],
     pricingTier: 'High',
     website: 'https://www.cognism.com',
     pros: ['Best for EMEA data', 'Phone-verified mobiles', 'GDPR compliant', 'Intent data'],
-    cons: ['Premium pricing', 'Platform UI can be slow']
+    cons: ['Premium pricing', 'Platform UI can be slow'],
+    badge: 'Specialized',
+    useCaseTags: ['Data Quality'],
+    learningCurve: 'Intermediate'
   },
 
   // --- SCHEDULING ---
@@ -191,7 +234,9 @@ export const TOOLS: Tool[] = [
     pricingTier: 'Low',
     website: 'https://www.calendly.com',
     pros: ['Ubiquitous and trusted', 'Simple to set up', 'Workflows for reminders'],
-    cons: ['Basic routing features', 'Customization limits']
+    cons: ['Basic routing features', 'Customization limits'],
+    useCaseTags: ['Beginner-Friendly'],
+    learningCurve: 'Beginner'
   }
 ];
 

@@ -771,7 +771,6 @@ const LibraryPage = () => {
                     <Star className="w-6 h-6 text-indigo-400" />
                     <div>
                         <h2 className="text-2xl font-bold text-white">My Current Favourite Sales Stack</h2>
-                        <p className="text-slate-400 text-sm mt-1">The exact combination behind 30k+ monthly send volume</p>
                     </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

@@ -2,7 +2,8 @@
 export enum TeamSize {
   SOLOPRENEUR = 'Founders',
   SMALL_TEAM = 'Small Team (2-10)',
-  MID_SCALE = 'Mid-Scale (10-20)'
+  MID_SCALE = 'Mid-Scale (10-20)',
+  ENTERPRISE = 'Enterprise (20+)'
 }
 
 export enum ToolCategory {
@@ -24,6 +25,9 @@ export interface Tool {
   pros: string[];
   cons: string[];
   channels?: string[];
+  badge?: 'Recommended' | 'Best Value' | 'Specialized' | 'Enterprise';
+  useCaseTags?: string[];
+  learningCurve: 'Beginner' | 'Intermediate' | 'Expert';
 }
 
 export interface StrategyGuide {

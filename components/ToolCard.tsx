@@ -1,21 +1,22 @@
 
 import React from 'react';
 import { Tool, ToolCategory } from '../types';
-import { 
-  ExternalLink, 
-  Database, 
-  Megaphone, 
-  ShieldCheck, 
-  Briefcase, 
-  TrendingUp, 
-  Mail, 
-  Target, 
-  Phone, 
-  Search, 
-  Globe, 
+import {
+  ExternalLink,
+  Database,
+  Megaphone,
+  ShieldCheck,
+  Briefcase,
+  TrendingUp,
+  Mail,
+  Target,
+  Phone,
+  Search,
+  Globe,
   Calendar,
   Zap,
-  LayoutDashboard
+  LayoutDashboard,
+  Star
 } from 'lucide-react';
 
 interface ToolCardProps {
@@ -64,7 +65,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, showChannels = true })
 
   return (
     <div className={`rounded-xl border shadow-lg hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300 flex flex-col h-full overflow-hidden group relative bg-slate-900 ${isCoreStack ? 'border-indigo-500/50 shadow-indigo-500/20' : 'border-slate-800'}`}>
-      
+
       <div className="p-6 flex-1 flex flex-col">
         <div className="flex items-start gap-4 mb-4">
           {/* Icon Box */}
@@ -73,19 +74,61 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, showChannels = true })
           </div>
 
           <div className="flex-1 pr-6">
+            {/* Recommended Badge with Star */}
+            {isCoreStack && (
+              <div className="flex items-center gap-1.5 mb-2">
+                <Star className="w-3.5 h-3.5 fill-indigo-400 text-indigo-400" />
+                <span className="text-xs font-bold text-indigo-400 uppercase tracking-wider">Recommended</span>
+              </div>
+            )}
             <h3 className="text-xl font-bold text-white leading-tight group-hover:text-indigo-400 transition-colors">{tool.name}</h3>
              {/* Custom Category Label */}
             <p className="text-sm font-medium text-slate-500 mt-1">{getCategoryLabel()}</p>
+            {/* Learning Curve - Separate Line */}
+            <span className={`inline-block text-xs font-semibold uppercase tracking-wide mt-1 ${
+              tool.learningCurve === 'Beginner' ? 'text-green-400' :
+              tool.learningCurve === 'Intermediate' ? 'text-yellow-400' :
+              'text-orange-400'
+            }`}>
+              {tool.learningCurve}
+            </span>
           </div>
         </div>
         
-        <p className="text-slate-400 text-sm mb-4 leading-relaxed line-clamp-3">
+        <p className="text-slate-400 text-sm leading-relaxed line-clamp-5">
           {tool.description}
         </p>
 
+        {/* Use Case Tags - Bottom Aligned */}
+        {tool.useCaseTags && tool.useCaseTags.length > 0 && (
+          <div className="mt-auto pt-3">
+            <div className="flex flex-wrap gap-1.5">
+              {tool.useCaseTags.map((tag, idx) => (
+                <span key={idx} className="px-2.5 py-1 bg-indigo-500/10 border border-indigo-500/20 rounded-md text-xs text-indigo-300 font-semibold">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Team Size Badges */}
+        {tool.bestFor && tool.bestFor.length > 0 && (
+          <div className={`pt-3 ${!tool.useCaseTags || tool.useCaseTags.length === 0 ? 'mt-auto' : ''}`}>
+            <p className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Best For</p>
+            <div className="flex flex-wrap gap-1.5">
+              {tool.bestFor.map((size, idx) => (
+                <span key={idx} className="px-2 py-0.5 bg-slate-800/50 border border-slate-700/50 rounded text-xs text-slate-400 font-medium">
+                  {size}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Channels Display */}
         {showChannels && tool.channels && tool.channels.length > 0 && (
-          <div className="mt-auto pt-3 border-t border-slate-800/50">
+          <div className={`pt-3 border-t border-slate-800/50 ${!tool.useCaseTags || tool.useCaseTags.length === 0 ? 'mt-auto' : ''}`}>
             <p className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Channels</p>
             <div className="flex flex-wrap gap-1.5">
               {tool.channels.map((channel, idx) => (
