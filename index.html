@@ -45,6 +45,9 @@
       }
     </script>
 
+    <!-- Preconnect to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script async type='text/javascript' src='https://static.klaviyo.com/onsite/js/TXidQt/klaviyo.js?company_id=TXidQt'></script>
     <script type="text/javascript">
@@ -176,9 +179,8 @@
       }
     </style>
 
-    <!-- Cookie Consent -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css">
-    <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.umd.js"></script>
+    <!-- Cookie Consent (Async loaded for better performance) -->
+    <!-- Scripts and initialization moved to bottom of body -->
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -368,83 +370,97 @@
     <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 
-  <!-- Cookie Consent Configuration -->
+  <!-- Cookie Consent - Async Loaded -->
   <script>
+    // Load cookie consent after page loads to avoid blocking render
     window.addEventListener('load', function() {
-      if (window.CookieConsent) {
-        window.CookieConsent.run({
-          guiOptions: {
-            consentModal: {
-              layout: "box inline",
-              position: "bottom left",
-              equalWeightButtons: true,
-              flipButtons: false
+      // Load CSS
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css';
+      document.head.appendChild(link);
+
+      // Load JS and initialize
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.umd.js';
+      script.onload = function() {
+        // Initialize cookie consent after script loads
+        if (window.CookieConsent) {
+          window.CookieConsent.run({
+            guiOptions: {
+              consentModal: {
+                layout: "box inline",
+                position: "bottom left",
+                equalWeightButtons: true,
+                flipButtons: false
+              },
+              preferencesModal: {
+                layout: "box",
+                position: "right",
+                equalWeightButtons: true,
+                flipButtons: false
+              }
             },
-            preferencesModal: {
-              layout: "box",
-              position: "right",
-              equalWeightButtons: true,
-              flipButtons: false
-            }
-          },
-          categories: {
-            necessary: {
-              readOnly: true,
-              enabled: true
+            categories: {
+              necessary: {
+                readOnly: true,
+                enabled: true
+              },
+              analytics: {},
+              functionality: {}
             },
-            analytics: {},
-            functionality: {}
-          },
-          language: {
-            default: "en",
-            translations: {
-              en: {
-                consentModal: {
-                  title: "We use cookies",
-                  description: "We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking 'Accept all', you consent to our use of cookies.",
-                  acceptAllBtn: "Accept all",
-                  acceptNecessaryBtn: "Reject all",
-                  showPreferencesBtn: "Manage preferences",
-                  footer: '<a href="#/privacy">Privacy Policy</a>'
-                },
-                preferencesModal: {
-                  title: "Cookie Preferences",
-                  acceptAllBtn: "Accept all",
-                  acceptNecessaryBtn: "Reject all",
-                  savePreferencesBtn: "Save preferences",
-                  closeIconLabel: "Close",
-                  serviceCounterLabel: "Service|Services",
-                  sections: [
-                    {
-                      title: "Cookie Usage",
-                      description: "We use cookies to optimize your experience on our site. You can customize your preferences below."
-                    },
-                    {
-                      title: "Strictly Necessary Cookies <span class=\"pm__badge\">Always Enabled</span>",
-                      description: "These cookies are essential for the website to function properly. They cannot be disabled.",
-                      linkedCategory: "necessary"
-                    },
-                    {
-                      title: "Analytics Cookies",
-                      description: "These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. We use Klaviyo for email marketing analytics.",
-                      linkedCategory: "analytics"
-                    },
-                    {
-                      title: "Functionality Cookies",
-                      description: "These cookies enable enhanced functionality and personalization, such as scheduling meetings through Calendly.",
-                      linkedCategory: "functionality"
-                    },
-                    {
-                      title: "More information",
-                      description: 'For more details about our cookie policy, please visit our <a class="cc__link" href="#/privacy">Privacy Policy</a>.'
-                    }
-                  ]
+            language: {
+              default: "en",
+              translations: {
+                en: {
+                  consentModal: {
+                    title: "We use cookies",
+                    description: "We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking 'Accept all', you consent to our use of cookies.",
+                    acceptAllBtn: "Accept all",
+                    acceptNecessaryBtn: "Reject all",
+                    showPreferencesBtn: "Manage preferences",
+                    footer: '<a href="#/privacy">Privacy Policy</a>'
+                  },
+                  preferencesModal: {
+                    title: "Cookie Preferences",
+                    acceptAllBtn: "Accept all",
+                    acceptNecessaryBtn: "Reject all",
+                    savePreferencesBtn: "Save preferences",
+                    closeIconLabel: "Close",
+                    serviceCounterLabel: "Service|Services",
+                    sections: [
+                      {
+                        title: "Cookie Usage",
+                        description: "We use cookies to optimize your experience on our site. You can customize your preferences below."
+                      },
+                      {
+                        title: "Strictly Necessary Cookies <span class=\"pm__badge\">Always Enabled</span>",
+                        description: "These cookies are essential for the website to function properly. They cannot be disabled.",
+                        linkedCategory: "necessary"
+                      },
+                      {
+                        title: "Analytics Cookies",
+                        description: "These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. We use Klaviyo for email marketing analytics.",
+                        linkedCategory: "analytics"
+                      },
+                      {
+                        title: "Functionality Cookies",
+                        description: "These cookies enable enhanced functionality and personalization, such as scheduling meetings through Calendly.",
+                        linkedCategory: "functionality"
+                      },
+                      {
+                        title: "More information",
+                        description: 'For more details about our cookie policy, please visit our <a class="cc__link" href="#/privacy">Privacy Policy</a>.'
+                      }
+                    ]
+                  }
                 }
               }
             }
-          }
-        });
-      }
+          });
+        }
+      };
+      document.body.appendChild(script);
     });
   </script>
 </body>
