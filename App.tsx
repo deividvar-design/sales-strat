@@ -170,22 +170,22 @@ const Footer = () => (
   <footer className="bg-slate-950 text-slate-500 py-12 border-t border-slate-800/50">
     <div className="max-w-7xl mx-auto px-6">
       <div className="grid md:grid-cols-3 gap-8 mb-12">
-        <div className="col-span-1 md:col-span-1">
-           <Link to="/" className="flex items-center gap-2 group mb-3">
-               <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-[0_0_15px_rgba(79,70,229,0.5)]">
-                  S
-              </div>
-              <span className="text-xl font-bold tracking-tight text-white">Sales House</span>
+        <div>
+          <Link to="/" className="flex items-center gap-2 group mb-3">
+            <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-[0_0_15px_rgba(79,70,229,0.5)]">
+              S
+            </div>
+            <span className="text-xl font-bold tracking-tight text-white">Sales House</span>
           </Link>
-           <p className="text-sm text-slate-400 max-w-xs mb-3">Build your outbound engine. Simpler than you think. No agencies needed.</p>
-           <a href="mailto:david@saleshousestack.com" className="text-sm text-slate-400 hover:text-indigo-400 transition-colors flex items-center gap-2 mb-3">
-              <Mail className="w-4 h-4" />
-              david@saleshousestack.com
-           </a>
-           <a href="https://www.linkedin.com/in/davidvaran/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-indigo-400 transition-colors inline-flex items-center gap-2">
-              <Linkedin className="w-5 h-5" />
-              <span className="text-sm">LinkedIn</span>
-           </a>
+          <p className="text-sm text-slate-400 max-w-xs mb-3">Build your outbound engine. Simpler than you think. No agencies needed.</p>
+          <a href="mailto:david@saleshousestack.com" className="text-sm text-slate-400 hover:text-indigo-400 transition-colors flex items-center gap-2 mb-3">
+            <Mail className="w-4 h-4" />
+            david@saleshousestack.com
+          </a>
+          <a href="https://www.linkedin.com/in/davidvaran/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-indigo-400 transition-colors inline-flex items-center gap-2">
+            <Linkedin className="w-5 h-5" />
+            <span className="text-sm">LinkedIn</span>
+          </a>
         </div>
 
         <div>
@@ -194,13 +194,13 @@ const Footer = () => (
             <li><Link to="/library" className="hover:text-indigo-400 transition-colors">Tool Library</Link></li>
             <li><Link to="/strategies" className="hover:text-indigo-400 transition-colors">Playbook</Link></li>
             <li><Link to="/reviews" className="hover:text-indigo-400 transition-colors">Tool Reviews</Link></li>
+            <li><Link to="/comparisons" className="hover:text-indigo-400 transition-colors">Tool Comparisons</Link></li>
           </ul>
         </div>
 
         <div>
           <h4 className="text-white font-bold mb-4 uppercase text-xs tracking-wider">Resources</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:text-indigo-400 transition-colors">Free Outbound Playbook</a></li>
             <li><Link to="/consulting" className="hover:text-indigo-400 transition-colors">Consulting</Link></li>
             <li><Link to="/faq" className="hover:text-indigo-400 transition-colors">FAQ</Link></li>
             <li><Link to="/privacy" className="hover:text-indigo-400 transition-colors">Privacy Policy</Link></li>
@@ -2390,6 +2390,442 @@ const FAQPage = () => {
     );
 };
 
+const ComparisonsListPage = () => {
+  // List of available comparisons
+  const availableComparisons = [
+    {
+      slug: 'pipedrive-hubspot-salesforce',
+      name: 'Pipedrive vs HubSpot vs Salesforce',
+      category: 'CRM',
+      excerpt: 'Which CRM is right for your growth stage? Side-by-side comparison of features, pricing, and best use cases.'
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-[#020617]">
+      <Helmet>
+        <title>Sales Tool Comparisons - Side-by-Side Reviews | Sales House</title>
+        <meta name="description" content="Compare sales tools side-by-side. Clay vs Apollo, Reply vs Instantly, HubSpot vs Salesforce and more. Expert comparisons based on real experience." />
+      </Helmet>
+
+      <div className="max-w-6xl mx-auto px-6 py-16">
+        <Breadcrumb />
+
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Tool Comparisons</h1>
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+            Side-by-side comparisons to help you choose the right tool for your stack
+          </p>
+        </div>
+
+        {/* Available Comparisons (empty for now) */}
+        {availableComparisons.length > 0 && (
+          <div className="grid md:grid-cols-2 gap-6 mb-16">
+            {availableComparisons.map((comparison) => (
+              <Link
+                key={comparison.slug}
+                to={`/comparisons/${comparison.slug}`}
+                className="bg-slate-900/50 border border-slate-800 rounded-xl p-8 hover:border-indigo-500/50 transition-all group"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h2 className="text-2xl font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+                      {comparison.name}
+                    </h2>
+                    <p className="text-sm text-slate-500">{comparison.category}</p>
+                  </div>
+                </div>
+
+                <p className="text-slate-300 leading-relaxed mb-6">
+                  {comparison.excerpt}
+                </p>
+
+                <div className="flex items-center gap-2 text-indigo-400 font-semibold">
+                  Read Comparison
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
+
+        {/* Request Section */}
+        <div className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl p-8 text-center">
+          <h2 className="text-2xl font-bold text-white mb-4">Which comparison would help you most?</h2>
+          <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
+            Let me know which tools you're trying to decide between and I'll prioritize that comparison.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="mailto:david@saleshousestack.com"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-500 transition-all"
+            >
+              <Mail className="w-5 h-5" />
+              Email Me
+            </a>
+            <a
+              href="https://www.linkedin.com/in/davidvaran/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 text-white font-semibold rounded-lg border border-slate-700 hover:bg-slate-700 transition-all"
+            >
+              <Linkedin className="w-5 h-5" />
+              Message on LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const CRMComparisonPage = () => {
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Pipedrive vs HubSpot vs Salesforce: CRM Comparison 2025",
+    "description": "Compare Pipedrive, HubSpot, and Salesforce CRMs. Which is best for your growth stage? Real comparison of features, pricing, setup time, and use cases.",
+    "image": "https://saleshousestack.com/og-image.png",
+    "author": {
+      "@type": "Person",
+      "name": "David Varan",
+      "url": "https://www.linkedin.com/in/davidvaran/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sales House - Tools, Reviews, Playbooks for Sales Pros",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://saleshousestack.com/logo.png"
+      }
+    },
+    "datePublished": "2025-12-13",
+    "dateModified": "2025-12-13"
+  };
+
+  return (
+    <div className="min-h-screen bg-[#020617]">
+      <Helmet>
+        <title>Pipedrive vs HubSpot vs Salesforce: CRM Comparison 2025 | Sales House</title>
+        <meta name="description" content="Compare Pipedrive, HubSpot, and Salesforce CRMs. Which is best for your growth stage? Real comparison of features, pricing, setup time, and use cases." />
+        <meta name="keywords" content="Pipedrive vs HubSpot, HubSpot vs Salesforce, Pipedrive vs Salesforce, CRM comparison, best CRM for startups, CRM for sales teams" />
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchema)}
+        </script>
+      </Helmet>
+
+      <div className="max-w-5xl mx-auto px-6 py-16">
+        <Breadcrumb />
+
+        {/* Header */}
+        <div className="mb-12">
+          <div className="mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">Pipedrive vs HubSpot vs Salesforce</h1>
+            <p className="text-slate-400 mb-3">Which CRM is right for your growth stage?</p>
+            <p className="text-sm text-slate-500">Last updated December 2025</p>
+          </div>
+        </div>
+
+        {/* TL;DR Box */}
+        <div className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl p-6 mb-12">
+          <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+            <span className="text-indigo-400">⚡</span>
+            TL;DR - Quick Recommendation
+          </h2>
+          <ul className="space-y-2 text-slate-300">
+            <li className="flex items-start gap-2">
+              <span className="text-green-400 mt-1">✓</span>
+              <span><strong className="text-white">Solo founder or small team?</strong> Go with Pipedrive - simple, affordable, gets the job done.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-green-400 mt-1">✓</span>
+              <span><strong className="text-white">Hired sales reps & thinking long-term?</strong> Choose HubSpot - scales well, solid automation.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-yellow-400 mt-1">⚠</span>
+              <span><strong className="text-white">Enterprise with dedicated RevOps?</strong> Salesforce works - but skip it otherwise.</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* Intro */}
+        <div className="bg-slate-900/30 border border-slate-800 rounded-xl p-6 mb-12">
+          <p className="text-lg text-slate-300 leading-relaxed">
+            All three are good CRMs - you've probably already heard of all of them. Each has different use cases and which CRM you go with depends on your position in the growth journey. If you're a founder, solopreneur, or vibecoder, your most logical choice is Pipedrive. If you've already hired sales people and are thinking long-term, go with HubSpot.
+          </p>
+        </div>
+
+        {/* Content Sections */}
+        <div className="space-y-12">
+          {/* Tool Deep Dives */}
+          <section className="space-y-8">
+            <h2 className="text-3xl font-bold text-white mb-6">The Breakdown</h2>
+
+            {/* Pipedrive */}
+            <div className="bg-slate-900/30 border-l-4 border-l-green-500/50 border-t border-r border-b border-slate-800 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                <span className="text-green-400">●</span>
+                Pipedrive
+              </h3>
+              <p className="text-slate-300 leading-relaxed">
+                Pipedrive in itself is a very basic CRM, but it covers 100% of your needs. It's literally made by sales people for sales people. No fluff, no unnecessary features - just what you need to manage your pipeline and close deals.
+              </p>
+            </div>
+
+            {/* HubSpot */}
+            <div className="bg-slate-900/30 border-l-4 border-l-orange-500/50 border-t border-r border-b border-slate-800 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                <span className="text-orange-400">●</span>
+                HubSpot
+              </h3>
+              <p className="text-slate-300 leading-relaxed mb-4">
+                HubSpot originally is a marketing tool, however it really picked up all the best features needed in the market and grabbed what was required by users from Salesforce. It has great customization and probably has the best user experience out of the three.
+              </p>
+              <p className="text-slate-300 leading-relaxed mb-4">
+                Reason not to start with it: the price grows very quickly just like Salesforce when considering add-ons and toys you'll need. HubSpot is fairly easy to customize and has automations and triggers you can build out to make it serve you more.
+              </p>
+            </div>
+
+            {/* Salesforce */}
+            <div className="bg-slate-900/30 border-l-4 border-l-blue-500/50 border-t border-r border-b border-slate-800 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                <span className="text-blue-400">●</span>
+                Salesforce
+              </h3>
+              <p className="text-slate-300 leading-relaxed mb-4">
+                The king in customization and versatility is Salesforce, no questions - the status quo CRM. Honestly, I would not recommend anyone to go with Salesforce CRM. It looks like it's made in the 90s, it's complex, and without Sales or Revenue Operations you won't even scratch the surface of what it's capable of - plus you'll be paying premium.
+              </p>
+              <p className="text-slate-300 leading-relaxed">
+                Most likely why you'll end up with Salesforce long-term is when you need extensive reporting to investors after funding rounds. I believe if you're reading this, you still have a lot of bridges to cross before that should be a thought in your head.
+              </p>
+            </div>
+          </section>
+
+          {/* Table 1: Best Use Cases */}
+          <section>
+            <h2 className="text-3xl font-bold text-white mb-6">Best Use Cases (Who Should Pick What)</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse bg-slate-900/50 border border-slate-800 rounded-xl overflow-hidden">
+                <thead>
+                  <tr className="bg-slate-800/50">
+                    <th className="text-left p-4 text-white font-bold border-b border-slate-700">Scenario</th>
+                    <th className="text-center p-4 text-white font-bold border-b border-slate-700">Salesforce</th>
+                    <th className="text-center p-4 text-white font-bold border-b border-slate-700">HubSpot</th>
+                    <th className="text-center p-4 text-white font-bold border-b border-slate-700">Pipedrive</th>
+                  </tr>
+                </thead>
+                <tbody className="text-slate-300">
+                  <tr className="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                    <td className="p-4 font-medium">Solo founder</td>
+                    <td className="p-4 text-center text-3xl">❌</td>
+                    <td className="p-4 text-center text-3xl">⚠️</td>
+                    <td className="p-4 text-center text-3xl">✅</td>
+                  </tr>
+                  <tr className="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                    <td className="p-4 font-medium">Small sales team (1-10)</td>
+                    <td className="p-4 text-center text-3xl">❌</td>
+                    <td className="p-4 text-center text-3xl">✅</td>
+                    <td className="p-4 text-center text-3xl">✅</td>
+                  </tr>
+                  <tr className="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                    <td className="p-4 font-medium">Growing SMB (10-50 reps)</td>
+                    <td className="p-4 text-center text-3xl">⚠️</td>
+                    <td className="p-4 text-center text-3xl">✅</td>
+                    <td className="p-4 text-center text-3xl">⚠️</td>
+                  </tr>
+                  <tr className="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                    <td className="p-4 font-medium">Enterprise / multi-region</td>
+                    <td className="p-4 text-center text-3xl">✅</td>
+                    <td className="p-4 text-center text-3xl">⚠️</td>
+                    <td className="p-4 text-center text-3xl">❌</td>
+                  </tr>
+                  <tr className="hover:bg-slate-800/30 transition-colors">
+                    <td className="p-4 font-medium">Dedicated RevOps/Admin</td>
+                    <td className="p-4 text-center text-sm">Required</td>
+                    <td className="p-4 text-center text-sm">Helpful</td>
+                    <td className="p-4 text-center text-sm">Not needed</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          {/* Table 2: Time to Value */}
+          <section>
+            <h2 className="text-3xl font-bold text-white mb-6">Time to Value & Adoption</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse bg-slate-900/50 border border-slate-800 rounded-xl overflow-hidden">
+                <thead>
+                  <tr className="bg-slate-800/50">
+                    <th className="text-left p-4 text-white font-bold border-b border-slate-700">Dimension</th>
+                    <th className="text-center p-4 text-white font-bold border-b border-slate-700">Salesforce</th>
+                    <th className="text-center p-4 text-white font-bold border-b border-slate-700">HubSpot</th>
+                    <th className="text-center p-4 text-white font-bold border-b border-slate-700">Pipedrive</th>
+                  </tr>
+                </thead>
+                <tbody className="text-slate-300">
+                  <tr className="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                    <td className="p-4 font-medium">Setup speed</td>
+                    <td className="p-4 text-center">Slow</td>
+                    <td className="p-4 text-center">Fast</td>
+                    <td className="p-4 text-center">Very fast</td>
+                  </tr>
+                  <tr className="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                    <td className="p-4 font-medium">Onboarding effort</td>
+                    <td className="p-4 text-center">High</td>
+                    <td className="p-4 text-center">Medium</td>
+                    <td className="p-4 text-center">Low</td>
+                  </tr>
+                  <tr className="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                    <td className="p-4 font-medium">Rep adoption</td>
+                    <td className="p-4 text-center">Medium</td>
+                    <td className="p-4 text-center">High</td>
+                    <td className="p-4 text-center">Very high</td>
+                  </tr>
+                  <tr className="hover:bg-slate-800/30 transition-colors">
+                    <td className="p-4 font-medium">"Feels usable on day 1"</td>
+                    <td className="p-4 text-center text-3xl">❌</td>
+                    <td className="p-4 text-center text-3xl">✅</td>
+                    <td className="p-4 text-center text-3xl">✅</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          {/* Table 3: Pricing Reality */}
+          <section>
+            <h2 className="text-3xl font-bold text-white mb-6">Pricing Reality</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse bg-slate-900/50 border border-slate-800 rounded-xl overflow-hidden">
+                <thead>
+                  <tr className="bg-slate-800/50">
+                    <th className="text-left p-4 text-white font-bold border-b border-slate-700">CRM</th>
+                    <th className="text-left p-4 text-white font-bold border-b border-slate-700">Entry price reality</th>
+                    <th className="text-left p-4 text-white font-bold border-b border-slate-700">What founders underestimate</th>
+                  </tr>
+                </thead>
+                <tbody className="text-slate-300">
+                  <tr className="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                    <td className="p-4 font-bold text-white">Salesforce</td>
+                    <td className="p-4">Starts "reasonable", scales brutally</td>
+                    <td className="p-4">Admin cost, consultants, add-ons</td>
+                  </tr>
+                  <tr className="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                    <td className="p-4 font-bold text-white">HubSpot</td>
+                    <td className="p-4">Free/cheap early</td>
+                    <td className="p-4">Cost grows as you add hubs & seats</td>
+                  </tr>
+                  <tr className="hover:bg-slate-800/30 transition-colors">
+                    <td className="p-4 font-bold text-white">Pipedrive</td>
+                    <td className="p-4">Affordable</td>
+                    <td className="p-4">Add-ons stack over time</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          {/* Recommendations */}
+          <section className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl p-8">
+            <h2 className="text-3xl font-bold text-white mb-6">My Recommendation</h2>
+            <ul className="space-y-4 text-lg">
+              <li className="flex items-start gap-3">
+                <span className="text-indigo-400 text-2xl">→</span>
+                <span className="text-slate-300"><strong className="text-white">Early stage / lean teams:</strong> Start with Pipedrive</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-indigo-400 text-2xl">→</span>
+                <span className="text-slate-300"><strong className="text-white">Growing SMBs:</strong> Default to HubSpot</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-indigo-400 text-2xl">→</span>
+                <span className="text-slate-300"><strong className="text-white">Complex, scaled orgs:</strong> Choose Salesforce only if you're ready</span>
+              </li>
+            </ul>
+          </section>
+
+          {/* About Me */}
+          <section className="bg-slate-900/30 border border-slate-800 rounded-xl p-4">
+            <h2 className="text-lg font-bold text-white mb-2">About This Comparison</h2>
+            <p className="text-slate-300 text-sm leading-normal mb-3">
+              I'm David, and I've spent years working with different CRMs across multiple SaaS companies. I've set up Pipedrive for early-stage startups, migrated teams to HubSpot during scale-up phases, and dealt with Salesforce's complexity at enterprise level from teams as small as a solo person, to 20 people mix of SDRs and AEs.
+            </p>
+            <p className="text-slate-300 text-sm leading-normal mb-3">
+              This comparison comes from real experience - not theory. I've felt the pain of choosing the wrong CRM too early, overpaying for features you don't need, and dealing with adoption issues when the tool is too complex. My goal here is to save you from making those same mistakes.
+            </p>
+
+            {/* Action Buttons */}
+            <div className="flex flex-wrap gap-2">
+              <a
+                href="https://www.linkedin.com/in/davidvaran/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors flex items-center gap-1.5"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                LinkedIn
+              </a>
+              <a
+                href="mailto:david@saleshousestack.com"
+                className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium rounded-lg transition-colors flex items-center gap-1.5 border border-slate-700"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                Email
+              </a>
+            </div>
+          </section>
+
+          {/* Tags */}
+          <section className="border-t border-slate-800 pt-8">
+            <p className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Tagged:</p>
+            <div className="flex flex-wrap gap-2">
+              {['CRM Comparison', 'Pipedrive', 'HubSpot', 'Salesforce', 'Sales CRM', 'CRM for Startups', 'B2B Sales Tools', 'Revenue Operations'].map((tag) => (
+                <span key={tag} className="px-3 py-1.5 bg-slate-800/50 border border-slate-700/50 rounded-md text-sm text-slate-300 hover:border-indigo-500/50 transition-colors">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </section>
+
+          {/* CTAs */}
+          <div className="grid md:grid-cols-3 gap-4 pt-8">
+            <a
+              href="https://www.pipedrive.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-slate-800 border border-slate-700 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all text-center"
+            >
+              Try Pipedrive
+            </a>
+            <a
+              href="https://www.hubspot.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-slate-800 border border-slate-700 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all text-center"
+            >
+              Try HubSpot
+            </a>
+            <a
+              href="https://www.salesforce.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-slate-800 border border-slate-700 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all text-center"
+            >
+              Try Salesforce
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const ReviewsListPage = () => {
   // List of tools that have reviews
   const reviewedTools = [
@@ -2460,8 +2896,27 @@ const ReviewsListPage = () => {
           ))}
         </div>
 
+        {/* In Progress Section */}
+        <div className="mt-16">
+          <h2 className="text-2xl font-bold text-white mb-6">Reviews In Progress</h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            {['HubSpot', 'Instantly', 'Lemlist'].map((toolName) => (
+              <div
+                key={toolName}
+                className="bg-slate-900/30 border border-slate-800 rounded-xl p-6 text-center"
+              >
+                <div className="w-12 h-12 bg-slate-800/50 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <div className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse"></div>
+                </div>
+                <h3 className="text-lg font-bold text-slate-400 mb-2">{toolName}</h3>
+                <p className="text-sm text-slate-500">Review coming soon</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Request Section */}
-        <div className="mt-16 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl p-8 text-center">
+        <div className="mt-12 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl p-8 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">What tool should I review next?</h2>
           <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
             Got a sales tool you want me to put through its paces? Let me know what you'd like to see reviewed.
@@ -3049,6 +3504,8 @@ const App = () => {
               <Route path="/reviews" element={<ReviewsListPage />} />
               <Route path="/reviews/clay" element={<ClayReviewPage />} />
               <Route path="/reviews/reply-io" element={<ReplyIOReviewPage />} />
+              <Route path="/comparisons" element={<ComparisonsListPage />} />
+              <Route path="/comparisons/pipedrive-hubspot-salesforce" element={<CRMComparisonPage />} />
             </Routes>
         </main>
 

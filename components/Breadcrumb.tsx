@@ -15,7 +15,8 @@ const pathToLabel: Record<string, string> = {
   '/faq': 'FAQ',
   '/reviews': 'Tool Reviews',
   '/reviews/reply-io': 'Reply.io Review',
-  '/reviews/clay': 'Clay Review'
+  '/reviews/clay': 'Clay Review',
+  '/comparisons': 'Tool Comparisons'
 };
 
 const Breadcrumb: React.FC = () => {
