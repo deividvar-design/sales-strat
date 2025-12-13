@@ -193,6 +193,7 @@ const Footer = () => (
           <ul className="space-y-2 text-sm">
             <li><Link to="/library" className="hover:text-indigo-400 transition-colors">Tool Library</Link></li>
             <li><Link to="/strategies" className="hover:text-indigo-400 transition-colors">Playbook</Link></li>
+            <li><Link to="/reviews" className="hover:text-indigo-400 transition-colors">Tool Reviews</Link></li>
           </ul>
         </div>
 
@@ -221,7 +222,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
   return (
   <div className="flex flex-col">
     <Helmet>
-      <title>Sales House - Outbound Sales Stack That Fills Your Calendar | Book 40+ Demos/Month</title>
+      <title>Sales House - Tools, Reviews, Playbooks for Sales Pros</title>
       <meta name="description" content="Curated outbound sales tools used by 500+ founders. Build your cold email engine with Clay, Reply.io & more. Start booking 40+ demos/month." />
     </Helmet>
     {/* Hero Section - The Outcome Architecture (Concept 1) */}
@@ -2389,6 +2390,568 @@ const FAQPage = () => {
     );
 };
 
+const ReviewsListPage = () => {
+  // List of tools that have reviews
+  const reviewedTools = [
+    {
+      id: 'clay',
+      name: 'Clay',
+      slug: 'clay',
+      rating: 5.0,
+      excerpt: 'Not just a contact database - a whole AI research assistant that qualifies, signals, and personalizes at scale',
+      category: 'Data & Enrichment',
+      lastUpdated: 'December 2025'
+    },
+    {
+      id: 'reply',
+      name: 'Reply.io',
+      slug: 'reply-io',
+      rating: 4.5,
+      excerpt: 'Very versatile tool, highest level of multichannel capabilities',
+      category: 'Sales Engagement',
+      lastUpdated: 'December 2025'
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-[#020617]">
+      <Helmet>
+        <title>Tool Reviews - Expert Sales Software Reviews | Sales House</title>
+        <meta name="description" content="Honest, in-depth reviews of sales tools based on real experience. Get expert insights on Reply.io, Clay, HubSpot and more sales engagement platforms." />
+      </Helmet>
+
+      <div className="max-w-6xl mx-auto px-6 py-16">
+        <Breadcrumb />
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Tool Reviews</h1>
+        </div>
+
+        {/* Reviews Grid */}
+        <div className="grid md:grid-cols-2 gap-6">
+          {reviewedTools.map((tool) => (
+            <Link
+              key={tool.id}
+              to={`/reviews/${tool.slug}`}
+              className="bg-slate-900/50 border border-slate-800 rounded-xl p-8 hover:border-indigo-500/50 transition-all group"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h2 className="text-2xl font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+                    {tool.name} Review
+                  </h2>
+                  <p className="text-sm text-slate-500">{tool.category} • Updated {tool.lastUpdated}</p>
+                </div>
+                <div className="flex items-center gap-1 bg-slate-800/50 px-3 py-1.5 rounded-lg">
+                  <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  <span className="text-white font-bold">{tool.rating}</span>
+                </div>
+              </div>
+
+              <p className="text-slate-300 leading-relaxed mb-6">
+                {tool.excerpt}
+              </p>
+
+              <div className="flex items-center gap-2 text-indigo-400 font-semibold">
+                Read Full Review
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Request Section */}
+        <div className="mt-16 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl p-8 text-center">
+          <h2 className="text-2xl font-bold text-white mb-4">What tool should I review next?</h2>
+          <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
+            Got a sales tool you want me to put through its paces? Let me know what you'd like to see reviewed.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="mailto:david@saleshousestack.com"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-500 transition-all"
+            >
+              <Mail className="w-5 h-5" />
+              Email Me
+            </a>
+            <a
+              href="https://www.linkedin.com/in/davidvaran/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 text-white font-semibold rounded-lg border border-slate-700 hover:bg-slate-700 transition-all"
+            >
+              <Linkedin className="w-5 h-5" />
+              Message on LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ReplyIOReviewPage = () => {
+  const replyTool = TOOLS.find(tool => tool.id === 'reply');
+
+  if (!replyTool) return null;
+
+  // Schema.org structured data for SEO
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "SoftwareApplication",
+      "name": "Reply.io",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    "author": {
+      "@type": "Person",
+      "name": "David Varan",
+      "jobTitle": "Sales Operations Consultant",
+      "url": "https://www.linkedin.com/in/davidvaran/"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "4.5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-12-13",
+    "reviewBody": "Reply.io covers all the channels you need and gives you complete control to personalize when necessary. The price-to-functionality ratio is top-notch. I've used and set up Reply.io for 4 SaaS companies over the past year.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sales House - Tools, Reviews, Playbooks for Sales Pros"
+    }
+  };
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Reply.io Review 2025: My Experience After 4 SaaS Companies",
+    "description": "Honest Reply.io review based on real experience with 4 SaaS companies. Open rates up to 80%, multichannel capabilities, pricing analysis, and who should (and shouldn't) use it.",
+    "image": "https://saleshousestack.com/og-image.png",
+    "author": {
+      "@type": "Person",
+      "name": "David Varan",
+      "url": "https://www.linkedin.com/in/davidvaran/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sales House - Tools, Reviews, Playbooks for Sales Pros",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://saleshousestack.com/logo.png"
+      }
+    },
+    "datePublished": "2025-12-13",
+    "dateModified": "2025-12-13",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://saleshousestack.com/#/reviews/reply-io"
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-[#020617]">
+      <Helmet>
+        <title>Reply.io Review 2025: My Experience After 4 SaaS Companies | Sales House</title>
+        <meta name="description" content="Honest Reply.io review based on real experience with 4 SaaS companies. Open rates up to 80%, multichannel capabilities, pricing analysis, and who should (and shouldn't) use it." />
+        <meta name="keywords" content="Reply.io review, Reply.io pricing, sales engagement platform, multichannel outreach, email automation, LinkedIn automation" />
+
+        {/* Schema.org Review Markup */}
+        <script type="application/ld+json">
+          {JSON.stringify(reviewSchema)}
+        </script>
+
+        {/* Schema.org Article Markup */}
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchema)}
+        </script>
+      </Helmet>
+
+      <div className="max-w-4xl mx-auto px-6 py-16">
+        <Breadcrumb />
+
+        {/* Header */}
+        <div className="mb-12">
+          <div className="mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">Reply.io Review</h1>
+            <p className="text-slate-400">Last updated December 2025</p>
+          </div>
+
+          {/* Rating */}
+          <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
+            <div className="flex items-center gap-2 mb-3">
+              {[...Array(4)].map((_, i) => (
+                <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+              ))}
+              <Star className="w-6 h-6 fill-yellow-400 text-yellow-400" style={{ clipPath: 'inset(0 50% 0 0)' }} />
+              <span className="text-2xl font-bold text-white ml-2">4.5/5</span>
+            </div>
+            <p className="text-xl font-semibold text-indigo-400">Very versatile tool, highest level of multichannel capabilities</p>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="space-y-8">
+          {/* Why I Recommend It */}
+          <section className="bg-slate-900/30 border border-slate-800 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+              <Star className="w-6 h-6 text-indigo-400" />
+              Why I Recommend It
+            </h2>
+            <p className="text-slate-300 leading-relaxed mb-4">
+              Reply.io covers all the channels you need and gives you complete control to personalize when necessary. The price-to-functionality ratio is top-notch, making it accessible for founders and small teams while still being powerful enough for established sales teams.
+            </p>
+            <p className="text-slate-300 leading-relaxed">
+              Their analytics and tracking capabilities really shine when it comes to extra nurturing steps. For example, I set up an automation that checks if a prospect opened an email more than 5 times after the last sequence step, then triggers a reminder email a day later (not the same day - that would be creepy). This simple workflow helped nudge reply rates and increased the number of opportunities created.
+            </p>
+          </section>
+
+          {/* My Experience */}
+          <section className="bg-slate-900/30 border border-slate-800 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-white mb-4">My Experience Using It</h2>
+            <p className="text-slate-300 leading-relaxed mb-4">
+              I've used and set up Reply.io for 4 SaaS companies over the past year. The platform has been my go-to for automating LinkedIn, InMail, and email sequencing with variable steps across multiple campaigns.
+            </p>
+            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6">
+              <p className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">Real Results:</p>
+              <ul className="space-y-3 text-slate-300">
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 mt-1 text-xl">✓</span>
+                  <span>Open rates varied by industry: 30-40% on the lower end, peaked at 80% with 3-4 follow-up steps (excluding LinkedIn)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 mt-1 text-xl">✓</span>
+                  <span>Successfully automated multichannel sequences across email, LinkedIn, and InMail</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 mt-1 text-xl">✓</span>
+                  <span>Advanced nurturing automation (5+ email opens trigger) increased reply rates and opportunities created</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Where It Shines */}
+          <section className="bg-slate-900/30 border border-slate-800 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-white mb-4">Where It Shines</h2>
+            <p className="text-slate-300 leading-relaxed mb-4">
+              The multichannel capabilities are unmatched. I've tested every channel except WhatsApp (though the sentiment about it seems positive). Reply.io is the best choice when:
+            </p>
+            <ul className="space-y-3 text-slate-300">
+              <li className="flex items-start gap-3">
+                <span className="text-indigo-400 text-xl">•</span>
+                <span>You need to run coordinated campaigns across email, LinkedIn, and InMail</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-indigo-400 text-xl">•</span>
+                <span>You want granular control over personalization without sacrificing automation</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-indigo-400 text-xl">•</span>
+                <span>You need advanced analytics and tracking for nurturing workflows</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-indigo-400 text-xl">•</span>
+                <span>You're serious about outbound and understand that single-channel focus leaves money on the table</span>
+              </li>
+            </ul>
+          </section>
+
+          {/* Who Should Skip This */}
+          <section className="bg-slate-900/30 border border-slate-800 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-white mb-4">Who Should Skip This</h2>
+            <p className="text-slate-300 leading-relaxed mb-4">
+              <strong className="text-white">If you're only focusing on one channel, don't buy Reply.io.</strong> There are specialized tools that will serve you better: Dripify for LinkedIn, Instantly for email, or Aircall for cold calls. But honestly, as a sales professional, single-channel focus is a bad strategy - you're leaving money on the table.
+            </p>
+            <p className="text-slate-300 leading-relaxed">
+              <strong className="text-white">The one real dealbreaker:</strong> Limited Salesforce integration. The only reason this gets 4.5 instead of 5 stars. I wasn't happy with how the integration works initially. With some technical workarounds in Salesforce, we got it working well enough for a team of 9 sales executives, but it's not ideal. For most founder and small team use cases using HubSpot, this is a non-issue.
+            </p>
+          </section>
+
+          {/* Bottom Line */}
+          <section className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-indigo-400 mb-4">Bottom Line</h2>
+            <p className="text-slate-300 leading-relaxed text-lg">
+              Great tool with a top-tier price-to-functionality ratio. Whether you're an established team or a founder just starting outbound, Reply.io will get the job done long-term and you can be confident with your commitment. It's my go-to recommendation for anyone serious about multichannel outreach who wants a tool they can grow with.
+            </p>
+          </section>
+
+          {/* Tags */}
+          <section className="border-t border-slate-800 pt-8">
+            <p className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Tagged:</p>
+            <div className="flex flex-wrap gap-2">
+              {['Sales Engagement', 'Email Automation', 'LinkedIn Automation', 'Multichannel Outreach', 'Cold Email', 'B2B Sales Tools', 'Sales Sequences'].map((tag) => (
+                <span key={tag} className="px-3 py-1.5 bg-slate-800/50 border border-slate-700/50 rounded-md text-sm text-slate-300 hover:border-indigo-500/50 transition-colors">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </section>
+
+          {/* CTA */}
+          <div className="text-center pt-8">
+            <a
+              href={replyTool.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-bold rounded-lg shadow-lg hover:bg-indigo-500 transition-all text-lg"
+            >
+              Try Reply.io For Free <ExternalLink className="w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ClayReviewPage = () => {
+  const clayTool = TOOLS.find(tool => tool.id === 'clay');
+
+  if (!clayTool) return null;
+
+  // Schema.org structured data for SEO
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "SoftwareApplication",
+      "name": "Clay",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    "author": {
+      "@type": "Person",
+      "name": "David Varan",
+      "jobTitle": "Sales Operations Consultant",
+      "url": "https://www.linkedin.com/in/davidvaran/"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-12-13",
+    "reviewBody": "Clay is not just a contact database - it's a whole AI research assistant doing extra qualification, sending you signals, and preparing personalization angles. Qualifying 500+ companies in under 10 minutes to figure out if they're a good fit is a massive time saver.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sales House - Tools, Reviews, Playbooks for Sales Pros"
+    }
+  };
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Clay Review 2025: AI-Powered Research Assistant for Sales Teams",
+    "description": "Honest Clay review after 8 months and 40k+ contacts processed. Signal building, AI qualification, data coverage analysis, and who should (and shouldn't) use it.",
+    "image": "https://saleshousestack.com/og-image.png",
+    "author": {
+      "@type": "Person",
+      "name": "David Varan",
+      "url": "https://www.linkedin.com/in/davidvaran/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sales House - Tools, Reviews, Playbooks for Sales Pros",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://saleshousestack.com/logo.png"
+      }
+    },
+    "datePublished": "2025-12-13",
+    "dateModified": "2025-12-13",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://saleshousestack.com/#/reviews/clay"
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-[#020617]">
+      <Helmet>
+        <title>Clay Review 2025: AI-Powered Research Assistant for Sales Teams | Sales House</title>
+        <meta name="description" content="Honest Clay review after 8 months and 40k+ contacts processed. Signal building, AI qualification, and who should use it vs Apollo or Lusha." />
+        <meta name="keywords" content="Clay review, Clay.com review, sales intelligence, data enrichment, AI qualification, signal building, contact database" />
+
+        {/* Schema.org Review Markup */}
+        <script type="application/ld+json">
+          {JSON.stringify(reviewSchema)}
+        </script>
+
+        {/* Schema.org Article Markup */}
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchema)}
+        </script>
+      </Helmet>
+
+      <div className="max-w-4xl mx-auto px-6 py-16">
+        <Breadcrumb />
+
+        {/* Header */}
+        <div className="mb-12">
+          <div className="mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">Clay Review</h1>
+            <p className="text-slate-400">Last updated December 2025</p>
+          </div>
+
+          {/* Rating */}
+          <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
+            <div className="flex items-center gap-2 mb-3">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+              ))}
+              <span className="text-2xl font-bold text-white ml-2">5.0/5</span>
+            </div>
+            <p className="text-xl font-semibold text-indigo-400">Not just a contact database - a whole AI research assistant that qualifies, signals, and personalizes at scale</p>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="space-y-8">
+          {/* Why I Recommend It */}
+          <section className="bg-slate-900/30 border border-slate-800 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+              <Star className="w-6 h-6 text-indigo-400" />
+              Why I Recommend It
+            </h2>
+            <p className="text-slate-300 leading-relaxed mb-4">
+              I'll be transparent: I haven't used a tool I can call a direct competitor to Clay. What makes it stand out is the extensiveness of how far you can go with the qualification steps.
+            </p>
+            <p className="text-slate-300 leading-relaxed">
+              It's not just a contact database - it's a whole AI research assistant doing extra qualification, sending you signals, and preparing personalization angles. It can be used as a database, but it can also identify key people in the company, research company LinkedIn and DMs information, and prepare an angle for a personalized pitch. The time saved from manual research is massive when you can launch an AI to qualify companies based on your criteria.
+            </p>
+          </section>
+
+          {/* My Experience */}
+          <section className="bg-slate-900/30 border border-slate-800 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-white mb-4">My Experience Using It</h2>
+            <p className="text-slate-300 leading-relaxed mb-4">
+              I've been using Clay for about 8 months and have processed north of 40,000 contacts. You know perfectly well what a pain account qualification is - but qualifying 500+ companies in under 10 minutes to figure out if they're a good fit for my product offering? Hell yeah. That extra time can be spent on sequence prep, old inbound, and closed-lost nurturing.
+            </p>
+            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 mb-6">
+              <p className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">Real Results:</p>
+              <ul className="space-y-3 text-slate-300">
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 mt-1 text-xl">✓</span>
+                  <span>Processed 40,000+ contacts across multiple campaigns</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 mt-1 text-xl">✓</span>
+                  <span>Qualify 500+ companies in under 10 minutes with AI - massive time savings on manual research</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 mt-1 text-xl">✓</span>
+                  <span>5-10% bounce rate on high volume sequences (recommend extra email verification if using fewer than 5 domains)</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-6">
+              <p className="text-sm font-bold text-amber-400 uppercase tracking-wider mb-3">Data Coverage Notes:</p>
+              <ul className="space-y-2 text-slate-300 text-sm">
+                <li className="flex items-start gap-2">
+                  <span className="text-green-400">✓</span>
+                  <span><strong>Excellent:</strong> North America, EMEA for fintech, tax firms, logistics, e-commerce</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-yellow-400">⚠</span>
+                  <span><strong>Outdated contacts:</strong> LATAM coverage</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-yellow-400">⚠</span>
+                  <span><strong>Limited:</strong> Eastern Europe coverage</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Where It Shines */}
+          <section className="bg-slate-900/30 border border-slate-800 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-white mb-4">Where It Shines</h2>
+            <p className="text-slate-300 leading-relaxed mb-4">
+              <strong className="text-white">Signal building is the killer feature.</strong> You can set up notifications to be the first in line to learn about promotions, investment round announcements, position changes, and acquisitions. You always want to be first to send congratulations and ask if there's room for a chat about your offering.
+            </p>
+            <ul className="space-y-3 text-slate-300">
+              <li className="flex items-start gap-3">
+                <span className="text-indigo-400 text-xl">•</span>
+                <span>AI-powered company qualification at scale (500+ companies in 10 minutes)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-indigo-400 text-xl">•</span>
+                <span>Signal tracking for promotions, funding rounds, job changes, M&A activity</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-indigo-400 text-xl">•</span>
+                <span>Identifying key decision-makers and preparing personalized pitch angles</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-indigo-400 text-xl">•</span>
+                <span>When you have your ICP dialed in and need to narrow down on perfect-fit accounts</span>
+              </li>
+            </ul>
+          </section>
+
+          {/* Who Should Skip This */}
+          <section className="bg-slate-900/30 border border-slate-800 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-white mb-4">Who Should Skip This</h2>
+            <p className="text-slate-300 leading-relaxed mb-4">
+              <strong className="text-white">New founders who don't have their ICP dialed in perfectly should skip Clay.</strong> Stick to Apollo.io or Lusha to test markets, verticals, and titles on high volume first. Clay is used when you're narrowing down on who's the perfect fit - not when you're still figuring that out.
+            </p>
+            <p className="text-slate-300 leading-relaxed">
+              <strong className="text-white">The dealbreaker:</strong> Credit-based AI usage means prompts need to be adjusted multiple times. There's a lot of testing required to refine the enrichment prompt, which burns through credits. If you're not willing to iterate and optimize your workflows, Clay will get expensive fast.
+            </p>
+          </section>
+
+          {/* Bottom Line */}
+          <section className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-indigo-400 mb-4">Bottom Line</h2>
+            <p className="text-slate-300 leading-relaxed text-lg">
+              Clay is in a league of its own - it's not just a database, it's an AI research assistant that does the grunt work of qualification, signal tracking, and personalization prep. If you have your ICP dialed in and need to operate at scale while staying personalized, Clay is unmatched. Just be prepared to invest time upfront refining your prompts and workflows.
+            </p>
+          </section>
+
+          {/* Tags */}
+          <section className="border-t border-slate-800 pt-8">
+            <p className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Tagged:</p>
+            <div className="flex flex-wrap gap-2">
+              {['Data Enrichment', 'Sales Intelligence', 'AI Qualification', 'Signal Building', 'Contact Database', 'Lead Research', 'B2B Sales Tools', 'Sales Automation'].map((tag) => (
+                <span key={tag} className="px-3 py-1.5 bg-slate-800/50 border border-slate-700/50 rounded-md text-sm text-slate-300 hover:border-indigo-500/50 transition-colors">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </section>
+
+          {/* CTA */}
+          <div className="text-center pt-8">
+            <a
+              href={clayTool.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-bold rounded-lg shadow-lg hover:bg-indigo-500 transition-all text-lg"
+            >
+              Try Clay For Free <ExternalLink className="w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 // Scroll to top on route change
 const ScrollToTop = () => {
   const location = useLocation();
@@ -2483,6 +3046,9 @@ const App = () => {
               <Route path="/privacy" element={<PrivacyPolicyPage />} />
               <Route path="/terms" element={<TermsOfServicePage />} />
               <Route path="/consulting" element={<ConsultingPage />} />
+              <Route path="/reviews" element={<ReviewsListPage />} />
+              <Route path="/reviews/clay" element={<ClayReviewPage />} />
+              <Route path="/reviews/reply-io" element={<ReplyIOReviewPage />} />
             </Routes>
         </main>
 

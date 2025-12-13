@@ -12,7 +12,10 @@ const pathToLabel: Record<string, string> = {
   '/library': 'Tool Library',
   '/strategies': 'Playbook',
   '/consulting': 'Consulting',
-  '/faq': 'FAQ'
+  '/faq': 'FAQ',
+  '/reviews': 'Tool Reviews',
+  '/reviews/reply-io': 'Reply.io Review',
+  '/reviews/clay': 'Clay Review'
 };
 
 const Breadcrumb: React.FC = () => {
@@ -29,9 +32,19 @@ const Breadcrumb: React.FC = () => {
     { label: 'Home', path: '/' }
   ];
 
-  // Add current page
-  const currentLabel = pathToLabel[currentPath] || 'Page';
-  breadcrumbItems.push({ label: currentLabel, path: currentPath });
+  // Handle nested paths (e.g., /reviews/reply-io)
+  const pathSegments = currentPath.split('/').filter(Boolean);
+  let accumulatedPath = '';
+
+  pathSegments.forEach((segment, index) => {
+    accumulatedPath += `/${segment}`;
+    const label = pathToLabel[accumulatedPath] || segment;
+
+    // Don't add if it's a duplicate of the last item
+    if (breadcrumbItems[breadcrumbItems.length - 1]?.path !== accumulatedPath) {
+      breadcrumbItems.push({ label, path: accumulatedPath });
+    }
+  });
 
   // Generate schema.org BreadcrumbList structured data
   const breadcrumbSchema = {
