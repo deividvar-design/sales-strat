@@ -48,7 +48,8 @@ import {
   ListTodo,
   CreditCard,
   AlertCircle,
-  TrendingUp
+  TrendingUp,
+  Building
 } from 'lucide-react';
 import { TOOLS, STRATEGIES } from './constants';
 import { TeamSize, ToolCategory, Tool } from './types';
@@ -223,90 +224,165 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
   <div className="flex flex-col">
     <Helmet>
       <title>Sales House - Tools, Reviews, Playbooks for Sales Pros</title>
-      <meta name="description" content="Curated outbound sales tools used by 500+ founders. Build your cold email engine with Clay, Reply.io & more. Start booking 40+ demos/month." />
+      <meta name="description" content="Unbiased sales tool reviews and comparisons from 6+ years of hands-on experience. Get consulting to build the right stack for your stage." />
     </Helmet>
-    {/* Hero Section - The Outcome Architecture (Concept 1) */}
-    <section className="relative bg-[#020617] text-white pt-24 pb-20 px-6 overflow-hidden border-b border-slate-900">
+    {/* Hero Section - Simplified Single Column */}
+    <section className="relative bg-[#020617] text-white pt-32 pb-24 px-6 overflow-hidden border-b border-slate-900">
         <div className="absolute top-0 right-0 -mt-20 -mr-20 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none"></div>
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03]"></div>
-        
-        <div className="max-w-7xl mx-auto relative z-10">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-                
-                {/* Left Column: Copy */}
-                <div className="text-left">
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1] text-white">
-                        Sales Stack Library with Playbook
-                    </h1>
 
-                    <p className="text-xl text-slate-400 max-w-lg mb-8 leading-relaxed font-light">
-                        Unbiased reviews of sales tools plus a free step-by-step playbook. Find your stack, follow the guide, fill your calendar.
-                    </p>
-                    
-                    <div className="flex flex-col sm:flex-row items-start gap-4">
-                        <Link to="/strategies" className="px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white text-lg font-bold rounded-xl shadow-[0_0_20px_rgba(79,70,229,0.4)] transition-all transform hover:-translate-y-1 flex items-center gap-2 border border-indigo-500">
-                            Build My Outbound System <ArrowRight className="w-5 h-5" />
-                        </Link>
-                        <Link to="/library" className="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold rounded-xl border border-slate-700 transition-all flex items-center gap-2">
-                            View Recommendations
-                        </Link>
-                    </div>
+        <div className="max-w-5xl mx-auto relative z-10 text-center">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-[1.05] text-white">
+                Stop Overpaying for Sales Tools You Don't Need
+            </h1>
+
+            <p className="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
+                Unbiased reviews, real comparisons, and consulting from someone who's implemented these tools. From solo founder to 20-person teams.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                <Link to="/library" className="px-10 py-5 bg-indigo-600 hover:bg-indigo-500 text-white text-xl font-bold rounded-xl shadow-[0_0_30px_rgba(79,70,229,0.5)] transition-all transform hover:-translate-y-1 flex items-center gap-3 border border-indigo-500">
+                    Browse Tool Recommendations <ArrowRight className="w-6 h-6" />
+                </Link>
+                <Link to="/strategies" className="px-10 py-5 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xl font-semibold rounded-xl border border-slate-700 transition-all flex items-center gap-3">
+                    View Playbook
+                </Link>
+            </div>
+
+            {/* Trust Badges */}
+            <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-slate-500">
+                <div className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-indigo-400" />
+                    <span>No sponsored reviews</span>
                 </div>
-
-                {/* Right Column: Composite Visual (Outcome Architecture) */}
-                <div className="relative h-[500px] w-full flex items-center justify-center perspective-[2000px] hidden md:flex">
-                    
-                    {/* Background Layer: Tool Stack representing "Curator" */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-80 bg-slate-800 rounded-2xl border border-slate-700 shadow-2xl transform -rotate-12 -translate-x-20 -translate-y-10 opacity-40 z-0 flex flex-col items-center justify-center transition-transform hover:-translate-y-12 duration-500">
-                        <Database className="w-16 h-16 text-slate-600 mb-4" />
-                        <span className="font-bold text-slate-500 text-lg">Clay</span>
-                    </div>
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-80 bg-slate-800 rounded-2xl border border-slate-700 shadow-2xl transform -rotate-6 -translate-x-8 -translate-y-4 opacity-60 z-10 flex flex-col items-center justify-center transition-transform hover:-translate-y-6 duration-500">
-                        <LayoutDashboard className="w-16 h-16 text-slate-500 mb-4" />
-                        <span className="font-bold text-slate-400 text-lg">HubSpot</span>
-                    </div>
-
-                    {/* Foreground Layer: Calendar Widget representing "Result" */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 bg-slate-900 rounded-2xl border border-slate-700 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.7)] z-20 overflow-hidden transform rotate-3 hover:rotate-0 transition-transform duration-500 group">
-                        <div className="bg-slate-950 p-5 border-b border-slate-800 flex justify-between items-center">
-                            <div className="flex items-center gap-2">
-                                <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                                <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                            </div>
-                            <span className="font-bold text-slate-300 text-sm">Tue, 12th Nov</span>
-                            <Calendar className="w-4 h-4 text-indigo-400" />
-                        </div>
-                        <div className="p-4 space-y-3 relative">
-                            {/* Time Slots */}
-                            {[
-                                { time: '9:00 AM', event: 'Discovery: TechCorp', type: 'discovery' },
-                                { time: '10:30 AM', event: 'Demo: SaaS.io', type: 'demo' },
-                                { time: '1:00 PM', event: 'Strategy Call', type: 'internal' },
-                                { time: '2:30 PM', event: 'Discovery: FinTech', type: 'discovery' },
-                                { time: '4:00 PM', event: 'Closing: Agency', type: 'demo' },
-                            ].map((slot, i) => (
-                                <div key={i} className="flex gap-3 text-xs items-center">
-                                    <span className="text-slate-500 w-14 text-right shrink-0 font-mono">{slot.time}</span>
-                                    <div className={`flex-1 p-2.5 rounded-lg border flex items-center gap-2 transition-all hover:scale-105 cursor-default ${
-                                        slot.type === 'discovery' ? 'bg-green-500/10 border-green-500/20 text-green-400 shadow-[0_0_10px_rgba(34,197,94,0.1)]' :
-                                        slot.type === 'demo' ? 'bg-indigo-500/10 border-indigo-500/20 text-indigo-300 shadow-[0_0_10px_rgba(99,102,241,0.1)]' :
-                                        'bg-slate-800 border-slate-700 text-slate-500'
-                                    }`}>
-                                        {slot.type === 'discovery' && <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>}
-                                        {slot.type === 'demo' && <div className="w-2 h-2 rounded-full bg-indigo-500"></div>}
-                                        <span className="font-bold tracking-wide">{slot.event}</span>
-                                    </div>
-                                </div>
-                            ))}
-                            {/* Floating Badge */}
-                            <div className="absolute -bottom-2 -right-2 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-tl-xl shadow-lg">
-                                +40 Demos/mo
-                            </div>
-                        </div>
-                    </div>
+                <div className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-indigo-400" />
+                    <span>6+ years experience</span>
+                </div>
+                <div className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-indigo-400" />
+                    <span>Updated December 2025</span>
                 </div>
             </div>
+        </div>
+    </section>
+
+    {/* What I Offer Section */}
+    <section className="py-20 bg-slate-950 border-b border-slate-800">
+        <div className="max-w-6xl mx-auto px-6">
+            <div className="grid md:grid-cols-3 gap-8">
+                {/* Tool Reviews - PRIMARY */}
+                <div className="relative bg-slate-900/50 border-2 border-indigo-500/50 rounded-xl p-8 hover:border-indigo-500 transition-all shadow-lg shadow-indigo-500/20">
+                    <div className="absolute -top-3 left-6 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                        START HERE
+                    </div>
+                    <div className="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <span className="text-3xl">⭐</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-3">Tool Reviews</h3>
+                    <p className="text-slate-300 mb-6 leading-relaxed">
+                        Honest tool reviews from 6+ years of hands-on experience.
+                    </p>
+                    <Link to="/library" className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg transition-all">
+                        Browse Library <ArrowRight className="w-5 h-5" />
+                    </Link>
+                </div>
+
+                {/* Tool Comparisons */}
+                <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-8 hover:border-indigo-500/30 transition-all">
+                    <div className="w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4">
+                        <span className="text-3xl">⚖️</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3">Tool Comparisons</h3>
+                    <p className="text-slate-400 mb-6 leading-relaxed">
+                        Side-by-side comparisons of sales tools. Know what you're paying for before you commit.
+                    </p>
+                    <Link to="/comparisons" className="text-indigo-400 hover:text-indigo-300 font-medium flex items-center gap-2">
+                        See Comparisons <ArrowRight className="w-4 h-4" />
+                    </Link>
+                </div>
+
+                {/* 1:1 Consulting */}
+                <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-8 hover:border-indigo-500/30 transition-all">
+                    <div className="w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4">
+                        <span className="text-3xl">💼</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3">1:1 Consulting</h3>
+                    <p className="text-slate-400 mb-6 leading-relaxed">
+                        Book a call to audit your current stack, get recommendations, or plan your implementation.
+                    </p>
+                    <Link to="/consulting" className="text-indigo-400 hover:text-indigo-300 font-medium flex items-center gap-2">
+                        Book Consulting <ArrowRight className="w-4 h-4" />
+                    </Link>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {/* Featured Tools Teaser (Moved UP) */}
+    <section id="featured-stack" className="py-24 bg-slate-950 text-white px-6 border-b border-slate-900 relative">
+        <div className="absolute inset-0 bg-indigo-950/10"></div>
+        <div className="max-w-6xl mx-auto relative z-10">
+             <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
+                <div>
+                    <h2 className="text-3xl font-bold mb-2">My Recommended Stack (December 2025)</h2>
+                    <p className="text-slate-400 text-sm">Tested, trusted, and currently in use</p>
+                </div>
+                <Link to="/library" className="flex items-center gap-2 text-indigo-400 hover:text-indigo-300 font-semibold transition-colors">
+                    View All Tools <ArrowRight className="w-4 h-4" />
+                </Link>
+            </div>
+
+            <div className="grid md:grid-cols-4 gap-6">
+                 {/* Replaced salesforge with hubspot in the filter */}
+                 {TOOLS.filter(t => ['clay', 'reply', 'hubspot', 'mailforge'].includes(t.id)).map(tool => (
+                     <ToolCard key={tool.id} tool={tool} showChannels={false} />
+                 ))}
+            </div>
+        </div>
+    </section>
+
+    {/* Cost Breakdown Section (Moved UP) */}
+    <section className="py-20 bg-[#020617] border-b border-slate-900">
+        <div className="max-w-5xl mx-auto px-6">
+             <div className="mb-12 text-center">
+                <h2 className="text-3xl font-bold text-white">A Realistic Cost of Scaling for Founders</h2>
+                <p className="text-slate-400 mt-2 max-w-2xl mx-auto">
+                    If you have more than a few functional braincells, this setup can be done in less than a few days. 
+                    It is significantly cheaper than hiring a dedicated person, and more reliable than hoping for a viral TikTok post or blasting ads on Facebook.
+                </p>
+             </div>
+
+             <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl">
+                <div className="grid md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-slate-800">
+                    {[
+                        { name: 'HubSpot', cost: '$0 - $119', period: '/mo', icon: LayoutDashboard, link: 'https://www.hubspot.com' },
+                        { name: 'Clay', cost: '$149', period: '/mo', icon: Database, link: 'https://clay.com?via=c74a80' },
+                        { name: 'Reply.io', cost: '$99', period: '/mo', icon: Megaphone, link: 'https://get.reply.io/scaleoutbound' },
+                        { name: 'Mailforge', cost: '$39', period: '/mo', icon: ShieldCheck, link: 'https://www.mailforge.ai/?via=outboundsales' },
+                        { name: 'Apollo', cost: '$0 - $119', period: '/mo', icon: Target, link: 'https://get.apollo.io/scaleoutbound' },
+                    ].map((item, idx) => (
+                        <a key={idx} href={item.link} target="_blank" rel="noopener noreferrer" className="p-6 flex flex-col items-center text-center hover:bg-slate-800/70 transition-all duration-300 group cursor-pointer">
+                            <div className="mb-4 p-3 bg-slate-800 rounded-full text-slate-400 group-hover:text-indigo-400 group-hover:bg-indigo-500/10 transition-all duration-300" aria-hidden="true">
+                                <item.icon className="w-6 h-6" />
+                            </div>
+                            <h3 className="text-white font-bold mb-1">{item.name}</h3>
+                            <div className="text-xl font-bold text-indigo-400 mb-2">
+                                {item.cost}<span className="text-xs text-slate-500 font-medium ml-1">{item.period}</span>
+                            </div>
+                            <span className="text-xs text-indigo-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                                Try for Free →
+                            </span>
+                        </a>
+                    ))}
+                </div>
+                <div className="bg-slate-950/50 p-6 border-t border-slate-800 text-center">
+                     <p className="text-slate-400 text-sm">
+                        <AlertCircle className="w-4 h-4 inline-block mr-2 text-indigo-500" />
+                        Total Stack Cost: <strong>~$350 - $500/mo</strong> vs. <strong>$4,500/mo</strong> for a single SDR.
+                     </p>
+                </div>
+             </div>
         </div>
     </section>
 
@@ -315,9 +391,32 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(79,70,229,0.05),transparent_70%)]"></div>
         <div className="max-w-6xl mx-auto px-6 relative z-10">
             <div className="text-center mb-12">
-                <h2 className="text-2xl md:text-3xl font-bold text-white">
-                    I've worked with
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                    Experience Across SaaS Companies & Team Sizes
                 </h2>
+                <div className="max-w-3xl mx-auto">
+                    <p className="text-lg text-slate-400 mb-6 leading-relaxed">
+                        I've worked across SaaS, Fintech, and Traditional sales companies from early-stage to scale-up. I've set up sales operations for:
+                    </p>
+                    <div className="grid md:grid-cols-3 gap-6 mb-8">
+                        <div className="bg-slate-900/50 border border-slate-800 rounded-lg p-4">
+                            <div className="text-indigo-400 font-bold mb-2">Solo founders</div>
+                            <div className="text-sm text-slate-400">Just you + a few freelancers</div>
+                        </div>
+                        <div className="bg-slate-900/50 border border-slate-800 rounded-lg p-4">
+                            <div className="text-indigo-400 font-bold mb-2">Small teams</div>
+                            <div className="text-sm text-slate-400">1-10 SDRs/AEs</div>
+                        </div>
+                        <div className="bg-slate-900/50 border border-slate-800 rounded-lg p-4">
+                            <div className="text-indigo-400 font-bold mb-2">Growing teams</div>
+                            <div className="text-sm text-slate-400">10-20 people, multiple roles</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="text-center mb-8">
+                <p className="text-slate-500 text-sm uppercase tracking-wider">Companies I've Worked With</p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                 {[
@@ -346,67 +445,6 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
         </div>
     </section>
 
-    {/* Featured Tools Teaser (Moved UP) */}
-    <section id="featured-stack" className="py-24 bg-slate-950 text-white px-6 border-b border-slate-900 relative">
-        <div className="absolute inset-0 bg-indigo-950/10"></div>
-        <div className="max-w-6xl mx-auto relative z-10">
-             <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
-                <h2 className="text-3xl font-bold">My Current Favourite Sales Stack</h2>
-                <Link to="/library" className="flex items-center gap-2 text-indigo-400 hover:text-indigo-300 font-semibold transition-colors">
-                    View All Tools <ArrowRight className="w-4 h-4" />
-                </Link>
-            </div>
-
-            <div className="grid md:grid-cols-4 gap-6">
-                 {/* Replaced salesforge with hubspot in the filter */}
-                 {TOOLS.filter(t => ['clay', 'reply', 'hubspot', 'mailforge'].includes(t.id)).map(tool => (
-                     <ToolCard key={tool.id} tool={tool} showChannels={false} />
-                 ))}
-            </div>
-        </div>
-    </section>
-
-    {/* Cost Breakdown Section (Moved UP) */}
-    <section className="py-20 bg-[#020617] border-b border-slate-900">
-        <div className="max-w-5xl mx-auto px-6">
-             <div className="mb-12 text-center">
-                <h2 className="text-3xl font-bold text-white">A Realistic Cost of Scaling</h2>
-                <p className="text-slate-400 mt-2 max-w-2xl mx-auto">
-                    If you have more than a few functional braincells, this setup can be done in less than a few days. 
-                    It is significantly cheaper than hiring a dedicated person, and more reliable than hoping for a viral TikTok post or blasting ads on Facebook.
-                </p>
-             </div>
-
-             <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl">
-                <div className="grid md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-slate-800">
-                    {[
-                        { name: 'HubSpot', cost: '$0 - $119', period: '/mo', icon: LayoutDashboard },
-                        { name: 'Clay', cost: '$149', period: '/mo', icon: Database },
-                        { name: 'Reply.io', cost: '$99', period: '/mo', icon: Megaphone },
-                        { name: 'Mailforge', cost: '$79', period: '/mo', icon: ShieldCheck },
-                        { name: 'Apollo', cost: '$0 - $119', period: '/mo', icon: Target },
-                    ].map((item, idx) => (
-                        <div key={idx} className="p-6 flex flex-col items-center text-center hover:bg-slate-800/70 transition-all duration-300 group cursor-pointer">
-                            <div className="mb-4 p-3 bg-slate-800 rounded-full text-slate-400 group-hover:text-indigo-400 group-hover:bg-indigo-500/10 transition-all duration-300" aria-hidden="true">
-                                <item.icon className="w-6 h-6" />
-                            </div>
-                            <h3 className="text-white font-bold mb-1">{item.name}</h3>
-                            <div className="text-xl font-bold text-indigo-400">
-                                {item.cost}<span className="text-xs text-slate-500 font-medium ml-1">{item.period}</span>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <div className="bg-slate-950/50 p-6 border-t border-slate-800 text-center">
-                     <p className="text-slate-400 text-sm">
-                        <AlertCircle className="w-4 h-4 inline-block mr-2 text-indigo-500" />
-                        Total Stack Cost: <strong>~$350 - $500/mo</strong> vs. <strong>$4,500/mo</strong> for a single SDR.
-                     </p>
-                </div>
-             </div>
-        </div>
-    </section>
-
      {/* Meet The Expert Section */}
     <section className="py-24 bg-slate-950 relative border-b border-slate-900">
          <div className="max-w-6xl mx-auto px-6">
@@ -420,7 +458,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                          <div className="absolute top-0 left-0 w-1 h-full bg-indigo-500"></div>
                          <div className="space-y-4 text-slate-300 leading-relaxed text-lg">
                             <p>
-                                <strong className="text-white">I’m a Head of Sales + RevOps consultant</strong> with 5 years of Marketing experience and 6 years of Sales experience. I’ve built B2B teams and outbound systems targeting North America, LATAM, and EMEA.
+                                <strong className="text-white">I'm a Head of Sales + RevOps consultant</strong> with under 5 years of Marketing experience and 6+ years of Sales experience. I've built B2B teams and outbound systems targeting North America, LATAM, and EMEA.
                             </p>
                             <p>
                                 First, the volume of questions I kept getting about tool stacks and outbound setups was getting more frequent. It made sense to put everything in one place so people can find answers fast in this library.
