@@ -168,7 +168,7 @@ export const TOOLS: Tool[] = [
     description: 'Personalized cold email outreach at scale. Known for dynamic images and video personalization.',
     bestFor: [TeamSize.SOLOPRENEUR, TeamSize.SMALL_TEAM],
     pricingTier: 'Medium',
-    website: 'https://www.lemlist.com',
+    website: 'https://get.lemlist.com/outboundsales',
     pros: ['Dynamic image personalization', 'Video prospecting', 'Built-in email warm-up', 'LinkedIn automation'],
     cons: ['Limited multichannel features', 'Reporting could be more robust'],
     channels: ['Calls', 'Emails', 'LinkedIn', 'WhatsApp'],
