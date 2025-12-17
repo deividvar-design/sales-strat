@@ -153,8 +153,8 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, showChannels = true })
           rel="noopener noreferrer"
           className={`flex-1 py-2.5 text-sm font-bold rounded-lg shadow-lg flex items-center justify-center gap-2 transition-all transform hover:-translate-y-0.5 ${
               isCoreStack
-              ? 'bg-indigo-600 text-slate-900 hover:bg-indigo-700 shadow-indigo-200'
-              : 'bg-slate-200 text-slate-800 border border-slate-200 hover:bg-slate-300'
+              ? 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-indigo-200'
+              : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-indigo-200'
           }`}
         >
           {isCoreStack ? 'Try For Free' : 'Visit Website'} <ExternalLink className="w-3 h-3" />
