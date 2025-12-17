@@ -68,7 +68,7 @@ const NavLink = ({ to, icon: Icon, label, onClick }: any) => {
       onClick={onClick}
       className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium ${
         isActive
-          ? 'bg-indigo-600 text-slate-900 shadow-md shadow-indigo-500/20'
+          ? 'bg-indigo-600 text-white shadow-md shadow-indigo-500/20'
           : 'text-slate-600 hover:bg-slate-300 hover:text-slate-900'
       }`}
     >
@@ -173,7 +173,7 @@ const Footer = () => (
       <div className="grid md:grid-cols-3 gap-8 mb-12">
         <div>
           <Link to="/" className="flex items-center gap-2 group mb-3">
-            <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-slate-900 text-lg shadow-[0_0_15px_rgba(79,70,229,0.5)]">
+            <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-[0_0_15px_rgba(79,70,229,0.5)]">
               S
             </div>
             <span className="text-xl font-bold tracking-tight text-slate-900">Sales House</span>
@@ -241,7 +241,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-                <Link to="/library" className="px-10 py-5 bg-indigo-600 hover:bg-indigo-600 text-slate-900 text-xl font-bold rounded-xl shadow-[0_0_30px_rgba(79,70,229,0.5)] transition-all transform hover:-translate-y-1 flex items-center gap-3 border border-indigo-500">
+                <Link to="/library" className="px-10 py-5 bg-indigo-600 hover:bg-indigo-600 text-white text-xl font-bold rounded-xl shadow-[0_0_30px_rgba(79,70,229,0.5)] transition-all transform hover:-translate-y-1 flex items-center gap-3 border border-indigo-500">
                     Browse Tool Recommendations <ArrowRight className="w-6 h-6" />
                 </Link>
                 <Link to="/strategies" className="px-10 py-5 bg-slate-100 hover:bg-slate-300 text-slate-800 text-xl font-semibold rounded-xl border border-slate-200 transition-all flex items-center gap-3">
@@ -273,7 +273,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
         <div className="max-w-6xl mx-auto px-6">
             <div className="grid md:grid-cols-3 gap-8">
                 <div className="relative bg-slate-100 border-2 border-indigo-500/50 rounded-xl p-8 hover:border-indigo-500 transition-all shadow-lg shadow-indigo-500/20">
-                    <div className="absolute -top-3 left-6 bg-indigo-600 text-slate-900 text-xs font-bold px-3 py-1 rounded-full">
+                    <div className="absolute -top-3 left-6 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                         START HERE
                     </div>
                     <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
@@ -283,7 +283,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                     <p className="text-slate-700 mb-6 leading-relaxed">
                         Honest tool reviews from 6+ years of hands-on experience.
                     </p>
-                    <Link to="/library" className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-600 text-slate-900 font-bold rounded-lg transition-all">
+                    <Link to="/library" className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-600 text-white font-bold rounded-lg transition-all">
                         Browse Library <ArrowRight className="w-5 h-5" />
                     </Link>
                 </div>
@@ -737,7 +737,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
             <div className="text-center mt-8">
                 <Link
                     to="/faq"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-slate-900 font-bold rounded-lg hover:bg-indigo-600 transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-600 transition-colors"
                 >
                     See All FAQs
                 </Link>
@@ -746,7 +746,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
     </section>
 
     {/* Lead Magnet / Playbook Section */}
-    <section className="py-24 bg-gradient-to-br from-indigo-900 to-purple-900 text-slate-900 px-6 border-t border-slate-200">
+    <section className="py-24 bg-gradient-to-br from-indigo-900 to-purple-900 text-white px-6 border-t border-slate-200">
         <div className="max-w-4xl mx-auto bg-slate-50/50 backdrop-blur-lg border border-white/10 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 relative overflow-hidden">
              <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/20 rounded-full blur-[80px] -mr-16 -mt-16 pointer-events-none"></div>
 
@@ -838,7 +838,7 @@ const LibraryPage = () => {
              {/* Floating Filter Button */}
              <button
                 onClick={() => setIsFilterOpen(true)}
-                className="fixed right-6 top-24 z-40 w-14 h-14 bg-indigo-600 hover:bg-indigo-600 text-slate-900 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
+                className="fixed right-6 top-24 z-40 w-14 h-14 bg-indigo-600 hover:bg-indigo-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
                 aria-label="Open filters"
              >
                 <Filter className="w-6 h-6" />
@@ -1046,7 +1046,7 @@ const LibraryPage = () => {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                         <a
                             href="mailto:david@saleshousestack.com"
-                            className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-600 text-slate-900 font-bold rounded-lg transition-colors"
+                            className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-600 text-white font-bold rounded-lg transition-colors"
                         >
                             <Mail className="w-4 h-4" />
                             Contact Me
@@ -1446,7 +1446,7 @@ const StrategiesPage = () => {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <a
                             href="mailto:david@saleshousestack.com"
-                            className="flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-600 text-slate-900 font-semibold rounded-lg transition-colors"
+                            className="flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-600 text-white font-semibold rounded-lg transition-colors"
                         >
                             <Mail className="w-5 h-5" />
                             Send Email
@@ -1465,7 +1465,7 @@ const StrategiesPage = () => {
             </section>
 
             {/* Get The Full Playbook */}
-            <section className="py-24 bg-gradient-to-br from-indigo-900 to-purple-900 text-slate-900 px-6 border-t border-slate-200">
+            <section className="py-24 bg-gradient-to-br from-indigo-900 to-purple-900 text-white px-6 border-t border-slate-200">
                 <div className="max-w-4xl mx-auto bg-slate-50/50 backdrop-blur-lg border border-white/10 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/20 rounded-full blur-[80px] -mr-16 -mt-16 pointer-events-none"></div>
 
@@ -2411,7 +2411,7 @@ const FAQPage = () => {
                 </p>
                 <Link
                     to="/consulting"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-600 text-slate-900 font-bold rounded-lg transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-600 text-white font-bold rounded-lg transition-colors"
                 >
                     Book a Call
                 </Link>
@@ -2496,7 +2496,7 @@ const ComparisonsListPage = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="mailto:david@saleshousestack.com"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-slate-900 font-semibold rounded-lg hover:bg-indigo-600 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-600 transition-all"
             >
               <Mail className="w-5 h-5" />
               Email Me
@@ -2961,7 +2961,7 @@ const ReviewsListPage = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="mailto:david@saleshousestack.com"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-slate-900 font-semibold rounded-lg hover:bg-indigo-600 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-600 transition-all"
             >
               <Mail className="w-5 h-5" />
               Email Me
@@ -3194,7 +3194,7 @@ const ReplyIOReviewPage = () => {
               href={replyTool.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-slate-900 font-bold rounded-lg shadow-lg hover:bg-indigo-600 transition-all text-lg"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-bold rounded-lg shadow-lg hover:bg-indigo-600 transition-all text-lg"
             >
               Try Reply.io For Free <ExternalLink className="w-5 h-5" />
             </a>
@@ -3433,7 +3433,7 @@ const ClayReviewPage = () => {
               href={clayTool.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-slate-900 font-bold rounded-lg shadow-lg hover:bg-indigo-600 transition-all text-lg"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-bold rounded-lg shadow-lg hover:bg-indigo-600 transition-all text-lg"
             >
               Try Clay For Free <ExternalLink className="w-5 h-5" />
             </a>
@@ -3475,7 +3475,7 @@ const App = () => {
                     {/* Logo */}
                     <div className="flex items-center shrink-0">
                          <Link to="/" className="flex items-center gap-2 group">
-                             <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-slate-900 text-lg shadow-[0_0_15px_rgba(79,70,229,0.5)] group-hover:bg-indigo-600 transition-colors">
+                             <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-[0_0_15px_rgba(79,70,229,0.5)] group-hover:bg-indigo-600 transition-colors">
                                 S
                              </div>
                              <span className="text-xl font-bold tracking-tight text-slate-900">Sales House</span>
@@ -3491,7 +3491,7 @@ const App = () => {
                         <div className="h-6 w-px bg-slate-200 mx-2"></div>
                         <button
                             onClick={openPlaybookForm}
-                            className="px-4 py-2 bg-indigo-600 hover:bg-indigo-600 text-slate-900 text-sm font-bold rounded-lg transition-colors flex items-center gap-2 shadow-[0_0_15px_rgba(79,70,229,0.3)]"
+                            className="px-4 py-2 bg-indigo-600 hover:bg-indigo-600 text-white text-sm font-bold rounded-lg transition-colors flex items-center gap-2 shadow-[0_0_15px_rgba(79,70,229,0.3)]"
                         >
                             <Download className="w-4 h-4" /> Get Playbook
                         </button>
