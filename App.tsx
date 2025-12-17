@@ -267,11 +267,11 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
         </div>
     </section>
 
-    {/* What I Offer Section */}
+    {/* What I Offer Section - HIDDEN FOR NOW */}
+    {/*
     <section className="py-20 bg-slate-950 border-b border-slate-800">
         <div className="max-w-6xl mx-auto px-6">
             <div className="grid md:grid-cols-3 gap-8">
-                {/* Tool Reviews - PRIMARY */}
                 <div className="relative bg-slate-900/50 border-2 border-indigo-500/50 rounded-xl p-8 hover:border-indigo-500 transition-all shadow-lg shadow-indigo-500/20">
                     <div className="absolute -top-3 left-6 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                         START HERE
@@ -288,7 +288,6 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                     </Link>
                 </div>
 
-                {/* Tool Comparisons */}
                 <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-8 hover:border-indigo-500/30 transition-all">
                     <div className="w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4">
                         <span className="text-3xl">⚖️</span>
@@ -302,7 +301,6 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                     </Link>
                 </div>
 
-                {/* 1:1 Consulting */}
                 <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-8 hover:border-indigo-500/30 transition-all">
                     <div className="w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4">
                         <span className="text-3xl">💼</span>
@@ -318,6 +316,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
             </div>
         </div>
     </section>
+    */}
 
     {/* Featured Tools Teaser (Moved UP) */}
     <section id="featured-stack" className="py-24 bg-slate-950 text-white px-6 border-b border-slate-900 relative">
@@ -3488,7 +3487,7 @@ const App = () => {
                         <NavLink to="/" icon={LayoutDashboard} label="Home" />
                         <NavLink to="/library" icon={Library} label="Library" />
                         <NavLink to="/strategies" icon={Layers} label="Playbook" />
-                        <NavLink to="/consulting" icon={Briefcase} label="Consulting" />
+                        {/* <NavLink to="/consulting" icon={Briefcase} label="Consulting" /> */}
                         <div className="h-6 w-px bg-slate-800 mx-2"></div>
                         <button
                             onClick={openPlaybookForm}
@@ -3516,7 +3515,7 @@ const App = () => {
                     <NavLink to="/" icon={LayoutDashboard} label="Home" onClick={() => setIsMobileMenuOpen(false)} />
                     <NavLink to="/library" icon={Library} label="Library" onClick={() => setIsMobileMenuOpen(false)} />
                     <NavLink to="/strategies" icon={Layers} label="Playbook" onClick={() => setIsMobileMenuOpen(false)} />
-                    <NavLink to="/consulting" icon={Briefcase} label="Consulting" onClick={() => setIsMobileMenuOpen(false)} />
+                    {/* <NavLink to="/consulting" icon={Briefcase} label="Consulting" onClick={() => setIsMobileMenuOpen(false)} /> */}
                     <a 
                         href="https://tally.so/r/mDOGeq" 
                         target="_blank" 
