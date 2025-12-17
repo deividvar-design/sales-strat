@@ -747,15 +747,15 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
 
     {/* Lead Magnet / Playbook Section */}
     <section className="py-24 bg-gradient-to-br from-indigo-900 to-purple-900 text-white px-6 border-t border-slate-200">
-        <div className="max-w-4xl mx-auto bg-slate-50/50 backdrop-blur-lg border border-white/10 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 relative overflow-hidden">
+        <div className="max-w-4xl mx-auto bg-white/95 backdrop-blur-lg border border-white/20 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 relative overflow-hidden shadow-2xl">
              <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/20 rounded-full blur-[80px] -mr-16 -mt-16 pointer-events-none"></div>
 
             <div className="flex-1 relative z-10">
-                <div className="inline-block px-3 py-1 bg-white/10 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-white/10">
+                <div className="inline-block px-3 py-1 bg-indigo-100 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-indigo-200 text-indigo-900">
                     Free Resource
                 </div>
-                <h2 className="text-3xl font-bold mb-4">Get The Full Playbook</h2>
-                <p className="text-indigo-200 text-lg mb-6 leading-relaxed">
+                <h2 className="text-3xl font-bold mb-4 text-slate-900">Get The Full Playbook</h2>
+                <p className="text-slate-700 text-lg mb-6 leading-relaxed">
                     It's a full Notion setup for getting started with outbound, including message templates, Clay setup, checklist.
                 </p>
                 <button
@@ -1466,7 +1466,7 @@ const StrategiesPage = () => {
 
             {/* Get The Full Playbook */}
             <section className="py-24 bg-gradient-to-br from-indigo-900 to-purple-900 text-white px-6 border-t border-slate-200">
-                <div className="max-w-4xl mx-auto bg-slate-50/50 backdrop-blur-lg border border-white/10 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 relative overflow-hidden">
+                <div className="max-w-4xl mx-auto bg-white/95 backdrop-blur-lg border border-white/20 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 relative overflow-hidden shadow-2xl">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/20 rounded-full blur-[80px] -mr-16 -mt-16 pointer-events-none"></div>
 
                     <div className="flex-1 relative z-10">
