@@ -398,15 +398,15 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                         I've worked across SaaS, Fintech, and Traditional sales companies from early-stage to scale-up. I've set up sales operations for:
                     </p>
                     <div className="grid md:grid-cols-3 gap-6 mb-8">
-                        <div className="bg-slate-100 border border-slate-300 rounded-lg p-4">
+                        <div className="bg-white border-2 border-indigo-200 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow">
                             <div className="text-indigo-600 font-bold mb-2">Solo founders</div>
                             <div className="text-sm text-slate-600">Just you + a few freelancers</div>
                         </div>
-                        <div className="bg-slate-100 border border-slate-300 rounded-lg p-4">
+                        <div className="bg-white border-2 border-indigo-200 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow">
                             <div className="text-indigo-600 font-bold mb-2">Small teams</div>
                             <div className="text-sm text-slate-600">1-10 SDRs/AEs</div>
                         </div>
-                        <div className="bg-slate-100 border border-slate-300 rounded-lg p-4">
+                        <div className="bg-white border-2 border-indigo-200 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow">
                             <div className="text-indigo-600 font-bold mb-2">Growing teams</div>
                             <div className="text-sm text-slate-600">10-20 people, multiple roles</div>
                         </div>
@@ -432,7 +432,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                 ].map((company) => (
                     <div
                         key={company}
-                        className="group relative bg-slate-100 backdrop-blur-sm border border-slate-300 rounded-xl p-6 hover:border-indigo-500/50 hover:bg-slate-300/50 transition-all duration-300 flex items-center justify-center text-center"
+                        className="group relative bg-white border border-slate-300 rounded-xl p-6 hover:border-indigo-400 hover:bg-indigo-50 transition-all duration-300 flex items-center justify-center text-center shadow-sm hover:shadow-md"
                     >
                         <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/0 to-purple-500/0 group-hover:from-indigo-500/5 group-hover:to-purple-500/5 rounded-xl transition-all duration-300"></div>
                         <span className="text-slate-900 font-semibold text-sm md:text-base transition-colors duration-300 relative z-10">
