@@ -76,16 +76,16 @@ const Breadcrumb: React.FC = () => {
             return (
               <li key={item.path} className="flex items-center gap-2">
                 {index > 0 && (
-                  <ChevronRight className="w-4 h-4 text-slate-600" aria-hidden="true" />
+                  <ChevronRight className="w-4 h-4 text-slate-400" aria-hidden="true" />
                 )}
                 {isLast ? (
-                  <span className="text-slate-400" aria-current="page">
+                  <span className="text-slate-600" aria-current="page">
                     {item.label}
                   </span>
                 ) : (
                   <Link
                     to={item.path}
-                    className="text-slate-400 hover:text-indigo-400 transition-colors"
+                    className="text-slate-600 hover:text-indigo-600 transition-colors"
                   >
                     {item.label}
                   </Link>
