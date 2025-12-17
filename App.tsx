@@ -530,7 +530,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
         {/* Condensed Comparison Grid - Always Visible */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
             {/* Paid Advertising */}
-            <div className="bg-slate-100 p-6 rounded-2xl border border-red-900/30 relative overflow-hidden h-full">
+            <div className="bg-white p-6 rounded-2xl border border-red-300 relative overflow-hidden h-full shadow-md">
                 <div className="absolute top-0 left-0 w-full h-1 bg-red-500/50"></div>
                 <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-red-500"></span> Paid Advertising
@@ -555,7 +555,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
             </div>
 
              {/* Organic Marketing */}
-            <div className="bg-slate-100 p-6 rounded-2xl border border-orange-900/30 relative overflow-hidden h-full">
+            <div className="bg-white p-6 rounded-2xl border border-orange-300 relative overflow-hidden h-full shadow-md">
                 <div className="absolute top-0 left-0 w-full h-1 bg-orange-500/50"></div>
                 <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-orange-500"></span> Organic Marketing
@@ -581,7 +581,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
             </div>
 
             {/* Outbound */}
-            <div className="bg-slate-100 p-6 rounded-2xl border border-indigo-500/30 relative overflow-hidden shadow-lg shadow-indigo-500/10 h-full">
+            <div className="bg-white p-6 rounded-2xl border-2 border-indigo-400 relative overflow-hidden shadow-lg shadow-indigo-200 h-full">
                 <div className="absolute top-0 left-0 w-full h-1 bg-indigo-600"></div>
                     <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-indigo-600"></span> Outbound (My Way)
