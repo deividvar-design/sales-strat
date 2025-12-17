@@ -27,32 +27,50 @@ interface ToolCardProps {
 export const ToolCard: React.FC<ToolCardProps> = ({ tool, showChannels = true }) => {
   const [isReviewModalOpen, setIsReviewModalOpen] = React.useState(false);
 
-  // Icon Mapping based on tool ID
-  const getIcon = () => {
+  // Logo Mapping based on tool ID
+  const getLogoPath = () => {
+    const logoMap: Record<string, string> = {
+      'clay': '/tool logos/clay.jpg',
+      'reply': '/tool logos/reply.jpg',
+      'hubspot': '/tool logos/hubspot.webp',
+      'salesforce': '/tool logos/salesforce.png',
+      'apollo': '/tool logos/apollo.png',
+      'lusha': '/tool logos/lusha.jpeg',
+      'zoominfo': '/tool logos/zoominfo.png',
+      'cognism': '/tool logos/cognism.png',
+      'mixmax': '/tool logos/mixmax.png',
+      'lemlist': '/tool logos/lemlist.webp',
+      'mailforge': '/tool logos/mailforge.jpeg',
+      'infraforge': '/tool logos/infraforge.jpeg',
+      'mailreef': '/tool logos/mailreef.jpeg',
+      'salesforge': '/tool logos/salesforge.jpeg',
+      'instantly': '/tool logos/instantly.jpg',
+      'dripify': '/tool logos/dripify.png',
+      'outreach': '/tool logos/outreach.png',
+      'pipedrive': '/tool logos/pipedrive.png',
+      'calendly': '/tool logos/calendly.png'
+    };
+    return logoMap[tool.id] || null;
+  };
+
+  const logoPath = getLogoPath();
+
+  // Fallback icon for tools without logos
+  const getFallbackIcon = () => {
     switch (tool.id) {
-      case 'clay': return Database;
-      case 'reply': return Megaphone;
       case 'mailforge': return ShieldCheck;
       case 'infraforge': return ShieldCheck;
       case 'mailreef': return ShieldCheck;
       case 'salesforge': return Zap;
       case 'outreach': return Target;
-      case 'hubspot': return LayoutDashboard;
       case 'pipedrive': return TrendingUp;
-      case 'salesforce': return Briefcase;
-      case 'mixmax': return Mail;
-      case 'lemlist': return Mail;
       case 'dripify': return Target;
-      case 'apollo': return Target;
-      case 'lusha': return Phone;
-      case 'zoominfo': return Search;
-      case 'cognism': return Globe;
       case 'calendly': return Calendar;
       default: return Briefcase;
     }
   };
 
-  const Icon = getIcon();
+  const FallbackIcon = getFallbackIcon();
 
   // Custom Category Label Mapping as requested
   const getCategoryLabel = () => {
@@ -72,9 +90,13 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, showChannels = true })
 
       <div className="p-6 flex-1 flex flex-col">
         <div className="flex items-start gap-4 mb-4">
-          {/* Icon Box */}
-          <div className={`p-3 rounded-lg border shrink-0 ${isCoreStack ? 'bg-indigo-50 border-indigo-200 text-indigo-600' : 'bg-slate-200 border-slate-200 text-slate-600'}`}>
-             <Icon className="w-6 h-6" />
+          {/* Logo/Icon Box */}
+          <div className={`w-12 h-12 rounded-xl border shrink-0 overflow-hidden flex items-center justify-center ${isCoreStack ? 'bg-white border-indigo-200 text-indigo-600 shadow-sm' : 'bg-white border-slate-200 text-slate-600 shadow-sm'}`}>
+             {logoPath ? (
+               <img src={logoPath} alt={`${tool.name} logo`} className="w-full h-full object-cover" />
+             ) : (
+               <FallbackIcon className="w-6 h-6" />
+             )}
           </div>
 
           <div className="flex-1 pr-6">
@@ -183,8 +205,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, showChannels = true })
                   DV
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-slate-900 mb-1">{tool.name} Review</h2>
-                  <p className="text-sm text-slate-600">Expert Review • Last updated December 2025</p>
+                  <h2 className="text-2xl font-bold text-slate-900">{tool.name} Review</h2>
                 </div>
               </div>
               <button
@@ -232,7 +253,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, showChannels = true })
                   I've used and set up Reply.io for 4 SaaS companies over the past year. The platform has been my go-to for automating LinkedIn, InMail, and email sequencing with variable steps across multiple campaigns.
                 </p>
                 <div className="bg-slate-200 border border-slate-200 rounded-lg p-4">
-                  <p className="text-sm text-slate-600 mb-2">Real Results:</p>
+                  <p className="text-sm text-slate-600 mb-2">Results:</p>
                   <ul className="space-y-2 text-slate-700">
                     <li className="flex items-start gap-2">
                       <span className="text-green-600 mt-1">✓</span>
@@ -322,8 +343,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, showChannels = true })
                   DV
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-slate-900 mb-1">{tool.name} Review</h2>
-                  <p className="text-sm text-slate-600">Expert Review • Last updated December 2025</p>
+                  <h2 className="text-2xl font-bold text-slate-900">{tool.name} Review</h2>
                 </div>
               </div>
               <button
@@ -356,7 +376,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, showChannels = true })
                   Why I Recommend It
                 </h3>
                 <p className="text-slate-700 leading-relaxed">
-                  I'll be transparent: I haven't used a tool I can call a direct competitor to Clay. It's not just a contact database - it's a whole AI research assistant doing extra qualification, sending you signals, and preparing personalization angles. The time saved from manual research is massive when you can qualify 500+ companies in under 10 minutes.
+                  I haven't used a tool I can call a direct competitor to Clay. It's not just a contact database - it's a whole AI research assistant doing extra qualification, sending you signals, and preparing personalization angles. The time saved from manual research is massive when you can qualify 500+ companies in under 10 minutes.
                 </p>
               </div>
 
@@ -367,7 +387,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, showChannels = true })
                   8 months of use, 40,000+ contacts processed. You know perfectly well what a pain account qualification is - but qualifying 500+ companies in under 10 minutes? Hell yeah.
                 </p>
                 <div className="bg-slate-200 border border-slate-200 rounded-lg p-4">
-                  <p className="text-sm text-slate-600 mb-2">Real Results:</p>
+                  <p className="text-sm text-slate-600 mb-2">Results:</p>
                   <ul className="space-y-2 text-slate-700">
                     <li className="flex items-start gap-2">
                       <span className="text-green-600 mt-1">✓</span>

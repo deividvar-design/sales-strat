@@ -235,7 +235,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
 
         <div className="max-w-5xl mx-auto relative z-10 text-center">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-[1.05] text-slate-900">
-                The Only Sales Stack Guide You Need
+                Reach the clients you need with the right outbound tools
             </h1>
 
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
@@ -421,24 +421,31 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                 {[
-                    'SORSEO',
-                    'Whatagraph',
-                    'RoyaltyRange',
-                    'GPSWOX',
-                    'Walk15',
-                    'CTO2B',
-                    'HEMES',
-                    'Glassique Cadeau',
-                    'Finfra',
-                    '+ 10 other'
+                    { name: 'SORSEO', logo: '/client logos/sor_seo_logo.jpeg' },
+                    { name: 'Whatagraph', logo: '/client logos/whatagraph_logo.jpeg' },
+                    { name: 'RoyaltyRange', logo: '/client logos/royaltyrange_logo.jpeg' },
+                    { name: 'GPSWOX', logo: '/client logos/gpswox_logo.jpeg' },
+                    { name: 'Walk15', logo: '/client logos/walk15_logo.jpeg' },
+                    { name: 'CTO2B', logo: '/client logos/cto2b_logo.jpeg' },
+                    { name: 'HEMES', logo: '/client logos/hemes1_logo.jpeg' },
+                    { name: 'Glassique Cadeau', logo: '/client logos/glassique_logo.png' },
+                    { name: 'Finfra', logo: '/client logos/finfra_logo.jpeg' },
+                    { name: '+ 10 other', logo: null }
                 ].map((company) => (
                     <div
-                        key={company}
-                        className="group relative bg-white border border-slate-300 rounded-xl p-6 hover:border-indigo-400 hover:bg-indigo-50 transition-all duration-300 flex items-center justify-center text-center shadow-sm hover:shadow-md"
+                        key={company.name}
+                        className={`group relative bg-white border border-slate-300 rounded-xl p-4 hover:border-indigo-400 hover:bg-indigo-50 transition-all duration-300 flex items-center shadow-sm hover:shadow-md ${company.logo ? 'gap-3' : 'justify-center'}`}
                     >
                         <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/0 to-purple-500/0 group-hover:from-indigo-500/5 group-hover:to-purple-500/5 rounded-xl transition-all duration-300"></div>
+                        {company.logo && (
+                            <img
+                                src={company.logo}
+                                alt={`${company.name} logo`}
+                                className="w-8 h-8 object-contain shrink-0 relative z-10"
+                            />
+                        )}
                         <span className="text-slate-900 font-semibold text-sm md:text-base transition-colors duration-300 relative z-10">
-                            {company}
+                            {company.name}
                         </span>
                     </div>
                 ))}
@@ -3115,7 +3122,7 @@ const ReplyIOReviewPage = () => {
               I've used and set up Reply.io for 4 SaaS companies over the past year. The platform has been my go-to for automating LinkedIn, InMail, and email sequencing with variable steps across multiple campaigns.
             </p>
             <div className="bg-slate-200 border border-slate-200 rounded-lg p-6">
-              <p className="text-sm font-bold text-slate-600 uppercase tracking-wider mb-4">Real Results:</p>
+              <p className="text-sm font-bold text-slate-600 uppercase tracking-wider mb-4">Results:</p>
               <ul className="space-y-3 text-slate-700">
                 <li className="flex items-start gap-3">
                   <span className="text-green-600 mt-1 text-xl">✓</span>
@@ -3323,7 +3330,7 @@ const ClayReviewPage = () => {
               Why I Recommend It
             </h2>
             <p className="text-slate-700 leading-relaxed mb-4">
-              I'll be transparent: I haven't used a tool I can call a direct competitor to Clay. What makes it stand out is the extensiveness of how far you can go with the qualification steps.
+              I haven't used a tool I can call a direct competitor to Clay. What makes it stand out is the extensiveness of how far you can go with the qualification steps.
             </p>
             <p className="text-slate-700 leading-relaxed">
               It's not just a contact database - it's a whole AI research assistant doing extra qualification, sending you signals, and preparing personalization angles. It can be used as a database, but it can also identify key people in the company, research company LinkedIn and DMs information, and prepare an angle for a personalized pitch. The time saved from manual research is massive when you can launch an AI to qualify companies based on your criteria.
@@ -3337,7 +3344,7 @@ const ClayReviewPage = () => {
               I've been using Clay for about 8 months and have processed north of 40,000 contacts. You know perfectly well what a pain account qualification is - but qualifying 500+ companies in under 10 minutes to figure out if they're a good fit for my product offering? Hell yeah. That extra time can be spent on sequence prep, old inbound, and closed-lost nurturing.
             </p>
             <div className="bg-slate-200 border border-slate-200 rounded-lg p-6 mb-6">
-              <p className="text-sm font-bold text-slate-600 uppercase tracking-wider mb-4">Real Results:</p>
+              <p className="text-sm font-bold text-slate-600 uppercase tracking-wider mb-4">Results:</p>
               <ul className="space-y-3 text-slate-700">
                 <li className="flex items-start gap-3">
                   <span className="text-green-600 mt-1 text-xl">✓</span>
