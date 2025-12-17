@@ -244,7 +244,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                 <Link to="/library" className="px-10 py-5 bg-indigo-600 hover:bg-indigo-600 text-white text-xl font-bold rounded-xl shadow-[0_0_30px_rgba(79,70,229,0.5)] transition-all transform hover:-translate-y-1 flex items-center gap-3 border border-indigo-500">
                     Show Me The Best Tools <ArrowRight className="w-6 h-6" />
                 </Link>
-                <Link to="/strategies" className="px-10 py-5 bg-slate-100 hover:bg-slate-300 text-slate-800 text-xl font-semibold rounded-xl border border-slate-200 transition-all flex items-center gap-3">
+                <Link to="/strategies" className="px-10 py-5 bg-transparent hover:bg-slate-100 text-slate-700 text-xl font-semibold rounded-xl border-2 border-slate-300 transition-all flex items-center gap-3">
                     View Playbook
                 </Link>
             </div>
