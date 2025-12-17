@@ -239,7 +239,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
             </h1>
 
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
-                Unbiased reviews, real comparisons, and consulting from someone who's implemented these tools. From solo founder to 20-person teams.
+                Unbiased reviews, comparisons, and consulting from someone who's implemented these tools. From solo founder to 20-person teams.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
