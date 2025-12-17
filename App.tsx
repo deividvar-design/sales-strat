@@ -395,7 +395,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                 </h2>
                 <div className="max-w-3xl mx-auto">
                     <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                        I've worked across SaaS, Fintech, and Traditional sales companies from early-stage to scale-up. I've set up sales operations for:
+                        I've worked across SaaS, Fintech, and Traditional sales companies from early-stage to scale-up—spanning from <strong className="text-slate-900">5-figure ARR startups to 7-figure ARR companies</strong>. I've set up sales operations for:
                     </p>
                     <div className="grid md:grid-cols-3 gap-6 mb-8">
                         <div className="bg-white border-2 border-indigo-200 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow">
