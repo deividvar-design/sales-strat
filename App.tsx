@@ -386,7 +386,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
     </section>
 
     {/* Social Proof - Companies */}
-    <section className="py-20 bg-gradient-to-b from-slate-900/50 to-slate-950 border-b border-slate-300 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-slate-50 to-slate-100 border-b border-slate-300 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(79,70,229,0.05),transparent_70%)]"></div>
         <div className="max-w-6xl mx-auto px-6 relative z-10">
             <div className="text-center mb-12">
@@ -497,19 +497,19 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                                 style={{ objectPosition: 'center 20%' }}
                             />
                             {/* Gradient Overlay for Text Readability */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-800/60 to-transparent"></div>
                         </div>
 
                         {/* Content Overlay */}
                         <div className="absolute bottom-0 left-0 w-full p-6 z-10 flex flex-col items-start">
-                            <h3 className="text-3xl font-bold text-slate-900 mb-1">David</h3>
-                            <p className="text-indigo-600 font-medium mb-6">Head of Sales & Creator</p>
+                            <h3 className="text-3xl font-bold text-white mb-1">David</h3>
+                            <p className="text-indigo-300 font-medium mb-6">Head of Sales & Creator</p>
 
                             <div className="w-full space-y-2">
-                                 <a href="https://www.linkedin.com/in/davidvaran/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 w-full py-2.5 bg-[#0077b5] hover:bg-[#006399] text-slate-900 rounded-lg font-bold text-sm transition-all shadow-lg shadow-blue-900/20">
+                                 <a href="https://www.linkedin.com/in/davidvaran/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 w-full py-2.5 bg-[#0077b5] hover:bg-[#006399] text-white rounded-lg font-bold text-sm transition-all shadow-lg shadow-blue-900/20">
                                     <Linkedin className="w-4 h-4" /> Connect on LinkedIn
                                 </a>
-                                <a href="mailto:david@saleshousestack.com" className="flex items-center justify-center gap-2 w-full py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-slate-900 rounded-lg font-bold text-sm transition-all border border-white/10">
+                                <a href="mailto:david@saleshousestack.com" className="flex items-center justify-center gap-2 w-full py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white rounded-lg font-bold text-sm transition-all border border-white/10">
                                     <Mail className="w-4 h-4" /> Email Me
                                 </a>
                             </div>
@@ -2227,19 +2227,19 @@ const ConsultingPage = () => {
                                     style={{ objectPosition: 'center 20%' }}
                                 />
                                 {/* Gradient Overlay */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-800/60 to-transparent"></div>
                             </div>
 
                             {/* Content Overlay */}
                             <div className="absolute bottom-0 left-0 w-full p-6 z-10 flex flex-col items-start">
-                                <h3 className="text-3xl font-bold text-slate-900 mb-1">David</h3>
-                                <p className="text-indigo-600 font-medium mb-6">Head of Sales & Creator</p>
+                                <h3 className="text-3xl font-bold text-white mb-1">David</h3>
+                                <p className="text-indigo-300 font-medium mb-6">Head of Sales & Creator</p>
 
                                 <div className="w-full space-y-2">
-                                    <a href="https://www.linkedin.com/in/davidvaran/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 w-full py-2.5 bg-[#0077b5] hover:bg-[#006399] text-slate-900 rounded-lg font-bold text-sm transition-all shadow-lg shadow-blue-900/20">
+                                    <a href="https://www.linkedin.com/in/davidvaran/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 w-full py-2.5 bg-[#0077b5] hover:bg-[#006399] text-white rounded-lg font-bold text-sm transition-all shadow-lg shadow-blue-900/20">
                                         <Linkedin className="w-4 h-4" /> Connect on LinkedIn
                                     </a>
-                                    <a href="mailto:david@saleshousestack.com" className="flex items-center justify-center gap-2 w-full py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-slate-900 rounded-lg font-bold text-sm transition-all border border-white/10">
+                                    <a href="mailto:david@saleshousestack.com" className="flex items-center justify-center gap-2 w-full py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white rounded-lg font-bold text-sm transition-all border border-white/10">
                                         <Mail className="w-4 h-4" /> Email Me
                                     </a>
                                 </div>
