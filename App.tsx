@@ -49,7 +49,9 @@ import {
   CreditCard,
   AlertCircle,
   TrendingUp,
-  Building
+  Building,
+  Clock,
+  Sparkles
 } from 'lucide-react';
 import { TOOLS, STRATEGIES } from './constants';
 import { TeamSize, ToolCategory, Tool } from './types';
@@ -233,7 +235,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
 
         <div className="max-w-5xl mx-auto relative z-10 text-center">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-[1.05] text-slate-900">
-                Stop Overpaying for Sales Tools You Don't Need
+                The Only Sales Stack Guide You Need
             </h1>
 
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
@@ -395,7 +397,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                 </h2>
                 <div className="max-w-3xl mx-auto">
                     <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                        I've worked across SaaS, Fintech, and Traditional sales companies from early-stage to scale-up—spanning from <strong className="text-slate-900">5-figure ARR startups to 7-figure ARR companies</strong>. I've set up sales operations for:
+                        I've worked across SaaS, Fintech, and Traditional sales companies from early-stage to scale-up—spanning from <strong className="text-slate-900">5-figure ARR startups - 7-figure ARR companies</strong>. I've set up sales operations for:
                     </p>
                     <div className="grid md:grid-cols-3 gap-6 mb-8">
                         <div className="bg-white border-2 border-indigo-200 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow">
@@ -1470,11 +1472,11 @@ const StrategiesPage = () => {
                     <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/20 rounded-full blur-[80px] -mr-16 -mt-16 pointer-events-none"></div>
 
                     <div className="flex-1 relative z-10">
-                        <div className="inline-block px-3 py-1 bg-white/10 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-white/10">
+                        <div className="inline-block px-3 py-1 bg-indigo-100 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-indigo-200 text-indigo-900">
                             Free Resource
                         </div>
-                        <h2 className="text-3xl font-bold mb-4">Get The Full Playbook</h2>
-                        <p className="text-indigo-200 text-lg mb-6 leading-relaxed">
+                        <h2 className="text-3xl font-bold mb-4 text-slate-900">Get The Full Playbook</h2>
+                        <p className="text-slate-700 text-lg mb-6 leading-relaxed">
                             It's a full Notion setup for getting started with outbound, including message templates, Clay setup, checklist.
                         </p>
                         <a
