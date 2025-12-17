@@ -1359,7 +1359,7 @@ const StrategiesPage = () => {
             <div className="px-6 max-w-7xl mx-auto">
             <div className="mt-6 bg-slate-100 rounded-xl border border-indigo-500 shadow-xl shadow-indigo-500/10 overflow-hidden">
                 <div className="p-6 md:p-8">
-                    <div className="p-6 bg-gradient-to-br from-slate-900 to-slate-950 border border-indigo-500/20 rounded-xl">
+                    <div className="p-6 bg-slate-50 border border-slate-300 rounded-xl">
                         <div className="flex items-start gap-3 mb-6">
                             <BarChart3 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
                             <div>
