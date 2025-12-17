@@ -68,8 +68,8 @@ const NavLink = ({ to, icon: Icon, label, onClick }: any) => {
       onClick={onClick}
       className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium ${
         isActive
-          ? 'bg-indigo-600 text-white shadow-md shadow-indigo-500/20'
-          : 'text-slate-400 hover:bg-slate-800 hover:text-white'
+          ? 'bg-indigo-600 text-slate-900 shadow-md shadow-indigo-500/20'
+          : 'text-slate-600 hover:bg-slate-300 hover:text-slate-900'
       }`}
     >
       <Icon className="w-4 h-4" />
@@ -130,7 +130,7 @@ const CalendlyEmbed = () => {
     <div ref={embedRef} style={{ minWidth: '320px', height: '950px' }}>
       {!scriptsLoaded && (
         <div className="flex items-center justify-center h-full">
-          <div className="text-slate-400">Loading calendar...</div>
+          <div className="text-slate-600">Loading calendar...</div>
         </div>
       )}
     </div>
@@ -141,17 +141,17 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden transition-colors hover:border-slate-700">
+    <div className="bg-slate-100 border border-slate-300 rounded-xl overflow-hidden transition-colors hover:border-slate-200">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full p-6 text-left flex items-start justify-between gap-4 group"
       >
-        <h3 className="text-lg font-bold text-white flex items-start gap-2 flex-1">
-          <span className="text-indigo-400 shrink-0">Q:</span>
-          <span className="group-hover:text-indigo-400 transition-colors">{question}</span>
+        <h3 className="text-lg font-bold text-slate-900 flex items-start gap-2 flex-1">
+          <span className="text-indigo-600 shrink-0">Q:</span>
+          <span className="group-hover:text-indigo-600 transition-colors">{question}</span>
         </h3>
         <ChevronDown
-          className={`w-5 h-5 text-slate-400 shrink-0 transition-transform duration-300 ${
+          className={`w-5 h-5 text-slate-600 shrink-0 transition-transform duration-300 ${
             isOpen ? 'rotate-180' : ''
           }`}
         />
@@ -161,56 +161,56 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <p className="text-slate-300 leading-relaxed px-6 pb-6 ml-6">{answer}</p>
+        <p className="text-slate-700 leading-relaxed px-6 pb-6 ml-6">{answer}</p>
       </div>
     </div>
   );
 };
 
 const Footer = () => (
-  <footer className="bg-slate-950 text-slate-500 py-12 border-t border-slate-800/50">
+  <footer className="bg-slate-50 text-slate-600 py-12 border-t border-slate-300">
     <div className="max-w-7xl mx-auto px-6">
       <div className="grid md:grid-cols-3 gap-8 mb-12">
         <div>
           <Link to="/" className="flex items-center gap-2 group mb-3">
-            <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-[0_0_15px_rgba(79,70,229,0.5)]">
+            <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-slate-900 text-lg shadow-[0_0_15px_rgba(79,70,229,0.5)]">
               S
             </div>
-            <span className="text-xl font-bold tracking-tight text-white">Sales House</span>
+            <span className="text-xl font-bold tracking-tight text-slate-900">Sales House</span>
           </Link>
-          <p className="text-sm text-slate-400 max-w-xs mb-3">Build your outbound engine. Simpler than you think. No agencies needed.</p>
-          <a href="mailto:david@saleshousestack.com" className="text-sm text-slate-400 hover:text-indigo-400 transition-colors flex items-center gap-2 mb-3">
+          <p className="text-sm text-slate-600 max-w-xs mb-3">Build your outbound engine. Simpler than you think. No agencies needed.</p>
+          <a href="mailto:david@saleshousestack.com" className="text-sm text-slate-600 hover:text-indigo-600 transition-colors flex items-center gap-2 mb-3">
             <Mail className="w-4 h-4" />
             david@saleshousestack.com
           </a>
-          <a href="https://www.linkedin.com/in/davidvaran/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-indigo-400 transition-colors inline-flex items-center gap-2">
+          <a href="https://www.linkedin.com/in/davidvaran/" target="_blank" rel="noreferrer" className="text-slate-600 hover:text-indigo-600 transition-colors inline-flex items-center gap-2">
             <Linkedin className="w-5 h-5" />
             <span className="text-sm">LinkedIn</span>
           </a>
         </div>
 
         <div>
-          <h4 className="text-white font-bold mb-4 uppercase text-xs tracking-wider">Platform</h4>
+          <h4 className="text-slate-900 font-bold mb-4 uppercase text-xs tracking-wider">Platform</h4>
           <ul className="space-y-2 text-sm">
-            <li><Link to="/library" className="hover:text-indigo-400 transition-colors">Tool Library</Link></li>
-            <li><Link to="/strategies" className="hover:text-indigo-400 transition-colors">Playbook</Link></li>
-            <li><Link to="/reviews" className="hover:text-indigo-400 transition-colors">Tool Reviews</Link></li>
-            <li><Link to="/comparisons" className="hover:text-indigo-400 transition-colors">Tool Comparisons</Link></li>
+            <li><Link to="/library" className="hover:text-indigo-600 transition-colors">Tool Library</Link></li>
+            <li><Link to="/strategies" className="hover:text-indigo-600 transition-colors">Playbook</Link></li>
+            <li><Link to="/reviews" className="hover:text-indigo-600 transition-colors">Tool Reviews</Link></li>
+            <li><Link to="/comparisons" className="hover:text-indigo-600 transition-colors">Tool Comparisons</Link></li>
           </ul>
         </div>
 
         <div>
-          <h4 className="text-white font-bold mb-4 uppercase text-xs tracking-wider">Resources</h4>
+          <h4 className="text-slate-900 font-bold mb-4 uppercase text-xs tracking-wider">Resources</h4>
           <ul className="space-y-2 text-sm">
-            <li><Link to="/consulting" className="hover:text-indigo-400 transition-colors">Consulting</Link></li>
-            <li><Link to="/faq" className="hover:text-indigo-400 transition-colors">FAQ</Link></li>
-            <li><Link to="/privacy" className="hover:text-indigo-400 transition-colors">Privacy Policy</Link></li>
-            <li><Link to="/terms" className="hover:text-indigo-400 transition-colors">Terms of Service</Link></li>
+            <li><Link to="/consulting" className="hover:text-indigo-600 transition-colors">Consulting</Link></li>
+            <li><Link to="/faq" className="hover:text-indigo-600 transition-colors">FAQ</Link></li>
+            <li><Link to="/privacy" className="hover:text-indigo-600 transition-colors">Privacy Policy</Link></li>
+            <li><Link to="/terms" className="hover:text-indigo-600 transition-colors">Terms of Service</Link></li>
           </ul>
         </div>
       </div>
 
-      <div className="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+      <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
         <p>&copy; 2025 Sales House by David Varan. All rights reserved.</p>
       </div>
     </div>
@@ -227,40 +227,40 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
       <meta name="description" content="Unbiased sales tool reviews and comparisons from 6+ years of hands-on experience. Get consulting to build the right stack for your stage." />
     </Helmet>
     {/* Hero Section - Simplified Single Column */}
-    <section className="relative bg-[#020617] text-white pt-32 pb-24 px-6 overflow-hidden border-b border-slate-900">
-        <div className="absolute top-0 right-0 -mt-20 -mr-20 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <section className="relative bg-[#FEFEFE] text-slate-900 pt-32 pb-24 px-6 overflow-hidden border-b border-slate-200">
+        <div className="absolute top-0 right-0 -mt-20 -mr-20 w-[600px] h-[600px] bg-indigo-50 rounded-full blur-[120px] pointer-events-none"></div>
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03]"></div>
 
         <div className="max-w-5xl mx-auto relative z-10 text-center">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-[1.05] text-white">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-[1.05] text-slate-900">
                 Stop Overpaying for Sales Tools You Don't Need
             </h1>
 
-            <p className="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
+            <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
                 Unbiased reviews, real comparisons, and consulting from someone who's implemented these tools. From solo founder to 20-person teams.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-                <Link to="/library" className="px-10 py-5 bg-indigo-600 hover:bg-indigo-500 text-white text-xl font-bold rounded-xl shadow-[0_0_30px_rgba(79,70,229,0.5)] transition-all transform hover:-translate-y-1 flex items-center gap-3 border border-indigo-500">
+                <Link to="/library" className="px-10 py-5 bg-indigo-600 hover:bg-indigo-600 text-slate-900 text-xl font-bold rounded-xl shadow-[0_0_30px_rgba(79,70,229,0.5)] transition-all transform hover:-translate-y-1 flex items-center gap-3 border border-indigo-500">
                     Browse Tool Recommendations <ArrowRight className="w-6 h-6" />
                 </Link>
-                <Link to="/strategies" className="px-10 py-5 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xl font-semibold rounded-xl border border-slate-700 transition-all flex items-center gap-3">
+                <Link to="/strategies" className="px-10 py-5 bg-slate-100 hover:bg-slate-300 text-slate-800 text-xl font-semibold rounded-xl border border-slate-200 transition-all flex items-center gap-3">
                     View Playbook
                 </Link>
             </div>
 
             {/* Trust Badges */}
-            <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-slate-500">
+            <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-slate-600">
                 <div className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-indigo-400" />
+                    <Check className="w-4 h-4 text-indigo-600" />
                     <span>No sponsored reviews</span>
                 </div>
                 <div className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-indigo-400" />
+                    <Check className="w-4 h-4 text-indigo-600" />
                     <span>6+ years experience</span>
                 </div>
                 <div className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-indigo-400" />
+                    <Check className="w-4 h-4 text-indigo-600" />
                     <span>Updated December 2025</span>
                 </div>
             </div>
@@ -269,47 +269,47 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
 
     {/* What I Offer Section - HIDDEN FOR NOW */}
     {/*
-    <section className="py-20 bg-slate-950 border-b border-slate-800">
+    <section className="py-20 bg-slate-50 border-b border-slate-300">
         <div className="max-w-6xl mx-auto px-6">
             <div className="grid md:grid-cols-3 gap-8">
-                <div className="relative bg-slate-900/50 border-2 border-indigo-500/50 rounded-xl p-8 hover:border-indigo-500 transition-all shadow-lg shadow-indigo-500/20">
-                    <div className="absolute -top-3 left-6 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                <div className="relative bg-slate-100 border-2 border-indigo-500/50 rounded-xl p-8 hover:border-indigo-500 transition-all shadow-lg shadow-indigo-500/20">
+                    <div className="absolute -top-3 left-6 bg-indigo-600 text-slate-900 text-xs font-bold px-3 py-1 rounded-full">
                         START HERE
                     </div>
-                    <div className="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-4">
+                    <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
                         <span className="text-3xl">⭐</span>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">Tool Reviews</h3>
-                    <p className="text-slate-300 mb-6 leading-relaxed">
+                    <h3 className="text-2xl font-bold text-slate-900 mb-3">Tool Reviews</h3>
+                    <p className="text-slate-700 mb-6 leading-relaxed">
                         Honest tool reviews from 6+ years of hands-on experience.
                     </p>
-                    <Link to="/library" className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg transition-all">
+                    <Link to="/library" className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-600 text-slate-900 font-bold rounded-lg transition-all">
                         Browse Library <ArrowRight className="w-5 h-5" />
                     </Link>
                 </div>
 
-                <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-8 hover:border-indigo-500/30 transition-all">
-                    <div className="w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4">
+                <div className="bg-slate-100 border border-slate-300 rounded-xl p-8 hover:border-indigo-500/30 transition-all">
+                    <div className="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center mb-4">
                         <span className="text-3xl">⚖️</span>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">Tool Comparisons</h3>
-                    <p className="text-slate-400 mb-6 leading-relaxed">
+                    <h3 className="text-xl font-bold text-slate-900 mb-3">Tool Comparisons</h3>
+                    <p className="text-slate-600 mb-6 leading-relaxed">
                         Side-by-side comparisons of sales tools. Know what you're paying for before you commit.
                     </p>
-                    <Link to="/comparisons" className="text-indigo-400 hover:text-indigo-300 font-medium flex items-center gap-2">
+                    <Link to="/comparisons" className="text-indigo-600 hover:text-indigo-700 font-medium flex items-center gap-2">
                         See Comparisons <ArrowRight className="w-4 h-4" />
                     </Link>
                 </div>
 
-                <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-8 hover:border-indigo-500/30 transition-all">
-                    <div className="w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4">
+                <div className="bg-slate-100 border border-slate-300 rounded-xl p-8 hover:border-indigo-500/30 transition-all">
+                    <div className="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center mb-4">
                         <span className="text-3xl">💼</span>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">1:1 Consulting</h3>
-                    <p className="text-slate-400 mb-6 leading-relaxed">
+                    <h3 className="text-xl font-bold text-slate-900 mb-3">1:1 Consulting</h3>
+                    <p className="text-slate-600 mb-6 leading-relaxed">
                         Book a call to audit your current stack, get recommendations, or plan your implementation.
                     </p>
-                    <Link to="/consulting" className="text-indigo-400 hover:text-indigo-300 font-medium flex items-center gap-2">
+                    <Link to="/consulting" className="text-indigo-600 hover:text-indigo-700 font-medium flex items-center gap-2">
                         Book Consulting <ArrowRight className="w-4 h-4" />
                     </Link>
                 </div>
@@ -319,15 +319,15 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
     */}
 
     {/* Featured Tools Teaser (Moved UP) */}
-    <section id="featured-stack" className="py-24 bg-slate-950 text-white px-6 border-b border-slate-900 relative">
+    <section id="featured-stack" className="py-24 bg-slate-50 text-slate-900 px-6 border-b border-slate-200 relative">
         <div className="absolute inset-0 bg-indigo-950/10"></div>
         <div className="max-w-6xl mx-auto relative z-10">
              <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
                 <div>
                     <h2 className="text-3xl font-bold mb-2">My Recommended Stack (December 2025)</h2>
-                    <p className="text-slate-400 text-sm">Tested, trusted, and currently in use</p>
+                    <p className="text-slate-600 text-sm">Tested, trusted, and currently in use</p>
                 </div>
-                <Link to="/library" className="flex items-center gap-2 text-indigo-400 hover:text-indigo-300 font-semibold transition-colors">
+                <Link to="/library" className="flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-semibold transition-colors">
                     View All Tools <ArrowRight className="w-4 h-4" />
                 </Link>
             </div>
@@ -342,17 +342,17 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
     </section>
 
     {/* Cost Breakdown Section (Moved UP) */}
-    <section className="py-20 bg-[#020617] border-b border-slate-900">
+    <section className="py-20 bg-[#FEFEFE] border-b border-slate-200">
         <div className="max-w-5xl mx-auto px-6">
              <div className="mb-12 text-center">
-                <h2 className="text-3xl font-bold text-white">A Realistic Cost of Scaling for Founders</h2>
-                <p className="text-slate-400 mt-2 max-w-2xl mx-auto">
+                <h2 className="text-3xl font-bold text-slate-900">A Realistic Cost of Scaling for Founders</h2>
+                <p className="text-slate-600 mt-2 max-w-2xl mx-auto">
                     If you have more than a few functional braincells, this setup can be done in less than a few days. 
                     It is significantly cheaper than hiring a dedicated person, and more reliable than hoping for a viral TikTok post or blasting ads on Facebook.
                 </p>
              </div>
 
-             <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl">
+             <div className="bg-slate-100 border border-slate-300 rounded-2xl overflow-hidden shadow-2xl">
                 <div className="grid md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-slate-800">
                     {[
                         { name: 'HubSpot', cost: '$0 - $119', period: '/mo', icon: LayoutDashboard, link: 'https://www.hubspot.com' },
@@ -361,22 +361,22 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                         { name: 'Mailforge', cost: '$39', period: '/mo', icon: ShieldCheck, link: 'https://www.mailforge.ai/?via=outboundsales' },
                         { name: 'Apollo', cost: '$0 - $119', period: '/mo', icon: Target, link: 'https://get.apollo.io/scaleoutbound' },
                     ].map((item, idx) => (
-                        <a key={idx} href={item.link} target="_blank" rel="noopener noreferrer" className="p-6 flex flex-col items-center text-center hover:bg-slate-800/70 transition-all duration-300 group cursor-pointer">
-                            <div className="mb-4 p-3 bg-slate-800 rounded-full text-slate-400 group-hover:text-indigo-400 group-hover:bg-indigo-500/10 transition-all duration-300" aria-hidden="true">
+                        <a key={idx} href={item.link} target="_blank" rel="noopener noreferrer" className="p-6 flex flex-col items-center text-center hover:bg-slate-300/70 transition-all duration-300 group cursor-pointer">
+                            <div className="mb-4 p-3 bg-slate-200 rounded-full text-slate-600 group-hover:text-indigo-600 group-hover:bg-indigo-50 transition-all duration-300" aria-hidden="true">
                                 <item.icon className="w-6 h-6" />
                             </div>
-                            <h3 className="text-white font-bold mb-1">{item.name}</h3>
-                            <div className="text-xl font-bold text-indigo-400 mb-2">
-                                {item.cost}<span className="text-xs text-slate-500 font-medium ml-1">{item.period}</span>
+                            <h3 className="text-slate-900 font-bold mb-1">{item.name}</h3>
+                            <div className="text-xl font-bold text-indigo-600 mb-2">
+                                {item.cost}<span className="text-xs text-slate-600 font-medium ml-1">{item.period}</span>
                             </div>
-                            <span className="text-xs text-indigo-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span className="text-xs text-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity">
                                 Try for Free →
                             </span>
                         </a>
                     ))}
                 </div>
-                <div className="bg-slate-950/50 p-6 border-t border-slate-800 text-center">
-                     <p className="text-slate-400 text-sm">
+                <div className="bg-slate-50/50 p-6 border-t border-slate-300 text-center">
+                     <p className="text-slate-600 text-sm">
                         <AlertCircle className="w-4 h-4 inline-block mr-2 text-indigo-500" />
                         Total Stack Cost: <strong>~$350 - $500/mo</strong> vs. <strong>$4,500/mo</strong> for a single SDR.
                      </p>
@@ -386,36 +386,36 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
     </section>
 
     {/* Social Proof - Companies */}
-    <section className="py-20 bg-gradient-to-b from-slate-900/50 to-slate-950 border-b border-slate-800 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-slate-900/50 to-slate-950 border-b border-slate-300 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(79,70,229,0.05),transparent_70%)]"></div>
         <div className="max-w-6xl mx-auto px-6 relative z-10">
             <div className="text-center mb-12">
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
                     Experience Across SaaS Companies & Team Sizes
                 </h2>
                 <div className="max-w-3xl mx-auto">
-                    <p className="text-lg text-slate-400 mb-6 leading-relaxed">
+                    <p className="text-lg text-slate-600 mb-6 leading-relaxed">
                         I've worked across SaaS, Fintech, and Traditional sales companies from early-stage to scale-up. I've set up sales operations for:
                     </p>
                     <div className="grid md:grid-cols-3 gap-6 mb-8">
-                        <div className="bg-slate-900/50 border border-slate-800 rounded-lg p-4">
-                            <div className="text-indigo-400 font-bold mb-2">Solo founders</div>
-                            <div className="text-sm text-slate-400">Just you + a few freelancers</div>
+                        <div className="bg-slate-100 border border-slate-300 rounded-lg p-4">
+                            <div className="text-indigo-600 font-bold mb-2">Solo founders</div>
+                            <div className="text-sm text-slate-600">Just you + a few freelancers</div>
                         </div>
-                        <div className="bg-slate-900/50 border border-slate-800 rounded-lg p-4">
-                            <div className="text-indigo-400 font-bold mb-2">Small teams</div>
-                            <div className="text-sm text-slate-400">1-10 SDRs/AEs</div>
+                        <div className="bg-slate-100 border border-slate-300 rounded-lg p-4">
+                            <div className="text-indigo-600 font-bold mb-2">Small teams</div>
+                            <div className="text-sm text-slate-600">1-10 SDRs/AEs</div>
                         </div>
-                        <div className="bg-slate-900/50 border border-slate-800 rounded-lg p-4">
-                            <div className="text-indigo-400 font-bold mb-2">Growing teams</div>
-                            <div className="text-sm text-slate-400">10-20 people, multiple roles</div>
+                        <div className="bg-slate-100 border border-slate-300 rounded-lg p-4">
+                            <div className="text-indigo-600 font-bold mb-2">Growing teams</div>
+                            <div className="text-sm text-slate-600">10-20 people, multiple roles</div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div className="text-center mb-8">
-                <p className="text-slate-500 text-sm uppercase tracking-wider">Companies I've Worked With</p>
+                <p className="text-slate-600 text-sm uppercase tracking-wider">Companies I've Worked With</p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                 {[
@@ -432,10 +432,10 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                 ].map((company) => (
                     <div
                         key={company}
-                        className="group relative bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-xl p-6 hover:border-indigo-500/50 hover:bg-slate-800/50 transition-all duration-300 flex items-center justify-center text-center"
+                        className="group relative bg-slate-100 backdrop-blur-sm border border-slate-300 rounded-xl p-6 hover:border-indigo-500/50 hover:bg-slate-300/50 transition-all duration-300 flex items-center justify-center text-center"
                     >
                         <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/0 to-purple-500/0 group-hover:from-indigo-500/5 group-hover:to-purple-500/5 rounded-xl transition-all duration-300"></div>
-                        <span className="text-white font-semibold text-sm md:text-base transition-colors duration-300 relative z-10">
+                        <span className="text-slate-900 font-semibold text-sm md:text-base transition-colors duration-300 relative z-10">
                             {company}
                         </span>
                     </div>
@@ -445,7 +445,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
     </section>
 
      {/* Meet The Expert Section */}
-    <section className="py-24 bg-slate-950 relative border-b border-slate-900">
+    <section className="py-24 bg-slate-50 relative border-b border-slate-200">
          <div className="max-w-6xl mx-auto px-6">
             <div className="flex flex-col md:flex-row gap-8 items-stretch">
 
@@ -453,11 +453,11 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                 <div className="md:w-2/3 w-full flex flex-col gap-6 h-full">
                     
                     {/* Bio Card */}
-                    <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-8 backdrop-blur-sm relative overflow-hidden flex-shrink-0">
-                         <div className="absolute top-0 left-0 w-1 h-full bg-indigo-500"></div>
-                         <div className="space-y-4 text-slate-300 leading-relaxed text-lg">
+                    <div className="bg-slate-100 border border-slate-300 rounded-2xl p-8 backdrop-blur-sm relative overflow-hidden flex-shrink-0">
+                         <div className="absolute top-0 left-0 w-1 h-full bg-indigo-600"></div>
+                         <div className="space-y-4 text-slate-700 leading-relaxed text-lg">
                             <p>
-                                <strong className="text-white">I'm a Head of Sales + RevOps consultant</strong> with under 5 years of Marketing experience and 6+ years of Sales experience. I've built B2B teams and outbound systems targeting North America, LATAM, and EMEA.
+                                <strong className="text-slate-900">I'm a Head of Sales + RevOps consultant</strong> with under 5 years of Marketing experience and 6+ years of Sales experience. I've built B2B teams and outbound systems targeting North America, LATAM, and EMEA.
                             </p>
                             <p>
                                 First, the volume of questions I kept getting about tool stacks and outbound setups was getting more frequent. It made sense to put everything in one place so people can find answers fast in this library.
@@ -476,10 +476,10 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                             { icon: Mail, val: '500k+', label: 'Emails Sent' },
                             { icon: Calendar, val: '200+', label: 'Demos Booked' }
                         ].map((stat, idx) => (
-                             <div key={idx} className="bg-slate-900 p-6 rounded-2xl border border-slate-800 flex flex-col items-center justify-center text-center hover:bg-slate-800/80 transition-all hover:border-slate-700 group h-full">
-                                <stat.icon className="w-6 h-6 text-indigo-400 mb-3 group-hover:scale-110 transition-transform opacity-80" />
-                                <div className="text-3xl font-bold text-white mb-1">{stat.val}</div>
-                                <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">{stat.label}</span>
+                             <div key={idx} className="bg-slate-100 p-6 rounded-2xl border border-slate-300 flex flex-col items-center justify-center text-center hover:bg-slate-300/80 transition-all hover:border-slate-200 group h-full">
+                                <stat.icon className="w-6 h-6 text-indigo-600 mb-3 group-hover:scale-110 transition-transform opacity-80" />
+                                <div className="text-3xl font-bold text-slate-900 mb-1">{stat.val}</div>
+                                <span className="text-xs font-bold text-slate-600 uppercase tracking-wider">{stat.label}</span>
                             </div>
                         ))}
                     </div>
@@ -487,7 +487,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
 
                 {/* Right Column: Profile Card - Full Image Background */}
                 <div className="md:w-1/3 w-full flex min-h-[600px]">
-                    <div className="rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-indigo-500/30 transition-all duration-500 w-full shadow-2xl">
+                    <div className="rounded-2xl border border-slate-300 relative overflow-hidden group hover:border-indigo-500/30 transition-all duration-500 w-full shadow-2xl">
                         {/* Background Image - Full Size */}
                         <div className="absolute inset-0">
                              <img
@@ -502,14 +502,14 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
 
                         {/* Content Overlay */}
                         <div className="absolute bottom-0 left-0 w-full p-6 z-10 flex flex-col items-start">
-                            <h3 className="text-3xl font-bold text-white mb-1">David</h3>
-                            <p className="text-indigo-400 font-medium mb-6">Head of Sales & Creator</p>
+                            <h3 className="text-3xl font-bold text-slate-900 mb-1">David</h3>
+                            <p className="text-indigo-600 font-medium mb-6">Head of Sales & Creator</p>
 
                             <div className="w-full space-y-2">
-                                 <a href="https://www.linkedin.com/in/davidvaran/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 w-full py-2.5 bg-[#0077b5] hover:bg-[#006399] text-white rounded-lg font-bold text-sm transition-all shadow-lg shadow-blue-900/20">
+                                 <a href="https://www.linkedin.com/in/davidvaran/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 w-full py-2.5 bg-[#0077b5] hover:bg-[#006399] text-slate-900 rounded-lg font-bold text-sm transition-all shadow-lg shadow-blue-900/20">
                                     <Linkedin className="w-4 h-4" /> Connect on LinkedIn
                                 </a>
-                                <a href="mailto:david@saleshousestack.com" className="flex items-center justify-center gap-2 w-full py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white rounded-lg font-bold text-sm transition-all border border-white/10">
+                                <a href="mailto:david@saleshousestack.com" className="flex items-center justify-center gap-2 w-full py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-slate-900 rounded-lg font-bold text-sm transition-all border border-white/10">
                                     <Mail className="w-4 h-4" /> Email Me
                                 </a>
                             </div>
@@ -521,24 +521,24 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
     </section>
     
     {/* Manifesto / Why This Exists (Moved DOWN and Collapsed) */}
-    <section className="py-20 px-6 bg-[#020617] border-b border-slate-900">
+    <section className="py-20 px-6 bg-[#FEFEFE] border-b border-slate-200">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white mb-4">Why Outbound?</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-4">Why Outbound?</h2>
         </div>
         
         {/* Condensed Comparison Grid - Always Visible */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
             {/* Paid Advertising */}
-            <div className="bg-slate-900/50 p-6 rounded-2xl border border-red-900/30 relative overflow-hidden h-full">
+            <div className="bg-slate-100 p-6 rounded-2xl border border-red-900/30 relative overflow-hidden h-full">
                 <div className="absolute top-0 left-0 w-full h-1 bg-red-500/50"></div>
-                <h3 className="text-lg font-bold text-white mb-6 flex items-center gap-2">
+                <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-red-500"></span> Paid Advertising
                 </h3>
                 
                 <div className="mb-6">
-                    <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">The Bad</h4>
-                    <ul className="space-y-2 text-slate-400 text-sm">
+                    <h4 className="text-xs font-bold text-slate-600 uppercase tracking-wider mb-3">The Bad</h4>
+                    <ul className="space-y-2 text-slate-600 text-sm">
                         <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-500 shrink-0 mt-0.5"/> Pay to learn</li>
                         <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-500 shrink-0 mt-0.5"/> Bot traffic</li>
                         <li className="flex items-start gap-2"><X className="w-4 h-4 text-red-500 shrink-0 mt-0.5"/> At scale: diminishing returns</li>
@@ -546,8 +546,8 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                 </div>
 
                 <div>
-                    <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">The Good</h4>
-                    <ul className="space-y-2 text-slate-400 text-sm">
+                    <h4 className="text-xs font-bold text-slate-600 uppercase tracking-wider mb-3">The Good</h4>
+                    <ul className="space-y-2 text-slate-600 text-sm">
                         <li className="flex items-start gap-2"><Check className="w-4 h-4 text-slate-600 shrink-0 mt-0.5"/> Fast top-of-funnel scale (if budget is big)</li>
                         <li className="flex items-start gap-2"><Check className="w-4 h-4 text-slate-600 shrink-0 mt-0.5"/> Easy to test multiple ICPs (if you enjoy burning money)</li>
                     </ul>
@@ -555,15 +555,15 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
             </div>
 
              {/* Organic Marketing */}
-            <div className="bg-slate-900/50 p-6 rounded-2xl border border-orange-900/30 relative overflow-hidden h-full">
+            <div className="bg-slate-100 p-6 rounded-2xl border border-orange-900/30 relative overflow-hidden h-full">
                 <div className="absolute top-0 left-0 w-full h-1 bg-orange-500/50"></div>
-                <h3 className="text-lg font-bold text-white mb-6 flex items-center gap-2">
+                <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-orange-500"></span> Organic Marketing
                 </h3>
 
                 <div className="mb-6">
-                    <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">The Bad</h4>
-                    <ul className="space-y-2 text-slate-400 text-sm">
+                    <h4 className="text-xs font-bold text-slate-600 uppercase tracking-wider mb-3">The Bad</h4>
+                    <ul className="space-y-2 text-slate-600 text-sm">
                         <li className="flex items-start gap-2"><X className="w-4 h-4 text-orange-500 shrink-0 mt-0.5"/> 6-18 months delayed ROI</li>
                         <li className="flex items-start gap-2"><X className="w-4 h-4 text-orange-500 shrink-0 mt-0.5"/> Google controls your fate</li>
                         <li className="flex items-start gap-2"><X className="w-4 h-4 text-orange-500 shrink-0 mt-0.5"/> Requires heavy consistency</li>
@@ -572,8 +572,8 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                 </div>
 
                 <div>
-                    <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">The Good</h4>
-                    <ul className="space-y-2 text-slate-400 text-sm">
+                    <h4 className="text-xs font-bold text-slate-600 uppercase tracking-wider mb-3">The Good</h4>
+                    <ul className="space-y-2 text-slate-600 text-sm">
                         <li className="flex items-start gap-2"><Check className="w-4 h-4 text-slate-600 shrink-0 mt-0.5"/> Long-term compounding ROI (if it hits)</li>
                         <li className="flex items-start gap-2"><Check className="w-4 h-4 text-slate-600 shrink-0 mt-0.5"/> Lower maintenance (after years of effort)</li>
                     </ul>
@@ -581,31 +581,31 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
             </div>
 
             {/* Outbound */}
-            <div className="bg-slate-900 p-6 rounded-2xl border border-indigo-500/30 relative overflow-hidden shadow-lg shadow-indigo-500/10 h-full">
-                <div className="absolute top-0 left-0 w-full h-1 bg-indigo-500"></div>
-                    <h3 className="text-lg font-bold text-white mb-6 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-indigo-500"></span> Outbound (My Way)
+            <div className="bg-slate-100 p-6 rounded-2xl border border-indigo-500/30 relative overflow-hidden shadow-lg shadow-indigo-500/10 h-full">
+                <div className="absolute top-0 left-0 w-full h-1 bg-indigo-600"></div>
+                    <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-indigo-600"></span> Outbound (My Way)
                 </h3>
                 
                 <div className="mb-6">
-                    <h4 className="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-3">The Great</h4>
-                    <ul className="space-y-2 text-slate-300 text-sm">
-                        <li className="flex items-start gap-2"><Check className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5"/> Full control over volume and targeting</li>
-                        <li className="flex items-start gap-2"><Check className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5"/> Works with zero brand awareness</li>
-                        <li className="flex items-start gap-2"><Check className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5"/> Direct line to decision-makers</li>
-                        <li className="flex items-start gap-2"><Check className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5"/> Instant validation & low upfront cost</li>
-                        <li className="flex items-start gap-2"><Check className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5"/> Highest ROI channel in B2B</li>
-                        <li className="flex items-start gap-2"><Check className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5"/> Re-usable engine</li>
+                    <h4 className="text-xs font-bold text-indigo-600 uppercase tracking-wider mb-3">The Great</h4>
+                    <ul className="space-y-2 text-slate-700 text-sm">
+                        <li className="flex items-start gap-2"><Check className="w-4 h-4 text-indigo-600 shrink-0 mt-0.5"/> Full control over volume and targeting</li>
+                        <li className="flex items-start gap-2"><Check className="w-4 h-4 text-indigo-600 shrink-0 mt-0.5"/> Works with zero brand awareness</li>
+                        <li className="flex items-start gap-2"><Check className="w-4 h-4 text-indigo-600 shrink-0 mt-0.5"/> Direct line to decision-makers</li>
+                        <li className="flex items-start gap-2"><Check className="w-4 h-4 text-indigo-600 shrink-0 mt-0.5"/> Instant validation & low upfront cost</li>
+                        <li className="flex items-start gap-2"><Check className="w-4 h-4 text-indigo-600 shrink-0 mt-0.5"/> Highest ROI channel in B2B</li>
+                        <li className="flex items-start gap-2"><Check className="w-4 h-4 text-indigo-600 shrink-0 mt-0.5"/> Re-usable engine</li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">The Reality</h4>
-                    <ul className="space-y-2 text-slate-400 text-sm">
-                        <li className="flex items-start gap-2"><AlertCircle className="w-4 h-4 text-slate-500 shrink-0 mt-0.5"/> Requires experience (which I'm sharing)</li>
-                        <li className="flex items-start gap-2"><AlertCircle className="w-4 h-4 text-slate-500 shrink-0 mt-0.5"/> Can burn lists if done badly</li>
-                        <li className="flex items-start gap-2"><AlertCircle className="w-4 h-4 text-slate-500 shrink-0 mt-0.5"/> Needs regular optimization</li>
-                        <li className="flex items-start gap-2"><AlertCircle className="w-4 h-4 text-slate-500 shrink-0 mt-0.5"/> Requires thick skin (You'll get told off)</li>
+                    <h4 className="text-xs font-bold text-slate-600 uppercase tracking-wider mb-3">The Reality</h4>
+                    <ul className="space-y-2 text-slate-600 text-sm">
+                        <li className="flex items-start gap-2"><AlertCircle className="w-4 h-4 text-slate-600 shrink-0 mt-0.5"/> Requires experience (which I'm sharing)</li>
+                        <li className="flex items-start gap-2"><AlertCircle className="w-4 h-4 text-slate-600 shrink-0 mt-0.5"/> Can burn lists if done badly</li>
+                        <li className="flex items-start gap-2"><AlertCircle className="w-4 h-4 text-slate-600 shrink-0 mt-0.5"/> Needs regular optimization</li>
+                        <li className="flex items-start gap-2"><AlertCircle className="w-4 h-4 text-slate-600 shrink-0 mt-0.5"/> Requires thick skin (You'll get told off)</li>
                     </ul>
                 </div>
             </div>
@@ -616,7 +616,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
              <div className="text-center">
                 <button
                     onClick={() => setShowFullManifesto(true)}
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors font-medium border border-slate-700"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-slate-200 hover:bg-slate-300 text-slate-900 rounded-lg transition-colors font-medium border border-slate-200"
                 >
                     Read Full Manifesto <ChevronDown className="w-4 h-4" />
                 </button>
@@ -626,7 +626,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
         {/* Expanded Content */}
         {showFullManifesto && (
             <div className="animate-fadeIn">
-                <div className="prose prose-lg prose-invert text-slate-400 leading-relaxed space-y-6 mx-auto">
+                <div className="prose prose-lg prose-invert text-slate-600 leading-relaxed space-y-6 mx-auto">
                     <p>
                         Fundamentally, I've been working in sales for 6+ years and have consulted small and mid-size sales teams on developing their strategies as well as tool stacks.
                     </p>
@@ -643,19 +643,19 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                         All popular modern channels where you can run marketing, you can safely run outbound via messaging as well: Instagram, Facebook, Twitter, TikTok, LinkedIn, X (Twitter).
                     </p>
                     
-                    <h2 className="text-xl font-bold text-white mt-8">The Vibecoder Advantage</h2>
+                    <h2 className="text-xl font-bold text-slate-900 mt-8">The Vibecoder Advantage</h2>
                     <p>
                         Also, if you're a serial entrepreneur, vibecoder, or running affiliate programs - the whole tool stack is reusable. You probably won't want to re-use the CRM, as different products = different markets, but the whole outbound strategy can be re-used.
                     </p>
                 </div>
 
                 {/* Transparency Section */}
-                <div className="mt-12 bg-slate-900 rounded-2xl p-8 border border-slate-800">
+                <div className="mt-12 bg-slate-100 rounded-2xl p-8 border border-slate-300">
                     <div className="flex items-start gap-4">
                         <Heart className="w-6 h-6 text-rose-500 shrink-0 mt-1 fill-rose-500/10" />
                         <div>
-                        <h2 className="text-lg font-bold text-white mb-2">Full Transparency: What's in it for me?</h2>
-                        <p className="text-slate-400 text-sm leading-relaxed">
+                        <h2 className="text-lg font-bold text-slate-900 mb-2">Full Transparency: What's in it for me?</h2>
+                        <p className="text-slate-600 text-sm leading-relaxed">
                             Generally, as I've been getting more and more questions on these topics, writing the same messages and sharing the same insights, I decided it just makes sense to put together a form of a library where I can share what tools I've used and what are my thoughts about them. All I'm getting in return from this is a small kickback from some of the affiliate programs if you do decide to trust my judgement and use the tools I recommend.
                         </p>
                         </div>
@@ -665,7 +665,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                 <div className="text-center pt-8">
                     <button
                         onClick={() => setShowFullManifesto(false)}
-                        className="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 font-medium"
+                        className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-medium"
                     >
                         Show Less <ChevronUp className="w-4 h-4" />
                     </button>
@@ -676,24 +676,24 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
     </section>
 
     {/* Consulting Section - Hidden */}
-    {/* <section className="py-24 bg-slate-950 text-white relative overflow-hidden border-b border-slate-900">
+    {/* <section className="py-24 bg-slate-50 text-slate-900 relative overflow-hidden border-b border-slate-200">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
         <div className="max-w-5xl mx-auto px-6 relative z-10">
 
-             <div className="flex flex-col md:flex-row items-stretch gap-12 bg-slate-900 border border-slate-800 rounded-2xl p-8 md:p-12 shadow-2xl">
+             <div className="flex flex-col md:flex-row items-stretch gap-12 bg-slate-100 border border-slate-300 rounded-2xl p-8 md:p-12 shadow-2xl">
                 <div className="md:w-1/2">
-                    <div className="w-16 h-16 bg-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-indigo-600/30 transform -rotate-3">
-                        <Briefcase className="w-8 h-8 text-white" />
+                    <div className="w-16 h-16 bg-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-indigo-200 transform -rotate-3">
+                        <Briefcase className="w-8 h-8 text-slate-900" />
                     </div>
                     <h2 className="text-3xl font-bold mb-4">Fractional Leadership</h2>
-                    <p className="text-lg text-slate-400 mb-8 leading-relaxed">
+                    <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                         Need more than just tools? I act as your fractional Head of Sales Ops.
                         I'll build the strategy, set up the stack, and hire the right people.
                     </p>
                     <ul className="space-y-3 mb-8">
                         {['Audit your ICP and Playbook', 'Implement toolstack', 'Setup audiences and outreach', 'A/B testing', 'CRM optimization', 'Lead recycling flow', 'Help with closing'].map((item, i) => (
-                            <li key={i} className="flex items-center gap-3 text-slate-300">
-                                <Check className="w-5 h-5 text-green-500 shrink-0" /> {item}
+                            <li key={i} className="flex items-center gap-3 text-slate-700">
+                                <Check className="w-5 h-5 text-green-700 shrink-0" /> {item}
                             </li>
                         ))}
                     </ul>
@@ -709,7 +709,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
     </section> */}
 
     {/* FAQ Section */}
-    <section className="py-24 bg-slate-950 text-white px-6 border-b border-slate-900">
+    <section className="py-24 bg-slate-50 text-slate-900 px-6 border-b border-slate-200">
         <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold mb-4">Common Questions</h2>
@@ -737,7 +737,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
             <div className="text-center mt-8">
                 <Link
                     to="/faq"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-500 transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-slate-900 font-bold rounded-lg hover:bg-indigo-600 transition-colors"
                 >
                     See All FAQs
                 </Link>
@@ -746,8 +746,8 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
     </section>
 
     {/* Lead Magnet / Playbook Section */}
-    <section className="py-24 bg-gradient-to-br from-indigo-900 to-purple-900 text-white px-6 border-t border-slate-900">
-        <div className="max-w-4xl mx-auto bg-slate-950/50 backdrop-blur-lg border border-white/10 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-br from-indigo-900 to-purple-900 text-slate-900 px-6 border-t border-slate-200">
+        <div className="max-w-4xl mx-auto bg-slate-50/50 backdrop-blur-lg border border-white/10 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 relative overflow-hidden">
              <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/20 rounded-full blur-[80px] -mr-16 -mt-16 pointer-events-none"></div>
 
             <div className="flex-1 relative z-10">
@@ -766,10 +766,10 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                 </button>
             </div>
             <div className="w-full md:w-1/3 relative z-10">
-                 <div className="bg-slate-900/50 p-1 rounded-xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 border border-white/10 backdrop-blur-sm">
-                    <div className="bg-slate-950 border border-slate-800 rounded-lg p-6 min-h-[200px] flex flex-col items-center justify-center text-slate-500">
-                        <FileText className="w-12 h-12 mb-2 text-indigo-400" aria-hidden="true" />
-                        <span className="font-mono text-xs text-slate-400">Notion</span>
+                 <div className="bg-slate-100 p-1 rounded-xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 border border-white/10 backdrop-blur-sm">
+                    <div className="bg-slate-50 border border-slate-300 rounded-lg p-6 min-h-[200px] flex flex-col items-center justify-center text-slate-600">
+                        <FileText className="w-12 h-12 mb-2 text-indigo-600" aria-hidden="true" />
+                        <span className="font-mono text-xs text-slate-600">Notion</span>
                     </div>
                  </div>
             </div>
@@ -824,26 +824,26 @@ const LibraryPage = () => {
     ];
 
     return (
-        <div className="p-6 max-w-7xl mx-auto min-h-screen bg-[#020617]">
+        <div className="p-6 max-w-7xl mx-auto min-h-screen bg-[#FEFEFE]">
              <Helmet>
                <title>Sales Tool Library - Compare 15+ Vetted Sales Engagement & CRM Tools | Sales House</title>
                <meta name="description" content="Compare 15+ vetted sales engagement, CRM, and contact tools. Pricing, pros, cons, and channels—find your perfect sales stack." />
              </Helmet>
              <Breadcrumb />
              <div className="mb-8">
-                 <h1 className="text-3xl font-bold text-white mb-2">Tool Library</h1>
-                 <p className="text-slate-400">Curated stack for modern sales teams.</p>
+                 <h1 className="text-3xl font-bold text-slate-900 mb-2">Tool Library</h1>
+                 <p className="text-slate-600">Curated stack for modern sales teams.</p>
              </div>
 
              {/* Floating Filter Button */}
              <button
                 onClick={() => setIsFilterOpen(true)}
-                className="fixed right-6 top-24 z-40 w-14 h-14 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
+                className="fixed right-6 top-24 z-40 w-14 h-14 bg-indigo-600 hover:bg-indigo-600 text-slate-900 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
                 aria-label="Open filters"
              >
                 <Filter className="w-6 h-6" />
                 {(searchQuery || selectedTeamSize || selectedLearningCurve || selectedCategory) && (
-                    <span className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full text-xs flex items-center justify-center font-bold">
+                    <span className="absolute -top-1 -right-1 w-5 h-5 bg-green-600 rounded-full text-xs flex items-center justify-center font-bold">
                         {[searchQuery, selectedTeamSize, selectedLearningCurve, selectedCategory].filter(Boolean).length}
                     </span>
                 )}
@@ -858,31 +858,31 @@ const LibraryPage = () => {
              )}
 
              {/* Filter Drawer */}
-             <div className={`fixed right-0 top-0 h-full w-full max-w-md bg-slate-900 border-l border-slate-800 z-50 transform transition-transform duration-300 overflow-y-auto ${isFilterOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+             <div className={`fixed right-0 top-0 h-full w-full max-w-md bg-slate-100 border-l border-slate-300 z-50 transform transition-transform duration-300 overflow-y-auto ${isFilterOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                 <div className="p-6">
                     {/* Header */}
                     <div className="flex items-center justify-between mb-6">
                         <div className="flex items-center gap-2">
-                            <Filter className="w-5 h-5 text-indigo-400" />
-                            <h3 className="text-lg font-semibold text-white">Search & Filter</h3>
+                            <Filter className="w-5 h-5 text-indigo-600" />
+                            <h3 className="text-lg font-semibold text-slate-900">Search & Filter</h3>
                         </div>
                         <button
                             onClick={() => setIsFilterOpen(false)}
-                            className="p-2 hover:bg-slate-800 rounded-lg transition-colors"
+                            className="p-2 hover:bg-slate-300 rounded-lg transition-colors"
                         >
-                            <X className="w-5 h-5 text-slate-400" />
+                            <X className="w-5 h-5 text-slate-600" />
                         </button>
                     </div>
 
                     {/* Search Input */}
                     <div className="relative mb-6">
-                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
+                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-600" />
                         <input
                             type="text"
                             placeholder="Search tools..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-indigo-500 transition-colors"
+                            className="w-full pl-10 pr-4 py-3 bg-slate-200 border border-slate-200 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:border-indigo-500 transition-colors"
                         />
                     </div>
 
@@ -890,11 +890,11 @@ const LibraryPage = () => {
                     <div className="space-y-6">
                         {/* Team Size Filter */}
                         <div>
-                            <label className="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Team Size</label>
+                            <label className="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2">Team Size</label>
                             <select
                                 value={selectedTeamSize}
                                 onChange={(e) => setSelectedTeamSize(e.target.value)}
-                                className="w-full px-3 py-2 bg-slate-800/50 border border-slate-700 rounded-lg text-white text-sm focus:outline-none focus:border-indigo-500 transition-colors"
+                                className="w-full px-3 py-2 bg-slate-200 border border-slate-200 rounded-lg text-slate-900 text-sm focus:outline-none focus:border-indigo-500 transition-colors"
                             >
                                 <option value="">All Sizes</option>
                                 <option value="Founders">Founders</option>
@@ -906,11 +906,11 @@ const LibraryPage = () => {
 
                         {/* Learning Curve Filter */}
                         <div>
-                            <label className="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Learning Curve</label>
+                            <label className="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2">Learning Curve</label>
                             <select
                                 value={selectedLearningCurve}
                                 onChange={(e) => setSelectedLearningCurve(e.target.value)}
-                                className="w-full px-3 py-2 bg-slate-800/50 border border-slate-700 rounded-lg text-white text-sm focus:outline-none focus:border-indigo-500 transition-colors"
+                                className="w-full px-3 py-2 bg-slate-200 border border-slate-200 rounded-lg text-slate-900 text-sm focus:outline-none focus:border-indigo-500 transition-colors"
                             >
                                 <option value="">All Levels</option>
                                 <option value="Beginner">Beginner</option>
@@ -921,11 +921,11 @@ const LibraryPage = () => {
 
                         {/* Category Filter */}
                         <div>
-                            <label className="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Category</label>
+                            <label className="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2">Category</label>
                             <select
                                 value={selectedCategory}
                                 onChange={(e) => setSelectedCategory(e.target.value)}
-                                className="w-full px-3 py-2 bg-slate-800/50 border border-slate-700 rounded-lg text-white text-sm focus:outline-none focus:border-indigo-500 transition-colors"
+                                className="w-full px-3 py-2 bg-slate-200 border border-slate-200 rounded-lg text-slate-900 text-sm focus:outline-none focus:border-indigo-500 transition-colors"
                             >
                                 <option value="">All Categories</option>
                                 <option value="CRM">CRM</option>
@@ -939,9 +939,9 @@ const LibraryPage = () => {
 
                     {/* Active Filters */}
                     {(searchQuery || selectedTeamSize || selectedLearningCurve || selectedCategory) && (
-                        <div className="mt-6 pt-6 border-t border-slate-800">
+                        <div className="mt-6 pt-6 border-t border-slate-300">
                             <div className="flex items-center justify-between mb-3">
-                                <span className="text-sm font-semibold text-slate-400">Active Filters</span>
+                                <span className="text-sm font-semibold text-slate-600">Active Filters</span>
                                 <button
                                     onClick={() => {
                                         setSearchQuery('');
@@ -949,7 +949,7 @@ const LibraryPage = () => {
                                         setSelectedLearningCurve('');
                                         setSelectedCategory('');
                                     }}
-                                    className="text-xs text-indigo-400 hover:text-indigo-300 transition-colors"
+                                    className="text-xs text-indigo-600 hover:text-indigo-700 transition-colors"
                                 >
                                     Clear All
                                 </button>
@@ -958,7 +958,7 @@ const LibraryPage = () => {
                                 {searchQuery && (
                                     <button
                                         onClick={() => setSearchQuery('')}
-                                        className="px-2 py-1 bg-indigo-500/20 border border-indigo-500/30 rounded text-xs text-indigo-300 hover:bg-indigo-500/30 transition-colors flex items-center gap-1"
+                                        className="px-2 py-1 bg-indigo-100 border border-indigo-500/30 rounded text-xs text-indigo-700 hover:bg-indigo-600/30 transition-colors flex items-center gap-1"
                                     >
                                         "{searchQuery}" <X className="w-3 h-3" />
                                     </button>
@@ -966,7 +966,7 @@ const LibraryPage = () => {
                                 {selectedTeamSize && (
                                     <button
                                         onClick={() => setSelectedTeamSize('')}
-                                        className="px-2 py-1 bg-indigo-500/20 border border-indigo-500/30 rounded text-xs text-indigo-300 hover:bg-indigo-500/30 transition-colors flex items-center gap-1"
+                                        className="px-2 py-1 bg-indigo-100 border border-indigo-500/30 rounded text-xs text-indigo-700 hover:bg-indigo-600/30 transition-colors flex items-center gap-1"
                                     >
                                         {selectedTeamSize} <X className="w-3 h-3" />
                                     </button>
@@ -974,7 +974,7 @@ const LibraryPage = () => {
                                 {selectedLearningCurve && (
                                     <button
                                         onClick={() => setSelectedLearningCurve('')}
-                                        className="px-2 py-1 bg-indigo-500/20 border border-indigo-500/30 rounded text-xs text-indigo-300 hover:bg-indigo-500/30 transition-colors flex items-center gap-1"
+                                        className="px-2 py-1 bg-indigo-100 border border-indigo-500/30 rounded text-xs text-indigo-700 hover:bg-indigo-600/30 transition-colors flex items-center gap-1"
                                     >
                                         {selectedLearningCurve} <X className="w-3 h-3" />
                                     </button>
@@ -982,7 +982,7 @@ const LibraryPage = () => {
                                 {selectedCategory && (
                                     <button
                                         onClick={() => setSelectedCategory('')}
-                                        className="px-2 py-1 bg-indigo-500/20 border border-indigo-500/30 rounded text-xs text-indigo-300 hover:bg-indigo-500/30 transition-colors flex items-center gap-1"
+                                        className="px-2 py-1 bg-indigo-100 border border-indigo-500/30 rounded text-xs text-indigo-700 hover:bg-indigo-600/30 transition-colors flex items-center gap-1"
                                     >
                                         {selectedCategory} <X className="w-3 h-3" />
                                     </button>
@@ -992,8 +992,8 @@ const LibraryPage = () => {
                     )}
 
                     {/* Results Count */}
-                    <div className="mt-6 pt-6 border-t border-slate-800 text-sm text-slate-400">
-                        Showing <span className="text-white font-semibold">{filteredTools.length}</span> of {TOOLS.length} tools
+                    <div className="mt-6 pt-6 border-t border-slate-300 text-sm text-slate-600">
+                        Showing <span className="text-slate-900 font-semibold">{filteredTools.length}</span> of {TOOLS.length} tools
                     </div>
                 </div>
              </div>
@@ -1001,9 +1001,9 @@ const LibraryPage = () => {
              {/* Recommended Tools Section */}
              <div className="mb-12 bg-gradient-to-br from-indigo-950/30 to-purple-950/20 rounded-2xl border border-indigo-500/20 p-8">
                 <div className="flex items-center gap-3 mb-6">
-                    <Star className="w-6 h-6 text-indigo-400" />
+                    <Star className="w-6 h-6 text-indigo-600" />
                     <div>
-                        <h2 className="text-2xl font-bold text-white">My Current Favourite Sales Stack</h2>
+                        <h2 className="text-2xl font-bold text-slate-900">My Current Favourite Sales Stack</h2>
                     </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1021,8 +1021,8 @@ const LibraryPage = () => {
                     return (
                         <div key={section.id}>
                             <div className="flex items-center gap-3 mb-6">
-                                <h2 className="text-xl font-bold text-slate-200">{section.title}</h2>
-                                <div className="h-px bg-slate-800 flex-1"></div>
+                                <h2 className="text-xl font-bold text-slate-800">{section.title}</h2>
+                                <div className="h-px bg-slate-200 flex-1"></div>
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {sectionTools.map(tool => (
@@ -1037,16 +1037,16 @@ const LibraryPage = () => {
 
              {/* Call to Action Section */}
              <div className="mt-16 mb-8 text-center">
-                <div className="bg-slate-900 border border-slate-800 rounded-xl p-8">
-                    <Mail className="w-8 h-8 text-indigo-400 mx-auto mb-4" />
-                    <h2 className="text-xl font-bold text-white mb-2">Want Your Tool Featured?</h2>
-                    <p className="text-slate-400 mb-4">
+                <div className="bg-slate-100 border border-slate-300 rounded-xl p-8">
+                    <Mail className="w-8 h-8 text-indigo-600 mx-auto mb-4" />
+                    <h2 className="text-xl font-bold text-slate-900 mb-2">Want Your Tool Featured?</h2>
+                    <p className="text-slate-600 mb-4">
                         Do you want your tool to be tested and listed here? Drop me an email.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                         <a
                             href="mailto:david@saleshousestack.com"
-                            className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg transition-colors"
+                            className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-600 text-slate-900 font-bold rounded-lg transition-colors"
                         >
                             <Mail className="w-4 h-4" />
                             Contact Me
@@ -1055,7 +1055,7 @@ const LibraryPage = () => {
                             href="https://www.linkedin.com/in/davidvaran/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-lg transition-colors border border-slate-700"
+                            className="inline-flex items-center gap-2 px-6 py-3 bg-slate-200 hover:bg-slate-300 text-slate-900 font-bold rounded-lg transition-colors border border-slate-200"
                         >
                             <Linkedin className="w-4 h-4" />
                             LinkedIn
@@ -1088,7 +1088,7 @@ const MetricsCalculator = () => {
             <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-4">
                     <div>
-                        <label className="block text-sm font-bold text-slate-300 mb-2">
+                        <label className="block text-sm font-bold text-slate-700 mb-2">
                             Emails per day (per inbox)
                         </label>
                         <input
@@ -1097,17 +1097,17 @@ const MetricsCalculator = () => {
                             max="100"
                             value={emailsPerDay}
                             onChange={(e) => setEmailsPerDay(Number(e.target.value))}
-                            className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-500"
+                            className="w-full h-2 bg-slate-300 rounded-lg appearance-none cursor-pointer accent-indigo-500"
                         />
                         <div className="flex justify-between mt-1">
-                            <span className="text-xs text-slate-500">20</span>
-                            <span className="text-sm font-bold text-indigo-400">{emailsPerDay}</span>
-                            <span className="text-xs text-slate-500">100</span>
+                            <span className="text-xs text-slate-600">20</span>
+                            <span className="text-sm font-bold text-indigo-600">{emailsPerDay}</span>
+                            <span className="text-xs text-slate-600">100</span>
                         </div>
                     </div>
 
                     <div>
-                        <label className="block text-sm font-bold text-slate-300 mb-2">
+                        <label className="block text-sm font-bold text-slate-700 mb-2">
                             Number of domains (inboxes)
                         </label>
                         <input
@@ -1116,19 +1116,19 @@ const MetricsCalculator = () => {
                             max="9"
                             value={numDomains}
                             onChange={(e) => setNumDomains(Number(e.target.value))}
-                            className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-500"
+                            className="w-full h-2 bg-slate-300 rounded-lg appearance-none cursor-pointer accent-indigo-500"
                         />
                         <div className="flex justify-between mt-1">
-                            <span className="text-xs text-slate-500">1</span>
-                            <span className="text-sm font-bold text-indigo-400">{numDomains}</span>
-                            <span className="text-xs text-slate-500">9</span>
+                            <span className="text-xs text-slate-600">1</span>
+                            <span className="text-sm font-bold text-indigo-600">{numDomains}</span>
+                            <span className="text-xs text-slate-600">9</span>
                         </div>
                     </div>
                 </div>
 
                 <div className="space-y-4">
                     <div>
-                        <label className="block text-sm font-bold text-slate-300 mb-2">
+                        <label className="block text-sm font-bold text-slate-700 mb-2">
                             Average Deal Value (ACV)
                         </label>
                         <input
@@ -1138,17 +1138,17 @@ const MetricsCalculator = () => {
                             step="500"
                             value={acv}
                             onChange={(e) => setAcv(Number(e.target.value))}
-                            className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-500"
+                            className="w-full h-2 bg-slate-300 rounded-lg appearance-none cursor-pointer accent-indigo-500"
                         />
                         <div className="flex justify-between mt-1">
-                            <span className="text-xs text-slate-500">$500</span>
-                            <span className="text-sm font-bold text-indigo-400">${acv.toLocaleString()}</span>
-                            <span className="text-xs text-slate-500">$10k</span>
+                            <span className="text-xs text-slate-600">$500</span>
+                            <span className="text-sm font-bold text-indigo-600">${acv.toLocaleString()}</span>
+                            <span className="text-xs text-slate-600">$10k</span>
                         </div>
                     </div>
 
                     <div>
-                        <label className="block text-sm font-bold text-slate-300 mb-2">
+                        <label className="block text-sm font-bold text-slate-700 mb-2">
                             Close Rate (%)
                         </label>
                         <input
@@ -1157,50 +1157,50 @@ const MetricsCalculator = () => {
                             max="20"
                             value={closeRate}
                             onChange={(e) => setCloseRate(Number(e.target.value))}
-                            className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-500"
+                            className="w-full h-2 bg-slate-300 rounded-lg appearance-none cursor-pointer accent-indigo-500"
                         />
                         <div className="flex justify-between mt-1">
-                            <span className="text-xs text-slate-500">1%</span>
-                            <span className="text-sm font-bold text-indigo-400">{closeRate}%</span>
-                            <span className="text-xs text-slate-500">20%</span>
+                            <span className="text-xs text-slate-600">1%</span>
+                            <span className="text-sm font-bold text-indigo-600">{closeRate}%</span>
+                            <span className="text-xs text-slate-600">20%</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* Results Display */}
-            <div className="grid md:grid-cols-5 gap-4 pt-6 border-t border-slate-800">
-                <div className="bg-slate-950/50 p-4 rounded-lg border border-slate-800 text-center">
-                    <div className="text-2xl font-bold text-slate-300 mb-1">{totalEmailsPerMonth.toLocaleString()}</div>
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Total Emails/Mo</div>
+            <div className="grid md:grid-cols-5 gap-4 pt-6 border-t border-slate-300">
+                <div className="bg-slate-50/50 p-4 rounded-lg border border-slate-300 text-center">
+                    <div className="text-2xl font-bold text-slate-700 mb-1">{totalEmailsPerMonth.toLocaleString()}</div>
+                    <div className="text-xs font-bold text-slate-600 uppercase tracking-wider">Total Emails/Mo</div>
                 </div>
 
-                <div className="bg-slate-950/50 p-4 rounded-lg border border-slate-800 text-center">
-                    <div className="text-2xl font-bold text-slate-300 mb-1">{opens.toLocaleString()}</div>
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Opens (35%)</div>
+                <div className="bg-slate-50/50 p-4 rounded-lg border border-slate-300 text-center">
+                    <div className="text-2xl font-bold text-slate-700 mb-1">{opens.toLocaleString()}</div>
+                    <div className="text-xs font-bold text-slate-600 uppercase tracking-wider">Opens (35%)</div>
                 </div>
 
-                <div className="bg-slate-950/50 p-4 rounded-lg border border-slate-800 text-center">
-                    <div className="text-2xl font-bold text-slate-300 mb-1">{replies.toLocaleString()}</div>
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Replies (3%)</div>
+                <div className="bg-slate-50/50 p-4 rounded-lg border border-slate-300 text-center">
+                    <div className="text-2xl font-bold text-slate-700 mb-1">{replies.toLocaleString()}</div>
+                    <div className="text-xs font-bold text-slate-600 uppercase tracking-wider">Replies (3%)</div>
                 </div>
 
-                <div className="bg-slate-950/50 p-4 rounded-lg border border-slate-800 text-center">
-                    <div className="text-2xl font-bold text-slate-300 mb-1">{meetings}</div>
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Meetings (1.5%)</div>
+                <div className="bg-slate-50/50 p-4 rounded-lg border border-slate-300 text-center">
+                    <div className="text-2xl font-bold text-slate-700 mb-1">{meetings}</div>
+                    <div className="text-xs font-bold text-slate-600 uppercase tracking-wider">Meetings (1.5%)</div>
                 </div>
 
-                <div className="bg-slate-950/50 p-4 rounded-lg border border-slate-800 text-center">
-                    <div className="text-2xl font-bold text-green-400 mb-1">${revenue.toLocaleString()}</div>
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Revenue/Mo</div>
+                <div className="bg-slate-50/50 p-4 rounded-lg border border-slate-300 text-center">
+                    <div className="text-2xl font-bold text-green-600 mb-1">${revenue.toLocaleString()}</div>
+                    <div className="text-xs font-bold text-slate-600 uppercase tracking-wider">Revenue/Mo</div>
                 </div>
             </div>
 
             {/* Breakdown Explanation */}
-            <div className="p-4 bg-slate-950/30 rounded-lg border border-slate-800">
-                <p className="text-xs text-slate-400 leading-relaxed">
-                    <strong className="text-slate-300">How this works:</strong> {emailsPerDay} emails/day × {numDomains} inboxes × 22 working days = {totalEmailsPerMonth.toLocaleString()} emails/month.
-                    At standard rates (35% open, 3% reply, 1.5% meeting) you get {meetings} demos. With {closeRate}% close rate at ${acv.toLocaleString()} ACV = <strong className="text-indigo-400">${revenue.toLocaleString()}/month potential revenue</strong>.
+            <div className="p-4 bg-slate-50/30 rounded-lg border border-slate-300">
+                <p className="text-xs text-slate-600 leading-relaxed">
+                    <strong className="text-slate-700">How this works:</strong> {emailsPerDay} emails/day × {numDomains} inboxes × 22 working days = {totalEmailsPerMonth.toLocaleString()} emails/month.
+                    At standard rates (35% open, 3% reply, 1.5% meeting) you get {meetings} demos. With {closeRate}% close rate at ${acv.toLocaleString()} ACV = <strong className="text-indigo-600">${revenue.toLocaleString()}/month potential revenue</strong>.
                 </p>
             </div>
         </div>
@@ -1232,7 +1232,7 @@ const StrategiesPage = () => {
     };
 
     return (
-        <div className="bg-[#020617] min-h-screen">
+        <div className="bg-[#FEFEFE] min-h-screen">
             <Helmet>
               <title>Free Outbound Playbook - Complete Cold Email Setup Guide | Sales House</title>
               <meta name="description" content="Free Notion template with proven cold email sequences, Clay workflows, and deliverability checklists. Built by sales operators." />
@@ -1241,8 +1241,8 @@ const StrategiesPage = () => {
                 <Breadcrumb />
             </div>
             <div className="mb-10 text-center md:text-left px-6 max-w-7xl mx-auto pt-6">
-                <h1 className="text-3xl font-bold text-white mb-4">From Zero to Booked Calendar</h1>
-                <p className="text-xl text-slate-400 max-w-3xl">
+                <h1 className="text-3xl font-bold text-slate-900 mb-4">From Zero to Booked Calendar</h1>
+                <p className="text-xl text-slate-600 max-w-3xl">
                     The playbook that generates 50 qualified leads per month for B2B SaaS companies - without cold calling or manual prospecting.
                 </p>
             </div>
@@ -1254,23 +1254,23 @@ const StrategiesPage = () => {
                 const progress = totalSteps > 0 ? (completedSteps / totalSteps) * 100 : 0;
 
                 return (
-                    <div key={strategy.id} className="bg-slate-900 rounded-xl border border-indigo-500 shadow-xl shadow-indigo-500/10 overflow-hidden">
+                    <div key={strategy.id} className="bg-slate-100 rounded-xl border border-indigo-500 shadow-xl shadow-indigo-500/10 overflow-hidden">
                     {/* Header Card */}
                     <div className="p-6 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
                         <div className="flex-1">
                             <div className="flex items-center gap-3 mb-2">
-                                <h2 className="text-xl font-bold text-white">{strategy.title}</h2>
+                                <h2 className="text-xl font-bold text-slate-900">{strategy.title}</h2>
                             </div>
-                            <p className="text-slate-400 text-sm">{strategy.summary}</p>
+                            <p className="text-slate-600 text-sm">{strategy.summary}</p>
                         </div>
 
                         <div className="flex items-center gap-6 w-full md:w-auto justify-between md:justify-end">
                             {/* Progress Visual */}
                             {totalSteps > 0 && (
                                 <div className="flex flex-col items-end gap-1">
-                                    <span className="text-xs font-bold text-indigo-400">{Math.round(progress)}% Complete</span>
-                                    <div className="w-24 h-1.5 bg-slate-800 rounded-full overflow-hidden">
-                                        <div className="h-full bg-indigo-500 transition-all duration-500" style={{ width: `${progress}%` }}></div>
+                                    <span className="text-xs font-bold text-indigo-600">{Math.round(progress)}% Complete</span>
+                                    <div className="w-24 h-1.5 bg-slate-200 rounded-full overflow-hidden">
+                                        <div className="h-full bg-indigo-600 transition-all duration-500" style={{ width: `${progress}%` }}></div>
                                     </div>
                                 </div>
                             )}
@@ -1278,11 +1278,11 @@ const StrategiesPage = () => {
                     </div>
 
                     {/* Content - Always Visible */}
-                    <div className="border-t border-slate-800 bg-slate-950/30 p-6 md:p-8">
+                    <div className="border-t border-slate-300 bg-slate-50/30 p-6 md:p-8">
                             <div className="grid md:grid-cols-3 gap-8">
                                 {/* Left: Checklist */}
                                 <div className="md:col-span-2">
-                                    <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4 flex items-center gap-2">
+                                    <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
                                         <ListTodo className="w-4 h-4 text-indigo-500" /> Execution Checklist
                                     </h3>
                                     <div className="space-y-3">
@@ -1300,16 +1300,16 @@ const StrategiesPage = () => {
                                                     <div
                                                         key={idx}
                                                         onClick={() => toggleStep(stepId)}
-                                                        className={`flex items-start gap-3 p-3 rounded-lg border cursor-pointer transition-all ${isChecked ? 'bg-indigo-900/10 border-indigo-500/30' : 'bg-slate-900 border-slate-800 hover:border-slate-700'}`}
+                                                        className={`flex items-start gap-3 p-3 rounded-lg border cursor-pointer transition-all ${isChecked ? 'bg-indigo-900/10 border-indigo-500/30' : 'bg-slate-100 border-slate-300 hover:border-slate-200'}`}
                                                     >
-                                                        <div className={`w-5 h-5 rounded border flex items-center justify-center shrink-0 mt-0.5 transition-colors ${isChecked ? 'bg-indigo-500 border-indigo-500' : 'border-slate-600'}`}>
-                                                            {isChecked && <Check className="w-3 h-3 text-white" />}
+                                                        <div className={`w-5 h-5 rounded border flex items-center justify-center shrink-0 mt-0.5 transition-colors ${isChecked ? 'bg-indigo-600 border-indigo-500' : 'border-slate-600'}`}>
+                                                            {isChecked && <Check className="w-3 h-3 text-slate-900" />}
                                                         </div>
-                                                        <span className={`flex-1 text-sm ${isChecked ? 'text-slate-400 line-through' : 'text-slate-200'}`}>
+                                                        <span className={`flex-1 text-sm ${isChecked ? 'text-slate-600 line-through' : 'text-slate-800'}`}>
                                                             {stepText}
                                                         </span>
                                                         {timeEstimate && (
-                                                            <span className={`text-xs shrink-0 ${isChecked ? 'text-slate-600' : 'text-slate-500'}`}>
+                                                            <span className={`text-xs shrink-0 ${isChecked ? 'text-slate-600' : 'text-slate-600'}`}>
                                                                 {timeEstimate}
                                                             </span>
                                                         )}
@@ -1317,7 +1317,7 @@ const StrategiesPage = () => {
                                                 );
                                             })
                                         ) : (
-                                            <p className="text-slate-500 text-sm italic">No specific steps defined for this strategy.</p>
+                                            <p className="text-slate-600 text-sm italic">No specific steps defined for this strategy.</p>
                                         )}
                                     </div>
                                 </div>
@@ -1325,27 +1325,27 @@ const StrategiesPage = () => {
                                 {/* Right: Stack & Focus */}
                                 <div className="space-y-6">
                                     <div>
-                                        <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-3">Recommended Stack</h3>
+                                        <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-3">Recommended Stack</h3>
                                         <div className="space-y-2">
                                             {strategy.recommendedStack.map(toolId => {
                                                 const tool = TOOLS.find(t => t.id === toolId);
                                                 return tool ? (
-                                                    <a href={tool.website} target="_blank" rel="noopener noreferrer" key={toolId} className="flex items-center gap-2 p-2 rounded bg-slate-900 border border-slate-800 hover:border-indigo-500/30 transition-colors group">
-                                                        <div className="w-1 h-8 bg-indigo-500 rounded-full"></div>
-                                                        <span className="text-sm font-medium text-slate-300 group-hover:text-white">{tool.name}</span>
-                                                        <ExternalLink className="w-3 h-3 text-slate-600 ml-auto group-hover:text-indigo-400" />
+                                                    <a href={tool.website} target="_blank" rel="noopener noreferrer" key={toolId} className="flex items-center gap-2 p-2 rounded bg-slate-100 border border-slate-300 hover:border-indigo-500/30 transition-colors group">
+                                                        <div className="w-1 h-8 bg-indigo-600 rounded-full"></div>
+                                                        <span className="text-sm font-medium text-slate-700 group-hover:text-slate-900">{tool.name}</span>
+                                                        <ExternalLink className="w-3 h-3 text-slate-600 ml-auto group-hover:text-indigo-600" />
                                                     </a>
                                                 ) : null;
                                             })}
                                         </div>
                                     </div>
                                     
-                                    <div className="bg-slate-900 p-4 rounded-lg border border-slate-800">
-                                         <div className="flex items-center gap-2 mb-2 text-indigo-400">
+                                    <div className="bg-slate-100 p-4 rounded-lg border border-slate-300">
+                                         <div className="flex items-center gap-2 mb-2 text-indigo-600">
                                             <Target className="w-4 h-4" />
                                             <span className="text-xs font-bold uppercase">Focus Area</span>
                                          </div>
-                                         <p className="text-sm text-slate-300 leading-relaxed">{strategy.focusArea}</p>
+                                         <p className="text-sm text-slate-700 leading-relaxed">{strategy.focusArea}</p>
                                     </div>
                                 </div>
                             </div>
@@ -1357,14 +1357,14 @@ const StrategiesPage = () => {
 
             {/* Interactive Metrics Calculator - Separate Container */}
             <div className="px-6 max-w-7xl mx-auto">
-            <div className="mt-6 bg-slate-900 rounded-xl border border-indigo-500 shadow-xl shadow-indigo-500/10 overflow-hidden">
+            <div className="mt-6 bg-slate-100 rounded-xl border border-indigo-500 shadow-xl shadow-indigo-500/10 overflow-hidden">
                 <div className="p-6 md:p-8">
                     <div className="p-6 bg-gradient-to-br from-slate-900 to-slate-950 border border-indigo-500/20 rounded-xl">
                         <div className="flex items-start gap-3 mb-6">
-                            <BarChart3 className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
+                            <BarChart3 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
                             <div>
-                                <h2 className="text-lg font-bold text-white mb-1">What Can I Expect?</h2>
-                                <p className="text-slate-400 text-sm">Interactive calculator - adjust inputs to see your potential results</p>
+                                <h2 className="text-lg font-bold text-slate-900 mb-1">What Can I Expect?</h2>
+                                <p className="text-slate-600 text-sm">Interactive calculator - adjust inputs to see your potential results</p>
                             </div>
                         </div>
 
@@ -1377,39 +1377,39 @@ const StrategiesPage = () => {
 
             {/* What Happens Next - Separate Container */}
             <div className="px-6 max-w-7xl mx-auto">
-            <div className="mt-6 bg-slate-900 rounded-xl border border-indigo-500 shadow-xl shadow-indigo-500/10 overflow-hidden">
+            <div className="mt-6 bg-slate-100 rounded-xl border border-indigo-500 shadow-xl shadow-indigo-500/10 overflow-hidden">
                 <div className="p-6 md:p-8">
-                    <div className="p-6 bg-slate-900/50 border border-slate-800 rounded-xl">
+                    <div className="p-6 bg-slate-100 border border-slate-300 rounded-xl">
                         <div className="flex items-start gap-3 mb-4">
-                            <AlertCircle className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
-                            <h2 className="text-lg font-bold text-white">What Happens Next?</h2>
+                            <AlertCircle className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+                            <h2 className="text-lg font-bold text-slate-900">What Happens Next?</h2>
                         </div>
-                        <div className="space-y-4 text-slate-300 text-sm leading-relaxed">
+                        <div className="space-y-4 text-slate-700 text-sm leading-relaxed">
                             <p>
-                                Once you complete this setup, you have the <strong className="text-white">fundamentals for an outbound top-of-funnel engine</strong>. The only remaining decision is your conversion path based on ticket size.
+                                Once you complete this setup, you have the <strong className="text-slate-900">fundamentals for an outbound top-of-funnel engine</strong>. The only remaining decision is your conversion path based on ticket size.
                             </p>
 
                             <div className="grid md:grid-cols-2 gap-4 my-4">
-                                <div className="p-4 bg-slate-950/50 rounded-lg border border-slate-800">
-                                    <h3 className="font-bold text-white mb-2 flex items-center gap-2">
-                                        <span className="text-indigo-400">→</span> Self-Service Path
+                                <div className="p-4 bg-slate-50/50 rounded-lg border border-slate-300">
+                                    <h3 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+                                        <span className="text-indigo-600">→</span> Self-Service Path
                                     </h3>
-                                    <p className="text-xs text-slate-400">For lower ACV products (&lt;$1.5k). Direct leads to sign-up or trial pages.</p>
+                                    <p className="text-xs text-slate-600">For lower ACV products (&lt;$1.5k). Direct leads to sign-up or trial pages.</p>
                                 </div>
-                                <div className="p-4 bg-slate-950/50 rounded-lg border border-slate-800">
-                                    <h3 className="font-bold text-white mb-2 flex items-center gap-2">
-                                        <span className="text-indigo-400">→</span> Demo/Discovery Path
+                                <div className="p-4 bg-slate-50/50 rounded-lg border border-slate-300">
+                                    <h3 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+                                        <span className="text-indigo-600">→</span> Demo/Discovery Path
                                     </h3>
-                                    <p className="text-xs text-slate-400">For higher ACV ($1.5k+). Book demos to understand needs and qualify prospects.</p>
+                                    <p className="text-xs text-slate-600">For higher ACV ($1.5k+). Book demos to understand needs and qualify prospects.</p>
                                 </div>
                             </div>
 
                             <p>
-                                <strong className="text-white">Why demos matter at $1.5k+ ACV:</strong> Beyond the revenue, discovery calls give you critical insights into your audience's pain points, buying process, and objections. This intelligence loop refines your messaging over time.
+                                <strong className="text-slate-900">Why demos matter at $1.5k+ ACV:</strong> Beyond the revenue, discovery calls give you critical insights into your audience's pain points, buying process, and objections. This intelligence loop refines your messaging over time.
                             </p>
 
-                            <p className="text-slate-400 italic">
-                                If you're a senior sales professional, you already know this. You're using this playbook to <strong className="text-slate-300">scale top-funnel volume</strong> while maintaining quality conversations.
+                            <p className="text-slate-600 italic">
+                                If you're a senior sales professional, you already know this. You're using this playbook to <strong className="text-slate-700">scale top-funnel volume</strong> while maintaining quality conversations.
                             </p>
                         </div>
                     </div>
@@ -1418,12 +1418,12 @@ const StrategiesPage = () => {
             </div>
 
             {/* My Current Favourite Sales Stack */}
-            <section id="featured-stack" className="mt-6 py-16 bg-slate-950 text-white px-6 border-b border-slate-900 relative">
+            <section id="featured-stack" className="mt-6 py-16 bg-slate-50 text-slate-900 px-6 border-b border-slate-200 relative">
                 <div className="absolute inset-0 bg-indigo-950/10"></div>
                 <div className="max-w-6xl mx-auto relative z-10">
                     <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
                         <h2 className="text-3xl font-bold">My Current Favourite Sales Stack</h2>
-                        <Link to="/library" className="flex items-center gap-2 text-indigo-400 hover:text-indigo-300 font-semibold transition-colors">
+                        <Link to="/library" className="flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-semibold transition-colors">
                             View All Tools <ArrowRight className="w-4 h-4" />
                         </Link>
                     </div>
@@ -1438,15 +1438,15 @@ const StrategiesPage = () => {
 
             {/* Contact Section */}
             <section className="py-16 px-6">
-                <div className="max-w-4xl mx-auto bg-slate-900 rounded-xl border border-slate-800 p-8 md:p-12 text-center">
-                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Need Help or Have Questions?</h2>
-                    <p className="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
+                <div className="max-w-4xl mx-auto bg-slate-100 rounded-xl border border-slate-300 p-8 md:p-12 text-center">
+                    <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">Need Help or Have Questions?</h2>
+                    <p className="text-slate-600 text-lg mb-8 max-w-2xl mx-auto">
                         Feel free to drop me an email or a message on LinkedIn if you need some ideas or suggestions.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <a
                             href="mailto:david@saleshousestack.com"
-                            className="flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg transition-colors"
+                            className="flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-600 text-slate-900 font-semibold rounded-lg transition-colors"
                         >
                             <Mail className="w-5 h-5" />
                             Send Email
@@ -1455,7 +1455,7 @@ const StrategiesPage = () => {
                             href="https://www.linkedin.com/in/davidvaran/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-lg border border-slate-700 transition-colors"
+                            className="flex items-center gap-2 px-6 py-3 bg-slate-200 hover:bg-slate-300 text-slate-900 font-semibold rounded-lg border border-slate-200 transition-colors"
                         >
                             <Linkedin className="w-5 h-5" />
                             Connect on LinkedIn
@@ -1465,8 +1465,8 @@ const StrategiesPage = () => {
             </section>
 
             {/* Get The Full Playbook */}
-            <section className="py-24 bg-gradient-to-br from-indigo-900 to-purple-900 text-white px-6 border-t border-slate-900">
-                <div className="max-w-4xl mx-auto bg-slate-950/50 backdrop-blur-lg border border-white/10 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 relative overflow-hidden">
+            <section className="py-24 bg-gradient-to-br from-indigo-900 to-purple-900 text-slate-900 px-6 border-t border-slate-200">
+                <div className="max-w-4xl mx-auto bg-slate-50/50 backdrop-blur-lg border border-white/10 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/20 rounded-full blur-[80px] -mr-16 -mt-16 pointer-events-none"></div>
 
                     <div className="flex-1 relative z-10">
@@ -1487,10 +1487,10 @@ const StrategiesPage = () => {
                         </a>
                     </div>
                     <div className="w-full md:w-1/3 relative z-10">
-                        <div className="bg-slate-900/50 p-1 rounded-xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 border border-white/10 backdrop-blur-sm">
-                            <div className="bg-slate-950 border border-slate-800 rounded-lg p-6 min-h-[200px] flex flex-col items-center justify-center text-slate-500">
-                                <FileText className="w-12 h-12 mb-2 text-indigo-400" />
-                                <span className="font-mono text-xs text-slate-400">Notion</span>
+                        <div className="bg-slate-100 p-1 rounded-xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 border border-white/10 backdrop-blur-sm">
+                            <div className="bg-slate-50 border border-slate-300 rounded-lg p-6 min-h-[200px] flex flex-col items-center justify-center text-slate-600">
+                                <FileText className="w-12 h-12 mb-2 text-indigo-600" />
+                                <span className="font-mono text-xs text-slate-600">Notion</span>
                             </div>
                         </div>
                     </div>
@@ -1502,52 +1502,52 @@ const StrategiesPage = () => {
 
 const PrivacyPolicyPage = () => {
     return (
-        <div className="p-6 max-w-4xl mx-auto bg-[#020617] min-h-screen">
+        <div className="p-6 max-w-4xl mx-auto bg-[#FEFEFE] min-h-screen">
             <div className="mb-10">
-                <h1 className="text-4xl font-bold text-white mb-3">Privacy Policy</h1>
-                <p className="text-slate-400 text-sm">Last Updated: January 2, 2025</p>
+                <h1 className="text-4xl font-bold text-slate-900 mb-3">Privacy Policy</h1>
+                <p className="text-slate-600 text-sm">Last Updated: January 2, 2025</p>
             </div>
 
             <div className="prose prose-invert prose-slate max-w-none space-y-8">
                 {/* Introduction */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <p className="text-slate-300 leading-relaxed">
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <p className="text-slate-700 leading-relaxed">
                         Sales House ("we," "us," or "our") operates saleshousestack.com. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
                     </p>
-                    <p className="text-slate-300 leading-relaxed mt-4">
+                    <p className="text-slate-700 leading-relaxed mt-4">
                         By using Sales House, you agree to the collection and use of information in accordance with this policy. If you do not agree with our policies and practices, do not use our services.
                     </p>
                 </section>
 
                 {/* Information We Collect */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">1.</span> Information We Collect
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">1.</span> Information We Collect
                     </h2>
 
                     <div className="space-y-4">
                         <div>
-                            <h3 className="text-lg font-bold text-white mb-2">Personal Information</h3>
-                            <p className="text-slate-300 leading-relaxed">
+                            <h3 className="text-lg font-bold text-slate-900 mb-2">Personal Information</h3>
+                            <p className="text-slate-700 leading-relaxed">
                                 We may collect personal information that you voluntarily provide to us when you:
                             </p>
-                            <ul className="list-disc list-inside text-slate-300 mt-2 space-y-1 ml-4">
+                            <ul className="list-disc list-inside text-slate-700 mt-2 space-y-1 ml-4">
                                 <li>Subscribe to our newsletter or email list</li>
                                 <li>Schedule a consultation or meeting through Calendly</li>
                                 <li>Contact us via email or contact forms</li>
                                 <li>Participate in surveys or promotions</li>
                             </ul>
-                            <p className="text-slate-300 leading-relaxed mt-3">
+                            <p className="text-slate-700 leading-relaxed mt-3">
                                 This information may include: email address, name, company name, and any other information you choose to provide.
                             </p>
                         </div>
 
                         <div className="mt-6">
-                            <h3 className="text-lg font-bold text-white mb-2">Automatically Collected Information</h3>
-                            <p className="text-slate-300 leading-relaxed">
+                            <h3 className="text-lg font-bold text-slate-900 mb-2">Automatically Collected Information</h3>
+                            <p className="text-slate-700 leading-relaxed">
                                 When you visit our website, we automatically collect certain information about your device and browsing actions, including:
                             </p>
-                            <ul className="list-disc list-inside text-slate-300 mt-2 space-y-1 ml-4">
+                            <ul className="list-disc list-inside text-slate-700 mt-2 space-y-1 ml-4">
                                 <li>IP address and general location data</li>
                                 <li>Browser type and version</li>
                                 <li>Pages visited and time spent on pages</li>
@@ -1559,14 +1559,14 @@ const PrivacyPolicyPage = () => {
                 </section>
 
                 {/* How We Use Your Information */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">2.</span> How We Use Your Information
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">2.</span> How We Use Your Information
                     </h2>
-                    <p className="text-slate-300 leading-relaxed mb-3">
+                    <p className="text-slate-700 leading-relaxed mb-3">
                         We use the information we collect to:
                     </p>
-                    <ul className="list-disc list-inside text-slate-300 space-y-2 ml-4">
+                    <ul className="list-disc list-inside text-slate-700 space-y-2 ml-4">
                         <li>Send you our newsletter, sales tactics, and product recommendations</li>
                         <li>Respond to your inquiries and provide customer support</li>
                         <li>Schedule and manage consultations or meetings</li>
@@ -1578,38 +1578,38 @@ const PrivacyPolicyPage = () => {
                 </section>
 
                 {/* Third-Party Services */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">3.</span> Third-Party Services
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">3.</span> Third-Party Services
                     </h2>
-                    <p className="text-slate-300 leading-relaxed mb-4">
+                    <p className="text-slate-700 leading-relaxed mb-4">
                         We use the following third-party services that may collect, use, and process your data:
                     </p>
 
                     <div className="space-y-4">
-                        <div className="p-4 bg-slate-950/50 rounded-lg border border-slate-800">
-                            <h3 className="text-base font-bold text-white mb-2">Klaviyo (Email Marketing)</h3>
-                            <p className="text-slate-300 text-sm leading-relaxed">
+                        <div className="p-4 bg-slate-50/50 rounded-lg border border-slate-300">
+                            <h3 className="text-base font-bold text-slate-900 mb-2">Klaviyo (Email Marketing)</h3>
+                            <p className="text-slate-700 text-sm leading-relaxed">
                                 We use Klaviyo to manage our email marketing and newsletter subscriptions. When you subscribe to our newsletter, your email address and any provided information is stored and processed by Klaviyo.
                             </p>
-                            <p className="text-slate-400 text-xs mt-2">
-                                Privacy Policy: <a href="https://www.klaviyo.com/legal/privacy" target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:underline">https://www.klaviyo.com/legal/privacy</a>
+                            <p className="text-slate-600 text-xs mt-2">
+                                Privacy Policy: <a href="https://www.klaviyo.com/legal/privacy" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">https://www.klaviyo.com/legal/privacy</a>
                             </p>
                         </div>
 
-                        <div className="p-4 bg-slate-950/50 rounded-lg border border-slate-800">
-                            <h3 className="text-base font-bold text-white mb-2">Calendly (Scheduling)</h3>
-                            <p className="text-slate-300 text-sm leading-relaxed">
+                        <div className="p-4 bg-slate-50/50 rounded-lg border border-slate-300">
+                            <h3 className="text-base font-bold text-slate-900 mb-2">Calendly (Scheduling)</h3>
+                            <p className="text-slate-700 text-sm leading-relaxed">
                                 We use Calendly to manage meeting and consultation scheduling. When you book a meeting, Calendly collects your name, email address, and any other information you provide in the booking form.
                             </p>
-                            <p className="text-slate-400 text-xs mt-2">
-                                Privacy Policy: <a href="https://calendly.com/privacy" target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:underline">https://calendly.com/privacy</a>
+                            <p className="text-slate-600 text-xs mt-2">
+                                Privacy Policy: <a href="https://calendly.com/privacy" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">https://calendly.com/privacy</a>
                             </p>
                         </div>
 
-                        <div className="p-4 bg-slate-950/50 rounded-lg border border-slate-800">
-                            <h3 className="text-base font-bold text-white mb-2">Analytics Services</h3>
-                            <p className="text-slate-300 text-sm leading-relaxed">
+                        <div className="p-4 bg-slate-50/50 rounded-lg border border-slate-300">
+                            <h3 className="text-base font-bold text-slate-900 mb-2">Analytics Services</h3>
+                            <p className="text-slate-700 text-sm leading-relaxed">
                                 We may use analytics services to understand how visitors interact with our website. These services use cookies and similar tracking technologies to collect usage data.
                             </p>
                         </div>
@@ -1617,128 +1617,128 @@ const PrivacyPolicyPage = () => {
                 </section>
 
                 {/* Cookies and Tracking */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">4.</span> Cookies and Tracking Technologies
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">4.</span> Cookies and Tracking Technologies
                     </h2>
-                    <p className="text-slate-300 leading-relaxed mb-3">
+                    <p className="text-slate-700 leading-relaxed mb-3">
                         We use cookies and similar tracking technologies to track activity on our website and hold certain information. Cookies are files with small amounts of data that are stored on your device.
                     </p>
-                    <p className="text-slate-300 leading-relaxed mb-3">
+                    <p className="text-slate-700 leading-relaxed mb-3">
                         You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our website.
                     </p>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-slate-700 leading-relaxed">
                         We use cookies to: remember your preferences, understand website usage patterns, and provide personalized content.
                     </p>
                 </section>
 
                 {/* Affiliate Disclosure */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">5.</span> Affiliate Links and Commissions
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">5.</span> Affiliate Links and Commissions
                     </h2>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-slate-700 leading-relaxed">
                         Sales House is reader-supported. Our website contains affiliate links to third-party products and services. When you click on these links and make a purchase, we may earn a commission at no extra cost to you.
                     </p>
-                    <p className="text-slate-300 leading-relaxed mt-3">
+                    <p className="text-slate-700 leading-relaxed mt-3">
                         We only recommend tools and services that we personally use, test, and verify. Our affiliate relationships do not influence our editorial content or recommendations.
                     </p>
                 </section>
 
                 {/* Data Retention */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">6.</span> Data Retention
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">6.</span> Data Retention
                     </h2>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-slate-700 leading-relaxed">
                         We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law.
                     </p>
-                    <p className="text-slate-300 leading-relaxed mt-3">
+                    <p className="text-slate-700 leading-relaxed mt-3">
                         When you unsubscribe from our email list, we will remove your information from our active databases within a reasonable timeframe, though some information may remain in backup archives.
                     </p>
                 </section>
 
                 {/* Your Rights */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">7.</span> Your Privacy Rights
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">7.</span> Your Privacy Rights
                     </h2>
-                    <p className="text-slate-300 leading-relaxed mb-3">
+                    <p className="text-slate-700 leading-relaxed mb-3">
                         Depending on your location, you may have the following rights regarding your personal information:
                     </p>
-                    <ul className="list-disc list-inside text-slate-300 space-y-2 ml-4">
-                        <li><strong className="text-white">Access:</strong> Request a copy of the personal data we hold about you</li>
-                        <li><strong className="text-white">Correction:</strong> Request correction of inaccurate or incomplete data</li>
-                        <li><strong className="text-white">Deletion:</strong> Request deletion of your personal data</li>
-                        <li><strong className="text-white">Opt-Out:</strong> Unsubscribe from marketing emails at any time</li>
-                        <li><strong className="text-white">Data Portability:</strong> Request a copy of your data in a portable format</li>
-                        <li><strong className="text-white">Objection:</strong> Object to processing of your personal data</li>
+                    <ul className="list-disc list-inside text-slate-700 space-y-2 ml-4">
+                        <li><strong className="text-slate-900">Access:</strong> Request a copy of the personal data we hold about you</li>
+                        <li><strong className="text-slate-900">Correction:</strong> Request correction of inaccurate or incomplete data</li>
+                        <li><strong className="text-slate-900">Deletion:</strong> Request deletion of your personal data</li>
+                        <li><strong className="text-slate-900">Opt-Out:</strong> Unsubscribe from marketing emails at any time</li>
+                        <li><strong className="text-slate-900">Data Portability:</strong> Request a copy of your data in a portable format</li>
+                        <li><strong className="text-slate-900">Objection:</strong> Object to processing of your personal data</li>
                     </ul>
-                    <p className="text-slate-300 leading-relaxed mt-4">
-                        To exercise any of these rights, please contact us at <a href="mailto:david@saleshousestack.com" className="text-indigo-400 hover:underline">david@saleshousestack.com</a>
+                    <p className="text-slate-700 leading-relaxed mt-4">
+                        To exercise any of these rights, please contact us at <a href="mailto:david@saleshousestack.com" className="text-indigo-600 hover:underline">david@saleshousestack.com</a>
                     </p>
                 </section>
 
                 {/* Data Security */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">8.</span> Data Security
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">8.</span> Data Security
                     </h2>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-slate-700 leading-relaxed">
                         We implement appropriate technical and organizational security measures to protect your personal information. However, no method of transmission over the Internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your data, we cannot guarantee its absolute security.
                     </p>
                 </section>
 
                 {/* Children's Privacy */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">9.</span> Children's Privacy
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">9.</span> Children's Privacy
                     </h2>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-slate-700 leading-relaxed">
                         Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If you believe we have collected information from a child, please contact us immediately.
                     </p>
                 </section>
 
                 {/* International Data Transfers */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">10.</span> International Data Transfers
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">10.</span> International Data Transfers
                     </h2>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-slate-700 leading-relaxed">
                         Your information may be transferred to and processed in countries other than your country of residence. These countries may have data protection laws that are different from your country's laws.
                     </p>
-                    <p className="text-slate-300 leading-relaxed mt-3">
+                    <p className="text-slate-700 leading-relaxed mt-3">
                         By using our services, you consent to the transfer of your information to the United States and other countries where our service providers operate.
                     </p>
                 </section>
 
                 {/* Changes to Privacy Policy */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">11.</span> Changes to This Privacy Policy
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">11.</span> Changes to This Privacy Policy
                     </h2>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-slate-700 leading-relaxed">
                         We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.
                     </p>
-                    <p className="text-slate-300 leading-relaxed mt-3">
+                    <p className="text-slate-700 leading-relaxed mt-3">
                         You are advised to review this Privacy Policy periodically for any changes. Changes are effective when posted on this page.
                     </p>
                 </section>
 
                 {/* Contact Information */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">12.</span> Contact Us
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">12.</span> Contact Us
                     </h2>
-                    <p className="text-slate-300 leading-relaxed mb-4">
+                    <p className="text-slate-700 leading-relaxed mb-4">
                         If you have any questions about this Privacy Policy or our data practices, please contact us:
                     </p>
-                    <div className="p-4 bg-slate-950/50 rounded-lg border border-slate-800">
-                        <p className="text-slate-300 leading-relaxed">
-                            <strong className="text-white">Email:</strong> <a href="mailto:david@saleshousestack.com" className="text-indigo-400 hover:underline">david@saleshousestack.com</a>
+                    <div className="p-4 bg-slate-50/50 rounded-lg border border-slate-300">
+                        <p className="text-slate-700 leading-relaxed">
+                            <strong className="text-slate-900">Email:</strong> <a href="mailto:david@saleshousestack.com" className="text-indigo-600 hover:underline">david@saleshousestack.com</a>
                         </p>
-                        <p className="text-slate-300 leading-relaxed mt-2">
-                            <strong className="text-white">Website:</strong> <a href="https://saleshousestack.com" className="text-indigo-400 hover:underline">https://saleshousestack.com</a>
+                        <p className="text-slate-700 leading-relaxed mt-2">
+                            <strong className="text-slate-900">Website:</strong> <a href="https://saleshousestack.com" className="text-indigo-600 hover:underline">https://saleshousestack.com</a>
                         </p>
                     </div>
                 </section>
@@ -1746,7 +1746,7 @@ const PrivacyPolicyPage = () => {
 
             {/* Back to Home Link */}
             <div className="mt-12 text-center">
-                <Link to="/" className="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-colors">
+                <Link to="/" className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 transition-colors">
                     ← Back to Home
                 </Link>
             </div>
@@ -1756,55 +1756,55 @@ const PrivacyPolicyPage = () => {
 
 const TermsOfServicePage = () => {
     return (
-        <div className="p-6 max-w-4xl mx-auto bg-[#020617] min-h-screen">
+        <div className="p-6 max-w-4xl mx-auto bg-[#FEFEFE] min-h-screen">
             <div className="mb-10">
-                <h1 className="text-4xl font-bold text-white mb-3">Terms of Service</h1>
-                <p className="text-slate-400 text-sm">Last Updated: January 2, 2025</p>
+                <h1 className="text-4xl font-bold text-slate-900 mb-3">Terms of Service</h1>
+                <p className="text-slate-600 text-sm">Last Updated: January 2, 2025</p>
             </div>
 
             <div className="prose prose-invert prose-slate max-w-none space-y-8">
                 {/* Introduction */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <p className="text-slate-300 leading-relaxed">
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <p className="text-slate-700 leading-relaxed">
                         Welcome to Sales House ("we," "us," or "our"). These Terms of Service ("Terms") govern your access to and use of saleshousestack.com (the "Website") and all related services, content, and materials provided by us.
                     </p>
-                    <p className="text-slate-300 leading-relaxed mt-4">
+                    <p className="text-slate-700 leading-relaxed mt-4">
                         By accessing or using our Website, you agree to be bound by these Terms. If you do not agree with any part of these Terms, you must not use our services.
                     </p>
                 </section>
 
                 {/* Acceptance of Terms */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">1.</span> Acceptance of Terms
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">1.</span> Acceptance of Terms
                     </h2>
-                    <p className="text-slate-300 leading-relaxed mb-3">
+                    <p className="text-slate-700 leading-relaxed mb-3">
                         By accessing and using Sales House, you acknowledge that you have read, understood, and agree to be bound by these Terms and our Privacy Policy. These Terms apply to all visitors, users, and others who access or use the Website.
                     </p>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-slate-700 leading-relaxed">
                         If you are using our services on behalf of an organization, you represent and warrant that you have the authority to bind that organization to these Terms.
                     </p>
                 </section>
 
                 {/* Use of Service */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">2.</span> Use of Service
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">2.</span> Use of Service
                     </h2>
                     <div className="space-y-4">
                         <div>
-                            <h3 className="text-lg font-bold text-white mb-2">Permitted Use</h3>
-                            <p className="text-slate-300 leading-relaxed">
+                            <h3 className="text-lg font-bold text-slate-900 mb-2">Permitted Use</h3>
+                            <p className="text-slate-700 leading-relaxed">
                                 You may use our Website for lawful purposes only. You agree to use the Website in compliance with all applicable laws and regulations.
                             </p>
                         </div>
 
                         <div className="mt-6">
-                            <h3 className="text-lg font-bold text-white mb-2">Prohibited Activities</h3>
-                            <p className="text-slate-300 leading-relaxed mb-3">
+                            <h3 className="text-lg font-bold text-slate-900 mb-2">Prohibited Activities</h3>
+                            <p className="text-slate-700 leading-relaxed mb-3">
                                 You agree not to:
                             </p>
-                            <ul className="list-disc list-inside text-slate-300 space-y-2 ml-4">
+                            <ul className="list-disc list-inside text-slate-700 space-y-2 ml-4">
                                 <li>Use the Website for any illegal purpose or in violation of any laws</li>
                                 <li>Attempt to gain unauthorized access to our systems or networks</li>
                                 <li>Interfere with or disrupt the Website or servers</li>
@@ -1819,72 +1819,72 @@ const TermsOfServicePage = () => {
                 </section>
 
                 {/* Intellectual Property */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">3.</span> Intellectual Property Rights
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">3.</span> Intellectual Property Rights
                     </h2>
-                    <p className="text-slate-300 leading-relaxed mb-3">
+                    <p className="text-slate-700 leading-relaxed mb-3">
                         All content on Sales House, including but not limited to text, graphics, logos, images, software, and other materials, is the property of Sales House or its licensors and is protected by copyright, trademark, and other intellectual property laws.
                     </p>
-                    <p className="text-slate-300 leading-relaxed mb-3">
+                    <p className="text-slate-700 leading-relaxed mb-3">
                         You may not reproduce, distribute, modify, create derivative works of, publicly display, or exploit any content from our Website without our prior written permission.
                     </p>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-slate-700 leading-relaxed">
                         The Sales House name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of Sales House. You may not use these marks without our prior written permission.
                     </p>
                 </section>
 
                 {/* User Content */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">4.</span> User Content and Feedback
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">4.</span> User Content and Feedback
                     </h2>
-                    <p className="text-slate-300 leading-relaxed mb-3">
+                    <p className="text-slate-700 leading-relaxed mb-3">
                         If you provide feedback, suggestions, comments, or other input to us ("Feedback"), you grant us a perpetual, irrevocable, worldwide, royalty-free license to use, reproduce, modify, and incorporate such Feedback into our services without any obligation to you.
                     </p>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-slate-700 leading-relaxed">
                         Any testimonials, reviews, or endorsements you provide may be used by us for marketing purposes without compensation to you.
                     </p>
                 </section>
 
                 {/* Third-Party Links and Services */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">5.</span> Third-Party Links and Services
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">5.</span> Third-Party Links and Services
                     </h2>
-                    <p className="text-slate-300 leading-relaxed mb-3">
+                    <p className="text-slate-700 leading-relaxed mb-3">
                         Our Website contains links to third-party websites and services, including tools we recommend. These links are provided for your convenience only. We do not endorse, control, or assume responsibility for the content, privacy policies, or practices of any third-party websites or services.
                     </p>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-slate-700 leading-relaxed">
                         Your interactions with third-party websites and services are solely between you and the third party. We encourage you to review the terms and privacy policies of any third-party services you access through our Website.
                     </p>
                 </section>
 
                 {/* Affiliate Relationships */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">6.</span> Affiliate Relationships
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">6.</span> Affiliate Relationships
                     </h2>
-                    <p className="text-slate-300 leading-relaxed mb-3">
+                    <p className="text-slate-700 leading-relaxed mb-3">
                         Sales House participates in affiliate marketing programs. We may earn commissions from purchases made through affiliate links on our Website. These affiliate relationships do not influence our editorial content or recommendations.
                     </p>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-slate-700 leading-relaxed">
                         We only recommend products and services that we have personally tested and believe will provide value to our users. However, we cannot guarantee specific results from using any recommended tools or services.
                     </p>
                 </section>
 
                 {/* Disclaimer of Warranties */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">7.</span> Disclaimer of Warranties
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">7.</span> Disclaimer of Warranties
                     </h2>
-                    <p className="text-slate-300 leading-relaxed mb-4">
+                    <p className="text-slate-700 leading-relaxed mb-4">
                         THE WEBSITE AND ALL CONTENT, SERVICES, AND MATERIALS ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.
                     </p>
-                    <p className="text-slate-300 leading-relaxed mb-4">
+                    <p className="text-slate-700 leading-relaxed mb-4">
                         TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:
                     </p>
-                    <ul className="list-disc list-inside text-slate-300 space-y-2 ml-4">
+                    <ul className="list-disc list-inside text-slate-700 space-y-2 ml-4">
                         <li>Warranties of merchantability, fitness for a particular purpose, and non-infringement</li>
                         <li>Warranties regarding the accuracy, reliability, or completeness of content</li>
                         <li>Warranties that the Website will be uninterrupted, secure, or error-free</li>
@@ -1893,14 +1893,14 @@ const TermsOfServicePage = () => {
                 </section>
 
                 {/* Limitation of Liability */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">8.</span> Limitation of Liability
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">8.</span> Limitation of Liability
                     </h2>
-                    <p className="text-slate-300 leading-relaxed mb-4">
+                    <p className="text-slate-700 leading-relaxed mb-4">
                         TO THE MAXIMUM EXTENT PERMITTED BY LAW, SALES HOUSE AND ITS OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES RESULTING FROM:
                     </p>
-                    <ul className="list-disc list-inside text-slate-300 space-y-2 ml-4 mb-4">
+                    <ul className="list-disc list-inside text-slate-700 space-y-2 ml-4 mb-4">
                         <li>Your use or inability to use the Website</li>
                         <li>Any unauthorized access to or use of our servers</li>
                         <li>Any bugs, viruses, or malicious code transmitted through the Website</li>
@@ -1908,20 +1908,20 @@ const TermsOfServicePage = () => {
                         <li>Your purchase or use of any third-party products or services</li>
                         <li>Any results or outcomes from following our recommendations</li>
                     </ul>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-slate-700 leading-relaxed">
                         IN NO EVENT SHALL OUR TOTAL LIABILITY TO YOU FOR ALL DAMAGES EXCEED THE AMOUNT YOU PAID US IN THE PAST TWELVE MONTHS, OR ONE HUNDRED DOLLARS ($100), WHICHEVER IS GREATER.
                     </p>
                 </section>
 
                 {/* Indemnification */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">9.</span> Indemnification
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">9.</span> Indemnification
                     </h2>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-slate-700 leading-relaxed">
                         You agree to indemnify, defend, and hold harmless Sales House and its officers, directors, employees, agents, and affiliates from and against any claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising from:
                     </p>
-                    <ul className="list-disc list-inside text-slate-300 space-y-2 ml-4 mt-3">
+                    <ul className="list-disc list-inside text-slate-700 space-y-2 ml-4 mt-3">
                         <li>Your use of the Website</li>
                         <li>Your violation of these Terms</li>
                         <li>Your violation of any rights of another party</li>
@@ -1930,94 +1930,94 @@ const TermsOfServicePage = () => {
                 </section>
 
                 {/* Email Communications */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">10.</span> Email Communications and Newsletter
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">10.</span> Email Communications and Newsletter
                     </h2>
-                    <p className="text-slate-300 leading-relaxed mb-3">
+                    <p className="text-slate-700 leading-relaxed mb-3">
                         By subscribing to our newsletter or providing your email address, you consent to receive marketing communications from us. You may unsubscribe at any time by clicking the unsubscribe link in our emails or contacting us directly.
                     </p>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-slate-700 leading-relaxed">
                         We reserve the right to send you transactional or administrative emails regarding your account or our services, even if you have unsubscribed from marketing communications.
                     </p>
                 </section>
 
                 {/* Changes to Terms */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">11.</span> Changes to Terms of Service
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">11.</span> Changes to Terms of Service
                     </h2>
-                    <p className="text-slate-300 leading-relaxed mb-3">
+                    <p className="text-slate-700 leading-relaxed mb-3">
                         We reserve the right to modify or replace these Terms at any time at our sole discretion. We will provide notice of any material changes by posting the new Terms on this page and updating the "Last Updated" date.
                     </p>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-slate-700 leading-relaxed">
                         Your continued use of the Website after any changes constitutes acceptance of the new Terms. It is your responsibility to review these Terms periodically.
                     </p>
                 </section>
 
                 {/* Termination */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">12.</span> Termination
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">12.</span> Termination
                     </h2>
-                    <p className="text-slate-300 leading-relaxed mb-3">
+                    <p className="text-slate-700 leading-relaxed mb-3">
                         We reserve the right to terminate or suspend your access to the Website immediately, without prior notice or liability, for any reason, including but not limited to breach of these Terms.
                     </p>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-slate-700 leading-relaxed">
                         Upon termination, your right to use the Website will immediately cease. All provisions of these Terms which by their nature should survive termination shall survive, including ownership provisions, warranty disclaimers, and limitations of liability.
                     </p>
                 </section>
 
                 {/* Governing Law */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">13.</span> Governing Law and Dispute Resolution
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">13.</span> Governing Law and Dispute Resolution
                     </h2>
-                    <p className="text-slate-300 leading-relaxed mb-3">
+                    <p className="text-slate-700 leading-relaxed mb-3">
                         These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.
                     </p>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-slate-700 leading-relaxed">
                         Any disputes arising from or relating to these Terms or your use of the Website shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association, except that either party may seek injunctive relief in court for intellectual property violations.
                     </p>
                 </section>
 
                 {/* Severability */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">14.</span> Severability and Waiver
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">14.</span> Severability and Waiver
                     </h2>
-                    <p className="text-slate-300 leading-relaxed mb-3">
+                    <p className="text-slate-700 leading-relaxed mb-3">
                         If any provision of these Terms is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that these Terms will otherwise remain in full force and effect.
                     </p>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-slate-700 leading-relaxed">
                         Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.
                     </p>
                 </section>
 
                 {/* Entire Agreement */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">15.</span> Entire Agreement
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">15.</span> Entire Agreement
                     </h2>
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-slate-700 leading-relaxed">
                         These Terms, together with our Privacy Policy, constitute the entire agreement between you and Sales House regarding your use of the Website and supersede all prior agreements and understandings.
                     </p>
                 </section>
 
                 {/* Contact Information */}
-                <section className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                        <span className="text-indigo-400">16.</span> Contact Information
+                <section className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span className="text-indigo-600">16.</span> Contact Information
                     </h2>
-                    <p className="text-slate-300 leading-relaxed mb-4">
+                    <p className="text-slate-700 leading-relaxed mb-4">
                         If you have any questions about these Terms of Service, please contact us:
                     </p>
-                    <div className="p-4 bg-slate-950/50 rounded-lg border border-slate-800">
-                        <p className="text-slate-300 leading-relaxed">
-                            <strong className="text-white">Email:</strong> <a href="mailto:david@saleshousestack.com" className="text-indigo-400 hover:underline">david@saleshousestack.com</a>
+                    <div className="p-4 bg-slate-50/50 rounded-lg border border-slate-300">
+                        <p className="text-slate-700 leading-relaxed">
+                            <strong className="text-slate-900">Email:</strong> <a href="mailto:david@saleshousestack.com" className="text-indigo-600 hover:underline">david@saleshousestack.com</a>
                         </p>
-                        <p className="text-slate-300 leading-relaxed mt-2">
-                            <strong className="text-white">Website:</strong> <a href="https://saleshousestack.com" className="text-indigo-400 hover:underline">https://saleshousestack.com</a>
+                        <p className="text-slate-700 leading-relaxed mt-2">
+                            <strong className="text-slate-900">Website:</strong> <a href="https://saleshousestack.com" className="text-indigo-600 hover:underline">https://saleshousestack.com</a>
                         </p>
                     </div>
                 </section>
@@ -2025,7 +2025,7 @@ const TermsOfServicePage = () => {
 
             {/* Back to Home Link */}
             <div className="mt-12 text-center">
-                <Link to="/" className="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-colors">
+                <Link to="/" className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 transition-colors">
                     ← Back to Home
                 </Link>
             </div>
@@ -2035,7 +2035,7 @@ const TermsOfServicePage = () => {
 
 const ConsultingPage = () => {
     return (
-        <div className="p-6 max-w-6xl mx-auto bg-[#020617] min-h-screen">
+        <div className="p-6 max-w-6xl mx-auto bg-[#FEFEFE] min-h-screen">
             <Helmet>
               <title>Sales Operations Consulting - Expert Outbound Strategy & Setup | Sales House</title>
               <meta name="description" content="Expert sales operations consulting. Set up your outbound engine, optimize deliverability, and scale to 40+ demos/month." />
@@ -2043,8 +2043,8 @@ const ConsultingPage = () => {
             <Breadcrumb />
             {/* Hero Section */}
             <div className="mb-16 text-center">
-                <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">Fractional Sales Leadership</h1>
-                <p className="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+                <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-4">Fractional Sales Leadership</h1>
+                <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
                     Get enterprise-grade sales strategy and execution without the enterprise price tag.
                     I help solopreneurs and small teams build scalable outbound systems that actually fill calendars.
                 </p>
@@ -2052,74 +2052,74 @@ const ConsultingPage = () => {
 
             {/* Services Grid */}
             <div className="grid md:grid-cols-3 gap-8 mb-16">
-                <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-8 hover:border-indigo-500/30 transition-all">
-                    <div className="w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4">
-                        <Target className="w-6 h-6 text-indigo-400" />
+                <div className="bg-slate-100 border border-slate-300 rounded-xl p-8 hover:border-indigo-500/30 transition-all">
+                    <div className="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center mb-4">
+                        <Target className="w-6 h-6 text-indigo-600" />
                     </div>
-                    <h2 className="text-xl font-bold text-white mb-3">Stack Setup & Advisory</h2>
-                    <p className="text-slate-400 leading-relaxed mb-4">
+                    <h2 className="text-xl font-bold text-slate-900 mb-3">Stack Setup & Advisory</h2>
+                    <p className="text-slate-600 leading-relaxed mb-4">
                         Complete sales stack implementation with ongoing optimization. From initial setup to continuous campaign refinement and scaling support.
                     </p>
-                    <ul className="space-y-2 text-sm text-slate-500">
+                    <ul className="space-y-2 text-sm text-slate-600">
                         <li className="flex items-start gap-2">
-                            <span className="text-indigo-400">→</span> Stack audit & tool setup
+                            <span className="text-indigo-600">→</span> Stack audit & tool setup
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-indigo-400">→</span> Campaign sequence design
+                            <span className="text-indigo-600">→</span> Campaign sequence design
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-indigo-400">→</span> Weekly performance reviews
+                            <span className="text-indigo-600">→</span> Weekly performance reviews
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-indigo-400">→</span> Copywriting & A/B testing
+                            <span className="text-indigo-600">→</span> Copywriting & A/B testing
                         </li>
                     </ul>
                 </div>
 
-                <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-8 hover:border-indigo-500/30 transition-all">
-                    <div className="w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4">
-                        <TrendingUp className="w-6 h-6 text-indigo-400" />
+                <div className="bg-slate-100 border border-slate-300 rounded-xl p-8 hover:border-indigo-500/30 transition-all">
+                    <div className="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center mb-4">
+                        <TrendingUp className="w-6 h-6 text-indigo-600" />
                     </div>
-                    <h2 className="text-xl font-bold text-white mb-3">RevOps Strategy</h2>
-                    <p className="text-slate-400 leading-relaxed mb-4">
+                    <h2 className="text-xl font-bold text-slate-900 mb-3">RevOps Strategy</h2>
+                    <p className="text-slate-600 leading-relaxed mb-4">
                         End-to-end revenue operations design: from lead routing and pipeline stages to reporting dashboards and forecasting models.
                     </p>
-                    <ul className="space-y-2 text-sm text-slate-500">
+                    <ul className="space-y-2 text-sm text-slate-600">
                         <li className="flex items-start gap-2">
-                            <span className="text-indigo-400">→</span> CRM architecture & automation
+                            <span className="text-indigo-600">→</span> CRM architecture & automation
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-indigo-400">→</span> Sales process documentation
+                            <span className="text-indigo-600">→</span> Sales process documentation
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-indigo-400">→</span> Pipeline & forecast reporting
+                            <span className="text-indigo-600">→</span> Pipeline & forecast reporting
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-indigo-400">→</span> Team onboarding & training
+                            <span className="text-indigo-600">→</span> Team onboarding & training
                         </li>
                     </ul>
                 </div>
 
-                <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-8 hover:border-indigo-500/30 transition-all">
-                    <div className="w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4">
-                        <BarChart3 className="w-6 h-6 text-indigo-400" />
+                <div className="bg-slate-100 border border-slate-300 rounded-xl p-8 hover:border-indigo-500/30 transition-all">
+                    <div className="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center mb-4">
+                        <BarChart3 className="w-6 h-6 text-indigo-600" />
                     </div>
-                    <h2 className="text-xl font-bold text-white mb-3">Sales Strategy</h2>
-                    <p className="text-slate-400 leading-relaxed mb-4">
+                    <h2 className="text-xl font-bold text-slate-900 mb-3">Sales Strategy</h2>
+                    <p className="text-slate-600 leading-relaxed mb-4">
                         Comprehensive go-to-market strategy and sales motion design tailored to your ICP, deal size, and growth stage.
                     </p>
-                    <ul className="space-y-2 text-sm text-slate-500">
+                    <ul className="space-y-2 text-sm text-slate-600">
                         <li className="flex items-start gap-2">
-                            <span className="text-indigo-400">→</span> GTM strategy & positioning
+                            <span className="text-indigo-600">→</span> GTM strategy & positioning
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-indigo-400">→</span> Sales playbook development
+                            <span className="text-indigo-600">→</span> Sales playbook development
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-indigo-400">→</span> ICP refinement & segmentation
+                            <span className="text-indigo-600">→</span> ICP refinement & segmentation
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-indigo-400">→</span> Competitive positioning
+                            <span className="text-indigo-600">→</span> Competitive positioning
                         </li>
                     </ul>
                 </div>
@@ -2127,51 +2127,51 @@ const ConsultingPage = () => {
 
             {/* Who This Is For */}
             <div className="mb-16 bg-gradient-to-br from-indigo-950/30 to-purple-950/20 rounded-2xl border border-indigo-500/20 p-8 md:p-12">
-                <h2 className="text-3xl font-bold text-white mb-6 text-center">Who This Is For</h2>
+                <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">Who This Is For</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                     <div className="flex items-start gap-4">
-                        <div className="w-8 h-8 bg-indigo-500/20 rounded-lg flex items-center justify-center shrink-0">
-                            <span className="text-indigo-400 font-bold">✓</span>
+                        <div className="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center shrink-0">
+                            <span className="text-indigo-600 font-bold">✓</span>
                         </div>
                         <div>
-                            <h3 className="text-lg font-bold text-white mb-2">Founders</h3>
-                            <p className="text-slate-400 text-sm">
+                            <h3 className="text-lg font-bold text-slate-900 mb-2">Founders</h3>
+                            <p className="text-slate-600 text-sm">
                                 You know your product solves a real problem, but you don't have time to become a sales ops expert. You need a system that runs while you focus on delivery.
                             </p>
                         </div>
                     </div>
 
                     <div className="flex items-start gap-4">
-                        <div className="w-8 h-8 bg-indigo-500/20 rounded-lg flex items-center justify-center shrink-0">
-                            <span className="text-indigo-400 font-bold">✓</span>
+                        <div className="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center shrink-0">
+                            <span className="text-indigo-600 font-bold">✓</span>
                         </div>
                         <div>
-                            <h3 className="text-lg font-bold text-white mb-2">Small Sales Teams (2-10)</h3>
-                            <p className="text-slate-400 text-sm">
+                            <h3 className="text-lg font-bold text-slate-900 mb-2">Small Sales Teams (2-10)</h3>
+                            <p className="text-slate-600 text-sm">
                                 Your team is spending too much time on manual prospecting. You need automation, but you don't know which tools to pick or how to integrate them.
                             </p>
                         </div>
                     </div>
 
                     <div className="flex items-start gap-4">
-                        <div className="w-8 h-8 bg-indigo-500/20 rounded-lg flex items-center justify-center shrink-0">
-                            <span className="text-indigo-400 font-bold">✓</span>
+                        <div className="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center shrink-0">
+                            <span className="text-indigo-600 font-bold">✓</span>
                         </div>
                         <div>
-                            <h3 className="text-lg font-bold text-white mb-2">B2B SaaS Companies</h3>
-                            <p className="text-slate-400 text-sm">
+                            <h3 className="text-lg font-bold text-slate-900 mb-2">B2B SaaS Companies</h3>
+                            <p className="text-slate-600 text-sm">
                                 You're targeting North America, LATAM, or EMEA markets with high-volume outbound. You need proven playbooks, not guesswork.
                             </p>
                         </div>
                     </div>
 
                     <div className="flex items-start gap-4">
-                        <div className="w-8 h-8 bg-indigo-500/20 rounded-lg flex items-center justify-center shrink-0">
-                            <span className="text-indigo-400 font-bold">✓</span>
+                        <div className="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center shrink-0">
+                            <span className="text-indigo-600 font-bold">✓</span>
                         </div>
                         <div>
-                            <h3 className="text-lg font-bold text-white mb-2">Agencies & Service Providers</h3>
-                            <p className="text-slate-400 text-sm">
+                            <h3 className="text-lg font-bold text-slate-900 mb-2">Agencies & Service Providers</h3>
+                            <p className="text-slate-600 text-sm">
                                 You sell retained services but struggle with consistent lead flow. You need a predictable outbound engine that books qualified calls on autopilot.
                             </p>
                         </div>
@@ -2181,16 +2181,16 @@ const ConsultingPage = () => {
 
             {/* About Me Section */}
             <div className="mb-16">
-                <h2 className="text-3xl font-bold text-white mb-8 text-center">About Me</h2>
+                <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">About Me</h2>
                 <div className="flex flex-col md:flex-row gap-8 items-stretch">
                     {/* Left Column: Bio & Stats */}
                     <div className="md:w-2/3 w-full flex flex-col gap-6 h-full">
                         {/* Bio Card */}
-                        <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-8 backdrop-blur-sm relative overflow-hidden flex-shrink-0">
-                            <div className="absolute top-0 left-0 w-1 h-full bg-indigo-500"></div>
-                            <div className="space-y-4 text-slate-300 leading-relaxed text-lg">
+                        <div className="bg-slate-100 border border-slate-300 rounded-2xl p-8 backdrop-blur-sm relative overflow-hidden flex-shrink-0">
+                            <div className="absolute top-0 left-0 w-1 h-full bg-indigo-600"></div>
+                            <div className="space-y-4 text-slate-700 leading-relaxed text-lg">
                                 <p>
-                                    <strong className="text-white">I'm a Head of Sales + RevOps consultant</strong> with 5 years of Marketing experience and 6 years of Sales experience. I've built B2B teams and outbound systems targeting North America, LATAM, and EMEA.
+                                    <strong className="text-slate-900">I'm a Head of Sales + RevOps consultant</strong> with 5 years of Marketing experience and 6 years of Sales experience. I've built B2B teams and outbound systems targeting North America, LATAM, and EMEA.
                                 </p>
                                 <p>
                                     I built Sales House because I got tired of seeing founders burn cash on bloated teams and "all-in-one" tools that don't work. I share exactly what I use to book meetings.
@@ -2206,10 +2206,10 @@ const ConsultingPage = () => {
                                 { icon: Mail, val: '500k+', label: 'Emails Sent' },
                                 { icon: Calendar, val: '200+', label: 'Demos Booked' }
                             ].map((stat, idx) => (
-                                <div key={idx} className="bg-slate-900 p-6 rounded-2xl border border-slate-800 flex flex-col items-center justify-center text-center hover:bg-slate-800/80 transition-all hover:border-slate-700 group h-full">
-                                    <stat.icon className="w-6 h-6 text-indigo-400 mb-3 group-hover:scale-110 transition-transform opacity-80" />
-                                    <div className="text-3xl font-bold text-white mb-1">{stat.val}</div>
-                                    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">{stat.label}</span>
+                                <div key={idx} className="bg-slate-100 p-6 rounded-2xl border border-slate-300 flex flex-col items-center justify-center text-center hover:bg-slate-300/80 transition-all hover:border-slate-200 group h-full">
+                                    <stat.icon className="w-6 h-6 text-indigo-600 mb-3 group-hover:scale-110 transition-transform opacity-80" />
+                                    <div className="text-3xl font-bold text-slate-900 mb-1">{stat.val}</div>
+                                    <span className="text-xs font-bold text-slate-600 uppercase tracking-wider">{stat.label}</span>
                                 </div>
                             ))}
                         </div>
@@ -2217,7 +2217,7 @@ const ConsultingPage = () => {
 
                     {/* Right Column: Profile Card */}
                     <div className="md:w-1/3 w-full flex min-h-[600px]">
-                        <div className="rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-indigo-500/30 transition-all duration-500 w-full shadow-2xl">
+                        <div className="rounded-2xl border border-slate-300 relative overflow-hidden group hover:border-indigo-500/30 transition-all duration-500 w-full shadow-2xl">
                             {/* Background Image */}
                             <div className="absolute inset-0">
                                 <img
@@ -2232,14 +2232,14 @@ const ConsultingPage = () => {
 
                             {/* Content Overlay */}
                             <div className="absolute bottom-0 left-0 w-full p-6 z-10 flex flex-col items-start">
-                                <h3 className="text-3xl font-bold text-white mb-1">David</h3>
-                                <p className="text-indigo-400 font-medium mb-6">Head of Sales & Creator</p>
+                                <h3 className="text-3xl font-bold text-slate-900 mb-1">David</h3>
+                                <p className="text-indigo-600 font-medium mb-6">Head of Sales & Creator</p>
 
                                 <div className="w-full space-y-2">
-                                    <a href="https://www.linkedin.com/in/davidvaran/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 w-full py-2.5 bg-[#0077b5] hover:bg-[#006399] text-white rounded-lg font-bold text-sm transition-all shadow-lg shadow-blue-900/20">
+                                    <a href="https://www.linkedin.com/in/davidvaran/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 w-full py-2.5 bg-[#0077b5] hover:bg-[#006399] text-slate-900 rounded-lg font-bold text-sm transition-all shadow-lg shadow-blue-900/20">
                                         <Linkedin className="w-4 h-4" /> Connect on LinkedIn
                                     </a>
-                                    <a href="mailto:david@saleshousestack.com" className="flex items-center justify-center gap-2 w-full py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white rounded-lg font-bold text-sm transition-all border border-white/10">
+                                    <a href="mailto:david@saleshousestack.com" className="flex items-center justify-center gap-2 w-full py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-slate-900 rounded-lg font-bold text-sm transition-all border border-white/10">
                                         <Mail className="w-4 h-4" /> Email Me
                                     </a>
                                 </div>
@@ -2251,51 +2251,51 @@ const ConsultingPage = () => {
 
             {/* Process */}
             <div className="mb-16">
-                <h2 className="text-3xl font-bold text-white mb-8 text-center">How We Work Together</h2>
+                <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">How We Work Together</h2>
                 <div className="space-y-4">
-                    <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 flex items-start gap-4">
-                        <div className="w-10 h-10 bg-indigo-500/20 rounded-lg flex items-center justify-center shrink-0 font-bold text-indigo-400">
+                    <div className="bg-slate-100 border border-slate-300 rounded-xl p-6 flex items-start gap-4">
+                        <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center shrink-0 font-bold text-indigo-600">
                             1
                         </div>
                         <div>
-                            <h3 className="text-lg font-bold text-white mb-2">Discovery Call</h3>
-                            <p className="text-slate-400">
+                            <h3 className="text-lg font-bold text-slate-900 mb-2">Discovery Call</h3>
+                            <p className="text-slate-600">
                                 We review your current setup, ICP, messaging, and goals. I'll identify immediate wins and long-term opportunities.
                             </p>
                         </div>
                     </div>
 
-                    <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 flex items-start gap-4">
-                        <div className="w-10 h-10 bg-indigo-500/20 rounded-lg flex items-center justify-center shrink-0 font-bold text-indigo-400">
+                    <div className="bg-slate-100 border border-slate-300 rounded-xl p-6 flex items-start gap-4">
+                        <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center shrink-0 font-bold text-indigo-600">
                             2
                         </div>
                         <div>
-                            <h3 className="text-lg font-bold text-white mb-2">Proposal & Scope</h3>
-                            <p className="text-slate-400">
+                            <h3 className="text-lg font-bold text-slate-900 mb-2">Proposal & Scope</h3>
+                            <p className="text-slate-600">
                                 I'll send a detailed proposal with timeline, deliverables, and investment. You'll know exactly what to expect before we start.
                             </p>
                         </div>
                     </div>
 
-                    <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 flex items-start gap-4">
-                        <div className="w-10 h-10 bg-indigo-500/20 rounded-lg flex items-center justify-center shrink-0 font-bold text-indigo-400">
+                    <div className="bg-slate-100 border border-slate-300 rounded-xl p-6 flex items-start gap-4">
+                        <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center shrink-0 font-bold text-indigo-600">
                             3
                         </div>
                         <div>
-                            <h3 className="text-lg font-bold text-white mb-2">Execution</h3>
-                            <p className="text-slate-400">
+                            <h3 className="text-lg font-bold text-slate-900 mb-2">Execution</h3>
+                            <p className="text-slate-600">
                                 I build, configure, and test your entire stack. You'll get documentation, training videos, and live walkthroughs.
                             </p>
                         </div>
                     </div>
 
-                    <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 flex items-start gap-4">
-                        <div className="w-10 h-10 bg-indigo-500/20 rounded-lg flex items-center justify-center shrink-0 font-bold text-indigo-400">
+                    <div className="bg-slate-100 border border-slate-300 rounded-xl p-6 flex items-start gap-4">
+                        <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center shrink-0 font-bold text-indigo-600">
                             4
                         </div>
                         <div>
-                            <h3 className="text-lg font-bold text-white mb-2">Launch & Optimization</h3>
-                            <p className="text-slate-400">
+                            <h3 className="text-lg font-bold text-slate-900 mb-2">Launch & Optimization</h3>
+                            <p className="text-slate-600">
                                 Your first campaigns go live. I monitor performance, iterate on messaging, and train your team on daily operations.
                             </p>
                         </div>
@@ -2305,8 +2305,8 @@ const ConsultingPage = () => {
 
             {/* CTA Section */}
             <div className="bg-gradient-to-br from-indigo-950/50 to-purple-950/30 rounded-2xl border border-indigo-500/30 p-12 text-center">
-                <h2 className="text-3xl font-bold text-white mb-4">Ready to Scale Your Outbound?</h2>
-                <p className="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
+                <h2 className="text-3xl font-bold text-slate-900 mb-4">Ready to Scale Your Outbound?</h2>
+                <p className="text-slate-600 text-lg mb-8 max-w-2xl mx-auto">
                     Book a 30-minute discovery call to see if we're a good fit. No sales pitch - just a real conversation about your challenges and goals.
                 </p>
                 <div className="max-w-4xl mx-auto min-h-[950px]">
@@ -2316,7 +2316,7 @@ const ConsultingPage = () => {
 
             {/* Back to Home Link */}
             <div className="mt-12 text-center">
-                <Link to="/" className="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-colors">
+                <Link to="/" className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 transition-colors">
                     ← Back to Home
                 </Link>
             </div>
@@ -2334,8 +2334,8 @@ const FAQPage = () => {
             <Breadcrumb />
             {/* Header */}
             <div className="text-center mb-16">
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Frequently Asked Questions</h1>
-                <p className="text-slate-400 text-lg">
+                <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h1>
+                <p className="text-slate-600 text-lg">
                     Everything you need to know about building your outbound sales stack
                 </p>
             </div>
@@ -2405,13 +2405,13 @@ const FAQPage = () => {
 
             {/* CTA Section */}
             <div className="bg-gradient-to-br from-indigo-950/50 to-purple-950/30 rounded-2xl border border-indigo-500/30 p-8 text-center">
-                <h2 className="text-2xl font-bold text-white mb-3">Still Have Questions?</h2>
-                <p className="text-slate-400 mb-6">
+                <h2 className="text-2xl font-bold text-slate-900 mb-3">Still Have Questions?</h2>
+                <p className="text-slate-600 mb-6">
                     Book a free consultation call to discuss your specific situation
                 </p>
                 <Link
                     to="/consulting"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-600 text-slate-900 font-bold rounded-lg transition-colors"
                 >
                     Book a Call
                 </Link>
@@ -2419,7 +2419,7 @@ const FAQPage = () => {
 
             {/* Back to Home Link */}
             <div className="mt-12 text-center">
-                <Link to="/" className="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-colors">
+                <Link to="/" className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 transition-colors">
                     ← Back to Home
                 </Link>
             </div>
@@ -2439,7 +2439,7 @@ const ComparisonsListPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#020617]">
+    <div className="min-h-screen bg-[#FEFEFE]">
       <Helmet>
         <title>Sales Tool Comparisons - Side-by-Side Reviews | Sales House</title>
         <meta name="description" content="Compare sales tools side-by-side. Clay vs Apollo, Reply vs Instantly, HubSpot vs Salesforce and more. Expert comparisons based on real experience." />
@@ -2450,8 +2450,8 @@ const ComparisonsListPage = () => {
 
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Tool Comparisons</h1>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Tool Comparisons</h1>
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             Side-by-side comparisons to help you choose the right tool for your stack
           </p>
         </div>
@@ -2463,22 +2463,22 @@ const ComparisonsListPage = () => {
               <Link
                 key={comparison.slug}
                 to={`/comparisons/${comparison.slug}`}
-                className="bg-slate-900/50 border border-slate-800 rounded-xl p-8 hover:border-indigo-500/50 transition-all group"
+                className="bg-slate-100 border border-slate-300 rounded-xl p-8 hover:border-indigo-500/50 transition-all group"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h2 className="text-2xl font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">
                       {comparison.name}
                     </h2>
-                    <p className="text-sm text-slate-500">{comparison.category}</p>
+                    <p className="text-sm text-slate-600">{comparison.category}</p>
                   </div>
                 </div>
 
-                <p className="text-slate-300 leading-relaxed mb-6">
+                <p className="text-slate-700 leading-relaxed mb-6">
                   {comparison.excerpt}
                 </p>
 
-                <div className="flex items-center gap-2 text-indigo-400 font-semibold">
+                <div className="flex items-center gap-2 text-indigo-600 font-semibold">
                   Read Comparison
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -2489,14 +2489,14 @@ const ComparisonsListPage = () => {
 
         {/* Request Section */}
         <div className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl p-8 text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">Which comparison would help you most?</h2>
-          <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">Which comparison would help you most?</h2>
+          <p className="text-slate-700 mb-6 max-w-2xl mx-auto">
             Let me know which tools you're trying to decide between and I'll prioritize that comparison.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="mailto:david@saleshousestack.com"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-500 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-slate-900 font-semibold rounded-lg hover:bg-indigo-600 transition-all"
             >
               <Mail className="w-5 h-5" />
               Email Me
@@ -2505,7 +2505,7 @@ const ComparisonsListPage = () => {
               href="https://www.linkedin.com/in/davidvaran/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 text-white font-semibold rounded-lg border border-slate-700 hover:bg-slate-700 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-slate-200 text-slate-900 font-semibold rounded-lg border border-slate-200 hover:bg-slate-300 transition-all"
             >
               <Linkedin className="w-5 h-5" />
               Message on LinkedIn
@@ -2542,7 +2542,7 @@ const CRMComparisonPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#020617]">
+    <div className="min-h-screen bg-[#FEFEFE]">
       <Helmet>
         <title>Pipedrive vs HubSpot vs Salesforce: CRM Comparison 2025 | Sales House</title>
         <meta name="description" content="Compare Pipedrive, HubSpot, and Salesforce CRMs. Which is best for your growth stage? Real comparison of features, pricing, setup time, and use cases." />
@@ -2558,37 +2558,37 @@ const CRMComparisonPage = () => {
         {/* Header */}
         <div className="mb-12">
           <div className="mb-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">Pipedrive vs HubSpot vs Salesforce</h1>
-            <p className="text-slate-400 mb-3">Which CRM is right for your growth stage?</p>
-            <p className="text-sm text-slate-500">Last updated December 2025</p>
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2">Pipedrive vs HubSpot vs Salesforce</h1>
+            <p className="text-slate-600 mb-3">Which CRM is right for your growth stage?</p>
+            <p className="text-sm text-slate-600">Last updated December 2025</p>
           </div>
         </div>
 
         {/* TL;DR Box */}
         <div className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl p-6 mb-12">
-          <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-            <span className="text-indigo-400">⚡</span>
+          <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+            <span className="text-indigo-600">⚡</span>
             TL;DR - Quick Recommendation
           </h2>
-          <ul className="space-y-2 text-slate-300">
+          <ul className="space-y-2 text-slate-700">
             <li className="flex items-start gap-2">
-              <span className="text-green-400 mt-1">✓</span>
-              <span><strong className="text-white">Solo founder or small team?</strong> Go with Pipedrive - simple, affordable, gets the job done.</span>
+              <span className="text-green-600 mt-1">✓</span>
+              <span><strong className="text-slate-900">Solo founder or small team?</strong> Go with Pipedrive - simple, affordable, gets the job done.</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-green-400 mt-1">✓</span>
-              <span><strong className="text-white">Hired sales reps & thinking long-term?</strong> Choose HubSpot - scales well, solid automation.</span>
+              <span className="text-green-600 mt-1">✓</span>
+              <span><strong className="text-slate-900">Hired sales reps & thinking long-term?</strong> Choose HubSpot - scales well, solid automation.</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-yellow-400 mt-1">⚠</span>
-              <span><strong className="text-white">Enterprise with dedicated RevOps?</strong> Salesforce works - but skip it otherwise.</span>
+              <span className="text-yellow-600 mt-1">⚠</span>
+              <span><strong className="text-slate-900">Enterprise with dedicated RevOps?</strong> Salesforce works - but skip it otherwise.</span>
             </li>
           </ul>
         </div>
 
         {/* Intro */}
-        <div className="bg-slate-900/30 border border-slate-800 rounded-xl p-6 mb-12">
-          <p className="text-lg text-slate-300 leading-relaxed">
+        <div className="bg-slate-100/30 border border-slate-300 rounded-xl p-6 mb-12">
+          <p className="text-lg text-slate-700 leading-relaxed">
             All three are good CRMs - you've probably already heard of all of them. Each has different use cases and which CRM you go with depends on your position in the growth journey. If you're a founder, solopreneur, or vibecoder, your most logical choice is Pipedrive. If you've already hired sales people and are thinking long-term, go with HubSpot.
           </p>
         </div>
@@ -2597,43 +2597,43 @@ const CRMComparisonPage = () => {
         <div className="space-y-12">
           {/* Tool Deep Dives */}
           <section className="space-y-8">
-            <h2 className="text-3xl font-bold text-white mb-6">The Breakdown</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">The Breakdown</h2>
 
             {/* Pipedrive */}
-            <div className="bg-slate-900/30 border-l-4 border-l-green-500/50 border-t border-r border-b border-slate-800 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                <span className="text-green-400">●</span>
+            <div className="bg-slate-100/30 border-l-4 border-l-green-500/50 border-t border-r border-b border-slate-300 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                <span className="text-green-600">●</span>
                 Pipedrive
               </h3>
-              <p className="text-slate-300 leading-relaxed">
+              <p className="text-slate-700 leading-relaxed">
                 Pipedrive in itself is a very basic CRM, but it covers 100% of your needs. It's literally made by sales people for sales people. No fluff, no unnecessary features - just what you need to manage your pipeline and close deals.
               </p>
             </div>
 
             {/* HubSpot */}
-            <div className="bg-slate-900/30 border-l-4 border-l-orange-500/50 border-t border-r border-b border-slate-800 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                <span className="text-orange-400">●</span>
+            <div className="bg-slate-100/30 border-l-4 border-l-orange-500/50 border-t border-r border-b border-slate-300 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                <span className="text-orange-600">●</span>
                 HubSpot
               </h3>
-              <p className="text-slate-300 leading-relaxed mb-4">
+              <p className="text-slate-700 leading-relaxed mb-4">
                 HubSpot originally is a marketing tool, however it really picked up all the best features needed in the market and grabbed what was required by users from Salesforce. It has great customization and probably has the best user experience out of the three.
               </p>
-              <p className="text-slate-300 leading-relaxed mb-4">
+              <p className="text-slate-700 leading-relaxed mb-4">
                 Reason not to start with it: the price grows very quickly just like Salesforce when considering add-ons and toys you'll need. HubSpot is fairly easy to customize and has automations and triggers you can build out to make it serve you more.
               </p>
             </div>
 
             {/* Salesforce */}
-            <div className="bg-slate-900/30 border-l-4 border-l-blue-500/50 border-t border-r border-b border-slate-800 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+            <div className="bg-slate-100/30 border-l-4 border-l-blue-500/50 border-t border-r border-b border-slate-300 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
                 <span className="text-blue-400">●</span>
                 Salesforce
               </h3>
-              <p className="text-slate-300 leading-relaxed mb-4">
+              <p className="text-slate-700 leading-relaxed mb-4">
                 The king in customization and versatility is Salesforce, no questions - the status quo CRM. Honestly, I would not recommend anyone to go with Salesforce CRM. It looks like it's made in the 90s, it's complex, and without Sales or Revenue Operations you won't even scratch the surface of what it's capable of - plus you'll be paying premium.
               </p>
-              <p className="text-slate-300 leading-relaxed">
+              <p className="text-slate-700 leading-relaxed">
                 Most likely why you'll end up with Salesforce long-term is when you need extensive reporting to investors after funding rounds. I believe if you're reading this, you still have a lot of bridges to cross before that should be a thought in your head.
               </p>
             </div>
@@ -2641,43 +2641,43 @@ const CRMComparisonPage = () => {
 
           {/* Table 1: Best Use Cases */}
           <section>
-            <h2 className="text-3xl font-bold text-white mb-6">Best Use Cases (Who Should Pick What)</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Best Use Cases (Who Should Pick What)</h2>
             <div className="overflow-x-auto">
-              <table className="w-full border-collapse bg-slate-900/50 border border-slate-800 rounded-xl overflow-hidden">
+              <table className="w-full border-collapse bg-slate-100 border border-slate-300 rounded-xl overflow-hidden">
                 <thead>
-                  <tr className="bg-slate-800/50">
-                    <th className="text-left p-4 text-white font-bold border-b border-slate-700">Scenario</th>
-                    <th className="text-center p-4 text-white font-bold border-b border-slate-700">Salesforce</th>
-                    <th className="text-center p-4 text-white font-bold border-b border-slate-700">HubSpot</th>
-                    <th className="text-center p-4 text-white font-bold border-b border-slate-700">Pipedrive</th>
+                  <tr className="bg-slate-200">
+                    <th className="text-left p-4 text-slate-900 font-bold border-b border-slate-200">Scenario</th>
+                    <th className="text-center p-4 text-slate-900 font-bold border-b border-slate-200">Salesforce</th>
+                    <th className="text-center p-4 text-slate-900 font-bold border-b border-slate-200">HubSpot</th>
+                    <th className="text-center p-4 text-slate-900 font-bold border-b border-slate-200">Pipedrive</th>
                   </tr>
                 </thead>
-                <tbody className="text-slate-300">
-                  <tr className="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                <tbody className="text-slate-700">
+                  <tr className="border-b border-slate-300 hover:bg-slate-300/30 transition-colors">
                     <td className="p-4 font-medium">Solo founder</td>
                     <td className="p-4 text-center text-3xl">❌</td>
                     <td className="p-4 text-center text-3xl">⚠️</td>
                     <td className="p-4 text-center text-3xl">✅</td>
                   </tr>
-                  <tr className="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                  <tr className="border-b border-slate-300 hover:bg-slate-300/30 transition-colors">
                     <td className="p-4 font-medium">Small sales team (1-10)</td>
                     <td className="p-4 text-center text-3xl">❌</td>
                     <td className="p-4 text-center text-3xl">✅</td>
                     <td className="p-4 text-center text-3xl">✅</td>
                   </tr>
-                  <tr className="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                  <tr className="border-b border-slate-300 hover:bg-slate-300/30 transition-colors">
                     <td className="p-4 font-medium">Growing SMB (10-50 reps)</td>
                     <td className="p-4 text-center text-3xl">⚠️</td>
                     <td className="p-4 text-center text-3xl">✅</td>
                     <td className="p-4 text-center text-3xl">⚠️</td>
                   </tr>
-                  <tr className="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                  <tr className="border-b border-slate-300 hover:bg-slate-300/30 transition-colors">
                     <td className="p-4 font-medium">Enterprise / multi-region</td>
                     <td className="p-4 text-center text-3xl">✅</td>
                     <td className="p-4 text-center text-3xl">⚠️</td>
                     <td className="p-4 text-center text-3xl">❌</td>
                   </tr>
-                  <tr className="hover:bg-slate-800/30 transition-colors">
+                  <tr className="hover:bg-slate-300/30 transition-colors">
                     <td className="p-4 font-medium">Dedicated RevOps/Admin</td>
                     <td className="p-4 text-center text-sm">Required</td>
                     <td className="p-4 text-center text-sm">Helpful</td>
@@ -2690,37 +2690,37 @@ const CRMComparisonPage = () => {
 
           {/* Table 2: Time to Value */}
           <section>
-            <h2 className="text-3xl font-bold text-white mb-6">Time to Value & Adoption</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Time to Value & Adoption</h2>
             <div className="overflow-x-auto">
-              <table className="w-full border-collapse bg-slate-900/50 border border-slate-800 rounded-xl overflow-hidden">
+              <table className="w-full border-collapse bg-slate-100 border border-slate-300 rounded-xl overflow-hidden">
                 <thead>
-                  <tr className="bg-slate-800/50">
-                    <th className="text-left p-4 text-white font-bold border-b border-slate-700">Dimension</th>
-                    <th className="text-center p-4 text-white font-bold border-b border-slate-700">Salesforce</th>
-                    <th className="text-center p-4 text-white font-bold border-b border-slate-700">HubSpot</th>
-                    <th className="text-center p-4 text-white font-bold border-b border-slate-700">Pipedrive</th>
+                  <tr className="bg-slate-200">
+                    <th className="text-left p-4 text-slate-900 font-bold border-b border-slate-200">Dimension</th>
+                    <th className="text-center p-4 text-slate-900 font-bold border-b border-slate-200">Salesforce</th>
+                    <th className="text-center p-4 text-slate-900 font-bold border-b border-slate-200">HubSpot</th>
+                    <th className="text-center p-4 text-slate-900 font-bold border-b border-slate-200">Pipedrive</th>
                   </tr>
                 </thead>
-                <tbody className="text-slate-300">
-                  <tr className="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                <tbody className="text-slate-700">
+                  <tr className="border-b border-slate-300 hover:bg-slate-300/30 transition-colors">
                     <td className="p-4 font-medium">Setup speed</td>
                     <td className="p-4 text-center">Slow</td>
                     <td className="p-4 text-center">Fast</td>
                     <td className="p-4 text-center">Very fast</td>
                   </tr>
-                  <tr className="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                  <tr className="border-b border-slate-300 hover:bg-slate-300/30 transition-colors">
                     <td className="p-4 font-medium">Onboarding effort</td>
                     <td className="p-4 text-center">High</td>
                     <td className="p-4 text-center">Medium</td>
                     <td className="p-4 text-center">Low</td>
                   </tr>
-                  <tr className="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
+                  <tr className="border-b border-slate-300 hover:bg-slate-300/30 transition-colors">
                     <td className="p-4 font-medium">Rep adoption</td>
                     <td className="p-4 text-center">Medium</td>
                     <td className="p-4 text-center">High</td>
                     <td className="p-4 text-center">Very high</td>
                   </tr>
-                  <tr className="hover:bg-slate-800/30 transition-colors">
+                  <tr className="hover:bg-slate-300/30 transition-colors">
                     <td className="p-4 font-medium">"Feels usable on day 1"</td>
                     <td className="p-4 text-center text-3xl">❌</td>
                     <td className="p-4 text-center text-3xl">✅</td>
@@ -2733,29 +2733,29 @@ const CRMComparisonPage = () => {
 
           {/* Table 3: Pricing Reality */}
           <section>
-            <h2 className="text-3xl font-bold text-white mb-6">Pricing Reality</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Pricing Reality</h2>
             <div className="overflow-x-auto">
-              <table className="w-full border-collapse bg-slate-900/50 border border-slate-800 rounded-xl overflow-hidden">
+              <table className="w-full border-collapse bg-slate-100 border border-slate-300 rounded-xl overflow-hidden">
                 <thead>
-                  <tr className="bg-slate-800/50">
-                    <th className="text-left p-4 text-white font-bold border-b border-slate-700">CRM</th>
-                    <th className="text-left p-4 text-white font-bold border-b border-slate-700">Entry price reality</th>
-                    <th className="text-left p-4 text-white font-bold border-b border-slate-700">What founders underestimate</th>
+                  <tr className="bg-slate-200">
+                    <th className="text-left p-4 text-slate-900 font-bold border-b border-slate-200">CRM</th>
+                    <th className="text-left p-4 text-slate-900 font-bold border-b border-slate-200">Entry price reality</th>
+                    <th className="text-left p-4 text-slate-900 font-bold border-b border-slate-200">What founders underestimate</th>
                   </tr>
                 </thead>
-                <tbody className="text-slate-300">
-                  <tr className="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 font-bold text-white">Salesforce</td>
+                <tbody className="text-slate-700">
+                  <tr className="border-b border-slate-300 hover:bg-slate-300/30 transition-colors">
+                    <td className="p-4 font-bold text-slate-900">Salesforce</td>
                     <td className="p-4">Starts "reasonable", scales brutally</td>
                     <td className="p-4">Admin cost, consultants, add-ons</td>
                   </tr>
-                  <tr className="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 font-bold text-white">HubSpot</td>
+                  <tr className="border-b border-slate-300 hover:bg-slate-300/30 transition-colors">
+                    <td className="p-4 font-bold text-slate-900">HubSpot</td>
                     <td className="p-4">Free/cheap early</td>
                     <td className="p-4">Cost grows as you add hubs & seats</td>
                   </tr>
-                  <tr className="hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 font-bold text-white">Pipedrive</td>
+                  <tr className="hover:bg-slate-300/30 transition-colors">
+                    <td className="p-4 font-bold text-slate-900">Pipedrive</td>
                     <td className="p-4">Affordable</td>
                     <td className="p-4">Add-ons stack over time</td>
                   </tr>
@@ -2766,30 +2766,30 @@ const CRMComparisonPage = () => {
 
           {/* Recommendations */}
           <section className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl p-8">
-            <h2 className="text-3xl font-bold text-white mb-6">My Recommendation</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">My Recommendation</h2>
             <ul className="space-y-4 text-lg">
               <li className="flex items-start gap-3">
-                <span className="text-indigo-400 text-2xl">→</span>
-                <span className="text-slate-300"><strong className="text-white">Early stage / lean teams:</strong> Start with Pipedrive</span>
+                <span className="text-indigo-600 text-2xl">→</span>
+                <span className="text-slate-700"><strong className="text-slate-900">Early stage / lean teams:</strong> Start with Pipedrive</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-indigo-400 text-2xl">→</span>
-                <span className="text-slate-300"><strong className="text-white">Growing SMBs:</strong> Default to HubSpot</span>
+                <span className="text-indigo-600 text-2xl">→</span>
+                <span className="text-slate-700"><strong className="text-slate-900">Growing SMBs:</strong> Default to HubSpot</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-indigo-400 text-2xl">→</span>
-                <span className="text-slate-300"><strong className="text-white">Complex, scaled orgs:</strong> Choose Salesforce only if you're ready</span>
+                <span className="text-indigo-600 text-2xl">→</span>
+                <span className="text-slate-700"><strong className="text-slate-900">Complex, scaled orgs:</strong> Choose Salesforce only if you're ready</span>
               </li>
             </ul>
           </section>
 
           {/* About Me */}
-          <section className="bg-slate-900/30 border border-slate-800 rounded-xl p-4">
-            <h2 className="text-lg font-bold text-white mb-2">About This Comparison</h2>
-            <p className="text-slate-300 text-sm leading-normal mb-3">
+          <section className="bg-slate-100/30 border border-slate-300 rounded-xl p-4">
+            <h2 className="text-lg font-bold text-slate-900 mb-2">About This Comparison</h2>
+            <p className="text-slate-700 text-sm leading-normal mb-3">
               I'm David, and I've spent years working with different CRMs across multiple SaaS companies. I've set up Pipedrive for early-stage startups, migrated teams to HubSpot during scale-up phases, and dealt with Salesforce's complexity at enterprise level from teams as small as a solo person, to 20 people mix of SDRs and AEs.
             </p>
-            <p className="text-slate-300 text-sm leading-normal mb-3">
+            <p className="text-slate-700 text-sm leading-normal mb-3">
               This comparison comes from real experience - not theory. I've felt the pain of choosing the wrong CRM too early, overpaying for features you don't need, and dealing with adoption issues when the tool is too complex. My goal here is to save you from making those same mistakes.
             </p>
 
@@ -2799,7 +2799,7 @@ const CRMComparisonPage = () => {
                 href="https://www.linkedin.com/in/davidvaran/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors flex items-center gap-1.5"
+                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-slate-900 text-sm font-medium rounded-lg transition-colors flex items-center gap-1.5"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
@@ -2808,7 +2808,7 @@ const CRMComparisonPage = () => {
               </a>
               <a
                 href="mailto:david@saleshousestack.com"
-                className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium rounded-lg transition-colors flex items-center gap-1.5 border border-slate-700"
+                className="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-900 text-sm font-medium rounded-lg transition-colors flex items-center gap-1.5 border border-slate-200"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -2819,11 +2819,11 @@ const CRMComparisonPage = () => {
           </section>
 
           {/* Tags */}
-          <section className="border-t border-slate-800 pt-8">
-            <p className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Tagged:</p>
+          <section className="border-t border-slate-300 pt-8">
+            <p className="text-sm font-bold text-slate-600 uppercase tracking-wider mb-4">Tagged:</p>
             <div className="flex flex-wrap gap-2">
               {['CRM Comparison', 'Pipedrive', 'HubSpot', 'Salesforce', 'Sales CRM', 'CRM for Startups', 'B2B Sales Tools', 'Revenue Operations'].map((tag) => (
-                <span key={tag} className="px-3 py-1.5 bg-slate-800/50 border border-slate-700/50 rounded-md text-sm text-slate-300 hover:border-indigo-500/50 transition-colors">
+                <span key={tag} className="px-3 py-1.5 bg-slate-200 border border-slate-200/50 rounded-md text-sm text-slate-700 hover:border-indigo-500/50 transition-colors">
                   {tag}
                 </span>
               ))}
@@ -2836,7 +2836,7 @@ const CRMComparisonPage = () => {
               href="https://www.pipedrive.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-slate-800 border border-slate-700 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all text-center"
+              className="px-6 py-3 bg-slate-200 border border-slate-200 text-slate-900 font-semibold rounded-lg hover:bg-slate-300 transition-all text-center"
             >
               Try Pipedrive
             </a>
@@ -2844,7 +2844,7 @@ const CRMComparisonPage = () => {
               href="https://www.hubspot.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-slate-800 border border-slate-700 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all text-center"
+              className="px-6 py-3 bg-slate-200 border border-slate-200 text-slate-900 font-semibold rounded-lg hover:bg-slate-300 transition-all text-center"
             >
               Try HubSpot
             </a>
@@ -2852,7 +2852,7 @@ const CRMComparisonPage = () => {
               href="https://www.salesforce.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-slate-800 border border-slate-700 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all text-center"
+              className="px-6 py-3 bg-slate-200 border border-slate-200 text-slate-900 font-semibold rounded-lg hover:bg-slate-300 transition-all text-center"
             >
               Try Salesforce
             </a>
@@ -2887,7 +2887,7 @@ const ReviewsListPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#020617]">
+    <div className="min-h-screen bg-[#FEFEFE]">
       <Helmet>
         <title>Tool Reviews - Expert Sales Software Reviews | Sales House</title>
         <meta name="description" content="Honest, in-depth reviews of sales tools based on real experience. Get expert insights on Reply.io, Clay, HubSpot and more sales engagement platforms." />
@@ -2897,7 +2897,7 @@ const ReviewsListPage = () => {
         <Breadcrumb />
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Tool Reviews</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Tool Reviews</h1>
         </div>
 
         {/* Reviews Grid */}
@@ -2906,26 +2906,26 @@ const ReviewsListPage = () => {
             <Link
               key={tool.id}
               to={`/reviews/${tool.slug}`}
-              className="bg-slate-900/50 border border-slate-800 rounded-xl p-8 hover:border-indigo-500/50 transition-all group"
+              className="bg-slate-100 border border-slate-300 rounded-xl p-8 hover:border-indigo-500/50 transition-all group"
             >
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <h2 className="text-2xl font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+                  <h2 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">
                     {tool.name} Review
                   </h2>
-                  <p className="text-sm text-slate-500">{tool.category} • Updated {tool.lastUpdated}</p>
+                  <p className="text-sm text-slate-600">{tool.category} • Updated {tool.lastUpdated}</p>
                 </div>
-                <div className="flex items-center gap-1 bg-slate-800/50 px-3 py-1.5 rounded-lg">
-                  <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  <span className="text-white font-bold">{tool.rating}</span>
+                <div className="flex items-center gap-1 bg-slate-200 px-3 py-1.5 rounded-lg">
+                  <Star className="w-4 h-4 fill-yellow-400 text-yellow-600" />
+                  <span className="text-slate-900 font-bold">{tool.rating}</span>
                 </div>
               </div>
 
-              <p className="text-slate-300 leading-relaxed mb-6">
+              <p className="text-slate-700 leading-relaxed mb-6">
                 {tool.excerpt}
               </p>
 
-              <div className="flex items-center gap-2 text-indigo-400 font-semibold">
+              <div className="flex items-center gap-2 text-indigo-600 font-semibold">
                 Read Full Review
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
@@ -2935,18 +2935,18 @@ const ReviewsListPage = () => {
 
         {/* In Progress Section */}
         <div className="mt-16">
-          <h2 className="text-2xl font-bold text-white mb-6">Reviews In Progress</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mb-6">Reviews In Progress</h2>
           <div className="grid md:grid-cols-3 gap-4">
             {['HubSpot', 'Instantly', 'Lemlist'].map((toolName) => (
               <div
                 key={toolName}
-                className="bg-slate-900/30 border border-slate-800 rounded-xl p-6 text-center"
+                className="bg-slate-100/30 border border-slate-300 rounded-xl p-6 text-center"
               >
-                <div className="w-12 h-12 bg-slate-800/50 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <div className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse"></div>
+                <div className="w-12 h-12 bg-slate-200 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <div className="w-2 h-2 bg-indigo-600 rounded-full animate-pulse"></div>
                 </div>
-                <h3 className="text-lg font-bold text-slate-400 mb-2">{toolName}</h3>
-                <p className="text-sm text-slate-500">Review coming soon</p>
+                <h3 className="text-lg font-bold text-slate-600 mb-2">{toolName}</h3>
+                <p className="text-sm text-slate-600">Review coming soon</p>
               </div>
             ))}
           </div>
@@ -2954,14 +2954,14 @@ const ReviewsListPage = () => {
 
         {/* Request Section */}
         <div className="mt-12 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl p-8 text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">What tool should I review next?</h2>
-          <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">What tool should I review next?</h2>
+          <p className="text-slate-700 mb-6 max-w-2xl mx-auto">
             Got a sales tool you want me to put through its paces? Let me know what you'd like to see reviewed.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="mailto:david@saleshousestack.com"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-500 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-slate-900 font-semibold rounded-lg hover:bg-indigo-600 transition-all"
             >
               <Mail className="w-5 h-5" />
               Email Me
@@ -2970,7 +2970,7 @@ const ReviewsListPage = () => {
               href="https://www.linkedin.com/in/davidvaran/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 text-white font-semibold rounded-lg border border-slate-700 hover:bg-slate-700 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-slate-200 text-slate-900 font-semibold rounded-lg border border-slate-200 hover:bg-slate-300 transition-all"
             >
               <Linkedin className="w-5 h-5" />
               Message on LinkedIn
@@ -3050,7 +3050,7 @@ const ReplyIOReviewPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#020617]">
+    <div className="min-h-screen bg-[#FEFEFE]">
       <Helmet>
         <title>Reply.io Review 2025: My Experience After 4 SaaS Companies | Sales House</title>
         <meta name="description" content="Honest Reply.io review based on real experience with 4 SaaS companies. Open rates up to 80%, multichannel capabilities, pricing analysis, and who should (and shouldn't) use it." />
@@ -3073,58 +3073,58 @@ const ReplyIOReviewPage = () => {
         {/* Header */}
         <div className="mb-12">
           <div className="mb-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">Reply.io Review</h1>
-            <p className="text-slate-400">Last updated December 2025</p>
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2">Reply.io Review</h1>
+            <p className="text-slate-600">Last updated December 2025</p>
           </div>
 
           {/* Rating */}
-          <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
+          <div className="bg-slate-100 border border-slate-300 rounded-xl p-6">
             <div className="flex items-center gap-2 mb-3">
               {[...Array(4)].map((_, i) => (
-                <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+                <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-600" />
               ))}
-              <Star className="w-6 h-6 fill-yellow-400 text-yellow-400" style={{ clipPath: 'inset(0 50% 0 0)' }} />
-              <span className="text-2xl font-bold text-white ml-2">4.5/5</span>
+              <Star className="w-6 h-6 fill-yellow-400 text-yellow-600" style={{ clipPath: 'inset(0 50% 0 0)' }} />
+              <span className="text-2xl font-bold text-slate-900 ml-2">4.5/5</span>
             </div>
-            <p className="text-xl font-semibold text-indigo-400">Very versatile tool, highest level of multichannel capabilities</p>
+            <p className="text-xl font-semibold text-indigo-600">Very versatile tool, highest level of multichannel capabilities</p>
           </div>
         </div>
 
         {/* Content */}
         <div className="space-y-8">
           {/* Why I Recommend It */}
-          <section className="bg-slate-900/30 border border-slate-800 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-              <Star className="w-6 h-6 text-indigo-400" />
+          <section className="bg-slate-100/30 border border-slate-300 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+              <Star className="w-6 h-6 text-indigo-600" />
               Why I Recommend It
             </h2>
-            <p className="text-slate-300 leading-relaxed mb-4">
+            <p className="text-slate-700 leading-relaxed mb-4">
               Reply.io covers all the channels you need and gives you complete control to personalize when necessary. The price-to-functionality ratio is top-notch, making it accessible for founders and small teams while still being powerful enough for established sales teams.
             </p>
-            <p className="text-slate-300 leading-relaxed">
+            <p className="text-slate-700 leading-relaxed">
               Their analytics and tracking capabilities really shine when it comes to extra nurturing steps. For example, I set up an automation that checks if a prospect opened an email more than 5 times after the last sequence step, then triggers a reminder email a day later (not the same day - that would be creepy). This simple workflow helped nudge reply rates and increased the number of opportunities created.
             </p>
           </section>
 
           {/* My Experience */}
-          <section className="bg-slate-900/30 border border-slate-800 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">My Experience Using It</h2>
-            <p className="text-slate-300 leading-relaxed mb-4">
+          <section className="bg-slate-100/30 border border-slate-300 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">My Experience Using It</h2>
+            <p className="text-slate-700 leading-relaxed mb-4">
               I've used and set up Reply.io for 4 SaaS companies over the past year. The platform has been my go-to for automating LinkedIn, InMail, and email sequencing with variable steps across multiple campaigns.
             </p>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6">
-              <p className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">Real Results:</p>
-              <ul className="space-y-3 text-slate-300">
+            <div className="bg-slate-200 border border-slate-200 rounded-lg p-6">
+              <p className="text-sm font-bold text-slate-600 uppercase tracking-wider mb-4">Real Results:</p>
+              <ul className="space-y-3 text-slate-700">
                 <li className="flex items-start gap-3">
-                  <span className="text-green-400 mt-1 text-xl">✓</span>
+                  <span className="text-green-600 mt-1 text-xl">✓</span>
                   <span>Open rates varied by industry: 30-40% on the lower end, peaked at 80% with 3-4 follow-up steps (excluding LinkedIn)</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-400 mt-1 text-xl">✓</span>
+                  <span className="text-green-600 mt-1 text-xl">✓</span>
                   <span>Successfully automated multichannel sequences across email, LinkedIn, and InMail</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-400 mt-1 text-xl">✓</span>
+                  <span className="text-green-600 mt-1 text-xl">✓</span>
                   <span>Advanced nurturing automation (5+ email opens trigger) increased reply rates and opportunities created</span>
                 </li>
               </ul>
@@ -3132,56 +3132,56 @@ const ReplyIOReviewPage = () => {
           </section>
 
           {/* Where It Shines */}
-          <section className="bg-slate-900/30 border border-slate-800 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Where It Shines</h2>
-            <p className="text-slate-300 leading-relaxed mb-4">
+          <section className="bg-slate-100/30 border border-slate-300 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Where It Shines</h2>
+            <p className="text-slate-700 leading-relaxed mb-4">
               The multichannel capabilities are unmatched. I've tested every channel except WhatsApp (though the sentiment about it seems positive). Reply.io is the best choice when:
             </p>
-            <ul className="space-y-3 text-slate-300">
+            <ul className="space-y-3 text-slate-700">
               <li className="flex items-start gap-3">
-                <span className="text-indigo-400 text-xl">•</span>
+                <span className="text-indigo-600 text-xl">•</span>
                 <span>You need to run coordinated campaigns across email, LinkedIn, and InMail</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-indigo-400 text-xl">•</span>
+                <span className="text-indigo-600 text-xl">•</span>
                 <span>You want granular control over personalization without sacrificing automation</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-indigo-400 text-xl">•</span>
+                <span className="text-indigo-600 text-xl">•</span>
                 <span>You need advanced analytics and tracking for nurturing workflows</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-indigo-400 text-xl">•</span>
+                <span className="text-indigo-600 text-xl">•</span>
                 <span>You're serious about outbound and understand that single-channel focus leaves money on the table</span>
               </li>
             </ul>
           </section>
 
           {/* Who Should Skip This */}
-          <section className="bg-slate-900/30 border border-slate-800 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Who Should Skip This</h2>
-            <p className="text-slate-300 leading-relaxed mb-4">
-              <strong className="text-white">If you're only focusing on one channel, don't buy Reply.io.</strong> There are specialized tools that will serve you better: Dripify for LinkedIn, Instantly for email, or Aircall for cold calls. But honestly, as a sales professional, single-channel focus is a bad strategy - you're leaving money on the table.
+          <section className="bg-slate-100/30 border border-slate-300 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Who Should Skip This</h2>
+            <p className="text-slate-700 leading-relaxed mb-4">
+              <strong className="text-slate-900">If you're only focusing on one channel, don't buy Reply.io.</strong> There are specialized tools that will serve you better: Dripify for LinkedIn, Instantly for email, or Aircall for cold calls. But honestly, as a sales professional, single-channel focus is a bad strategy - you're leaving money on the table.
             </p>
-            <p className="text-slate-300 leading-relaxed">
-              <strong className="text-white">The one real dealbreaker:</strong> Limited Salesforce integration. The only reason this gets 4.5 instead of 5 stars. I wasn't happy with how the integration works initially. With some technical workarounds in Salesforce, we got it working well enough for a team of 9 sales executives, but it's not ideal. For most founder and small team use cases using HubSpot, this is a non-issue.
+            <p className="text-slate-700 leading-relaxed">
+              <strong className="text-slate-900">The one real dealbreaker:</strong> Limited Salesforce integration. The only reason this gets 4.5 instead of 5 stars. I wasn't happy with how the integration works initially. With some technical workarounds in Salesforce, we got it working well enough for a team of 9 sales executives, but it's not ideal. For most founder and small team use cases using HubSpot, this is a non-issue.
             </p>
           </section>
 
           {/* Bottom Line */}
           <section className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-indigo-400 mb-4">Bottom Line</h2>
-            <p className="text-slate-300 leading-relaxed text-lg">
+            <h2 className="text-2xl font-bold text-indigo-600 mb-4">Bottom Line</h2>
+            <p className="text-slate-700 leading-relaxed text-lg">
               Great tool with a top-tier price-to-functionality ratio. Whether you're an established team or a founder just starting outbound, Reply.io will get the job done long-term and you can be confident with your commitment. It's my go-to recommendation for anyone serious about multichannel outreach who wants a tool they can grow with.
             </p>
           </section>
 
           {/* Tags */}
-          <section className="border-t border-slate-800 pt-8">
-            <p className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Tagged:</p>
+          <section className="border-t border-slate-300 pt-8">
+            <p className="text-sm font-bold text-slate-600 uppercase tracking-wider mb-4">Tagged:</p>
             <div className="flex flex-wrap gap-2">
               {['Sales Engagement', 'Email Automation', 'LinkedIn Automation', 'Multichannel Outreach', 'Cold Email', 'B2B Sales Tools', 'Sales Sequences'].map((tag) => (
-                <span key={tag} className="px-3 py-1.5 bg-slate-800/50 border border-slate-700/50 rounded-md text-sm text-slate-300 hover:border-indigo-500/50 transition-colors">
+                <span key={tag} className="px-3 py-1.5 bg-slate-200 border border-slate-200/50 rounded-md text-sm text-slate-700 hover:border-indigo-500/50 transition-colors">
                   {tag}
                 </span>
               ))}
@@ -3194,7 +3194,7 @@ const ReplyIOReviewPage = () => {
               href={replyTool.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-bold rounded-lg shadow-lg hover:bg-indigo-500 transition-all text-lg"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-slate-900 font-bold rounded-lg shadow-lg hover:bg-indigo-600 transition-all text-lg"
             >
               Try Reply.io For Free <ExternalLink className="w-5 h-5" />
             </a>
@@ -3273,7 +3273,7 @@ const ClayReviewPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#020617]">
+    <div className="min-h-screen bg-[#FEFEFE]">
       <Helmet>
         <title>Clay Review 2025: AI-Powered Research Assistant for Sales Teams | Sales House</title>
         <meta name="description" content="Honest Clay review after 8 months and 40k+ contacts processed. Signal building, AI qualification, and who should use it vs Apollo or Lusha." />
@@ -3296,74 +3296,74 @@ const ClayReviewPage = () => {
         {/* Header */}
         <div className="mb-12">
           <div className="mb-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">Clay Review</h1>
-            <p className="text-slate-400">Last updated December 2025</p>
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2">Clay Review</h1>
+            <p className="text-slate-600">Last updated December 2025</p>
           </div>
 
           {/* Rating */}
-          <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
+          <div className="bg-slate-100 border border-slate-300 rounded-xl p-6">
             <div className="flex items-center gap-2 mb-3">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+                <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-600" />
               ))}
-              <span className="text-2xl font-bold text-white ml-2">5.0/5</span>
+              <span className="text-2xl font-bold text-slate-900 ml-2">5.0/5</span>
             </div>
-            <p className="text-xl font-semibold text-indigo-400">Not just a contact database - a whole AI research assistant that qualifies, signals, and personalizes at scale</p>
+            <p className="text-xl font-semibold text-indigo-600">Not just a contact database - a whole AI research assistant that qualifies, signals, and personalizes at scale</p>
           </div>
         </div>
 
         {/* Content */}
         <div className="space-y-8">
           {/* Why I Recommend It */}
-          <section className="bg-slate-900/30 border border-slate-800 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-              <Star className="w-6 h-6 text-indigo-400" />
+          <section className="bg-slate-100/30 border border-slate-300 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+              <Star className="w-6 h-6 text-indigo-600" />
               Why I Recommend It
             </h2>
-            <p className="text-slate-300 leading-relaxed mb-4">
+            <p className="text-slate-700 leading-relaxed mb-4">
               I'll be transparent: I haven't used a tool I can call a direct competitor to Clay. What makes it stand out is the extensiveness of how far you can go with the qualification steps.
             </p>
-            <p className="text-slate-300 leading-relaxed">
+            <p className="text-slate-700 leading-relaxed">
               It's not just a contact database - it's a whole AI research assistant doing extra qualification, sending you signals, and preparing personalization angles. It can be used as a database, but it can also identify key people in the company, research company LinkedIn and DMs information, and prepare an angle for a personalized pitch. The time saved from manual research is massive when you can launch an AI to qualify companies based on your criteria.
             </p>
           </section>
 
           {/* My Experience */}
-          <section className="bg-slate-900/30 border border-slate-800 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">My Experience Using It</h2>
-            <p className="text-slate-300 leading-relaxed mb-4">
+          <section className="bg-slate-100/30 border border-slate-300 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">My Experience Using It</h2>
+            <p className="text-slate-700 leading-relaxed mb-4">
               I've been using Clay for about 8 months and have processed north of 40,000 contacts. You know perfectly well what a pain account qualification is - but qualifying 500+ companies in under 10 minutes to figure out if they're a good fit for my product offering? Hell yeah. That extra time can be spent on sequence prep, old inbound, and closed-lost nurturing.
             </p>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 mb-6">
-              <p className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">Real Results:</p>
-              <ul className="space-y-3 text-slate-300">
+            <div className="bg-slate-200 border border-slate-200 rounded-lg p-6 mb-6">
+              <p className="text-sm font-bold text-slate-600 uppercase tracking-wider mb-4">Real Results:</p>
+              <ul className="space-y-3 text-slate-700">
                 <li className="flex items-start gap-3">
-                  <span className="text-green-400 mt-1 text-xl">✓</span>
+                  <span className="text-green-600 mt-1 text-xl">✓</span>
                   <span>Processed 40,000+ contacts across multiple campaigns</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-400 mt-1 text-xl">✓</span>
+                  <span className="text-green-600 mt-1 text-xl">✓</span>
                   <span>Qualify 500+ companies in under 10 minutes with AI - massive time savings on manual research</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-400 mt-1 text-xl">✓</span>
+                  <span className="text-green-600 mt-1 text-xl">✓</span>
                   <span>5-10% bounce rate on high volume sequences (recommend extra email verification if using fewer than 5 domains)</span>
                 </li>
               </ul>
             </div>
             <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-6">
               <p className="text-sm font-bold text-amber-400 uppercase tracking-wider mb-3">Data Coverage Notes:</p>
-              <ul className="space-y-2 text-slate-300 text-sm">
+              <ul className="space-y-2 text-slate-700 text-sm">
                 <li className="flex items-start gap-2">
-                  <span className="text-green-400">✓</span>
+                  <span className="text-green-600">✓</span>
                   <span><strong>Excellent:</strong> North America, EMEA for fintech, tax firms, logistics, e-commerce</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-yellow-400">⚠</span>
+                  <span className="text-yellow-600">⚠</span>
                   <span><strong>Outdated contacts:</strong> LATAM coverage</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-yellow-400">⚠</span>
+                  <span className="text-yellow-600">⚠</span>
                   <span><strong>Limited:</strong> Eastern Europe coverage</span>
                 </li>
               </ul>
@@ -3371,56 +3371,56 @@ const ClayReviewPage = () => {
           </section>
 
           {/* Where It Shines */}
-          <section className="bg-slate-900/30 border border-slate-800 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Where It Shines</h2>
-            <p className="text-slate-300 leading-relaxed mb-4">
-              <strong className="text-white">Signal building is the killer feature.</strong> You can set up notifications to be the first in line to learn about promotions, investment round announcements, position changes, and acquisitions. You always want to be first to send congratulations and ask if there's room for a chat about your offering.
+          <section className="bg-slate-100/30 border border-slate-300 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Where It Shines</h2>
+            <p className="text-slate-700 leading-relaxed mb-4">
+              <strong className="text-slate-900">Signal building is the killer feature.</strong> You can set up notifications to be the first in line to learn about promotions, investment round announcements, position changes, and acquisitions. You always want to be first to send congratulations and ask if there's room for a chat about your offering.
             </p>
-            <ul className="space-y-3 text-slate-300">
+            <ul className="space-y-3 text-slate-700">
               <li className="flex items-start gap-3">
-                <span className="text-indigo-400 text-xl">•</span>
+                <span className="text-indigo-600 text-xl">•</span>
                 <span>AI-powered company qualification at scale (500+ companies in 10 minutes)</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-indigo-400 text-xl">•</span>
+                <span className="text-indigo-600 text-xl">•</span>
                 <span>Signal tracking for promotions, funding rounds, job changes, M&A activity</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-indigo-400 text-xl">•</span>
+                <span className="text-indigo-600 text-xl">•</span>
                 <span>Identifying key decision-makers and preparing personalized pitch angles</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-indigo-400 text-xl">•</span>
+                <span className="text-indigo-600 text-xl">•</span>
                 <span>When you have your ICP dialed in and need to narrow down on perfect-fit accounts</span>
               </li>
             </ul>
           </section>
 
           {/* Who Should Skip This */}
-          <section className="bg-slate-900/30 border border-slate-800 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Who Should Skip This</h2>
-            <p className="text-slate-300 leading-relaxed mb-4">
-              <strong className="text-white">New founders who don't have their ICP dialed in perfectly should skip Clay.</strong> Stick to Apollo.io or Lusha to test markets, verticals, and titles on high volume first. Clay is used when you're narrowing down on who's the perfect fit - not when you're still figuring that out.
+          <section className="bg-slate-100/30 border border-slate-300 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Who Should Skip This</h2>
+            <p className="text-slate-700 leading-relaxed mb-4">
+              <strong className="text-slate-900">New founders who don't have their ICP dialed in perfectly should skip Clay.</strong> Stick to Apollo.io or Lusha to test markets, verticals, and titles on high volume first. Clay is used when you're narrowing down on who's the perfect fit - not when you're still figuring that out.
             </p>
-            <p className="text-slate-300 leading-relaxed">
-              <strong className="text-white">The dealbreaker:</strong> Credit-based AI usage means prompts need to be adjusted multiple times. There's a lot of testing required to refine the enrichment prompt, which burns through credits. If you're not willing to iterate and optimize your workflows, Clay will get expensive fast.
+            <p className="text-slate-700 leading-relaxed">
+              <strong className="text-slate-900">The dealbreaker:</strong> Credit-based AI usage means prompts need to be adjusted multiple times. There's a lot of testing required to refine the enrichment prompt, which burns through credits. If you're not willing to iterate and optimize your workflows, Clay will get expensive fast.
             </p>
           </section>
 
           {/* Bottom Line */}
           <section className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-indigo-400 mb-4">Bottom Line</h2>
-            <p className="text-slate-300 leading-relaxed text-lg">
+            <h2 className="text-2xl font-bold text-indigo-600 mb-4">Bottom Line</h2>
+            <p className="text-slate-700 leading-relaxed text-lg">
               Clay is in a league of its own - it's not just a database, it's an AI research assistant that does the grunt work of qualification, signal tracking, and personalization prep. If you have your ICP dialed in and need to operate at scale while staying personalized, Clay is unmatched. Just be prepared to invest time upfront refining your prompts and workflows.
             </p>
           </section>
 
           {/* Tags */}
-          <section className="border-t border-slate-800 pt-8">
-            <p className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Tagged:</p>
+          <section className="border-t border-slate-300 pt-8">
+            <p className="text-sm font-bold text-slate-600 uppercase tracking-wider mb-4">Tagged:</p>
             <div className="flex flex-wrap gap-2">
               {['Data Enrichment', 'Sales Intelligence', 'AI Qualification', 'Signal Building', 'Contact Database', 'Lead Research', 'B2B Sales Tools', 'Sales Automation'].map((tag) => (
-                <span key={tag} className="px-3 py-1.5 bg-slate-800/50 border border-slate-700/50 rounded-md text-sm text-slate-300 hover:border-indigo-500/50 transition-colors">
+                <span key={tag} className="px-3 py-1.5 bg-slate-200 border border-slate-200/50 rounded-md text-sm text-slate-700 hover:border-indigo-500/50 transition-colors">
                   {tag}
                 </span>
               ))}
@@ -3433,7 +3433,7 @@ const ClayReviewPage = () => {
               href={clayTool.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-bold rounded-lg shadow-lg hover:bg-indigo-500 transition-all text-lg"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-slate-900 font-bold rounded-lg shadow-lg hover:bg-indigo-600 transition-all text-lg"
             >
               Try Clay For Free <ExternalLink className="w-5 h-5" />
             </a>
@@ -3466,19 +3466,19 @@ const App = () => {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen bg-[#020617] font-sans text-slate-100">
+      <div className="min-h-screen bg-[#FEFEFE] font-sans text-slate-900">
         
         {/* Top Navigation Bar */}
-        <nav className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-lg border-b border-slate-800">
+        <nav className="sticky top-0 z-50 bg-slate-50/80 backdrop-blur-lg border-b border-slate-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <div className="flex items-center shrink-0">
                          <Link to="/" className="flex items-center gap-2 group">
-                             <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-[0_0_15px_rgba(79,70,229,0.5)] group-hover:bg-indigo-500 transition-colors">
+                             <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-slate-900 text-lg shadow-[0_0_15px_rgba(79,70,229,0.5)] group-hover:bg-indigo-600 transition-colors">
                                 S
                              </div>
-                             <span className="text-xl font-bold tracking-tight text-white">Sales House</span>
+                             <span className="text-xl font-bold tracking-tight text-slate-900">Sales House</span>
                          </Link>
                     </div>
 
@@ -3488,10 +3488,10 @@ const App = () => {
                         <NavLink to="/library" icon={Library} label="Library" />
                         <NavLink to="/strategies" icon={Layers} label="Playbook" />
                         {/* <NavLink to="/consulting" icon={Briefcase} label="Consulting" /> */}
-                        <div className="h-6 w-px bg-slate-800 mx-2"></div>
+                        <div className="h-6 w-px bg-slate-200 mx-2"></div>
                         <button
                             onClick={openPlaybookForm}
-                            className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-bold rounded-lg transition-colors flex items-center gap-2 shadow-[0_0_15px_rgba(79,70,229,0.3)]"
+                            className="px-4 py-2 bg-indigo-600 hover:bg-indigo-600 text-slate-900 text-sm font-bold rounded-lg transition-colors flex items-center gap-2 shadow-[0_0_15px_rgba(79,70,229,0.3)]"
                         >
                             <Download className="w-4 h-4" /> Get Playbook
                         </button>
@@ -3501,7 +3501,7 @@ const App = () => {
                     <div className="md:hidden flex">
                         <button 
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            className="text-slate-400 hover:text-white p-2"
+                            className="text-slate-600 hover:text-slate-900 p-2"
                         >
                             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                         </button>
@@ -3511,7 +3511,7 @@ const App = () => {
 
             {/* Mobile Menu Dropdown */}
             {isMobileMenuOpen && (
-                <div className="md:hidden bg-slate-900 border-t border-slate-800 px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-2xl">
+                <div className="md:hidden bg-slate-100 border-t border-slate-300 px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-2xl">
                     <NavLink to="/" icon={LayoutDashboard} label="Home" onClick={() => setIsMobileMenuOpen(false)} />
                     <NavLink to="/library" icon={Library} label="Library" onClick={() => setIsMobileMenuOpen(false)} />
                     <NavLink to="/strategies" icon={Layers} label="Playbook" onClick={() => setIsMobileMenuOpen(false)} />
@@ -3520,7 +3520,7 @@ const App = () => {
                         href="https://tally.so/r/mDOGeq" 
                         target="_blank" 
                         rel="noreferrer"
-                        className="block w-full text-left px-3 py-2 text-indigo-400 font-bold hover:bg-slate-800 rounded-lg"
+                        className="block w-full text-left px-3 py-2 text-indigo-600 font-bold hover:bg-slate-300 rounded-lg"
                     >
                         Get Free Playbook
                     </a>
