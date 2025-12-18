@@ -29,6 +29,30 @@
     <meta property="twitter:description" content="Unbiased reviews and comparisons of outbound sales tools from 6+ years of experience. Find the right stack to reach your target clients.">
     <meta property="twitter:image" content="https://saleshousestack.com/og-image.png">
 
+    <!-- GitHub Pages SPA Redirect Handler -->
+    <script>
+      // Handle redirect from 404.html for GitHub Pages SPA routing
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+      // Store initial path if coming from 404
+      (function(){
+        var l = window.location;
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      })();
+    </script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-78SZ289CBZ"></script>
     <script>
@@ -218,7 +242,7 @@
       "description": "Outbound sales stack that fills your calendar. Book 40+ demos/month with curated tools under $500/mo.",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://saleshousestack.com/#/search?q={search_term_string}",
+        "target": "https://saleshousestack.com/search?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     }
@@ -229,7 +253,7 @@
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Sales House Consulting",
-      "url": "https://saleshousestack.com/#/consulting",
+      "url": "https://saleshousestack.com/consulting",
       "description": "Expert consulting for outbound sales operations, stack optimization, and lead generation automation",
       "provider": {
         "@type": "Person",
@@ -255,7 +279,7 @@
       "image": "https://saleshousestack.com/david-profile.jpg",
       "jobTitle": "Sales Operations Consultant",
       "description": "Sales operations consultant helping solopreneurs and small teams automate lead generation and book 40+ demos per month",
-      "url": "https://saleshousestack.com/#/consulting",
+      "url": "https://saleshousestack.com/consulting",
       "knowsAbout": [
         "Outbound Sales",
         "Lead Generation",

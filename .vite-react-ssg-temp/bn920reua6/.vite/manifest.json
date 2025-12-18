@@ -1,0 +1,12 @@
+{
+  "main.tsx": {
+    "file": "main.mjs",
+    "name": "main",
+    "src": "main.tsx",
+    "isEntry": true
+  },
+  "style.css": {
+    "file": "assets/style-D_YquaZu.css",
+    "src": "style.css"
+  }
+}
