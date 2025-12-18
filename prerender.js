@@ -110,3 +110,6 @@ try {
 
 console.log('\n✨ Pre-rendering complete! All routes now contain full tool content for SEO.');
 console.log('Tool names, descriptions, and reviews are now visible in the raw HTML.');
+
+// Exit cleanly
+process.exit(0);
