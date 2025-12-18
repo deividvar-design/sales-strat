@@ -3094,37 +3094,6 @@ const CRMComparisonPage = () => {
             </div>
           </section>
 
-          {/* Credibility Section */}
-          <section className="bg-gradient-to-br from-slate-100 to-slate-200/50 border border-slate-300 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">My CRM Journey (So You Can Skip the Mistakes)</h2>
-            <div className="space-y-4 text-slate-700">
-              <p className="leading-relaxed">
-                I've implemented all three of these CRMs across different companies - from solo founder setups to 20-person sales teams with mixed SDR/AE structures. Here's what I've learned from the trenches:
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                  <span className="text-slate-400 mt-1">•</span>
-                  <span><strong>Wasted 6 months on Salesforce too early</strong> - Paid $2,400 in licenses plus consultant fees for features we never configured. Team hated the UI.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-slate-400 mt-1">•</span>
-                  <span><strong>Migrated from Pipedrive to HubSpot at 8 people</strong> - Painful but necessary. Wish we'd started with HubSpot at 5 people.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-slate-400 mt-1">•</span>
-                  <span><strong>Currently run HubSpot at a 15-person team</strong> - Sales Hub + Marketing Hub. ~$1,800/month but worth every penny for the alignment.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-slate-400 mt-1">•</span>
-                  <span><strong>Still recommend Pipedrive to solo founders</strong> - Don't overcomplicate your stack when you're just starting. Simple wins.</span>
-                </li>
-              </ul>
-              <p className="leading-relaxed pt-2">
-                This comparison comes from making every mistake so you don't have to. The "best" CRM is the one that matches your current stage - not the one with the most features or biggest name.
-              </p>
-            </div>
-          </section>
-
           {/* About Me */}
           <section className="bg-slate-100/30 border border-slate-300 rounded-xl p-4">
             <h2 className="text-lg font-bold text-slate-900 mb-2">Want Help Choosing?</h2>
