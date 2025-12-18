@@ -3453,6 +3453,218 @@ const ClayReviewPage = () => {
   );
 };
 
+const BestOutboundStackForFoundersPage = () => {
+  // Filter tools for founders' core stack
+  const foundersTools = TOOLS.filter(t => ['clay', 'reply', 'mailforge', 'hubspot'].includes(t.id));
+
+  return (
+    <div className="min-h-screen bg-[#FEFEFE]">
+      <Helmet>
+        <title>Best Outbound Stack for Founders 2025 - Complete Sales Setup Under $500/mo | Sales House</title>
+        <meta name="description" content="The complete outbound sales stack for founders: Clay, Reply.io, Mailforge, and HubSpot. Book 40+ demos/month under $500. Proven by 100+ founder-led companies." />
+        <meta name="keywords" content="founder sales stack, outbound sales for founders, best sales tools for startups, Clay Reply.io, sales automation founders, B2B lead generation" />
+      </Helmet>
+
+      <div className="p-6 max-w-5xl mx-auto">
+        <Breadcrumb />
+
+        {/* Hero Section */}
+        <div className="mb-12">
+          <div className="inline-block px-3 py-1 bg-indigo-100 border border-indigo-300 rounded-full text-sm font-semibold text-indigo-700 mb-4">
+            For Founders
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+            The Best Outbound Sales Stack for Founders
+          </h1>
+          <p className="text-xl text-slate-600 leading-relaxed">
+            Book 40+ demos per month with this proven 4-tool stack. Total cost: <span className="font-bold text-indigo-600">$350-500/month</span>
+          </p>
+        </div>
+
+        {/* Why This Stack */}
+        <div className="mb-12 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl border border-indigo-200 p-8">
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">Why This Stack?</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div>
+              <div className="text-3xl font-bold text-indigo-600 mb-2">$350-500</div>
+              <div className="text-sm text-slate-600">Total monthly cost</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-indigo-600 mb-2">40+</div>
+              <div className="text-sm text-slate-600">Demos booked/month</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-indigo-600 mb-2">2-3 weeks</div>
+              <div className="text-sm text-slate-600">Time to first results</div>
+            </div>
+          </div>
+
+          <div className="mt-6 pt-6 border-t border-indigo-200">
+            <p className="text-slate-700 leading-relaxed">
+              This is the exact stack I recommend to every founder starting outbound. It's the minimum viable stack that actually works—no bloat, no unnecessary complexity. You get contact enrichment, multichannel outreach, email infrastructure, and a CRM to track it all.
+            </p>
+          </div>
+        </div>
+
+        {/* The Core 4 Tools */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-slate-900 mb-6">The Core 4 Tools</h2>
+          <div className="space-y-6">
+            {foundersTools.map(tool => (
+              <ToolCard key={tool.id} tool={tool} showChannels={tool.id === 'reply'} />
+            ))}
+          </div>
+        </div>
+
+        {/* Why These Specific Tools */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-slate-900 mb-6">Why These Specific Tools?</h2>
+          <div className="space-y-6">
+            <div className="bg-white border border-slate-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <span className="text-2xl">🧠</span> Clay - Your AI Research Assistant
+              </h3>
+              <p className="text-slate-700 mb-4">
+                Clay isn't just a contact database. It's an AI research assistant that enriches data from 50+ sources, builds custom signals, and qualifies leads before you even reach out. You can process 500+ companies in 10 minutes to find perfect-fit prospects.
+              </p>
+              <div className="text-sm text-slate-600">
+                <strong>Founder benefit:</strong> Spend your time selling to qualified leads, not researching.
+              </div>
+            </div>
+
+            <div className="bg-white border border-slate-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <span className="text-2xl">📧</span> Reply.io - Multichannel Outreach Engine
+              </h3>
+              <p className="text-slate-700 mb-4">
+                Reply handles email sequences, LinkedIn automation, and phone calls in one unified workflow. Most founders start with just email, but the multichannel capability means you can add LinkedIn when you're ready—without switching tools.
+              </p>
+              <div className="text-sm text-slate-600">
+                <strong>Founder benefit:</strong> One tool for all channels. No integration headaches.
+              </div>
+            </div>
+
+            <div className="bg-white border border-slate-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <span className="text-2xl">📬</span> Mailforge - Email Infrastructure That Just Works
+              </h3>
+              <p className="text-slate-700 mb-4">
+                At $29/mo, Mailforge handles domain warmup, inbox rotation, and deliverability automatically. You don't need to understand SPF/DKIM records or manage multiple inboxes manually. It just works.
+              </p>
+              <div className="text-sm text-slate-600">
+                <strong>Founder benefit:</strong> Set it and forget it. Focus on messaging, not infrastructure.
+              </div>
+            </div>
+
+            <div className="bg-white border border-slate-200 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <span className="text-2xl">📊</span> HubSpot - CRM That Grows With You
+              </h3>
+              <p className="text-slate-700 mb-4">
+                HubSpot's free tier gives you everything you need to start: deal tracking, email integration, meeting scheduling, and basic reporting. As you grow, you can upgrade without migrating to a new CRM.
+              </p>
+              <div className="text-sm text-slate-600">
+                <strong>Founder benefit:</strong> Start free, scale to enterprise. No painful migrations.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Cost Breakdown */}
+        <div className="mb-12 bg-slate-50 border border-slate-200 rounded-xl p-8">
+          <h2 className="text-2xl font-bold text-slate-900 mb-6">Exact Cost Breakdown</h2>
+          <div className="space-y-4">
+            <div className="flex items-center justify-between pb-3 border-b border-slate-200">
+              <div>
+                <div className="font-semibold text-slate-900">Clay.com</div>
+                <div className="text-sm text-slate-600">5,000 credits/month</div>
+              </div>
+              <div className="text-lg font-bold text-slate-900">$149/mo</div>
+            </div>
+            <div className="flex items-center justify-between pb-3 border-b border-slate-200">
+              <div>
+                <div className="font-semibold text-slate-900">Reply.io</div>
+                <div className="text-sm text-slate-600">1,000 prospects/month</div>
+              </div>
+              <div className="text-lg font-bold text-slate-900">$60/mo</div>
+            </div>
+            <div className="flex items-center justify-between pb-3 border-b border-slate-200">
+              <div>
+                <div className="font-semibold text-slate-900">Mailforge.ai</div>
+                <div className="text-sm text-slate-600">Unlimited warmup + rotation</div>
+              </div>
+              <div className="text-lg font-bold text-slate-900">$29/mo</div>
+            </div>
+            <div className="flex items-center justify-between pb-3 border-b border-slate-200">
+              <div>
+                <div className="font-semibold text-slate-900">HubSpot Sales Hub</div>
+                <div className="text-sm text-slate-600">Free tier (2 users)</div>
+              </div>
+              <div className="text-lg font-bold text-slate-900">$0/mo</div>
+            </div>
+            <div className="flex items-center justify-between pt-4">
+              <div className="text-xl font-bold text-slate-900">Total Monthly Cost</div>
+              <div className="text-3xl font-bold text-indigo-600">$238/mo</div>
+            </div>
+            <div className="text-sm text-slate-600 pt-2">
+              + $50-100/mo for domains and additional email accounts = <strong>$300-350/mo total</strong>
+            </div>
+          </div>
+        </div>
+
+        {/* What You Can Skip */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-slate-900 mb-6">What You Can Skip (For Now)</h2>
+          <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3">
+                <span className="text-lg">❌</span>
+                <div>
+                  <strong className="text-slate-900">Apollo, Lusha, ZoomInfo:</strong>
+                  <span className="text-slate-700"> Clay already gives you access to these databases. No need to pay separately.</span>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-lg">❌</span>
+                <div>
+                  <strong className="text-slate-900">Instantly, Lemlist, Smartlead:</strong>
+                  <span className="text-slate-700"> Reply.io does everything these tools do, plus LinkedIn and calls.</span>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-lg">❌</span>
+                <div>
+                  <strong className="text-slate-900">Salesforce, Pipedrive:</strong>
+                  <span className="text-slate-700"> HubSpot free tier is enough until you hit 10+ people on the sales team.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl p-8 text-center text-white">
+          <h2 className="text-3xl font-bold mb-4">Ready to Build Your Stack?</h2>
+          <p className="text-lg mb-6 text-indigo-100">
+            Get the complete implementation playbook with exact setup steps, campaign templates, and messaging frameworks.
+          </p>
+          <button
+            onClick={() => {
+              if (window._klOnsite) {
+                window._klOnsite.openForm('SDqh4i');
+              }
+            }}
+            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-indigo-600 font-bold rounded-lg shadow-lg hover:bg-slate-50 transition-all text-lg"
+          >
+            <Download className="w-5 h-5" />
+            Download Free Playbook
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 // Scroll to top on route change
 const ScrollToTop = () => {
   const location = useLocation();
@@ -3542,6 +3754,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<HomePage openPlaybookForm={openPlaybookForm} />} />
               <Route path="/library" element={<LibraryPage />} />
+              <Route path="/best-outbound-stack-for-founders" element={<BestOutboundStackForFoundersPage />} />
               <Route path="/strategies" element={<StrategiesPage />} />
               <Route path="/faq" element={<FAQPage />} />
               <Route path="/privacy" element={<PrivacyPolicyPage />} />

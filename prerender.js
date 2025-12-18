@@ -10,6 +10,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const routes = [
   '/',
   '/library',
+  '/best-outbound-stack-for-founders',
   '/strategies',
   '/reviews',
   '/comparisons',
