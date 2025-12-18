@@ -22,6 +22,7 @@ const routes = [
   '/reviews/reply-io',
   '/comparisons/clay-vs-apollo',
   '/comparisons/pipedrive-hubspot-salesforce',
+  '/comparisons/reply-vs-instantly',
 ];
 
 console.log('Starting pre-render process with full content...\n');
