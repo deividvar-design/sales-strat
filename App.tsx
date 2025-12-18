@@ -3779,14 +3779,14 @@ const ClayReviewPage = () => {
 
 const BestOutboundStackForFoundersPage = () => {
   // Filter tools for founders' core stack
-  const foundersTools = TOOLS.filter(t => ['clay', 'reply', 'mailforge', 'hubspot'].includes(t.id));
+  const foundersTools = TOOLS.filter(t => ['apollo', 'reply', 'mailforge', 'pipedrive'].includes(t.id));
 
   return (
     <div className="min-h-screen bg-[#FEFEFE]">
       <Helmet>
-        <title>Best Outbound Stack for Founders 2025 - Complete Sales Setup Under $500/mo | Sales House</title>
-        <meta name="description" content="The complete outbound sales stack for founders: Clay, Reply.io, Mailforge, and HubSpot. Book 40+ demos/month under $500. Proven by 100+ founder-led companies." />
-        <meta name="keywords" content="founder sales stack, outbound sales for founders, best sales tools for startups, Clay Reply.io, sales automation founders, B2B lead generation" />
+        <title>Best Outbound Stack for Founders 2025 - Complete Sales Setup Under $300/mo | Sales House</title>
+        <meta name="description" content="The complete outbound sales stack for founders: Apollo, Reply.io, Mailforge, and Pipedrive. Under $250/month. Proven by 100+ founder-led companies." />
+        <meta name="keywords" content="founder sales stack, outbound sales for founders, best sales tools for startups, Apollo Reply.io, sales automation founders, B2B lead generation" />
       </Helmet>
 
       <div className="p-6 max-w-5xl mx-auto">
@@ -3801,21 +3801,17 @@ const BestOutboundStackForFoundersPage = () => {
             The Best Outbound Sales Stack for Founders
           </h1>
           <p className="text-xl text-slate-600 leading-relaxed">
-            Book 40+ demos per month with this proven 4-tool stack. Total cost: <span className="font-bold text-indigo-600">$350-500/month</span>
+            The proven 4-tool stack for outbound. Total cost: <span className="font-bold text-indigo-600">$150-250/month</span>
           </p>
         </div>
 
         {/* Why This Stack */}
         <div className="mb-12 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl border border-indigo-200 p-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Why This Stack?</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <div className="text-3xl font-bold text-indigo-600 mb-2">$350-500</div>
+              <div className="text-3xl font-bold text-indigo-600 mb-2">$150-250</div>
               <div className="text-sm text-slate-600">Total monthly cost</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-indigo-600 mb-2">40+</div>
-              <div className="text-sm text-slate-600">Demos booked/month</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-indigo-600 mb-2">2-3 weeks</div>
@@ -3824,9 +3820,18 @@ const BestOutboundStackForFoundersPage = () => {
           </div>
 
           <div className="mt-6 pt-6 border-t border-indigo-200">
-            <p className="text-slate-700 leading-relaxed">
-              This is the exact stack I recommend to every founder starting outbound. It's the minimum viable stack that actually works—no bloat, no unnecessary complexity. You get contact enrichment, multichannel outreach, email infrastructure, and a CRM to track it all.
+            <p className="text-slate-700 leading-relaxed mb-4">
+              This is the exact stack I recommend to every founder starting outbound. It's the minimum viable stack that actually works - no bloat, no unnecessary complexity. You get contact finding, multichannel outreach, email infrastructure, and a CRM to track it all.
             </p>
+            <div className="flex gap-3 text-sm">
+              <a href="/reviews" className="text-indigo-600 hover:text-indigo-700 font-medium underline">
+                Read detailed tool reviews
+              </a>
+              <span className="text-slate-400">•</span>
+              <a href="/comparisons" className="text-indigo-600 hover:text-indigo-700 font-medium underline">
+                Compare alternatives
+              </a>
+            </div>
           </div>
         </div>
 
@@ -3846,13 +3851,13 @@ const BestOutboundStackForFoundersPage = () => {
           <div className="space-y-6">
             <div className="bg-white border border-slate-200 rounded-xl p-6">
               <h3 className="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
-                <span className="text-2xl">🧠</span> Clay - Your AI Research Assistant
+                <span className="text-2xl">🔍</span> Apollo - Contact Finding Database
               </h3>
               <p className="text-slate-700 mb-4">
-                Clay isn't just a contact database. It's an AI research assistant that enriches data from 50+ sources, builds custom signals, and qualifies leads before you even reach out. You can process 500+ companies in 10 minutes to find perfect-fit prospects.
+                Apollo gives you access to 200M+ contacts with their proprietary database. It's straightforward contact finding - search by title, company size, industry, and export your list. When you're just starting outbound, Apollo's simplicity and database size make it the right choice for contact discovery.
               </p>
               <div className="text-sm text-slate-600">
-                <strong>Founder benefit:</strong> Spend your time selling to qualified leads, not researching.
+                <strong>Founder benefit:</strong> Fast contact finding without complexity. Start building your list immediately.
               </div>
             </div>
 
@@ -3861,34 +3866,34 @@ const BestOutboundStackForFoundersPage = () => {
                 <span className="text-2xl">📧</span> Reply.io - Multichannel Outreach Engine
               </h3>
               <p className="text-slate-700 mb-4">
-                Reply handles email sequences, LinkedIn automation, and phone calls in one unified workflow. Most founders start with just email, but the multichannel capability means you can add LinkedIn when you're ready—without switching tools.
+                Reply handles email sequences, LinkedIn automation, and phone calls in one unified workflow. The reason you need Reply is multichannel outreach - you don't want to limit yourself to just emails. Most founders start with email, but having LinkedIn and calls ready means you can expand your reach without switching tools.
               </p>
               <div className="text-sm text-slate-600">
-                <strong>Founder benefit:</strong> One tool for all channels. No integration headaches.
+                <strong>Founder benefit:</strong> One tool for all channels. No integration headaches when you scale.
               </div>
             </div>
 
             <div className="bg-white border border-slate-200 rounded-xl p-6">
               <h3 className="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
-                <span className="text-2xl">📬</span> Mailforge - Email Infrastructure That Just Works
+                <span className="text-2xl">📬</span> Mailforge - Email Infrastructure
               </h3>
               <p className="text-slate-700 mb-4">
-                At $29/mo, Mailforge handles domain warmup, inbox rotation, and deliverability automatically. You don't need to understand SPF/DKIM records or manage multiple inboxes manually. It just works.
+                At $29/mo, Mailforge handles domain warmup, inbox rotation, and deliverability. It's okay - gets the job done for email infrastructure without you needing to understand SPF/DKIM records or manage multiple inboxes manually.
               </p>
               <div className="text-sm text-slate-600">
-                <strong>Founder benefit:</strong> Set it and forget it. Focus on messaging, not infrastructure.
+                <strong>Founder benefit:</strong> Set it and forget it. Focus on messaging, not technical setup.
               </div>
             </div>
 
             <div className="bg-white border border-slate-200 rounded-xl p-6">
               <h3 className="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
-                <span className="text-2xl">📊</span> HubSpot - CRM That Grows With You
+                <span className="text-2xl">📊</span> Pipedrive - Simple CRM for Founders
               </h3>
               <p className="text-slate-700 mb-4">
-                HubSpot's free tier gives you everything you need to start: deal tracking, email integration, meeting scheduling, and basic reporting. As you grow, you can upgrade without migrating to a new CRM.
+                Pipedrive is the CRM I recommend as your initial system. It's very easy to upgrade in the future when you scale, and you don't overspend initially on features you don't need yet. Plus, it has all the integrations you'll need with Reply.io and your other tools.
               </p>
               <div className="text-sm text-slate-600">
-                <strong>Founder benefit:</strong> Start free, scale to enterprise. No painful migrations.
+                <strong>Founder benefit:</strong> Affordable now, easy to upgrade later. Built for sales teams from day one.
               </div>
             </div>
           </div>
@@ -3900,10 +3905,10 @@ const BestOutboundStackForFoundersPage = () => {
           <div className="space-y-4">
             <div className="flex items-center justify-between pb-3 border-b border-slate-200">
               <div>
-                <div className="font-semibold text-slate-900">Clay.com</div>
-                <div className="text-sm text-slate-600">5,000 credits/month</div>
+                <div className="font-semibold text-slate-900">Apollo.io</div>
+                <div className="text-sm text-slate-600">Free or Basic plan ($49/mo for unlimited exports)</div>
               </div>
-              <div className="text-lg font-bold text-slate-900">$149/mo</div>
+              <div className="text-lg font-bold text-slate-900">$0-49/mo</div>
             </div>
             <div className="flex items-center justify-between pb-3 border-b border-slate-200">
               <div>
@@ -3921,17 +3926,17 @@ const BestOutboundStackForFoundersPage = () => {
             </div>
             <div className="flex items-center justify-between pb-3 border-b border-slate-200">
               <div>
-                <div className="font-semibold text-slate-900">HubSpot Sales Hub</div>
-                <div className="text-sm text-slate-600">Free tier (2 users)</div>
+                <div className="font-semibold text-slate-900">Pipedrive</div>
+                <div className="text-sm text-slate-600">Essential plan (1 user)</div>
               </div>
-              <div className="text-lg font-bold text-slate-900">$0/mo</div>
+              <div className="text-lg font-bold text-slate-900">$15/mo</div>
             </div>
             <div className="flex items-center justify-between pt-4">
               <div className="text-xl font-bold text-slate-900">Total Monthly Cost</div>
-              <div className="text-3xl font-bold text-indigo-600">$238/mo</div>
+              <div className="text-3xl font-bold text-indigo-600">$104-153/mo</div>
             </div>
             <div className="text-sm text-slate-600 pt-2">
-              + $50-100/mo for domains and additional email accounts = <strong>$300-350/mo total</strong>
+              + $50-100/mo for domains and additional email accounts = <strong>$150-250/mo total</strong>
             </div>
           </div>
         </div>
@@ -3944,22 +3949,22 @@ const BestOutboundStackForFoundersPage = () => {
               <li className="flex items-start gap-3">
                 <span className="text-lg">❌</span>
                 <div>
-                  <strong className="text-slate-900">Apollo, Lusha, ZoomInfo:</strong>
-                  <span className="text-slate-700"> Clay already gives you access to these databases. No need to pay separately.</span>
+                  <strong className="text-slate-900">Clay, Lusha, ZoomInfo:</strong>
+                  <span className="text-slate-700"> Apollo's database is sufficient when you're starting. Save the advanced enrichment tools for when you've validated your ICP.</span>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-lg">❌</span>
                 <div>
                   <strong className="text-slate-900">Instantly, Lemlist, Smartlead:</strong>
-                  <span className="text-slate-700"> Reply.io does everything these tools do, plus LinkedIn and calls.</span>
+                  <span className="text-slate-700"> Reply.io does everything these tools do, plus LinkedIn and calls in one platform.</span>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-lg">❌</span>
                 <div>
-                  <strong className="text-slate-900">Salesforce, Pipedrive:</strong>
-                  <span className="text-slate-700"> HubSpot free tier is enough until you hit 10+ people on the sales team.</span>
+                  <strong className="text-slate-900">Salesforce, HubSpot:</strong>
+                  <span className="text-slate-700"> Pipedrive is simpler and more affordable. Upgrade to HubSpot when you add marketing, or Salesforce when you hit enterprise scale.</span>
                 </div>
               </li>
             </ul>
@@ -4407,6 +4412,7 @@ const ScrollToTop = () => {
 
 const App = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
 
   const openPlaybookForm = () => {
     window._klOnsite = window._klOnsite || [];
@@ -4417,7 +4423,7 @@ const App = () => {
     <Router>
       <ScrollToTop />
       <div className="min-h-screen bg-[#FEFEFE] font-sans text-slate-900">
-        
+
         {/* Top Navigation Bar */}
         <nav className="sticky top-0 z-50 bg-slate-50/80 backdrop-blur-lg border-b border-slate-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -4437,7 +4443,53 @@ const App = () => {
                         <NavLink to="/" icon={LayoutDashboard} label="Home" />
                         <NavLink to="/library" icon={Library} label="Library" />
                         <NavLink to="/strategies" icon={Layers} label="Playbook" />
-                        {/* <NavLink to="/consulting" icon={Briefcase} label="Consulting" /> */}
+                        <NavLink to="/best-outbound-stack-for-founders" icon={Briefcase} label="For Founders" />
+
+                        {/* Resources Dropdown */}
+                        <div className="relative">
+                          <button
+                            onClick={() => setIsResourcesOpen(!isResourcesOpen)}
+                            onBlur={() => setTimeout(() => setIsResourcesOpen(false), 200)}
+                            className="flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium text-slate-600 hover:bg-slate-300 hover:text-slate-900"
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
+                              <rect width="7" height="7" x="3" y="3" rx="1"></rect>
+                              <rect width="7" height="7" x="14" y="3" rx="1"></rect>
+                              <rect width="7" height="7" x="14" y="14" rx="1"></rect>
+                              <rect width="7" height="7" x="3" y="14" rx="1"></rect>
+                            </svg>
+                            <span>Resources</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`w-4 h-4 transition-transform ${isResourcesOpen ? 'rotate-180' : ''}`}>
+                              <path d="m6 9 6 6 6-6"></path>
+                            </svg>
+                          </button>
+
+                          {isResourcesOpen && (
+                            <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-xl border border-slate-200 py-2 z-50">
+                              <Link
+                                to="/reviews"
+                                className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 transition-colors"
+                                onClick={() => setIsResourcesOpen(false)}
+                              >
+                                <div className="font-semibold">Reviews</div>
+                                <div className="text-xs text-slate-500">Expert tool reviews</div>
+                              </Link>
+                              <Link
+                                to="/comparisons"
+                                className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 transition-colors"
+                                onClick={() => setIsResourcesOpen(false)}
+                              >
+                                <div className="font-semibold">Comparisons</div>
+                                <div className="text-xs text-slate-500">Side-by-side tool comparisons</div>
+                              </Link>
+                              <div className="px-4 py-2 text-sm text-slate-400">
+                                <div className="font-semibold">More coming soon!</div>
+                                <div className="text-xs">New resources on the way</div>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+
                         <div className="h-6 w-px bg-slate-200 mx-2"></div>
                         <button
                             onClick={openPlaybookForm}
@@ -4465,12 +4517,35 @@ const App = () => {
                     <NavLink to="/" icon={LayoutDashboard} label="Home" onClick={() => setIsMobileMenuOpen(false)} />
                     <NavLink to="/library" icon={Library} label="Library" onClick={() => setIsMobileMenuOpen(false)} />
                     <NavLink to="/strategies" icon={Layers} label="Playbook" onClick={() => setIsMobileMenuOpen(false)} />
-                    {/* <NavLink to="/consulting" icon={Briefcase} label="Consulting" onClick={() => setIsMobileMenuOpen(false)} /> */}
-                    <a 
-                        href="https://tally.so/r/mDOGeq" 
-                        target="_blank" 
+                    <NavLink to="/best-outbound-stack-for-founders" icon={Briefcase} label="For Founders" onClick={() => setIsMobileMenuOpen(false)} />
+
+                    {/* Resources Section */}
+                    <div className="border-t border-slate-300 pt-2 mt-2">
+                      <div className="px-3 py-2 text-xs font-bold text-slate-500 uppercase tracking-wider">Resources</div>
+                      <Link
+                        to="/reviews"
+                        className="block px-3 py-2 text-sm text-slate-700 hover:bg-slate-300 rounded-lg"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Reviews
+                      </Link>
+                      <Link
+                        to="/comparisons"
+                        className="block px-3 py-2 text-sm text-slate-700 hover:bg-slate-300 rounded-lg"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Comparisons
+                      </Link>
+                      <div className="px-3 py-2 text-sm text-slate-400">
+                        More coming soon!
+                      </div>
+                    </div>
+
+                    <a
+                        href="https://tally.so/r/mDOGeq"
+                        target="_blank"
                         rel="noreferrer"
-                        className="block w-full text-left px-3 py-2 text-indigo-600 font-bold hover:bg-slate-300 rounded-lg"
+                        className="block w-full text-left px-3 py-2 text-indigo-600 font-bold hover:bg-slate-300 rounded-lg mt-2"
                     >
                         Get Free Playbook
                     </a>
