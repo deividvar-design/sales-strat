@@ -3807,7 +3807,7 @@ const BestOutboundStackForFoundersPage = () => {
             The Best Outbound Sales Stack for Founders
           </h1>
           <p className="text-xl text-slate-600 leading-relaxed">
-            The proven 4-tool stack for outbound. Total cost: <span className="font-bold text-indigo-600">$150-250/month</span>
+            The proven 4-tool stack for outbound. Total cost: <span className="font-bold text-indigo-600">under $300/mo vs $4,500/mo for one SDR</span>
           </p>
         </div>
 
@@ -3865,6 +3865,11 @@ const BestOutboundStackForFoundersPage = () => {
               <div className="text-sm text-slate-600">
                 <strong>Founder benefit:</strong> Fast contact finding without complexity. Start building your list immediately.
               </div>
+              <div className="mt-3 pt-3 border-t border-slate-200">
+                <a href="/comparisons/clay-vs-apollo" className="text-indigo-600 hover:text-indigo-700 font-medium text-sm inline-flex items-center gap-1">
+                  Not sure if Apollo is right? Compare Clay vs Apollo →
+                </a>
+              </div>
             </div>
 
             <div className="bg-white border border-slate-200 rounded-xl p-6">
@@ -3876,6 +3881,11 @@ const BestOutboundStackForFoundersPage = () => {
               </p>
               <div className="text-sm text-slate-600">
                 <strong>Founder benefit:</strong> One tool for all channels. No integration headaches when you scale.
+              </div>
+              <div className="mt-3 pt-3 border-t border-slate-200">
+                <a href="/comparisons/reply-vs-instantly" className="text-indigo-600 hover:text-indigo-700 font-medium text-sm inline-flex items-center gap-1">
+                  Wondering about alternatives? Compare Reply.io vs Instantly →
+                </a>
               </div>
             </div>
 
@@ -3900,6 +3910,11 @@ const BestOutboundStackForFoundersPage = () => {
               </p>
               <div className="text-sm text-slate-600">
                 <strong>Founder benefit:</strong> Affordable now, easy to upgrade later. Built for sales teams from day one.
+              </div>
+              <div className="mt-3 pt-3 border-t border-slate-200">
+                <a href="/comparisons/pipedrive-hubspot-salesforce" className="text-indigo-600 hover:text-indigo-700 font-medium text-sm inline-flex items-center gap-1">
+                  Compare Salesforce vs HubSpot vs Pipedrive →
+                </a>
               </div>
             </div>
           </div>
