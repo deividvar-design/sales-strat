@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 // Declare Calendly and Klaviyo on window object
@@ -87,8 +87,6 @@ const CalendlyEmbed = () => {
 
   // Lazy load Calendly scripts when component mounts
   React.useEffect(() => {
-    // SSR guard: only run in browser
-    if (typeof window === 'undefined') return;
     if (scriptsLoaded) return;
 
     // Load Calendly CSS
@@ -113,8 +111,6 @@ const CalendlyEmbed = () => {
 
   // Initialize Calendly widget after scripts are loaded
   React.useEffect(() => {
-    // SSR guard: only run in browser
-    if (typeof window === 'undefined') return;
     if (!scriptsLoaded || initialized || !embedRef.current) return;
 
     if (window.Calendly) {
@@ -3462,10 +3458,7 @@ const ScrollToTop = () => {
   const location = useLocation();
 
   React.useEffect(() => {
-    // SSR guard: only run in browser
-    if (typeof window !== 'undefined') {
-      window.scrollTo(0, 0);
-    }
+    window.scrollTo(0, 0);
   }, [location.pathname]);
 
   return null;
@@ -3475,11 +3468,8 @@ const App = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const openPlaybookForm = () => {
-    // SSR guard: only run in browser
-    if (typeof window !== 'undefined') {
-      window._klOnsite = window._klOnsite || [];
-      window._klOnsite.push(['openForm', 'SDqh4i']);
-    }
+    window._klOnsite = window._klOnsite || [];
+    window._klOnsite.push(['openForm', 'SDqh4i']);
   };
 
   return (
