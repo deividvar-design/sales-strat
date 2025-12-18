@@ -4006,7 +4006,7 @@ const ClayVsApolloPage = () => {
           <div className="flex items-start gap-3 mb-4">
             <div className="text-3xl">🚀</div>
             <div>
-              <h2 className="text-2xl font-bold mb-3">My Current Stack</h2>
+              <h2 className="text-2xl font-bold mb-3">Top Tier Stack</h2>
               <p className="text-slate-300 text-lg">
                 Apollo for discovery → Clay for enrichment → Reply.io for sending → HubSpot for tracking.
               </p>
