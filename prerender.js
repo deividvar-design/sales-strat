@@ -29,8 +29,29 @@ const server = spawn('npx', ['http-server', 'dist', '-p', '8888', '-s', '-c-1'],
   stdio: 'pipe'
 });
 
-// Wait for server to start
-await new Promise(resolve => setTimeout(resolve, 2000));
+// Wait for server to be ready by polling
+console.log('Waiting for local server to be ready...');
+let serverReady = false;
+let attempts = 0;
+const maxAttempts = 30;
+
+while (!serverReady && attempts < maxAttempts) {
+  try {
+    const response = await fetch('http://localhost:8888');
+    if (response.ok || response.status === 404) {
+      serverReady = true;
+    }
+  } catch (error) {
+    attempts++;
+    await new Promise(resolve => setTimeout(resolve, 1000));
+  }
+}
+
+if (!serverReady) {
+  console.error('Failed to start local server after 30 seconds');
+  server.kill();
+  process.exit(1);
+}
 
 console.log('Local server started on port 8888\n');
 console.log('Pre-rendering routes with puppeteer...');
