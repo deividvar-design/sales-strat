@@ -218,7 +218,7 @@
       "description": "Outbound sales stack that fills your calendar. Book 40+ demos/month with curated tools under $500/mo.",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://saleshousestack.com/#/search?q={search_term_string}",
+        "target": "https://saleshousestack.com/search?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     }
@@ -229,7 +229,7 @@
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Sales House Consulting",
-      "url": "https://saleshousestack.com/#/consulting",
+      "url": "https://saleshousestack.com/consulting",
       "description": "Expert consulting for outbound sales operations, stack optimization, and lead generation automation",
       "provider": {
         "@type": "Person",
@@ -255,7 +255,7 @@
       "image": "https://saleshousestack.com/david-profile.jpg",
       "jobTitle": "Sales Operations Consultant",
       "description": "Sales operations consultant helping solopreneurs and small teams automate lead generation and book 40+ demos per month",
-      "url": "https://saleshousestack.com/#/consulting",
+      "url": "https://saleshousestack.com/consulting",
       "knowsAbout": [
         "Outbound Sales",
         "Lead Generation",
@@ -369,6 +369,30 @@
   }
 }
 </script>
+
+<!-- GitHub Pages SPA Redirect Handler -->
+<script>
+  // Handle redirect from 404.html
+  (function(){
+    var redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    if (redirect && redirect != location.href) {
+      history.replaceState(null, null, redirect);
+    }
+  })();
+  // Process encoded path from 404.html
+  (function(){
+    var l = window.location;
+    if (l.search[1] === '/' ) {
+      var decoded = l.search.slice(1).split('&').map(function(s) {
+        return s.replace(/~and~/g, '&')
+      }).join('?');
+      window.history.replaceState(null, null,
+          l.pathname.slice(0, -1) + decoded + l.hash
+      );
+    }
+  })();
+</script>
 </head>
   <body>
     <div id="root"></div>
@@ -423,7 +447,7 @@
                     acceptAllBtn: "Accept all",
                     acceptNecessaryBtn: "Reject all",
                     showPreferencesBtn: "Manage preferences",
-                    footer: '<a href="#/privacy">Privacy Policy</a>'
+                    footer: '<a href="/privacy">Privacy Policy</a>'
                   },
                   preferencesModal: {
                     title: "Cookie Preferences",
@@ -454,7 +478,7 @@
                       },
                       {
                         title: "More information",
-                        description: 'For more details about our cookie policy, please visit our <a class="cc__link" href="#/privacy">Privacy Policy</a>.'
+                        description: 'For more details about our cookie policy, please visit our <a class="cc__link" href="/privacy">Privacy Policy</a>.'
                       }
                     ]
                   }
