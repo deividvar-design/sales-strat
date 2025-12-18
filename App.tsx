@@ -2445,9 +2445,9 @@ const ComparisonsListPage = () => {
   const availableComparisons = [
     {
       slug: 'pipedrive-hubspot-salesforce',
-      name: 'Best Sales CRM 2026: Pipedrive vs HubSpot vs Salesforce',
+      name: 'Pipedrive vs HubSpot vs Salesforce',
       category: 'CRM',
-      excerpt: 'Find the best sales CRM for your team. Expert comparison of features, pricing, and which fits your growth stage.'
+      excerpt: 'Which CRM is right for your growth stage? Side-by-side comparison of features, pricing, and best use cases.'
     }
   ];
 
@@ -2534,8 +2534,8 @@ const CRMComparisonPage = () => {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Best Sales CRM 2026: Pipedrive vs HubSpot vs Salesforce",
-    "description": "Find the best sales CRM for your team. Expert comparison of Pipedrive, HubSpot, and Salesforce - features, pricing, setup time, and which fits your growth stage.",
+    "headline": "Pipedrive vs HubSpot vs Salesforce: CRM Comparison 2025",
+    "description": "Compare Pipedrive, HubSpot, and Salesforce CRMs. Which is best for your growth stage? Real comparison of features, pricing, setup time, and use cases.",
     "image": "https://saleshousestack.com/og-image.png",
     "author": {
       "@type": "Person",
@@ -2557,9 +2557,9 @@ const CRMComparisonPage = () => {
   return (
     <div className="min-h-screen bg-[#FEFEFE]">
       <Helmet>
-        <title>Best Sales CRM 2026: Pipedrive vs HubSpot vs Salesforce | Sales House</title>
-        <meta name="description" content="Find the best sales CRM for your team. Expert comparison of Pipedrive, HubSpot, and Salesforce - features, pricing, setup time, and which fits your growth stage." />
-        <meta name="keywords" content="best sales CRM, best CRM 2026, Pipedrive vs HubSpot, HubSpot vs Salesforce, CRM comparison, best CRM for startups, CRM for sales teams, sales CRM software" />
+        <title>Pipedrive vs HubSpot vs Salesforce: CRM Comparison 2025 | Sales House</title>
+        <meta name="description" content="Compare Pipedrive, HubSpot, and Salesforce CRMs. Which is best for your growth stage? Real comparison of features, pricing, setup time, and use cases." />
+        <meta name="keywords" content="Pipedrive vs HubSpot, HubSpot vs Salesforce, Pipedrive vs Salesforce, CRM comparison, best CRM for startups, CRM for sales teams" />
         <script type="application/ld+json">
           {JSON.stringify(articleSchema)}
         </script>
@@ -2571,8 +2571,8 @@ const CRMComparisonPage = () => {
         {/* Header */}
         <div className="mb-12">
           <div className="mb-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2">Best Sales CRM 2026: Pipedrive vs HubSpot vs Salesforce</h1>
-            <p className="text-slate-600 mb-3">Find the best sales CRM for your team</p>
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2">Pipedrive vs HubSpot vs Salesforce</h1>
+            <p className="text-slate-600 mb-3">Which CRM is right for your growth stage?</p>
             <p className="text-sm text-slate-600">Last updated December 2025</p>
           </div>
         </div>
