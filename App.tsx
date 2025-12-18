@@ -2440,6 +2440,12 @@ const ComparisonsListPage = () => {
   // List of available comparisons
   const availableComparisons = [
     {
+      slug: 'clay-vs-apollo',
+      name: 'Clay vs Apollo',
+      category: 'B2B Data & Intelligence',
+      excerpt: 'Should you use Clay\'s AI enrichment or Apollo\'s 200M+ database? Complete breakdown with pricing, use cases, and my verdict after 6+ years.'
+    },
+    {
       slug: 'pipedrive-hubspot-salesforce',
       name: 'Pipedrive vs HubSpot vs Salesforce',
       category: 'CRM',
