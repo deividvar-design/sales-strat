@@ -397,7 +397,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                 </h2>
                 <div className="max-w-3xl mx-auto">
                     <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                        I've worked across SaaS, Fintech, and Traditional sales companies from early-stage to scale-up—spanning from <strong className="text-slate-900">5-figure ARR startups - 7-figure ARR companies</strong>. I've set up sales operations for:
+                        I've worked across SaaS, Fintech, and Traditional sales companies from early-stage to scale-up - spanning from <strong className="text-slate-900">5-figure ARR startups - 7-figure ARR companies</strong>. I've set up sales operations for:
                     </p>
                     <div className="grid md:grid-cols-3 gap-6 mb-8">
                         <div className="bg-white border-2 border-indigo-200 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow">
@@ -836,7 +836,7 @@ const LibraryPage = () => {
         <div className="p-6 max-w-7xl mx-auto min-h-screen bg-[#FEFEFE]">
              <Helmet>
                <title>Sales Tool Library - Compare 15+ Vetted Sales Engagement & CRM Tools | Sales House</title>
-               <meta name="description" content="Compare 15+ vetted sales engagement, CRM, and contact tools. Pricing, pros, cons, and channels—find your perfect sales stack." />
+               <meta name="description" content="Compare 15+ vetted sales engagement, CRM, and contact tools. Pricing, pros, cons, and channels - find your perfect sales stack." />
              </Helmet>
              <Breadcrumb />
              <div className="mb-8">
