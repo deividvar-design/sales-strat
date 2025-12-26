@@ -3191,6 +3191,15 @@ const ReviewsListPage = () => {
       excerpt: 'Very versatile tool, highest level of multichannel capabilities',
       category: 'Sales Engagement',
       lastUpdated: 'December 2025'
+    },
+    {
+      id: 'mixmax',
+      name: 'Mixmax',
+      slug: 'mixmax',
+      rating: 2.5,
+      excerpt: 'A once-great tool that\'s now stuck in 2019. Overpriced, email-only, and significantly behind the competition',
+      category: 'Sales Engagement',
+      lastUpdated: 'December 2025'
     }
   ];
 
@@ -3507,6 +3516,418 @@ const ReplyIOReviewPage = () => {
               Try Reply.io For Free <ExternalLink className="w-5 h-5" />
             </a>
           </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const MixmaxReviewPage = () => {
+  // Schema.org structured data for SEO
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "SoftwareApplication",
+      "name": "Mixmax",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "89",
+        "priceCurrency": "USD"
+      }
+    },
+    "author": {
+      "@type": "Person",
+      "name": "David Varan",
+      "jobTitle": "Sales Operations Consultant",
+      "url": "https://www.linkedin.com/in/davidvaran/"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "2.5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "datePublished": "2025-12-18",
+    "reviewBody": "Mixmax was a fantastic tool five years ago. Today it's overpriced, email-only, and significantly behind tools like Reply.io, Lemlist, and Instantly. Used 2019-2024, stopped using ~6 months ago.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sales House - Tools, Reviews, Playbooks for Sales Pros"
+    }
+  };
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Mixmax Review 2025: A Once-Great Tool That's Now Stuck in 2019",
+    "description": "Honest Mixmax review after 5 years of use. Why I stopped using it, what it does well, and why you shouldn't choose it in 2025. Compare pricing vs Reply.io, Lemlist, and Instantly.",
+    "image": "https://saleshousestack.com/og-image.png",
+    "author": {
+      "@type": "Person",
+      "name": "David Varan",
+      "url": "https://www.linkedin.com/in/davidvaran/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sales House - Tools, Reviews, Playbooks for Sales Pros",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://saleshousestack.com/logo.png"
+      }
+    },
+    "datePublished": "2025-12-18",
+    "dateModified": "2025-12-18",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://saleshousestack.com/#/reviews/mixmax"
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-[#FEFEFE]">
+      <Helmet>
+        <title>Mixmax Review 2025: A Once-Great Tool That's Now Stuck in 2019 | Sales House</title>
+        <meta name="description" content="Honest Mixmax review after 5 years of use. Why I stopped using it, what it does well, and why you shouldn't choose it in 2025. Compare pricing vs Reply.io, Lemlist, and Instantly." />
+        <meta name="keywords" content="Mixmax review, Mixmax pricing, Mixmax alternatives, Reply.io vs Mixmax, sales engagement platform, email automation" />
+
+        {/* Schema.org Review Markup */}
+        <script type="application/ld+json">
+          {JSON.stringify(reviewSchema)}
+        </script>
+
+        {/* Schema.org Article Markup */}
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchema)}
+        </script>
+      </Helmet>
+
+      <div className="max-w-4xl mx-auto px-6 py-16">
+        <Breadcrumb />
+
+        {/* Header */}
+        <div className="mb-12">
+          <div className="mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2">Mixmax Review 2025: A Once-Great Tool That's Now Stuck in 2019</h1>
+            <p className="text-slate-600">Last updated: December 2025</p>
+            <p className="text-slate-600 font-medium">My experience: Used 2019-2024, stopped using ~6 months ago</p>
+          </div>
+
+          {/* Rating */}
+          <div className="bg-slate-100 border border-slate-300 rounded-xl p-6">
+            <div className="flex items-center gap-2 mb-3">
+              {[...Array(2)].map((_, i) => (
+                <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-600" />
+              ))}
+              <Star className="w-6 h-6 fill-yellow-400 text-yellow-600" style={{ clipPath: 'inset(0 50% 0 0)' }} />
+              {[...Array(2)].map((_, i) => (
+                <Star key={`empty-${i}`} className="w-6 h-6 text-slate-300" />
+              ))}
+              <span className="text-2xl font-bold text-slate-900 ml-2">2.5/5</span>
+            </div>
+            <p className="text-xl font-semibold text-amber-600">Overpriced, email-only, and significantly behind the competition in 2025</p>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="space-y-8">
+          {/* The Honest Take */}
+          <section className="bg-amber-50 border border-amber-200 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">The Honest Take</h2>
+            <p className="text-slate-700 leading-relaxed mb-4">
+              I'll be transparent upfront: I haven't touched Mixmax in about six months. During that time, they've apparently rolled out more AI features. But here's the thing - those AI features (objection handling, AI-assisted sequence writing) are table stakes now. Every serious player in the market has them.
+            </p>
+            <p className="text-slate-700 leading-relaxed mb-4">
+              Mixmax was a fantastic tool five years ago. Back in 2019-2020, it had top-tier email tracking, reliable analytics, and was genuinely ahead of the curve. Today? It's overpriced, email-only, and significantly behind tools like <a href="https://get.reply.io/scaleoutbound" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-700 underline">Reply.io</a>, <a href="https://get.lemlist.com/outboundsales" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-700 underline">Lemlist</a>, and <a href="https://instantly.ai/?via=outboundsales" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-700 underline">Instantly</a>.
+            </p>
+            <p className="text-slate-700 leading-relaxed">
+              The only reason they still claim 60,000+ users is enterprise inertia. Teams adopted it years ago when it was legitimately good, and now they're too deep in to migrate easily. That's not a reason for you to start with it in 2025.
+            </p>
+          </section>
+
+          {/* What Mixmax Actually Does Well */}
+          <section className="bg-slate-100/30 border border-slate-300 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">What Mixmax Actually Does Well</h2>
+            <p className="text-slate-700 leading-relaxed mb-4">Let me give credit where it's due:</p>
+
+            <div className="space-y-4">
+              <div className="bg-white border border-slate-200 rounded-lg p-4">
+                <h3 className="font-bold text-slate-900 mb-2">Best deliverability I've personally tested</h3>
+                <p className="text-slate-700 text-sm">
+                  I've seen the lowest bounce rates coming from Mixmax campaigns compared to other platforms. This is interesting because Mixmax doesn't even have native warm-up - you need a separate tool like Mailreach or Warmbox. Yet somehow, the deliverability is consistently excellent. I can't tell you exactly why (could be infrastructure, conservative sending limits, or just cleaner sender reputation), but it's real.
+                </p>
+              </div>
+
+              <div className="bg-white border border-slate-200 rounded-lg p-4">
+                <h3 className="font-bold text-slate-900 mb-2">Solid Gmail integration</h3>
+                <p className="text-slate-700 text-sm">
+                  The Chrome extension works well. You can access templates and sequences directly from Gmail, which is genuinely useful if you live in your inbox. The problem? That "inbox-native" advantage dies the moment you're working with a proper CRM like Salesforce or HubSpot, because you'll still be adding contacts to sequences via the Mixmax panel or directly from Salesforce anyway.
+                </p>
+              </div>
+
+              <div className="bg-white border border-slate-200 rounded-lg p-4">
+                <h3 className="font-bold text-slate-900 mb-2">Reliable Salesforce logging</h3>
+                <p className="text-slate-700 text-sm">
+                  The integration with Salesforce is good - emails, meetings, and tasks sync properly. But let's be real: every other tool has extensive enough capabilities to create all the reporting you need in Salesforce too. This isn't the differentiator Mixmax marketing makes it out to be.
+                </p>
+              </div>
+
+              <div className="bg-white border border-slate-200 rounded-lg p-4">
+                <h3 className="font-bold text-slate-900 mb-2">Good tracking and analytics</h3>
+                <p className="text-slate-700 text-sm">
+                  Task tracking and reporting are potentially among the best in the market. Five years ago, this was a killer feature. Today, it's just expected functionality.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Why You Shouldn't Use Mixmax in 2025 */}
+          <section className="bg-red-50 border border-red-200 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Why You Shouldn't Use Mixmax in 2025</h2>
+
+            <div className="space-y-4">
+              <div>
+                <h3 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+                  <span className="text-red-600">❌</span>
+                  It's email-only in a multichannel world
+                </h3>
+                <p className="text-slate-700 text-sm leading-relaxed mb-2">
+                  The biggest limitation is that Mixmax only does email. No native LinkedIn automation, no SMS, no integrated calling beyond basic Twilio integration (which everyone uses anyway - <a href="/reviews/reply-io" className="text-indigo-600 hover:text-indigo-700 underline">Reply.io</a>, Aircall, and most providers run on Twilio).
+                </p>
+                <p className="text-slate-700 text-sm leading-relaxed">
+                  I personally moved away from Mixmax because I wanted to get more aggressive with LinkedIn. LinkedIn is currently the least saturated channel - you get better reply rates and conversion rates simply because fewer people are pounding it as hard as email. Mixmax didn't have native LinkedIn automation, and trying to bolt on a separate LinkedIn tool created a mess.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+                  <span className="text-red-600">❌</span>
+                  The UI is clunky for daily operations
+                </h3>
+                <p className="text-slate-700 text-sm leading-relaxed">
+                  You can get used to it, but adding prospects to sequences is probably one of my least favorite experiences across all sales tools. It's not that it's too many clicks - it's that the UI isn't clear if you're not tech-savvy. I've onboarded countless SDRs, and they always have the same issue: buttons are scattered all over the screen, and you constantly miss something in the process of adding a lead to a sequence.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+                  <span className="text-red-600">❌</span>
+                  Mixmax has been behind the curve on innovation
+                </h3>
+                <p className="text-slate-700 text-sm leading-relaxed">
+                  The "Outbox" feature (where you can manage which day and what volume of emails get sent) is cool in theory, but maybe 10% of users will actually utilize it efficiently. The recent AI additions are basic stuff everyone already has. There's no vision here - just feature parity catch-up.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+                  <span className="text-red-600">❌</span>
+                  No native warm-up
+                </h3>
+                <p className="text-slate-700 text-sm leading-relaxed">
+                  You need a separate tool to warm up your sending domains. Reply.io, Lemlist (with lemwarm), and Instantly all have this built in or bundled. With Mixmax, it's another tool to manage and pay for.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* The Pricing Problem */}
+          <section className="bg-slate-100/30 border border-slate-300 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">The Pricing Problem</h2>
+            <p className="text-slate-700 leading-relaxed mb-4">Here's where it gets painful.</p>
+            <p className="text-slate-700 leading-relaxed mb-6">
+              To get Salesforce or HubSpot integration - the features that actually make Mixmax useful - you need the Growth + CRM plan at <strong className="text-slate-900">$89/user/month</strong>.
+            </p>
+
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-slate-200 border-b-2 border-slate-300">
+                    <th className="text-left p-3 font-bold text-slate-900">Tool</th>
+                    <th className="text-left p-3 font-bold text-slate-900">Price/User/Month</th>
+                    <th className="text-left p-3 font-bold text-slate-900">What You Get</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-slate-200 bg-red-50">
+                    <td className="p-3 font-semibold text-slate-900">Mixmax Growth + CRM</td>
+                    <td className="p-3 text-slate-900">$89</td>
+                    <td className="p-3 text-slate-700 text-sm">Email sequences, Salesforce sync, tracking, analytics</td>
+                  </tr>
+                  <tr className="border-b border-slate-200 bg-green-50">
+                    <td className="p-3 font-semibold text-slate-900">Reply.io</td>
+                    <td className="p-3 text-slate-900">$60-70</td>
+                    <td className="p-3 text-slate-700 text-sm">Email + LinkedIn + calls + SMS in unified sequences</td>
+                  </tr>
+                  <tr className="border-b border-slate-200 bg-green-50">
+                    <td className="p-3 font-semibold text-slate-900">Lemlist</td>
+                    <td className="p-3 text-slate-900">$69-99</td>
+                    <td className="p-3 text-slate-700 text-sm">Multichannel + lemwarm (native warm-up) + aggressive LinkedIn personalization</td>
+                  </tr>
+                  <tr className="bg-green-50">
+                    <td className="p-3 font-semibold text-slate-900">Instantly</td>
+                    <td className="p-3 text-slate-900">Flat rate</td>
+                    <td className="p-3 text-slate-700 text-sm">Unlimited inboxes for high-volume email campaigns</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p className="text-slate-700 leading-relaxed mt-6 font-semibold">
+              You're paying 30% more for 20% of the functionality.
+            </p>
+          </section>
+
+          {/* Who Should Actually Use Mixmax in 2025 */}
+          <section className="bg-slate-100/30 border border-slate-300 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Who Should Actually Use Mixmax in 2025</h2>
+            <p className="text-2xl font-bold text-red-600 mb-4">Nobody starting fresh.</p>
+            <p className="text-slate-700 leading-relaxed mb-4">
+              If you're building a new sales team, developing new outbound strategies, or just getting serious about sales engagement, do not choose Mixmax. The ROI ratio of what you're spending to what you're getting is terrible compared to what else is available.
+            </p>
+            <p className="text-slate-700 leading-relaxed">
+              <strong>The one exception:</strong> Your sales ops manager is a micromanager who needs real-time tracking of every email open, click, and breath your reps take. Mixmax's inbox-native tracking + Salesforce logging gives management the surveillance visibility they want.
+            </p>
+          </section>
+
+          {/* Migration Guide */}
+          <section className="bg-indigo-50 border border-indigo-200 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">If You're Currently Using Mixmax: When and How to Migrate</h2>
+            <p className="text-slate-700 leading-relaxed mb-6">
+              If you're already on Mixmax and it's working "well enough," the migration pain might not be worth it right this second - especially if you're doing low-volume, email-only outreach (under 100-200 emails per week).
+            </p>
+            <p className="text-slate-700 leading-relaxed mb-6">
+              But when your contract comes up for renewal, seriously consider switching. Here's where to go based on your use case:
+            </p>
+
+            <div className="space-y-4">
+              <div className="bg-white border border-indigo-200 rounded-lg p-4">
+                <h3 className="font-bold text-indigo-600 mb-2">Switch to Reply.io if you want multi-channel</h3>
+                <p className="text-sm text-slate-700 mb-2"><strong>Best for:</strong> Teams that need email + LinkedIn + calls + SMS in unified sequences</p>
+                <p className="text-sm text-slate-700 mb-2"><strong>Price:</strong> $60-70/user/month</p>
+                <p className="text-sm text-slate-700"><strong>Why:</strong> This is the standard for growth-stage B2B companies doing serious outbound. You get four channels coordinated in one platform for less than Mixmax email-only.</p>
+                <a href="/reviews/reply-io" className="text-indigo-600 hover:text-indigo-700 text-sm font-medium underline mt-2 inline-block">Read full Reply.io review →</a>
+              </div>
+
+              <div className="bg-white border border-indigo-200 rounded-lg p-4">
+                <h3 className="font-bold text-indigo-600 mb-2">Switch to Lemlist if you want to be aggressive on LinkedIn + email</h3>
+                <p className="text-sm text-slate-700 mb-2"><strong>Best for:</strong> Teams focused on highly personalized, LinkedIn-heavy outbound</p>
+                <p className="text-sm text-slate-700 mb-2"><strong>Price:</strong> $69-99/user/month</p>
+                <p className="text-sm text-slate-700"><strong>Why:</strong> Lemlist has the best LinkedIn personalization features, includes lemwarm for deliverability, and the multichannel sequencing is solid. If LinkedIn is a primary channel, this is your tool.</p>
+              </div>
+
+              <div className="bg-white border border-indigo-200 rounded-lg p-4">
+                <h3 className="font-bold text-indigo-600 mb-2">Switch to Instantly if you want to go crazy on email volume</h3>
+                <p className="text-sm text-slate-700 mb-2"><strong>Best for:</strong> Agencies, lead gen shops, high-volume cold email campaigns</p>
+                <p className="text-sm text-slate-700 mb-2"><strong>Price:</strong> Flat rate with unlimited inboxes</p>
+                <p className="text-sm text-slate-700"><strong>Why:</strong> If you're sending thousands of emails per day across multiple domains/inboxes, Instantly's pricing model makes way more sense than per-seat pricing. Pure email focus, built for scale.</p>
+                <a href="/comparisons/reply-vs-instantly" className="text-indigo-600 hover:text-indigo-700 text-sm font-medium underline mt-2 inline-block">Compare Reply.io vs Instantly →</a>
+              </div>
+            </div>
+          </section>
+
+          {/* Why Mixmax Still Has 60,000+ Users */}
+          <section className="bg-slate-100/30 border border-slate-300 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Why Mixmax Still Has 60,000+ Users</h2>
+            <p className="text-3xl font-bold text-slate-600 mb-4">Inertia.</p>
+            <p className="text-slate-700 leading-relaxed mb-4">
+              Enterprise teams adopted Mixmax in 2018-2020 when it was legitimately a top-tier tool. They've got it integrated into Salesforce, reps are trained on it, and "it works well enough" for what they're doing.
+            </p>
+            <p className="text-slate-700 leading-relaxed">
+              But that installed base isn't growth - it's momentum from five years ago slowly decaying. According to their website, they have 60,000+ users. I believe that number. I also believe a significant chunk of those are dormant enterprise seats on multi-year contracts, not active users running aggressive campaigns.
+            </p>
+          </section>
+
+          {/* The Bottom Line */}
+          <section className="bg-gradient-to-br from-slate-100 to-slate-200/50 border border-slate-300 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">The Bottom Line</h2>
+            <p className="text-slate-700 leading-relaxed mb-4">
+              Mixmax is a relic of the 2019 sales engagement landscape. It does email sequences reliably with excellent deliverability, but so does everyone else - plus LinkedIn, SMS, and calls.
+            </p>
+            <p className="text-slate-700 leading-relaxed mb-4">
+              The user experience hasn't meaningfully improved in five years. The feature set is stagnant. The pricing doesn't make sense when compared to what <a href="https://get.reply.io/scaleoutbound" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-700 underline">Reply.io</a>, <a href="https://get.lemlist.com/outboundsales" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-700 underline">Lemlist</a>, and <a href="https://instantly.ai/?via=outboundsales" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-700 underline">Instantly</a> offer for the same or less money.
+            </p>
+            <ul className="space-y-2 text-slate-700 mb-4">
+              <li className="flex items-start gap-2">
+                <span className="text-red-600 mt-1">✗</span>
+                <span><strong>If you're starting fresh:</strong> Don't even consider Mixmax. Start with Reply.io (multichannel), Lemlist (LinkedIn-heavy), or Instantly (email volume).</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-amber-600 mt-1">!</span>
+                <span><strong>If you're currently using Mixmax:</strong> Migrate when your contract renews. You're paying too much for too little, and the opportunity cost of staying email-only is real.</span>
+              </li>
+            </ul>
+          </section>
+
+          {/* Quick Decision Framework */}
+          <section className="bg-slate-100/30 border border-slate-300 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Quick Decision Framework</h2>
+
+            <div className="space-y-3">
+              <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                <p className="font-bold text-slate-900 mb-1">Choose <a href="https://get.reply.io/scaleoutbound" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-700 underline">Reply.io</a> if:</p>
+                <ul className="text-sm text-slate-700 space-y-1 ml-4">
+                  <li>• You need multichannel (email + LinkedIn + calls + SMS)</li>
+                  <li>• You're a growth-stage team doing 500+ emails/week per rep</li>
+                  <li>• You want the "safe," standard choice that works</li>
+                </ul>
+              </div>
+
+              <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                <p className="font-bold text-slate-900 mb-1">Choose <a href="https://get.lemlist.com/outboundsales" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-700 underline">Lemlist</a> if:</p>
+                <ul className="text-sm text-slate-700 space-y-1 ml-4">
+                  <li>• LinkedIn is a primary channel for you</li>
+                  <li>• You value personalization and creative outreach</li>
+                  <li>• You want strong native warm-up (lemwarm)</li>
+                </ul>
+              </div>
+
+              <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                <p className="font-bold text-slate-900 mb-1">Choose <a href="https://instantly.ai/?via=outboundsales" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-700 underline">Instantly</a> if:</p>
+                <ul className="text-sm text-slate-700 space-y-1 ml-4">
+                  <li>• You're doing high-volume cold email (agencies, lead gen)</li>
+                  <li>• You need multiple sending inboxes under one flat rate</li>
+                  <li>• Email-only focus is fine for your use case</li>
+                </ul>
+              </div>
+
+              <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                <p className="font-bold text-slate-900 mb-1">Choose Mixmax if:</p>
+                <ul className="text-sm text-slate-700 space-y-1 ml-4">
+                  <li>• You're already locked in and migration isn't worth the pain right now</li>
+                  <li>• Your ops team is weirdly attached to it</li>
+                  <li>• You're doing very low-volume email (&lt;100/week) and just need basic tracking</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* Contact CTA */}
+          <section className="bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl p-8 text-center text-white">
+            <h2 className="text-2xl font-bold mb-4">Questions? Think I'm wrong about something?</h2>
+            <p className="text-lg mb-6 text-indigo-100">
+              I've implemented these tools across 50+ companies, and I'm always happy to talk through specific use cases.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="mailto:david@saleshousestack.com"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-slate-50 transition-all"
+              >
+                <Mail className="w-5 h-5" />
+                Email Me
+              </a>
+              <a
+                href="https://www.linkedin.com/in/davidvaran/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-700 text-white font-semibold rounded-lg border-2 border-white/20 hover:bg-indigo-800 transition-all"
+              >
+                <Linkedin className="w-5 h-5" />
+                Connect on LinkedIn
+              </a>
+            </div>
+          </section>
         </div>
       </div>
     </div>
@@ -5045,6 +5466,7 @@ const App = () => {
               <Route path="/reviews" element={<ReviewsListPage />} />
               <Route path="/reviews/clay" element={<ClayReviewPage />} />
               <Route path="/reviews/reply-io" element={<ReplyIOReviewPage />} />
+              <Route path="/reviews/mixmax" element={<MixmaxReviewPage />} />
               <Route path="/comparisons" element={<ComparisonsListPage />} />
               <Route path="/comparisons/clay-vs-apollo" element={<ClayVsApolloPage />} />
               <Route path="/comparisons/pipedrive-hubspot-salesforce" element={<CRMComparisonPage />} />

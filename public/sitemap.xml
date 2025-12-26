@@ -7,85 +7,91 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://saleshousestack.com/library</loc>
+    <loc>https://saleshousestack.com/library/</loc>
     <lastmod>2025-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://saleshousestack.com/best-outbound-stack-for-founders</loc>
+    <loc>https://saleshousestack.com/best-outbound-stack-for-founders/</loc>
     <lastmod>2025-12-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://saleshousestack.com/strategies</loc>
+    <loc>https://saleshousestack.com/strategies/</loc>
     <lastmod>2025-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saleshousestack.com/reviews</loc>
+    <loc>https://saleshousestack.com/reviews/</loc>
     <lastmod>2025-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://saleshousestack.com/reviews/clay</loc>
+    <loc>https://saleshousestack.com/reviews/clay/</loc>
     <lastmod>2025-12-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saleshousestack.com/reviews/reply-io</loc>
+    <loc>https://saleshousestack.com/reviews/reply-io/</loc>
     <lastmod>2025-12-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saleshousestack.com/comparisons</loc>
+    <loc>https://saleshousestack.com/reviews/mixmax/</loc>
+    <lastmod>2025-12-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saleshousestack.com/comparisons/</loc>
     <lastmod>2025-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saleshousestack.com/comparisons/clay-vs-apollo</loc>
+    <loc>https://saleshousestack.com/comparisons/clay-vs-apollo/</loc>
     <lastmod>2025-12-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://saleshousestack.com/comparisons/pipedrive-hubspot-salesforce</loc>
+    <loc>https://saleshousestack.com/comparisons/pipedrive-hubspot-salesforce/</loc>
     <lastmod>2025-12-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saleshousestack.com/comparisons/reply-vs-instantly</loc>
+    <loc>https://saleshousestack.com/comparisons/reply-vs-instantly/</loc>
     <lastmod>2025-12-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://saleshousestack.com/faq</loc>
+    <loc>https://saleshousestack.com/faq/</loc>
     <lastmod>2025-12-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://saleshousestack.com/consulting</loc>
+    <loc>https://saleshousestack.com/consulting/</loc>
     <lastmod>2025-12-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saleshousestack.com/privacy</loc>
+    <loc>https://saleshousestack.com/privacy/</loc>
     <lastmod>2025-12-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://saleshousestack.com/terms</loc>
+    <loc>https://saleshousestack.com/terms/</loc>
     <lastmod>2025-12-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

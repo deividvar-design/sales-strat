@@ -20,6 +20,7 @@ const routes = [
   '/terms',
   '/reviews/clay',
   '/reviews/reply-io',
+  '/reviews/mixmax',
   '/comparisons/clay-vs-apollo',
   '/comparisons/pipedrive-hubspot-salesforce',
   '/comparisons/reply-vs-instantly',

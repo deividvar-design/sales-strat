@@ -16,7 +16,8 @@ import {
   Calendar,
   Zap,
   LayoutDashboard,
-  Star
+  Star,
+  ArrowRight
 } from 'lucide-react';
 
 interface ToolCardProps {
@@ -183,7 +184,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, showChannels = true })
         </a>
 
         {/* My Review Button */}
-        {(tool.id === 'reply' || tool.id === 'clay') && (
+        {(tool.id === 'reply' || tool.id === 'clay' || tool.id === 'mixmax' || tool.id === 'instantly' || tool.id === 'lemlist') && (
           <button
             onClick={() => setIsReviewModalOpen(true)}
             className="px-4 py-2.5 text-xs font-bold rounded-lg bg-indigo-50 border border-indigo-300 text-indigo-700 hover:bg-indigo-700/20 hover:border-indigo-400 transition-all flex items-center justify-center gap-1.5 whitespace-nowrap"
@@ -454,6 +455,253 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, showChannels = true })
               >
                 Try {tool.name} For Free <ExternalLink className="w-4 h-4" />
               </a>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Mixmax Review Modal */}
+      {isReviewModalOpen && tool.id === 'mixmax' && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm" onClick={() => setIsReviewModalOpen(false)}>
+          <div className="bg-slate-100 border border-slate-300 rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            {/* Header */}
+            <div className="sticky top-0 bg-slate-100 border-b border-slate-300 p-6 flex items-start justify-between">
+              <div className="flex items-center gap-4">
+                <div className="w-16 h-16 rounded-full bg-slate-200 border-2 border-indigo-500 flex items-center justify-center text-2xl font-bold text-indigo-600">
+                  DV
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-slate-900">{tool.name} Review</h2>
+                </div>
+              </div>
+              <button
+                onClick={() => setIsReviewModalOpen(false)}
+                className="text-slate-600 hover:text-slate-900 transition-colors"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Rating */}
+            <div className="p-6 border-b border-slate-300">
+              <div className="flex items-center gap-2 mb-2">
+                {[...Array(2)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-600" />
+                ))}
+                <Star className="w-5 h-5 fill-yellow-400 text-yellow-600" style={{ clipPath: 'inset(0 50% 0 0)' }} />
+                {[...Array(2)].map((_, i) => (
+                  <Star key={`empty-${i}`} className="w-5 h-5 text-slate-300" />
+                ))}
+                <span className="text-xl font-bold text-slate-900 ml-2">2.5/5</span>
+              </div>
+              <p className="text-lg font-semibold text-amber-600">Overpriced, email-only, and significantly behind the competition in 2025</p>
+            </div>
+
+            {/* Content */}
+            <div className="p-6 space-y-6">
+              {/* The Honest Take */}
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">The Honest Take</h3>
+                <p className="text-slate-700 leading-relaxed mb-3">
+                  Mixmax was a fantastic tool five years ago. Back in 2019-2020, it had top-tier email tracking, reliable analytics, and was genuinely ahead of the curve. Today? It's overpriced, email-only, and significantly behind tools like Reply.io, Lemlist, and Instantly.
+                </p>
+                <p className="text-slate-700 leading-relaxed">
+                  Used 2019-2024, stopped using ~6 months ago. The only reason they still claim 60,000+ users is enterprise inertia—teams adopted it years ago when it was legitimately good, and now they're too deep in to migrate easily.
+                </p>
+              </div>
+
+              {/* What It Does Well */}
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">What It Actually Does Well</h3>
+                <div className="bg-slate-200 border border-slate-200 rounded-lg p-4">
+                  <ul className="space-y-2 text-slate-700">
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-600 mt-1">✓</span>
+                      <span><strong>Best deliverability I've tested</strong> - Lowest bounce rates compared to other platforms, despite no native warm-up</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-600 mt-1">✓</span>
+                      <span><strong>Solid Gmail integration</strong> - Chrome extension works well if you live in your inbox</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-600 mt-1">✓</span>
+                      <span><strong>Reliable Salesforce logging</strong> - Emails and tasks sync properly (though every tool does this now)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Why You Shouldn't Use It */}
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Why You Shouldn't Use It in 2025</h3>
+                <ul className="space-y-2 text-slate-700">
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-600">✗</span>
+                    <span><strong>Email-only in a multichannel world</strong> - No LinkedIn, no SMS, no integrated calling</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-600">✗</span>
+                    <span><strong>Clunky UI</strong> - Adding prospects to sequences is one of the worst experiences across all sales tools</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-600">✗</span>
+                    <span><strong>Behind on innovation</strong> - Recent AI features are just catch-up, no real vision</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-600">✗</span>
+                    <span><strong>No native warm-up</strong> - You need a separate tool (Reply, Lemlist, Instantly include this)</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Pricing Problem */}
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">The Pricing Problem</h3>
+                <p className="text-slate-700 leading-relaxed mb-3">
+                  To get Salesforce/HubSpot integration, you need Growth + CRM at <strong>$89/user/month</strong>. Compare that to:
+                </p>
+                <ul className="space-y-2 text-slate-700">
+                  <li className="flex items-start gap-2">
+                    <span className="text-indigo-600">•</span>
+                    <span><strong>Reply.io ($60-70/mo)</strong> - Email + LinkedIn + calls + SMS in unified sequences</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-indigo-600">•</span>
+                    <span><strong>Lemlist ($69-99/mo)</strong> - Multichannel + lemwarm + LinkedIn personalization</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-indigo-600">•</span>
+                    <span><strong>Instantly (flat rate)</strong> - Unlimited inboxes for high-volume campaigns</span>
+                  </li>
+                </ul>
+                <p className="text-slate-700 leading-relaxed mt-3">
+                  You're paying <strong>30% more for 20% of the functionality</strong>.
+                </p>
+              </div>
+
+              {/* Who Should Use It */}
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Who Should Actually Use Mixmax</h3>
+                <p className="text-slate-700 leading-relaxed mb-3">
+                  <strong className="text-red-600">Nobody starting fresh.</strong> If you're building a new sales team or getting serious about outbound, do not choose Mixmax. The ROI doesn't make sense compared to what's available.
+                </p>
+                <p className="text-slate-700 leading-relaxed">
+                  <strong>Only exception:</strong> You're already locked in and migration isn't worth the pain right now. But when your contract renews, seriously consider switching.
+                </p>
+              </div>
+
+              {/* Bottom Line */}
+              <div className="bg-red-50 border border-red-200 rounded-lg p-6">
+                <h3 className="text-xl font-bold text-red-600 mb-3">Bottom Line</h3>
+                <p className="text-slate-700 leading-relaxed mb-3">
+                  Mixmax is a relic of the 2019 sales engagement landscape. It does email reliably with excellent deliverability, but so does everyone else—plus LinkedIn, SMS, and calls.
+                </p>
+                <p className="text-slate-700 leading-relaxed">
+                  If you're starting fresh: Choose Reply.io (multichannel), Lemlist (LinkedIn-heavy), or Instantly (email volume). If you're currently using Mixmax: Migrate when your contract renews.
+                </p>
+              </div>
+            </div>
+
+            {/* Footer CTA */}
+            <div className="sticky bottom-0 bg-slate-100 border-t border-slate-300 p-6">
+              <a
+                href="/reviews/mixmax"
+                className="w-full py-3 px-6 bg-indigo-600 text-white font-bold rounded-lg shadow-lg flex items-center justify-center gap-2 hover:bg-indigo-700 transition-all"
+              >
+                Read Full Review <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Instantly Review Modal */}
+      {isReviewModalOpen && tool.id === 'instantly' && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm" onClick={() => setIsReviewModalOpen(false)}>
+          <div className="bg-slate-100 border border-slate-300 rounded-xl max-w-md w-full shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            <div className="p-6">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-full bg-slate-200 border-2 border-indigo-500 flex items-center justify-center text-lg font-bold text-indigo-600">
+                  DV
+                </div>
+                <h2 className="text-2xl font-bold text-slate-900">{tool.name} Review</h2>
+              </div>
+
+              <p className="text-slate-700 leading-relaxed mb-6">
+                Best for high-volume cold email campaigns. Pure email focus with unlimited inboxes at a flat rate. Built for agencies and lead gen shops that need to scale fast without per-seat pricing killing margins.
+              </p>
+
+              <div className="space-y-3 mb-6">
+                <a
+                  href="/comparisons/reply-vs-instantly"
+                  className="w-full py-3 px-6 bg-indigo-600 text-white font-bold rounded-lg shadow-lg flex items-center justify-center gap-2 hover:bg-indigo-700 transition-all"
+                >
+                  Compare Reply.io vs Instantly <ArrowRight className="w-4 h-4" />
+                </a>
+
+                <a
+                  href={tool.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 px-6 bg-slate-200 text-slate-900 font-bold rounded-lg shadow-lg flex items-center justify-center gap-2 hover:bg-slate-300 transition-all"
+                >
+                  Try Instantly <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+
+              <button
+                onClick={() => setIsReviewModalOpen(false)}
+                className="w-full py-2 px-6 text-slate-600 hover:text-slate-900 transition-colors"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Lemlist Review Modal */}
+      {isReviewModalOpen && tool.id === 'lemlist' && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm" onClick={() => setIsReviewModalOpen(false)}>
+          <div className="bg-slate-100 border border-slate-300 rounded-xl max-w-md w-full shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            <div className="p-6">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-full bg-slate-200 border-2 border-indigo-500 flex items-center justify-center text-lg font-bold text-indigo-600">
+                  DV
+                </div>
+                <h2 className="text-2xl font-bold text-slate-900">{tool.name} Review</h2>
+              </div>
+
+              <p className="text-slate-700 leading-relaxed mb-6">
+                Best for LinkedIn-heavy outbound with aggressive personalization. Includes lemwarm for native warm-up. If LinkedIn is your primary channel and you value creative, personalized outreach, Lemlist is the tool.
+              </p>
+
+              <div className="space-y-3 mb-6">
+                <a
+                  href="/comparisons/reply-vs-instantly"
+                  className="w-full py-3 px-6 bg-indigo-600 text-white font-bold rounded-lg shadow-lg flex items-center justify-center gap-2 hover:bg-indigo-700 transition-all"
+                >
+                  Compare Tools <ArrowRight className="w-4 h-4" />
+                </a>
+
+                <a
+                  href={tool.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 px-6 bg-slate-200 text-slate-900 font-bold rounded-lg shadow-lg flex items-center justify-center gap-2 hover:bg-slate-300 transition-all"
+                >
+                  Try Lemlist <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+
+              <button
+                onClick={() => setIsReviewModalOpen(false)}
+                className="w-full py-2 px-6 text-slate-600 hover:text-slate-900 transition-colors"
+              >
+                Close
+              </button>
             </div>
           </div>
         </div>
