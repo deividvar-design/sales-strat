@@ -1231,7 +1231,7 @@ const ConsultingPage = () => {
                     </div>
 
                     {/* Right Column: Profile Card */}
-                    <div className="md:w-1/3 w-full flex min-h-[600px]">
+                    <div className="md:w-1/3 w-full hidden md:flex min-h-[600px]">
                         <div className="rounded-2xl border border-slate-300 relative overflow-hidden group hover:border-indigo-500/30 transition-all duration-500 w-full shadow-2xl">
                             {/* Background Image */}
                             <div className="absolute inset-0">
@@ -1240,6 +1240,7 @@ const ConsultingPage = () => {
                                     alt="David Varan, Sales Operations Consultant and Founder of Sales House"
                                     className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                                     style={{ objectPosition: 'center 20%' }}
+                                    loading="lazy"
                                 />
                                 {/* Gradient Overlay */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-800/60 to-transparent"></div>
