@@ -213,7 +213,7 @@ const Footer = () => (
       </div>
 
       <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-        <p>&copy; 2025 Sales House by David Varan. All rights reserved.</p>
+        <p>&copy; 2026 Sales House by David Varan. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -263,7 +263,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                 </div>
                 <div className="flex items-center gap-2">
                     <Check className="w-4 h-4 text-indigo-600" />
-                    <span>Updated December 2025</span>
+                    <span>Updated for 2026</span>
                 </div>
             </div>
         </div>
@@ -326,7 +326,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
         <div className="max-w-6xl mx-auto relative z-10">
              <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
                 <div>
-                    <h2 className="text-3xl font-bold mb-2">My Recommended Stack (December 2025)</h2>
+                    <h2 className="text-3xl font-bold mb-2">My Recommended Stack (2026)</h2>
                     <p className="text-slate-600 text-sm">Tested, trusted, and currently in use</p>
                 </div>
                 <Link to="/library" className="flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-semibold transition-colors">
@@ -1514,7 +1514,7 @@ const PrivacyPolicyPage = () => {
         <div className="p-6 max-w-4xl mx-auto bg-[#FEFEFE] min-h-screen">
             <div className="mb-10">
                 <h1 className="text-4xl font-bold text-slate-900 mb-3">Privacy Policy</h1>
-                <p className="text-slate-600 text-sm">Last Updated: January 2, 2025</p>
+                <p className="text-slate-600 text-sm">Last Updated: January 2, 2026</p>
             </div>
 
             <div className="prose prose-invert prose-slate max-w-none space-y-8">
@@ -1768,7 +1768,7 @@ const TermsOfServicePage = () => {
         <div className="p-6 max-w-4xl mx-auto bg-[#FEFEFE] min-h-screen">
             <div className="mb-10">
                 <h1 className="text-4xl font-bold text-slate-900 mb-3">Terms of Service</h1>
-                <p className="text-slate-600 text-sm">Last Updated: January 2, 2025</p>
+                <p className="text-slate-600 text-sm">Last Updated: January 2, 2026</p>
             </div>
 
             <div className="prose prose-invert prose-slate max-w-none space-y-8">
@@ -2542,8 +2542,8 @@ const CRMComparisonPage = () => {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Best CRM for 2025: Pipedrive vs HubSpot vs Salesforce",
-    "description": "Which CRM should you actually use in 2025? Real comparison of Pipedrive, HubSpot, and Salesforce based on team size, budget, and growth stage.",
+    "headline": "Best CRM for 2026: Pipedrive vs HubSpot vs Salesforce",
+    "description": "Which CRM should you actually use in 2026? Real comparison of Pipedrive, HubSpot, and Salesforce based on team size, budget, and growth stage.",
     "image": "https://saleshousestack.com/og-image.png",
     "author": {
       "@type": "Person",
@@ -2558,16 +2558,16 @@ const CRMComparisonPage = () => {
         "url": "https://saleshousestack.com/logo.png"
       }
     },
-    "datePublished": "2025-12-18",
-    "dateModified": "2025-12-18"
+    "datePublished": "2026-01-02",
+    "dateModified": "2026-01-02"
   };
 
   return (
     <div className="min-h-screen bg-[#FEFEFE]">
       <Helmet>
-        <title>Best CRM for 2025: Pipedrive vs HubSpot vs Salesforce | Sales House</title>
-        <meta name="description" content="Which CRM should you actually use in 2025? Real comparison of Pipedrive, HubSpot, and Salesforce based on team size, budget, and growth stage. Pricing, features, and honest recommendations." />
-        <meta name="keywords" content="best CRM 2025, Pipedrive vs HubSpot, HubSpot vs Salesforce, Pipedrive vs Salesforce, CRM comparison, best CRM for startups, CRM for sales teams, best sales CRM" />
+        <title>Best CRM for 2026: Pipedrive vs HubSpot vs Salesforce | Sales House</title>
+        <meta name="description" content="Which CRM should you actually use in 2026? Real comparison of Pipedrive, HubSpot, and Salesforce based on team size, budget, and growth stage. Pricing, features, and honest recommendations." />
+        <meta name="keywords" content="best CRM 2026, Pipedrive vs HubSpot, HubSpot vs Salesforce, Pipedrive vs Salesforce, CRM comparison, best CRM for startups, CRM for sales teams, best sales CRM" />
         <script type="application/ld+json">
           {JSON.stringify(articleSchema)}
         </script>
@@ -2590,7 +2590,7 @@ const CRMComparisonPage = () => {
             </div>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Best CRM for 2025: Pipedrive vs HubSpot vs Salesforce
+            Best CRM for 2026: Pipedrive vs HubSpot vs Salesforce
           </h1>
           <p className="text-lg text-slate-600 mb-2">Which should you actually use?</p>
         </div>
@@ -3181,7 +3181,7 @@ const ReviewsListPage = () => {
       rating: 5.0,
       excerpt: 'Not just a contact database - a whole AI research assistant that qualifies, signals, and personalizes at scale',
       category: 'Data & Enrichment',
-      lastUpdated: 'December 2025'
+      lastUpdated: 'Updated for 2026'
     },
     {
       id: 'reply',
@@ -3190,7 +3190,7 @@ const ReviewsListPage = () => {
       rating: 4.5,
       excerpt: 'Very versatile tool, highest level of multichannel capabilities',
       category: 'Sales Engagement',
-      lastUpdated: 'December 2025'
+      lastUpdated: 'Updated for 2026'
     },
     {
       id: 'mixmax',
@@ -3199,7 +3199,7 @@ const ReviewsListPage = () => {
       rating: 2.5,
       excerpt: 'A once-great tool that\'s now stuck in 2019. Overpriced, email-only, and significantly behind the competition',
       category: 'Sales Engagement',
-      lastUpdated: 'December 2025'
+      lastUpdated: 'Updated for 2026'
     }
   ];
 
@@ -3331,7 +3331,7 @@ const ReplyIOReviewPage = () => {
       "bestRating": "5",
       "worstRating": "1"
     },
-    "datePublished": "2025-12-13",
+    "datePublished": "2026-01-02",
     "reviewBody": "Reply.io covers all the channels you need and gives you complete control to personalize when necessary. The price-to-functionality ratio is top-notch. I've used and set up Reply.io for 4 SaaS companies over the past year.",
     "publisher": {
       "@type": "Organization",
@@ -3342,7 +3342,7 @@ const ReplyIOReviewPage = () => {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Reply.io Review 2025: My Experience After 4 SaaS Companies",
+    "headline": "Reply.io Review 2026: My Experience After 4 SaaS Companies",
     "description": "Honest Reply.io review based on real experience with 4 SaaS companies. Open rates up to 80%, multichannel capabilities, pricing analysis, and who should (and shouldn't) use it.",
     "image": "https://saleshousestack.com/og-image.png",
     "author": {
@@ -3358,8 +3358,8 @@ const ReplyIOReviewPage = () => {
         "url": "https://saleshousestack.com/logo.png"
       }
     },
-    "datePublished": "2025-12-13",
-    "dateModified": "2025-12-13",
+    "datePublished": "2026-01-02",
+    "dateModified": "2026-01-02",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://saleshousestack.com/#/reviews/reply-io"
@@ -3369,7 +3369,7 @@ const ReplyIOReviewPage = () => {
   return (
     <div className="min-h-screen bg-[#FEFEFE]">
       <Helmet>
-        <title>Reply.io Review 2025: My Experience After 4 SaaS Companies | Sales House</title>
+        <title>Reply.io Review 2026: My Experience After 4 SaaS Companies | Sales House</title>
         <meta name="description" content="Honest Reply.io review based on real experience with 4 SaaS companies. Open rates up to 80%, multichannel capabilities, pricing analysis, and who should (and shouldn't) use it." />
         <meta name="keywords" content="Reply.io review, Reply.io pricing, sales engagement platform, multichannel outreach, email automation, LinkedIn automation" />
 
@@ -3391,7 +3391,7 @@ const ReplyIOReviewPage = () => {
         <div className="mb-12">
           <div className="mb-6">
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2">Reply.io Review</h1>
-            <p className="text-slate-600">Last updated December 2025</p>
+            <p className="text-slate-600">Updated for 2026</p>
           </div>
 
           {/* Rating */}
@@ -3550,7 +3550,7 @@ const MixmaxReviewPage = () => {
       "bestRating": "5",
       "worstRating": "1"
     },
-    "datePublished": "2025-12-18",
+    "datePublished": "2026-01-02",
     "reviewBody": "Mixmax was a fantastic tool five years ago. Today it's overpriced, email-only, and significantly behind tools like Reply.io, Lemlist, and Instantly. Used 2019-2024, stopped using ~6 months ago.",
     "publisher": {
       "@type": "Organization",
@@ -3561,8 +3561,8 @@ const MixmaxReviewPage = () => {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Mixmax Review 2025: A Once-Great Tool That's Now Stuck in 2019",
-    "description": "Honest Mixmax review after 5 years of use. Why I stopped using it, what it does well, and why you shouldn't choose it in 2025. Compare pricing vs Reply.io, Lemlist, and Instantly.",
+    "headline": "Mixmax Review 2026: A Once-Great Tool That's Now Stuck in 2019",
+    "description": "Honest Mixmax review after 5 years of use. Why I stopped using it, what it does well, and why you shouldn't choose it in 2026. Compare pricing vs Reply.io, Lemlist, and Instantly.",
     "image": "https://saleshousestack.com/og-image.png",
     "author": {
       "@type": "Person",
@@ -3577,8 +3577,8 @@ const MixmaxReviewPage = () => {
         "url": "https://saleshousestack.com/logo.png"
       }
     },
-    "datePublished": "2025-12-18",
-    "dateModified": "2025-12-18",
+    "datePublished": "2026-01-02",
+    "dateModified": "2026-01-02",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://saleshousestack.com/#/reviews/mixmax"
@@ -3588,8 +3588,8 @@ const MixmaxReviewPage = () => {
   return (
     <div className="min-h-screen bg-[#FEFEFE]">
       <Helmet>
-        <title>Mixmax Review 2025: A Once-Great Tool That's Now Stuck in 2019 | Sales House</title>
-        <meta name="description" content="Honest Mixmax review after 5 years of use. Why I stopped using it, what it does well, and why you shouldn't choose it in 2025. Compare pricing vs Reply.io, Lemlist, and Instantly." />
+        <title>Mixmax Review 2026: A Once-Great Tool That's Now Stuck in 2019 | Sales House</title>
+        <meta name="description" content="Honest Mixmax review after 5 years of use. Why I stopped using it, what it does well, and why you shouldn't choose it in 2026. Compare pricing vs Reply.io, Lemlist, and Instantly." />
         <meta name="keywords" content="Mixmax review, Mixmax pricing, Mixmax alternatives, Reply.io vs Mixmax, sales engagement platform, email automation" />
 
         {/* Schema.org Review Markup */}
@@ -3609,8 +3609,8 @@ const MixmaxReviewPage = () => {
         {/* Header */}
         <div className="mb-12">
           <div className="mb-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2">Mixmax Review 2025: A Once-Great Tool That's Now Stuck in 2019</h1>
-            <p className="text-slate-600">Last updated: December 2025</p>
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2">Mixmax Review 2026: A Once-Great Tool That's Now Stuck in 2019</h1>
+            <p className="text-slate-600">Updated for 2026</p>
             <p className="text-slate-600 font-medium">My experience: Used 2019-2024, stopped using ~6 months ago</p>
           </div>
 
@@ -3626,7 +3626,7 @@ const MixmaxReviewPage = () => {
               ))}
               <span className="text-2xl font-bold text-slate-900 ml-2">2.5/5</span>
             </div>
-            <p className="text-xl font-semibold text-amber-600">Overpriced, email-only, and significantly behind the competition in 2025</p>
+            <p className="text-xl font-semibold text-amber-600">Overpriced, email-only, and significantly behind the competition in 2026</p>
           </div>
         </div>
 
@@ -3642,7 +3642,7 @@ const MixmaxReviewPage = () => {
               Mixmax was a fantastic tool five years ago. Back in 2019-2020, it had top-tier email tracking, reliable analytics, and was genuinely ahead of the curve. Today? It's overpriced, email-only, and significantly behind tools like <a href="https://get.reply.io/scaleoutbound" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-700 underline">Reply.io</a>, <a href="https://get.lemlist.com/outboundsales" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-700 underline">Lemlist</a>, and <a href="https://instantly.ai/?via=outboundsales" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-700 underline">Instantly</a>.
             </p>
             <p className="text-slate-700 leading-relaxed">
-              The only reason they still claim 60,000+ users is enterprise inertia. Teams adopted it years ago when it was legitimately good, and now they're too deep in to migrate easily. That's not a reason for you to start with it in 2025.
+              The only reason they still claim 60,000+ users is enterprise inertia. Teams adopted it years ago when it was legitimately good, and now they're too deep in to migrate easily. That's not a reason for you to start with it in 2026.
             </p>
           </section>
 
@@ -3682,9 +3682,9 @@ const MixmaxReviewPage = () => {
             </div>
           </section>
 
-          {/* Why You Shouldn't Use Mixmax in 2025 */}
+          {/* Why You Shouldn't Use Mixmax in 2026 */}
           <section className="bg-red-50 border border-red-200 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">Why You Shouldn't Use Mixmax in 2025</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Why You Shouldn't Use Mixmax in 2026</h2>
 
             <div className="space-y-4">
               <div>
@@ -3779,9 +3779,9 @@ const MixmaxReviewPage = () => {
             </p>
           </section>
 
-          {/* Who Should Actually Use Mixmax in 2025 */}
+          {/* Who Should Actually Use Mixmax in 2026 */}
           <section className="bg-slate-100/30 border border-slate-300 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">Who Should Actually Use Mixmax in 2025</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Who Should Actually Use Mixmax in 2026</h2>
             <p className="text-2xl font-bold text-red-600 mb-4">Nobody starting fresh.</p>
             <p className="text-slate-700 leading-relaxed mb-4">
               If you're building a new sales team, developing new outbound strategies, or just getting serious about sales engagement, do not choose Mixmax. The ROI ratio of what you're spending to what you're getting is terrible compared to what else is available.
@@ -3966,7 +3966,7 @@ const ClayReviewPage = () => {
       "bestRating": "5",
       "worstRating": "1"
     },
-    "datePublished": "2025-12-13",
+    "datePublished": "2026-01-02",
     "reviewBody": "Clay is not just a contact database - it's a whole AI research assistant doing extra qualification, sending you signals, and preparing personalization angles. Qualifying 500+ companies in under 10 minutes to figure out if they're a good fit is a massive time saver.",
     "publisher": {
       "@type": "Organization",
@@ -3977,7 +3977,7 @@ const ClayReviewPage = () => {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Clay Review 2025: AI-Powered Research Assistant for Sales Teams",
+    "headline": "Clay Review 2026: AI-Powered Research Assistant for Sales Teams",
     "description": "Honest Clay review after 8 months and 40k+ contacts processed. Signal building, AI qualification, data coverage analysis, and who should (and shouldn't) use it.",
     "image": "https://saleshousestack.com/og-image.png",
     "author": {
@@ -3993,8 +3993,8 @@ const ClayReviewPage = () => {
         "url": "https://saleshousestack.com/logo.png"
       }
     },
-    "datePublished": "2025-12-13",
-    "dateModified": "2025-12-13",
+    "datePublished": "2026-01-02",
+    "dateModified": "2026-01-02",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://saleshousestack.com/#/reviews/clay"
@@ -4004,7 +4004,7 @@ const ClayReviewPage = () => {
   return (
     <div className="min-h-screen bg-[#FEFEFE]">
       <Helmet>
-        <title>Clay Review 2025: AI-Powered Research Assistant for Sales Teams | Sales House</title>
+        <title>Clay Review 2026: AI-Powered Research Assistant for Sales Teams | Sales House</title>
         <meta name="description" content="Honest Clay review after 8 months and 40k+ contacts processed. Signal building, AI qualification, and who should use it vs Apollo or Lusha." />
         <meta name="keywords" content="Clay review, Clay.com review, sales intelligence, data enrichment, AI qualification, signal building, contact database" />
 
@@ -4026,7 +4026,7 @@ const ClayReviewPage = () => {
         <div className="mb-12">
           <div className="mb-6">
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2">Clay Review</h1>
-            <p className="text-slate-600">Last updated December 2025</p>
+            <p className="text-slate-600">Updated for 2026</p>
           </div>
 
           {/* Rating */}
@@ -4180,7 +4180,7 @@ const BestOutboundStackForFoundersPage = () => {
   return (
     <div className="min-h-screen bg-[#FEFEFE]">
       <Helmet>
-        <title>Best Outbound Stack for Founders 2025 - Complete Sales Setup Under $300/mo | Sales House</title>
+        <title>Best Outbound Stack for Founders 2026 - Complete Sales Setup Under $300/mo | Sales House</title>
         <meta name="description" content="The complete outbound sales stack for founders: Apollo, Reply.io, Mailforge, and Pipedrive. Under $250/month. Proven by 100+ founder-led companies." />
         <meta name="keywords" content="founder sales stack, outbound sales for founders, best sales tools for startups, Apollo Reply.io, sales automation founders, B2B lead generation" />
       </Helmet>
@@ -4412,7 +4412,7 @@ const ClayVsApolloPage = () => {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Clay vs Apollo 2025: Which B2B Data Tool Should You Actually Use?",
+    "headline": "Clay vs Apollo 2026: Which B2B Data Tool Should You Actually Use?",
     "description": "Honest Clay vs Apollo comparison after using both for 6+ years. When to use Clay's AI enrichment vs Apollo's 200M+ database.",
     "image": "https://saleshousestack.com/og-image.png",
     "author": {
@@ -4428,14 +4428,14 @@ const ClayVsApolloPage = () => {
         "url": "https://saleshousestack.com/logo.png"
       }
     },
-    "datePublished": "2025-12-18",
-    "dateModified": "2025-12-18"
+    "datePublished": "2026-01-02",
+    "dateModified": "2026-01-02"
   };
 
   return (
     <div className="min-h-screen bg-[#FEFEFE]">
       <Helmet>
-        <title>Clay vs Apollo 2025: Which B2B Data Tool Should You Actually Use? | Sales House</title>
+        <title>Clay vs Apollo 2026: Which B2B Data Tool Should You Actually Use? | Sales House</title>
         <meta name="description" content="Honest Clay vs Apollo comparison after using both for 6+ years. When to use Clay's AI enrichment vs Apollo's 200M+ database. Complete breakdown with pricing, use cases, and my verdict." />
         <meta name="keywords" content="Clay vs Apollo, Clay.com Apollo comparison, B2B data tools, sales intelligence, contact enrichment, lead generation tools, Clay review, Apollo review" />
         <script type="application/ld+json">
@@ -4462,7 +4462,7 @@ const ClayVsApolloPage = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
             Clay vs Apollo: Which B2B Data Tool Should You Actually Use?
           </h1>
-          <div className="text-lg text-slate-600 mb-4">2025 Edition</div>
+          <div className="text-lg text-slate-600 mb-4">2026 Edition</div>
         </div>
 
         {/* Verdict Box */}
@@ -4817,7 +4817,7 @@ const ReplyVsInstantlyPage = () => {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Reply.io vs Instantly: Which Cold Email Tool Actually Works? (2025)",
+    "headline": "Reply.io vs Instantly: Which Cold Email Tool Actually Works? (2026)",
     "description": "Honest Reply.io vs Instantly comparison. When to use multichannel complexity vs email-only simplicity. Complete breakdown with pricing and recommendations.",
     "image": "https://saleshousestack.com/og-image.png",
     "author": {
@@ -4833,14 +4833,14 @@ const ReplyVsInstantlyPage = () => {
         "url": "https://saleshousestack.com/logo.png"
       }
     },
-    "datePublished": "2025-12-18",
-    "dateModified": "2025-12-18"
+    "datePublished": "2026-01-02",
+    "dateModified": "2026-01-02"
   };
 
   return (
     <div className="min-h-screen bg-[#FEFEFE]">
       <Helmet>
-        <title>Reply.io vs Instantly 2025: Which Cold Email Tool Actually Works? | Sales House</title>
+        <title>Reply.io vs Instantly 2026: Which Cold Email Tool Actually Works? | Sales House</title>
         <meta name="description" content="Reply.io vs Instantly comparison after using both for 15+ clients. Multichannel complexity vs email-only simplicity. Pricing, features, and honest recommendations." />
         <meta name="keywords" content="Reply.io vs Instantly, Reply Instantly comparison, cold email tools, email outreach software, sales engagement platforms, Reply.io review, Instantly review" />
         <script type="application/ld+json">
@@ -4867,7 +4867,7 @@ const ReplyVsInstantlyPage = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
             Reply.io vs Instantly: Which Cold Email Tool Actually Works?
           </h1>
-          <div className="text-lg text-slate-600 mb-4">2025 Edition</div>
+          <div className="text-lg text-slate-600 mb-4">2026 Edition</div>
         </div>
 
         {/* Verdict Box */}
