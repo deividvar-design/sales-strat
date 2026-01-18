@@ -27,7 +27,7 @@ try {
     console.log('[REQUEST FAILED]:', request.url(), request.failure().errorText);
   });
 
-  const testUrl = 'http://localhost:8890/comparisons/clay-vs-apollo';
+  const testUrl = 'http://localhost:8890/';
   console.log(`Navigating to ${testUrl}...`);
   await page.goto(testUrl, {
     waitUntil: 'networkidle0',
