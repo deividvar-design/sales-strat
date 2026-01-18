@@ -5,7 +5,10 @@ import {
   Search,
   Filter,
   X,
-  ExternalLink
+  ExternalLink,
+  Star,
+  Mail,
+  Linkedin
 } from 'lucide-react';
 import { TOOLS } from '../../constants';
 import { TeamSize, ToolCategory } from '../../types';

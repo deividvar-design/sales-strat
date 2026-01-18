@@ -5,7 +5,10 @@ import {
   Check,
   X,
   ArrowRight,
-  ExternalLink
+  ExternalLink,
+  Linkedin,
+  Mail,
+  Star
 } from 'lucide-react';
 import Breadcrumb from '../../components/Breadcrumb';
 

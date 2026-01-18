@@ -20,7 +20,8 @@ import {
   ChevronUp,
   Heart,
   Download,
-  FileText
+  FileText,
+  Briefcase
 } from 'lucide-react';
 import { TOOLS } from '../../constants';
 import { ToolCard } from '../../components/ToolCard';
