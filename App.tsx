@@ -65,6 +65,7 @@ import Footer from './components/Footer';
 // --- Lazy-loaded page components ---
 const HomePage = lazy(() => import('./pages/home/HomePage'));
 const LibraryPage = lazy(() => import('./pages/library/LibraryPage'));
+const TestimonialsPage = lazy(() => import('./pages/testimonials/TestimonialsPage'));
 const CRMComparisonPage = lazy(() => import('./pages/comparisons/CRMComparisonPage'));
 const MixmaxReviewPage = lazy(() => import('./pages/reviews/MixmaxReviewPage'));
 const ClayVsApolloPage = lazy(() => import('./pages/comparisons/ClayVsApolloPage'));
@@ -2410,7 +2411,7 @@ const App = () => {
                     <div className="hidden md:flex items-center space-x-2">
                         <NavLink to="/" icon={LayoutDashboard} label="Home" />
                         <NavLink to="/library" icon={Library} label="Library" />
-                        <NavLink to="/strategies" icon={Layers} label="Playbook" />
+                        <NavLink to="/testimonials" icon={Heart} label="Testimonials" />
                         <NavLink to="/best-outbound-stack-for-founders" icon={Briefcase} label="For Founders" />
 
                         {/* Resources Dropdown */}
@@ -2450,10 +2451,14 @@ const App = () => {
                                 <div className="font-semibold">Comparisons</div>
                                 <div className="text-xs text-slate-500">Side-by-side tool comparisons</div>
                               </Link>
-                              <div className="px-4 py-2 text-sm text-slate-400">
-                                <div className="font-semibold">More coming soon!</div>
-                                <div className="text-xs">New resources on the way</div>
-                              </div>
+                              <Link
+                                to="/strategies"
+                                className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 transition-colors"
+                                onClick={() => setIsResourcesOpen(false)}
+                              >
+                                <div className="font-semibold">Playbook</div>
+                                <div className="text-xs text-slate-500">Free outbound sales playbook</div>
+                              </Link>
                             </div>
                           )}
                         </div>
@@ -2484,7 +2489,7 @@ const App = () => {
                 <div className="md:hidden bg-slate-100 border-t border-slate-300 px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-2xl">
                     <NavLink to="/" icon={LayoutDashboard} label="Home" onClick={() => setIsMobileMenuOpen(false)} />
                     <NavLink to="/library" icon={Library} label="Library" onClick={() => setIsMobileMenuOpen(false)} />
-                    <NavLink to="/strategies" icon={Layers} label="Playbook" onClick={() => setIsMobileMenuOpen(false)} />
+                    <NavLink to="/testimonials" icon={Heart} label="Testimonials" onClick={() => setIsMobileMenuOpen(false)} />
                     <NavLink to="/best-outbound-stack-for-founders" icon={Briefcase} label="For Founders" onClick={() => setIsMobileMenuOpen(false)} />
 
                     {/* Resources Section */}
@@ -2504,9 +2509,13 @@ const App = () => {
                       >
                         Comparisons
                       </Link>
-                      <div className="px-3 py-2 text-sm text-slate-400">
-                        More coming soon!
-                      </div>
+                      <Link
+                        to="/strategies"
+                        className="block px-3 py-2 text-sm text-slate-700 hover:bg-slate-300 rounded-lg"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Playbook
+                      </Link>
                     </div>
 
                     <a
@@ -2527,6 +2536,7 @@ const App = () => {
               <Routes>
                 <Route path="/" element={<HomePage openPlaybookForm={openPlaybookForm} />} />
                 <Route path="/library" element={<LibraryPage />} />
+                <Route path="/testimonials" element={<TestimonialsPage />} />
                 <Route path="/best-outbound-stack-for-founders" element={<BestOutboundStackForFoundersPage />} />
                 <Route path="/strategies" element={<StrategiesPage />} />
                 <Route path="/faq" element={<FAQPage />} />

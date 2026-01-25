@@ -76,9 +76,13 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03]"></div>
 
         <div className="max-w-5xl mx-auto relative z-10 text-center">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-[1.05] text-slate-900">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 leading-[1.05] text-slate-900">
                 Find the best sales tools for you
             </h1>
+
+            <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Unbiased reviews, comparisons, and consulting from someone who's implemented these tools. From solo founder to 20-person teams.
+            </p>
 
             {/* Testimonial Carousel */}
             <div className="mb-8 max-w-3xl mx-auto">
@@ -125,10 +129,6 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
                     ))}
                 </div>
             </div>
-
-            <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
-                Unbiased reviews, comparisons, and consulting from someone who's implemented these tools. From solo founder to 20-person teams.
-            </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
                 <Link to="/library" className="px-10 py-5 bg-indigo-600 hover:bg-indigo-600 text-white text-xl font-bold rounded-xl shadow-[0_0_30px_rgba(79,70,229,0.5)] transition-all transform hover:-translate-y-1 flex items-center gap-3 border border-indigo-500">
