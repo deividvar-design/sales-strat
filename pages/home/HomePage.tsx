@@ -33,6 +33,36 @@ interface HomePageProps {
 
 const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
   const [showFullManifesto, setShowFullManifesto] = useState(false);
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+
+  const testimonials = [
+    {
+      quote: "Promoted 3x during his tenure... a core asset to Whatagraph",
+      author: "Frank Sondors",
+      title: "CEO",
+      company: "Forge"
+    },
+    {
+      quote: "SDR to Client Partner in one year... incredibly good salesperson",
+      author: "Vismantas",
+      title: "VP of Sales",
+      company: "Nord Security"
+    },
+    {
+      quote: "My mentor for 3 years... strong foundations of SaaS sales process",
+      author: "Janis",
+      title: "Head of Sales",
+      company: "Aviation Recruitment"
+    }
+  ];
+
+  // Rotate testimonials every 5 seconds
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
 
   return (
   <div className="flex flex-col">
@@ -49,6 +79,52 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-[1.05] text-slate-900">
                 Reach the clients you need with the right outbound tools
             </h1>
+
+            {/* Testimonial Carousel */}
+            <div className="mb-8 max-w-3xl mx-auto">
+                <p className="text-sm font-semibold text-indigo-600 mb-4 uppercase tracking-wide">
+                    Trusted by sales leaders who've scaled from SDR to VP
+                </p>
+
+                <div className="relative h-24 overflow-hidden">
+                    {testimonials.map((testimonial, index) => (
+                        <div
+                            key={index}
+                            className={`absolute inset-0 transition-all duration-700 ${
+                                index === activeTestimonial
+                                    ? 'opacity-100 transform translate-y-0'
+                                    : 'opacity-0 transform -translate-y-4'
+                            }`}
+                        >
+                            <blockquote className="text-center">
+                                <p className="text-lg md:text-xl text-slate-700 italic mb-3">
+                                    "{testimonial.quote}"
+                                </p>
+                                <footer className="text-sm text-slate-600">
+                                    <span className="font-semibold text-slate-900">{testimonial.author}</span>
+                                    , {testimonial.title} @ {testimonial.company}
+                                </footer>
+                            </blockquote>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Carousel Dots */}
+                <div className="flex items-center justify-center gap-2 mt-4">
+                    {testimonials.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => setActiveTestimonial(index)}
+                            className={`w-2 h-2 rounded-full transition-all ${
+                                index === activeTestimonial
+                                    ? 'bg-indigo-600 w-6'
+                                    : 'bg-slate-300 hover:bg-slate-400'
+                            }`}
+                            aria-label={`View testimonial ${index + 1}`}
+                        />
+                    ))}
+                </div>
+            </div>
 
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
                 Unbiased reviews, comparisons, and consulting from someone who's implemented these tools. From solo founder to 20-person teams.
