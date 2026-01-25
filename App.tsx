@@ -66,6 +66,7 @@ import Footer from './components/Footer';
 const HomePage = lazy(() => import('./pages/home/HomePage'));
 const LibraryPage = lazy(() => import('./pages/library/LibraryPage'));
 const TestimonialsPage = lazy(() => import('./pages/testimonials/TestimonialsPage'));
+const ColdEmailGuidePage = lazy(() => import('./pages/resources/ColdEmailGuidePage'));
 const CRMComparisonPage = lazy(() => import('./pages/comparisons/CRMComparisonPage'));
 const MixmaxReviewPage = lazy(() => import('./pages/reviews/MixmaxReviewPage'));
 const ClayVsApolloPage = lazy(() => import('./pages/comparisons/ClayVsApolloPage'));
@@ -2452,6 +2453,14 @@ const App = () => {
                                 <div className="text-xs text-slate-500">Side-by-side tool comparisons</div>
                               </Link>
                               <Link
+                                to="/resources/cold-email-guide"
+                                className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 transition-colors"
+                                onClick={() => setIsResourcesOpen(false)}
+                              >
+                                <div className="font-semibold">Cold Email Guide</div>
+                                <div className="text-xs text-slate-500">Scale-tested copywriting templates</div>
+                              </Link>
+                              <Link
                                 to="/strategies"
                                 className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 transition-colors"
                                 onClick={() => setIsResourcesOpen(false)}
@@ -2510,6 +2519,13 @@ const App = () => {
                         Comparisons
                       </Link>
                       <Link
+                        to="/resources/cold-email-guide"
+                        className="block px-3 py-2 text-sm text-slate-700 hover:bg-slate-300 rounded-lg"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Cold Email Guide
+                      </Link>
+                      <Link
                         to="/strategies"
                         className="block px-3 py-2 text-sm text-slate-700 hover:bg-slate-300 rounded-lg"
                         onClick={() => setIsMobileMenuOpen(false)}
@@ -2539,6 +2555,7 @@ const App = () => {
                 <Route path="/testimonials" element={<TestimonialsPage />} />
                 <Route path="/best-outbound-stack-for-founders" element={<BestOutboundStackForFoundersPage />} />
                 <Route path="/strategies" element={<StrategiesPage />} />
+                <Route path="/resources/cold-email-guide" element={<ColdEmailGuidePage />} />
                 <Route path="/faq" element={<FAQPage />} />
                 <Route path="/privacy" element={<PrivacyPolicyPage />} />
                 <Route path="/terms" element={<TermsOfServicePage />} />
