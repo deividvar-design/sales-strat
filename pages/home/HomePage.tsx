@@ -45,13 +45,13 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
     {
       quote: "SDR to Client Partner in one year... incredibly good salesperson",
       author: "Vismantas",
-      title: "VP of Sales",
+      title: "Outbound Sales Lead",
       company: "Nord Security"
     },
     {
       quote: "My mentor for 3 years... strong foundations of SaaS sales process",
       author: "Janis",
-      title: "Head of Sales",
+      title: "Sr. Global Partnerships Manager",
       company: "Aviation Recruitment"
     }
   ];
