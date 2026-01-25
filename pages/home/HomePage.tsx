@@ -77,7 +77,7 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
 
         <div className="max-w-5xl mx-auto relative z-10 text-center">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-[1.05] text-slate-900">
-                Reach the clients you need with the right outbound tools
+                Find the best sales tools for you
             </h1>
 
             {/* Testimonial Carousel */}
