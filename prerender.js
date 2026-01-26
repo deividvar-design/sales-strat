@@ -12,6 +12,8 @@ const routes = [
   '/library',
   '/best-outbound-stack-for-founders',
   '/strategies',
+  '/testimonials',
+  '/resources/cold-email-guide',
   '/reviews',
   '/comparisons',
   '/faq',
