@@ -28,6 +28,7 @@ const routes = [
   '/comparisons/pipedrive-hubspot-salesforce',
   '/comparisons/reply-vs-instantly',
   '/comparisons/apollo-vs-zoominfo-vs-cognism-2026',
+  '/comparisons/instantly-vs-lemlist-vs-replyio',
 ];
 
 console.log('Starting pre-render process with full content...\n');

@@ -73,6 +73,7 @@ const MixmaxReviewPage = lazy(() => import('./pages/reviews/MixmaxReviewPage'));
 const ClayVsApolloPage = lazy(() => import('./pages/comparisons/ClayVsApolloPage'));
 const ReplyVsInstantlyPage = lazy(() => import('./pages/comparisons/ReplyVsInstantlyPage'));
 const ApolloVsZoomInfoVsCognism2026Page = lazy(() => import('./pages/comparisons/ApolloVsZoomInfoVsCognism2026Page'));
+const InstantlyVsLemlistVsReplyioPage = lazy(() => import('./pages/comparisons/InstantlyVsLemlistVsReplyioPage'));
 
 // Loading fallback component
 const PageLoadingFallback = () => (
@@ -1473,6 +1474,12 @@ const ComparisonsListPage = () => {
       name: 'Apollo vs ZoomInfo vs Cognism',
       category: 'B2B Data & Intelligence',
       excerpt: 'The practical breakdown: pricing reality, data quality (especially EMEA), GDPR posture, and who each tool is actually for.'
+    },
+    {
+      slug: 'instantly-vs-lemlist-vs-replyio',
+      name: 'Instantly vs Lemlist vs Reply.io',
+      category: 'Cold Email & Outreach',
+      excerpt: 'Email-first scale vs creative personalization vs true sales engagement. Pick the tool that matches your channel mix and workflow.'
     }
   ];
 
@@ -2593,6 +2600,7 @@ const App = () => {
                 <Route path="/comparisons/pipedrive-hubspot-salesforce" element={<CRMComparisonPage />} />
                 <Route path="/comparisons/reply-vs-instantly" element={<ReplyVsInstantlyPage />} />
                 <Route path="/comparisons/apollo-vs-zoominfo-vs-cognism-2026" element={<ApolloVsZoomInfoVsCognism2026Page />} />
+                <Route path="/comparisons/instantly-vs-lemlist-vs-replyio" element={<InstantlyVsLemlistVsReplyioPage />} />
               </Routes>
             </Suspense>
         </main>
