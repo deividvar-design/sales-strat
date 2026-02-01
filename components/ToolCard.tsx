@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Tool, ToolCategory } from '../types';
+import { trackAffiliateClick } from '../utils/analytics';
 import {
   ExternalLink,
   Database,
@@ -174,6 +175,12 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, showChannels = true })
           href={tool.website}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackAffiliateClick({
+            toolId: tool.id,
+            toolName: tool.name,
+            url: tool.website,
+            placement: 'tool_card_cta'
+          })}
           className={`flex-1 py-2.5 text-sm font-bold rounded-lg shadow-lg flex items-center justify-center gap-2 transition-all transform hover:-translate-y-0.5 ${
               isCoreStack
               ? 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-indigo-200'
