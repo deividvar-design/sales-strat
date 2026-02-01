@@ -70,6 +70,7 @@ const ColdEmailGuidePage = lazy(() => import('./pages/resources/ColdEmailGuidePa
 const BestColdEmailSoftwarePage = lazy(() => import('./pages/resources/BestColdEmailSoftwarePage'));
 const HowToPickAnICPWhenYouHaveZeroTractionPage = lazy(() => import('./pages/resources/HowToPickAnICPWhenYouHaveZeroTractionPage'));
 const ThirtyDayOutboundPlanFirst5CustomersPage = lazy(() => import('./pages/resources/ThirtyDayOutboundPlanFirst5CustomersPage'));
+const SolopreneurOutboundStackUnder100Mo2026Page = lazy(() => import('./pages/resources/SolopreneurOutboundStackUnder100Mo2026Page'));
 const CRMComparisonPage = lazy(() => import('./pages/comparisons/CRMComparisonPage'));
 const MixmaxReviewPage = lazy(() => import('./pages/reviews/MixmaxReviewPage'));
 const ClayVsApolloPage = lazy(() => import('./pages/comparisons/ClayVsApolloPage'));
@@ -2502,6 +2503,14 @@ const App = () => {
                                 <div className="text-xs text-slate-500">Get your first 5 customers</div>
                               </Link>
                               <Link
+                                to="/resources/solopreneur-outbound-stack-under-100-mo-2026"
+                                className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 transition-colors"
+                                onClick={() => setIsResourcesOpen(false)}
+                              >
+                                <div className="font-semibold">Solopreneur Outbound Stack</div>
+                                <div className="text-xs text-slate-500">Under $100/mo (2026)</div>
+                              </Link>
+                              <Link
                                 to="/strategies"
                                 className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 transition-colors"
                                 onClick={() => setIsResourcesOpen(false)}
@@ -2607,6 +2616,7 @@ const App = () => {
                 <Route path="/resources/best-cold-email-software" element={<BestColdEmailSoftwarePage />} />
                 <Route path="/resources/how-to-pick-an-icp-when-you-have-zero-traction" element={<HowToPickAnICPWhenYouHaveZeroTractionPage />} />
                 <Route path="/resources/30-day-outbound-plan-first-5-customers" element={<ThirtyDayOutboundPlanFirst5CustomersPage />} />
+                <Route path="/resources/solopreneur-outbound-stack-under-100-mo-2026" element={<SolopreneurOutboundStackUnder100Mo2026Page />} />
                 <Route path="/faq" element={<FAQPage />} />
                 <Route path="/privacy" element={<PrivacyPolicyPage />} />
                 <Route path="/terms" element={<TermsOfServicePage />} />
