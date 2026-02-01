@@ -71,6 +71,7 @@ const CRMComparisonPage = lazy(() => import('./pages/comparisons/CRMComparisonPa
 const MixmaxReviewPage = lazy(() => import('./pages/reviews/MixmaxReviewPage'));
 const ClayVsApolloPage = lazy(() => import('./pages/comparisons/ClayVsApolloPage'));
 const ReplyVsInstantlyPage = lazy(() => import('./pages/comparisons/ReplyVsInstantlyPage'));
+const ApolloVsZoomInfoVsCognism2026Page = lazy(() => import('./pages/comparisons/ApolloVsZoomInfoVsCognism2026Page'));
 
 // Loading fallback component
 const PageLoadingFallback = () => (
@@ -2568,6 +2569,7 @@ const App = () => {
                 <Route path="/comparisons/clay-vs-apollo" element={<ClayVsApolloPage />} />
                 <Route path="/comparisons/pipedrive-hubspot-salesforce" element={<CRMComparisonPage />} />
                 <Route path="/comparisons/reply-vs-instantly" element={<ReplyVsInstantlyPage />} />
+                <Route path="/comparisons/apollo-vs-zoominfo-vs-cognism-2026" element={<ApolloVsZoomInfoVsCognism2026Page />} />
               </Routes>
             </Suspense>
         </main>

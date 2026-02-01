@@ -26,6 +26,7 @@ const routes = [
   '/comparisons/clay-vs-apollo',
   '/comparisons/pipedrive-hubspot-salesforce',
   '/comparisons/reply-vs-instantly',
+  '/comparisons/apollo-vs-zoominfo-vs-cognism-2026',
 ];
 
 console.log('Starting pre-render process with full content...\n');
