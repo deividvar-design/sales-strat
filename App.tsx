@@ -67,6 +67,7 @@ const HomePage = lazy(() => import('./pages/home/HomePage'));
 const LibraryPage = lazy(() => import('./pages/library/LibraryPage'));
 const TestimonialsPage = lazy(() => import('./pages/testimonials/TestimonialsPage'));
 const ColdEmailGuidePage = lazy(() => import('./pages/resources/ColdEmailGuidePage'));
+const BestColdEmailSoftwarePage = lazy(() => import('./pages/resources/BestColdEmailSoftwarePage'));
 const CRMComparisonPage = lazy(() => import('./pages/comparisons/CRMComparisonPage'));
 const MixmaxReviewPage = lazy(() => import('./pages/reviews/MixmaxReviewPage'));
 const ClayVsApolloPage = lazy(() => import('./pages/comparisons/ClayVsApolloPage'));
@@ -2563,6 +2564,7 @@ const App = () => {
                 <Route path="/best-outbound-stack-for-founders" element={<BestOutboundStackForFoundersPage />} />
                 <Route path="/strategies" element={<StrategiesPage />} />
                 <Route path="/resources/cold-email-guide" element={<ColdEmailGuidePage />} />
+                <Route path="/resources/best-cold-email-software" element={<BestColdEmailSoftwarePage />} />
                 <Route path="/faq" element={<FAQPage />} />
                 <Route path="/privacy" element={<PrivacyPolicyPage />} />
                 <Route path="/terms" element={<TermsOfServicePage />} />

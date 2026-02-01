@@ -14,6 +14,7 @@ const routes = [
   '/strategies',
   '/testimonials',
   '/resources/cold-email-guide',
+  '/resources/best-cold-email-software',
   '/reviews',
   '/comparisons',
   '/faq',
