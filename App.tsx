@@ -1466,6 +1466,12 @@ const ComparisonsListPage = () => {
       name: 'Reply.io vs Instantly',
       category: 'Cold Email & Outreach',
       excerpt: 'Multichannel powerhouse vs email simplicity. Which cold email tool wins for your use case? Complete breakdown with pricing and real-world insights.'
+    },
+    {
+      slug: 'apollo-vs-zoominfo-vs-cognism-2026',
+      name: 'Apollo vs ZoomInfo vs Cognism',
+      category: 'B2B Data & Intelligence',
+      excerpt: 'The practical breakdown: pricing reality, data quality (especially EMEA), GDPR posture, and who each tool is actually for.'
     }
   ];
 
