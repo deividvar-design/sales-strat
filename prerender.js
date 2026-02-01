@@ -16,6 +16,7 @@ const routes = [
   '/resources/cold-email-guide',
   '/resources/best-cold-email-software',
   '/resources/how-to-pick-an-icp-when-you-have-zero-traction',
+  '/resources/30-day-outbound-plan-first-5-customers',
   '/reviews',
   '/comparisons',
   '/faq',
