@@ -29,6 +29,30 @@ interface ToolCardProps {
 export const ToolCard: React.FC<ToolCardProps> = ({ tool, showChannels = true }) => {
   const [isReviewModalOpen, setIsReviewModalOpen] = React.useState(false);
 
+  const getPrimaryCtaLabel = () => {
+    // Outcome-oriented CTAs to drive affiliate clicks.
+    if (tool.id === 'reply') return 'Start multichannel trial';
+    if (tool.id === 'instantly') return 'Start sending today';
+    if (tool.id === 'lemlist') return 'Launch a campaign';
+    if (tool.id === 'apollo') return 'Build a list fast';
+    if (tool.id === 'clay') return 'Try Clay on your ICP';
+
+    // Defaults by category.
+    if (tool.category === ToolCategory.SALES_ENGAGEMENT) return 'Start a sequence';
+    if (tool.category === ToolCategory.CONTACTS) return 'Find leads';
+
+    return 'Visit website';
+  };
+
+  const getCtaMicrocopy = () => {
+    if (tool.id === 'instantly') return 'Best for email-only scale';
+    if (tool.id === 'reply') return 'Best for email + LinkedIn workflows';
+    if (tool.id === 'lemlist') return 'Best for creative personalization';
+    if (tool.id === 'apollo') return 'Best value for list building';
+    if (tool.id === 'clay') return 'Best for enrichment and qualification';
+    return null;
+  };
+
   // Logo Mapping based on tool ID
   const getLogoPath = () => {
     const logoMap: Record<string, string> = {
@@ -187,7 +211,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, showChannels = true })
               : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-indigo-200'
           }`}
         >
-          {isCoreStack ? 'Try For Free' : 'Visit Website'} <ExternalLink className="w-3 h-3" />
+          {getPrimaryCtaLabel()} <ExternalLink className="w-3 h-3" />
         </a>
 
         {/* My Review Button */}
@@ -201,6 +225,12 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, showChannels = true })
           </button>
         )}
       </div>
+
+      {getCtaMicrocopy() && (
+        <div className="px-4 pb-4 -mt-2 text-center">
+          <div className="text-xs text-slate-600">{getCtaMicrocopy()}</div>
+        </div>
+      )}
 
       {/* Review Modal */}
       {isReviewModalOpen && tool.id === 'reply' && (
