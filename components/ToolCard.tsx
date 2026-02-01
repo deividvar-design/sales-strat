@@ -40,6 +40,9 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, showChannels = true })
     // Defaults by category.
     if (tool.category === ToolCategory.SALES_ENGAGEMENT) return 'Start a sequence';
     if (tool.category === ToolCategory.CONTACTS) return 'Find leads';
+    if (tool.category === ToolCategory.INFRASTRUCTURE) return 'Fix deliverability';
+    if (tool.category === ToolCategory.SCHEDULING) return 'Book more meetings';
+    if (tool.category === ToolCategory.CRM) return 'Set up your CRM';
 
     return 'Visit website';
   };
