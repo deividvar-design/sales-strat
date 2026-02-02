@@ -68,6 +68,7 @@ const LibraryPage = lazy(() => import('./pages/library/LibraryPage'));
 const TestimonialsPage = lazy(() => import('./pages/testimonials/TestimonialsPage'));
 const ColdEmailGuidePage = lazy(() => import('./pages/resources/ColdEmailGuidePage'));
 const BestColdEmailSoftwarePage = lazy(() => import('./pages/resources/BestColdEmailSoftwarePage'));
+const ResourcesListPage = lazy(() => import('./pages/resources/ResourcesListPage'));
 const HowToPickAnICPWhenYouHaveZeroTractionPage = lazy(() => import('./pages/resources/HowToPickAnICPWhenYouHaveZeroTractionPage'));
 const ThirtyDayOutboundPlanFirst5CustomersPage = lazy(() => import('./pages/resources/ThirtyDayOutboundPlanFirst5CustomersPage'));
 const SolopreneurOutboundStackUnder100Mo2026Page = lazy(() => import('./pages/resources/SolopreneurOutboundStackUnder100Mo2026Page'));
@@ -2455,6 +2456,14 @@ const App = () => {
                           {isResourcesOpen && (
                             <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-xl border border-slate-200 py-2 z-50">
                               <Link
+                                to="/resources"
+                                className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 transition-colors"
+                                onClick={() => setIsResourcesOpen(false)}
+                              >
+                                <div className="font-semibold">Resources</div>
+                                <div className="text-xs text-slate-500">Guides and playbooks</div>
+                              </Link>
+                              <Link
                                 to="/reviews"
                                 className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 transition-colors"
                                 onClick={() => setIsResourcesOpen(false)}
@@ -2612,6 +2621,7 @@ const App = () => {
                 <Route path="/testimonials" element={<TestimonialsPage />} />
                 <Route path="/best-outbound-stack-for-founders" element={<BestOutboundStackForFoundersPage />} />
                 <Route path="/strategies" element={<StrategiesPage />} />
+                <Route path="/resources" element={<ResourcesListPage />} />
                 <Route path="/resources/cold-email-guide" element={<ColdEmailGuidePage />} />
                 <Route path="/resources/best-cold-email-software" element={<BestColdEmailSoftwarePage />} />
                 <Route path="/resources/how-to-pick-an-icp-when-you-have-zero-traction" element={<HowToPickAnICPWhenYouHaveZeroTractionPage />} />

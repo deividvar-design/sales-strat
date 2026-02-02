@@ -20,6 +20,7 @@ const routes = [
   '/resources/solopreneur-outbound-stack-under-100-mo-2026',
   '/reviews',
   '/comparisons',
+  '/resources',
   '/faq',
   '/consulting',
   '/privacy',

@@ -64,6 +64,7 @@ const LibraryPage = () => {
              <Helmet>
                <title>Sales Tool Library - Compare 15+ Vetted Sales Engagement & CRM Tools | Sales House</title>
                <meta name="description" content="Compare 15+ vetted sales engagement, CRM, and contact tools. Pricing, pros, cons, and channels - find your perfect sales stack." />
+               <link rel="canonical" href="https://saleshousestack.com/library/" />
              </Helmet>
              <Breadcrumb />
              <div className="mb-8">

@@ -32,6 +32,8 @@ const InstantlyVsLemlistVsReplyioPage = () => {
     dateModified: "2026-02-01"
   };
 
+  const canonical = 'https://saleshousestack.com/comparisons/instantly-vs-lemlist-vs-replyio/';
+
   return (
     <div className="min-h-screen bg-[#FEFEFE]">
       <Helmet>
@@ -44,6 +46,7 @@ const InstantlyVsLemlistVsReplyioPage = () => {
           name="keywords"
           content="Instantly vs Lemlist vs Reply.io, Instantly vs Lemlist, Reply.io vs Lemlist, Reply.io vs Instantly, cold email tools, sales engagement platforms, outreach software"
         />
+        <link rel="canonical" href={canonical} />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
       </Helmet>
 
