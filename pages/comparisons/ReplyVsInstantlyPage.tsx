@@ -46,6 +46,7 @@ const ReplyVsInstantlyPage = () => {
         <script type="application/ld+json">
           {JSON.stringify(articleSchema)}
         </script>
+        <link rel="canonical" href="https://saleshousestack.com/comparisons/reply-vs-instantly/" />
       </Helmet>
 
       <div className="p-6 max-w-4xl mx-auto">
