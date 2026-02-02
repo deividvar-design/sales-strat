@@ -44,6 +44,7 @@ const ApolloVsZoomInfoVsCognism2026Page = () => {
         <meta name="description" content={metaDescription} />
         <meta name="keywords" content={metaKeywords} />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <link rel="canonical" href="https://saleshousestack.com/comparisons/apollo-vs-zoominfo-vs-cognism-2026/" />
       </Helmet>
 
       <div className="p-6 max-w-4xl mx-auto">
