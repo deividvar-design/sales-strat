@@ -15,6 +15,12 @@ const ResourcesListPage = () => {
   // Resource guides
   const guides = [
     {
+      title: 'Reply.io for Founders: Set Up Multichannel Outreach (Email + LinkedIn) in 2 Hours',
+      slug: 'replyio-setup-guide',
+      category: 'SETUP GUIDE',
+      excerpt: 'Complete Reply.io setup guide for founders. Build your first multichannel sequence in under 2 hours. Includes templates and common mistakes to avoid.'
+    },
+    {
       title: 'Cold Email Guide',
       slug: 'cold-email-guide',
       category: 'COLD EMAIL',
