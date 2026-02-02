@@ -15,6 +15,12 @@ const ResourcesListPage = () => {
   // Resource guides
   const guides = [
     {
+      title: 'How Vibecoders Sell: The "Build-First" Outbound Playbook',
+      slug: 'build-first-outbound-playbook',
+      category: 'FOR DEVELOPERS',
+      excerpt: 'Outbound for technical founders who would rather build than schmooze. Start with 2 tools, no phone calls required. Systems-first approach to customer acquisition.'
+    },
+    {
       title: 'Reply.io for Founders: Set Up Multichannel Outreach (Email + LinkedIn) in 2 Hours',
       slug: 'replyio-setup-guide',
       category: 'SETUP GUIDE',

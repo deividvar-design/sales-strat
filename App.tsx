@@ -73,6 +73,7 @@ const HowToPickAnICPWhenYouHaveZeroTractionPage = lazy(() => import('./pages/res
 const ThirtyDayOutboundPlanFirst5CustomersPage = lazy(() => import('./pages/resources/ThirtyDayOutboundPlanFirst5CustomersPage'));
 const SolopreneurOutboundStackUnder100Mo2026Page = lazy(() => import('./pages/resources/SolopreneurOutboundStackUnder100Mo2026Page'));
 const ReplyioSetupGuidePage = lazy(() => import('./pages/resources/ReplyioSetupGuidePage'));
+const BuildFirstOutboundPlaybookPage = lazy(() => import('./pages/resources/BuildFirstOutboundPlaybookPage'));
 const CRMComparisonPage = lazy(() => import('./pages/comparisons/CRMComparisonPage'));
 const MixmaxReviewPage = lazy(() => import('./pages/reviews/MixmaxReviewPage'));
 const ClayVsApolloPage = lazy(() => import('./pages/comparisons/ClayVsApolloPage'));
@@ -2629,6 +2630,7 @@ const App = () => {
                 <Route path="/resources/30-day-outbound-plan-first-5-customers" element={<ThirtyDayOutboundPlanFirst5CustomersPage />} />
                 <Route path="/resources/solopreneur-outbound-stack-under-100-mo-2026" element={<SolopreneurOutboundStackUnder100Mo2026Page />} />
                 <Route path="/resources/replyio-setup-guide" element={<ReplyioSetupGuidePage />} />
+                <Route path="/resources/build-first-outbound-playbook" element={<BuildFirstOutboundPlaybookPage />} />
                 <Route path="/faq" element={<FAQPage />} />
                 <Route path="/privacy" element={<PrivacyPolicyPage />} />
                 <Route path="/terms" element={<TermsOfServicePage />} />
