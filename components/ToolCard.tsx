@@ -217,8 +217,8 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool, showChannels = true })
           {getPrimaryCtaLabel()} <ExternalLink className="w-3 h-3" />
         </a>
 
-        {/* My Review Button */}
-        {(tool.id === 'reply' || tool.id === 'clay' || tool.id === 'mixmax' || tool.id === 'instantly' || tool.id === 'lemlist') && (
+        {/* My Review Button - Hidden */}
+        {false && (tool.id === 'reply' || tool.id === 'clay' || tool.id === 'mixmax' || tool.id === 'instantly' || tool.id === 'lemlist') && (
           <button
             onClick={() => setIsReviewModalOpen(true)}
             className="px-4 py-2.5 text-xs font-bold rounded-lg bg-indigo-50 border border-indigo-300 text-indigo-700 hover:bg-indigo-700/20 hover:border-indigo-400 transition-all flex items-center justify-center gap-1.5 whitespace-nowrap"
