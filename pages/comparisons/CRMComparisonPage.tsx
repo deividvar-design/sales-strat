@@ -238,7 +238,7 @@ const CRMComparisonPage = () => {
               <div className="bg-orange-50/50 border border-orange-200 rounded-xl p-6">
                 <h3 className="text-xl font-bold text-slate-900 mb-3">✅ You care about user experience and modern UI</h3>
                 <p className="text-slate-700 leading-relaxed">
-                  HubSpot simply looks and feels better than Salesforce. Clean interface, intuitive navigation, mobile apps that actually work. Your team will adopt it faster and complain less. This matters more than founders think - CRM adoption is a constant battle.
+                  HubSport simply looks and feels better than Salesforce. Clean interface, intuitive navigation, mobile apps that actually work. Your team will adopt it faster and complain less. This matters more than founders think - CRM adoption is a constant battle.
                 </p>
               </div>
             </div>
