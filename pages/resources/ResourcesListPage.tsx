@@ -15,6 +15,12 @@ const ResourcesListPage = () => {
   // Resource guides
   const guides = [
     {
+      title: 'The CRM Setup That Helps You Sell More and Improve Your SaaS Exit Valuation',
+      slug: 'crm-setup-guide',
+      category: 'CRM & EXIT',
+      excerpt: 'The exact 9 CRM fields that help you close more deals today and command a premium valuation at exit. Works in HubSpot, Pipedrive, and Salesforce.'
+    },
+    {
       title: 'How Vibecoders Sell: The "Build-First" Outbound Playbook',
       slug: 'build-first-outbound-playbook',
       category: 'FOR DEVELOPERS',

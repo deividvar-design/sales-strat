@@ -20,6 +20,7 @@ const routes = [
   '/resources/solopreneur-outbound-stack-under-100-mo-2026',
   '/resources/replyio-setup-guide',
   '/resources/build-first-outbound-playbook',
+  '/resources/crm-setup-guide',
   '/reviews',
   '/comparisons',
   '/resources',
