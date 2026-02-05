@@ -72,6 +72,7 @@ const ResourcesListPage = lazy(() => import('./pages/resources/ResourcesListPage
 const HowToPickAnICPWhenYouHaveZeroTractionPage = lazy(() => import('./pages/resources/HowToPickAnICPWhenYouHaveZeroTractionPage'));
 const ThirtyDayOutboundPlanFirst5CustomersPage = lazy(() => import('./pages/resources/ThirtyDayOutboundPlanFirst5CustomersPage'));
 const SolopreneurOutboundStackUnder100Mo2026Page = lazy(() => import('./pages/resources/SolopreneurOutboundStackUnder100Mo2026Page'));
+const SolopreneurOutboundDailyPipelineRoutinePage = lazy(() => import('./pages/resources/SolopreneurOutboundDailyPipelineRoutinePage'));
 const ReplyioSetupGuidePage = lazy(() => import('./pages/resources/ReplyioSetupGuidePage'));
 const BuildFirstOutboundPlaybookPage = lazy(() => import('./pages/resources/BuildFirstOutboundPlaybookPage'));
 const CRMSetupGuidePage = lazy(() => import('./pages/resources/CRMSetupGuidePage'));
@@ -2630,6 +2631,7 @@ const App = () => {
                 <Route path="/resources/how-to-pick-an-icp-when-you-have-zero-traction" element={<HowToPickAnICPWhenYouHaveZeroTractionPage />} />
                 <Route path="/resources/30-day-outbound-plan-first-5-customers" element={<ThirtyDayOutboundPlanFirst5CustomersPage />} />
                 <Route path="/resources/solopreneur-outbound-stack-under-100-mo-2026" element={<SolopreneurOutboundStackUnder100Mo2026Page />} />
+                <Route path="/pages/solopreneur-outbound-pipeline-routine" element={<SolopreneurOutboundDailyPipelineRoutinePage />} />
                 <Route path="/resources/replyio-setup-guide" element={<ReplyioSetupGuidePage />} />
                 <Route path="/resources/build-first-outbound-playbook" element={<BuildFirstOutboundPlaybookPage />} />
                 <Route path="/resources/crm-setup-guide" element={<CRMSetupGuidePage />} />

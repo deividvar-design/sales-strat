@@ -18,6 +18,7 @@ const routes = [
   '/resources/how-to-pick-an-icp-when-you-have-zero-traction',
   '/resources/30-day-outbound-plan-first-5-customers',
   '/resources/solopreneur-outbound-stack-under-100-mo-2026',
+  '/pages/solopreneur-outbound-pipeline-routine',
   '/resources/replyio-setup-guide',
   '/resources/build-first-outbound-playbook',
   '/resources/crm-setup-guide',
