@@ -83,6 +83,7 @@ const ClayVsApolloPage = lazy(() => import('./pages/comparisons/ClayVsApolloPage
 const ReplyVsInstantlyPage = lazy(() => import('./pages/comparisons/ReplyVsInstantlyPage'));
 const ApolloVsZoomInfoVsCognism2026Page = lazy(() => import('./pages/comparisons/ApolloVsZoomInfoVsCognism2026Page'));
 const InstantlyVsLemlistVsReplyioPage = lazy(() => import('./pages/comparisons/InstantlyVsLemlistVsReplyioPage'));
+const InstantlyForBeginnersPage = lazy(() => import('./pages/InstantlyForBeginnersPage'));
 
 // Loading fallback component
 const PageLoadingFallback = () => (
@@ -2651,6 +2652,7 @@ const App = () => {
                 <Route path="/comparisons/reply-vs-instantly" element={<ReplyVsInstantlyPage />} />
                 <Route path="/comparisons/apollo-vs-zoominfo-vs-cognism-2026" element={<ApolloVsZoomInfoVsCognism2026Page />} />
                 <Route path="/comparisons/instantly-vs-lemlist-vs-replyio" element={<InstantlyVsLemlistVsReplyioPage />} />
+                <Route path="/pages/instantly-for-beginners-safe-scaling" element={<InstantlyForBeginnersPage />} />
               </Routes>
             </Suspense>
         </main>
