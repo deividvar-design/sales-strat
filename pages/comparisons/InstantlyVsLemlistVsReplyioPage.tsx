@@ -270,6 +270,20 @@ const InstantlyVsLemlistVsReplyioPage = () => {
             Book a Call
           </a>
         </div>
+
+        {/* Stack Recommendation CTA */}
+        <div className="mb-16 bg-slate-900 rounded-2xl p-8 text-white mt-12">
+          <h2 className="text-2xl font-bold mb-3">Want the stack recommendation?</h2>
+          <p className="text-slate-200 mb-6">Browse our library and build a complete setup that books meetings.</p>
+          <div className="flex flex-wrap gap-3">
+            <a href="/library" className="px-5 py-3 bg-white text-slate-900 font-bold rounded-lg hover:bg-slate-100 transition-all">
+              View the Library
+            </a>
+            <a href="/comparisons" className="px-5 py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 transition-all">
+              More Comparisons
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
