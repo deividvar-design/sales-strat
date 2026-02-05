@@ -39,6 +39,7 @@ const routes = [
   '/comparisons/apollo-vs-zoominfo-vs-cognism-2026',
   '/comparisons/instantly-vs-lemlist-vs-replyio',
   '/pages/instantly-for-beginners-safe-scaling',
+  '/pages/founder-outbound-qualify-leads',
 ];
 
 console.log('Starting pre-render process with full content...\n');
