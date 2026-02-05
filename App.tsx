@@ -67,6 +67,7 @@ const HomePage = lazy(() => import('./pages/home/HomePage'));
 const LibraryPage = lazy(() => import('./pages/library/LibraryPage'));
 const TestimonialsPage = lazy(() => import('./pages/testimonials/TestimonialsPage'));
 const ColdEmailGuidePage = lazy(() => import('./pages/resources/ColdEmailGuidePage'));
+const ColdEmailDeliverabilityPage = lazy(() => import('./pages/resources/ColdEmailDeliverabilityPage'));
 const BestColdEmailSoftwarePage = lazy(() => import('./pages/resources/BestColdEmailSoftwarePage'));
 const ResourcesListPage = lazy(() => import('./pages/resources/ResourcesListPage'));
 const HowToPickAnICPWhenYouHaveZeroTractionPage = lazy(() => import('./pages/resources/HowToPickAnICPWhenYouHaveZeroTractionPage'));
@@ -2627,6 +2628,7 @@ const App = () => {
                 <Route path="/strategies" element={<StrategiesPage />} />
                 <Route path="/resources" element={<ResourcesListPage />} />
                 <Route path="/resources/cold-email-guide" element={<ColdEmailGuidePage />} />
+                <Route path="/pages/cold-email-deliverability-founders" element={<ColdEmailDeliverabilityPage />} />
                 <Route path="/resources/best-cold-email-software" element={<BestColdEmailSoftwarePage />} />
                 <Route path="/resources/how-to-pick-an-icp-when-you-have-zero-traction" element={<HowToPickAnICPWhenYouHaveZeroTractionPage />} />
                 <Route path="/resources/30-day-outbound-plan-first-5-customers" element={<ThirtyDayOutboundPlanFirst5CustomersPage />} />

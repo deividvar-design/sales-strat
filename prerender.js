@@ -14,6 +14,7 @@ const routes = [
   '/strategies',
   '/testimonials',
   '/resources/cold-email-guide',
+  '/pages/cold-email-deliverability-founders',
   '/resources/best-cold-email-software',
   '/resources/how-to-pick-an-icp-when-you-have-zero-traction',
   '/resources/30-day-outbound-plan-first-5-customers',
