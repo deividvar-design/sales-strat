@@ -97,7 +97,7 @@ const CRMSetupGuidePage = () => {
                 "url": "https://saleshousestack.com/saleshouse-logo.png"
               }
             },
-            "datePublished": "2026-02-03",
+            "datePublished": "2026-02-02",
             "dateModified": "2026-02-03",
             "mainEntityOfPage": "https://saleshousestack.com/resources/crm-setup-guide",
             "image": "https://saleshousestack.com/saleshouse-logo.png",

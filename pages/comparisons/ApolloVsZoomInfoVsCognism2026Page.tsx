@@ -34,7 +34,7 @@ const ApolloVsZoomInfoVsCognism2026Page = () => {
       }
     },
     datePublished: '2026-02-03',
-    dateModified: '2026-02-03'
+    dateModified: '2026-02-04'
   };
 
   return (
@@ -265,6 +265,13 @@ const ApolloVsZoomInfoVsCognism2026Page = () => {
               <p className="text-slate-700">For many EU/UK teams, Cognism is the easier fit because of its EMEA positioning and compliance posture. Always validate by country + persona before committing.</p>
             </div>
           </div>
+        </div>
+
+        {/* Affiliate Disclosure */}
+        <div className="mb-12 bg-slate-50 border border-slate-200 rounded-xl p-6">
+          <p className="text-sm text-slate-600">
+            <strong>Disclosure:</strong> If you click through to Apollo, ZoomInfo, or Cognism, I may earn a commission. But the recommendations above are based on operator experience - 6+ years in sales ops with real usage on all three tools.
+          </p>
         </div>
 
         {/* Final CTA */}

@@ -29,8 +29,8 @@ const InstantlyForBeginnersPage = () => {
         url: 'https://saleshousestack.com/logo.png'
       }
     },
-    datePublished: '2026-02-05',
-    dateModified: '2026-02-05'
+    datePublished: '2026-01-29',
+    dateModified: '2026-02-02'
   };
 
   return (
