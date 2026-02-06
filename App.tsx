@@ -2713,6 +2713,27 @@ const App = () => {
                         Best Cold Email Software
                       </Link>
                       <Link
+                        to="/resources/how-to-pick-an-icp-when-you-have-zero-traction"
+                        className="block px-3 py-2 text-sm text-slate-700 hover:bg-slate-300 rounded-lg"
+                        onClick={() => { setIsMobileMenuOpen(false); }}
+                      >
+                        How to Pick an ICP
+                      </Link>
+                      <Link
+                        to="/resources/30-day-outbound-plan-first-5-customers"
+                        className="block px-3 py-2 text-sm text-slate-700 hover:bg-slate-300 rounded-lg"
+                        onClick={() => { setIsMobileMenuOpen(false); }}
+                      >
+                        30-Day Outbound Plan
+                      </Link>
+                      <Link
+                        to="/resources/solopreneur-outbound-stack-under-100-mo-2026"
+                        className="block px-3 py-2 text-sm text-slate-700 hover:bg-slate-300 rounded-lg"
+                        onClick={() => { setIsMobileMenuOpen(false); }}
+                      >
+                        Solopreneur Stack
+                      </Link>
+                      <Link
                         to="/strategies"
                         className="block px-3 py-2 text-sm text-slate-700 hover:bg-slate-300 rounded-lg"
                         onClick={() => { setIsMobileMenuOpen(false); }}
