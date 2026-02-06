@@ -69,46 +69,6 @@ const HomePage = ({ openPlaybookForm }: { openPlaybookForm: () => void }) => {
     <Helmet>
       <title>Sales House - Tools, Reviews, Playbooks for Sales Pros</title>
       <meta name="description" content="Unbiased sales tool reviews and comparisons from 6+ years of hands-on experience. Get consulting to build the right stack for your stage." />
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Will this work for my industry?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Honestly, you'll only know when you test. Your goal is to provide a solution to businesses. I generally do not recommend fixing a problem for industries you do not understand."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What if I get marked as spam?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "With this setup you have 9 mailboxes, 3 domains, and you're using warm-ups to make sure the risk of being flagged as spam is less likely. The lists you generate from Clay.com or Apollo are fully GDPR and Data Privacy laws compliant. Even if you do get marked as spam - you're okay, it will happen. You'll also be told to F off multiple times as you are outreaching cold. It comes with the territory."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How long before I see results?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Under 2 weeks you'll have a very good understanding if there is a product market fit (demos booked or trial requests), and if the messaging is good (open rate, reply rate)."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I do this with a smaller budget?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "This setup costs under $500 a month. An SDR will cost you 30-50k annually. You do the math."
-              }
-            }
-          ]
-        })}
-      </script>
     </Helmet>
     {/* Hero Section - Simplified Single Column */}
     <section className="relative bg-[#FEFEFE] text-slate-900 pt-32 pb-24 px-6 overflow-hidden border-b border-slate-200">

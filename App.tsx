@@ -1357,11 +1357,118 @@ const ConsultingPage = () => {
 };
 
 const FAQPage = () => {
+    // FAQ Schema for SEO
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does the complete outbound sales stack cost per month?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Up to $500 per month. If you skip a CRM, you can squeeze in under $350. However, when building a sales funnel, you'll want to follow up, create reminders, and track potential deals. If you're thinking long-term, don't skip the CRM. Most sales aren't accomplished through the first outreach - you'll be following up with the same contacts multiple times throughout a year until you land them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to set up the full sales stack from scratch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With my experience, I could get it up and running in under 5-6 hours. For most people who haven't worked with these platforms, I'd say a safe bet is under 2 working days. Take it easy, don't rush things, and do it properly so you won't have to redo everything."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need technical skills to set up these tools?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, all the tools are fairly easy to use. It's pretty much like setting up your laptop or phone for the first time. It's really not rocket science."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I start with just a few tools and add more later?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, I recommend starting with Reply.io + Clay OR Apollo. This gives you a tool to outreach with plus contacts to work with. You'll need to buy a domain for outbound, but you'll be limited by the volume of emails you can send initially."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many demos per month can I realistically expect to book?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "I won't make empty promises - this really depends on market, messaging, and targeting. It can be as low as 5, it can be as high as hundreds a month. From my experience in a market where you have some competition and you add 40-50 new contacts monthly, 15 to 20 demos is a healthy target."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long before I see results from outbound?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You'll see open rates the same day, reply rates within a few days. Realistically, within the first week, if you haven't gotten answers and your open rate is lower than 40%, work on the messaging - you probably have issues there."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's a good reply rate for cold emails?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "3-5% is a good benchmark for cold email reply rates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's included in your fractional sales leadership?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Audit, review, insights, recommendations, my hands-on work, and strategies. Every consultation I do is very case-by-case. We might be building just an outbound system, or in other cases, I might be helping you improve conversion rates, win rates, or recycle previous contacts. No company is identical, and I don't do cookie-cutter strategies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you set up the tools for me or just advise?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Either or both. I can consult, I can set everything up for you, or we can work together on implementation. It's flexible based on your needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I hire an SDR or build this myself?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "I would always recommend starting yourself first. Calculate how much an SDR costs locally. A good rule of thumb is if an SDR costs $2,000/month, they need to bring enough opportunities to generate $6,000 of revenue monthly - essentially a 3:1 ratio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the #1 mistake founders make with outbound sales?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Writing emails that read like a marketing campaign. Your goal is to message like a friend and say 'Hey, I see you're having issues with this, I have a solution, worth a chat?' Less is more."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a big email list to get started?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's subjective and depends on what verticals you're targeting. You might not have the privilege of a lot of contacts, so you need to be a bit more reserved on the scale of outreach and focus more on quality and follow-ups. But generally, we're speaking about thousands of contacts you can get from Clay, Apollo, or Lusha, so practically this isn't an area of concern."
+          }
+        }
+      ]
+    };
+
     return (
         <div className="max-w-4xl mx-auto px-6 py-16">
             <Helmet>
               <title>FAQ - Cold Email & Sales Stack Questions Answered | Sales House</title>
               <meta name="description" content="Answers to cold email, tool selection, and outbound strategy questions. Learn how to build your sales stack for under $500/mo." />
+              <script type="application/ld+json">
+                {JSON.stringify(faqSchema)}
+              </script>
             </Helmet>
             <Breadcrumb />
             {/* Header */}
