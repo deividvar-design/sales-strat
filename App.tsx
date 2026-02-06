@@ -2678,37 +2678,44 @@ const App = () => {
                     <div className="border-t border-slate-300 pt-2 mt-2">
                       <div className="px-3 py-2 text-xs font-bold text-slate-500 uppercase tracking-wider">Resources</div>
                       <Link
+                        to="/resources"
+                        className="block px-3 py-2 text-sm font-semibold text-slate-900 hover:bg-slate-300 rounded-lg"
+                        onClick={() => { setIsMobileMenuOpen(false); }}
+                      >
+                        All Resources
+                      </Link>
+                      <Link
                         to="/reviews"
                         className="block px-3 py-2 text-sm text-slate-700 hover:bg-slate-300 rounded-lg"
-                        onClick={() => setIsMobileMenuOpen(false)}
+                        onClick={() => { setIsMobileMenuOpen(false); }}
                       >
                         Reviews
                       </Link>
                       <Link
                         to="/comparisons"
                         className="block px-3 py-2 text-sm text-slate-700 hover:bg-slate-300 rounded-lg"
-                        onClick={() => setIsMobileMenuOpen(false)}
+                        onClick={() => { setIsMobileMenuOpen(false); }}
                       >
                         Comparisons
                       </Link>
                       <Link
                         to="/resources/cold-email-guide"
                         className="block px-3 py-2 text-sm text-slate-700 hover:bg-slate-300 rounded-lg"
-                        onClick={() => setIsMobileMenuOpen(false)}
+                        onClick={() => { setIsMobileMenuOpen(false); }}
                       >
                         Cold Email Guide
                       </Link>
                       <Link
                         to="/resources/best-cold-email-software"
                         className="block px-3 py-2 text-sm text-slate-700 hover:bg-slate-300 rounded-lg"
-                        onClick={() => setIsMobileMenuOpen(false)}
+                        onClick={() => { setIsMobileMenuOpen(false); }}
                       >
                         Best Cold Email Software
                       </Link>
                       <Link
                         to="/strategies"
                         className="block px-3 py-2 text-sm text-slate-700 hover:bg-slate-300 rounded-lg"
-                        onClick={() => setIsMobileMenuOpen(false)}
+                        onClick={() => { setIsMobileMenuOpen(false); }}
                       >
                         Playbook
                       </Link>
