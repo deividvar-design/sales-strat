@@ -66,7 +66,7 @@ const SolopreneurOutboundDailyPipelineRoutinePage = () => {
             Solopreneur Outbound: The Daily 45-Minute Pipeline Routine
           </h1>
           <p className="text-lg text-slate-600 max-w-3xl">
-            Outbound done right takes less time than you think. Here's the exact 45-minute daily routine I use to maintain a healthy pipeline as a solopreneur—no chaos, no overwhelm.
+            Outbound done right takes less time than you think. Here's the exact 45-minute daily routine I use to maintain a healthy pipeline as a solopreneur - no chaos, no overwhelm.
           </p>
         </div>
 
@@ -138,7 +138,7 @@ const SolopreneurOutboundDailyPipelineRoutinePage = () => {
                       <li>Aim for 1 minute per email once you hit flow</li>
                       <li>Send all 10-15 before you second-guess yourself</li>
                     </ul>
-                    <p className="mt-3 text-sm italic text-slate-600">Pro tip: Templating is your friend. Use the 80/20 rule—same template for 80% of prospects, 20% real personalization.</p>
+                    <p className="mt-3 text-sm italic text-slate-600">Pro tip: Templating is your friend. Use the 80/20 rule - same template for 80% of prospects, 20% real personalization.</p>
                   </div>
                 </div>
               </div>
@@ -159,7 +159,7 @@ const SolopreneurOutboundDailyPipelineRoutinePage = () => {
                     <ul className="list-disc list-inside space-y-2 text-slate-700">
                       <li>Check your CRM for leads from 2-3 days ago with no replies</li>
                       <li>Send 2-3 short follow-ups (no pressure, just a reminder)</li>
-                      <li>Flag any replies from the past week—move them to next steps immediately</li>
+                      <li>Flag any replies from the past week - move them to next steps immediately</li>
                       <li>Log what you sent and basic metrics (# sent, # opens if tracking, # replies)</li>
                     </ul>
                     <p className="mt-3 text-sm italic text-slate-600">Keep it lightweight. You're not building a sales operations empire; you're staying organized.</p>
