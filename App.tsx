@@ -83,8 +83,8 @@ const ClayVsApolloPage = lazy(() => import('./pages/comparisons/ClayVsApolloPage
 const ReplyVsInstantlyPage = lazy(() => import('./pages/comparisons/ReplyVsInstantlyPage'));
 const ApolloVsZoomInfoVsCognism2026Page = lazy(() => import('./pages/comparisons/ApolloVsZoomInfoVsCognism2026Page'));
 const InstantlyVsLemlistVsReplyioPage = lazy(() => import('./pages/comparisons/InstantlyVsLemlistVsReplyioPage'));
-const InstantlyForBeginnersPage = lazy(() => import('./pages/InstantlyForBeginnersPage'));
-const FounderOutboundQualifyLeadsPage = lazy(() => import('./pages/FounderOutboundQualifyLeadsPage'));
+const InstantlyForBeginnersPage = lazy(() => import('./pages/resources/InstantlyForBeginnersPage'));
+const FounderOutboundQualifyLeadsPage = lazy(() => import('./pages/resources/FounderOutboundQualifyLeadsPage'));
 
 // Loading fallback component
 const PageLoadingFallback = () => (
@@ -2765,12 +2765,12 @@ const App = () => {
                 <Route path="/strategies" element={<StrategiesPage />} />
                 <Route path="/resources" element={<ResourcesListPage />} />
                 <Route path="/resources/cold-email-guide" element={<ColdEmailGuidePage />} />
-                <Route path="/pages/cold-email-deliverability-founders" element={<ColdEmailDeliverabilityPage />} />
+                <Route path="/resources/cold-email-deliverability-founders" element={<ColdEmailDeliverabilityPage />} />
                 <Route path="/resources/best-cold-email-software" element={<BestColdEmailSoftwarePage />} />
                 <Route path="/resources/how-to-pick-an-icp-when-you-have-zero-traction" element={<HowToPickAnICPWhenYouHaveZeroTractionPage />} />
                 <Route path="/resources/30-day-outbound-plan-first-5-customers" element={<ThirtyDayOutboundPlanFirst5CustomersPage />} />
                 <Route path="/resources/solopreneur-outbound-stack-under-100-mo-2026" element={<SolopreneurOutboundStackUnder100Mo2026Page />} />
-                <Route path="/pages/solopreneur-outbound-pipeline-routine" element={<SolopreneurOutboundDailyPipelineRoutinePage />} />
+                <Route path="/resources/solopreneur-outbound-pipeline-routine" element={<SolopreneurOutboundDailyPipelineRoutinePage />} />
                 <Route path="/resources/replyio-setup-guide" element={<ReplyioSetupGuidePage />} />
                 <Route path="/resources/build-first-outbound-playbook" element={<BuildFirstOutboundPlaybookPage />} />
                 <Route path="/resources/crm-setup-guide" element={<CRMSetupGuidePage />} />
@@ -2788,8 +2788,8 @@ const App = () => {
                 <Route path="/comparisons/reply-vs-instantly" element={<ReplyVsInstantlyPage />} />
                 <Route path="/comparisons/apollo-vs-zoominfo-vs-cognism-2026" element={<ApolloVsZoomInfoVsCognism2026Page />} />
                 <Route path="/comparisons/instantly-vs-lemlist-vs-replyio" element={<InstantlyVsLemlistVsReplyioPage />} />
-                <Route path="/pages/instantly-for-beginners-safe-scaling" element={<InstantlyForBeginnersPage />} />
-                <Route path="/pages/founder-outbound-qualify-leads" element={<FounderOutboundQualifyLeadsPage />} />
+                <Route path="/resources/instantly-for-beginners-safe-scaling" element={<InstantlyForBeginnersPage />} />
+                <Route path="/resources/founder-outbound-qualify-leads" element={<FounderOutboundQualifyLeadsPage />} />
               </Routes>
             </Suspense>
         </main>

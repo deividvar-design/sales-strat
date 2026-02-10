@@ -14,12 +14,12 @@ const routes = [
   '/strategies',
   '/testimonials',
   '/resources/cold-email-guide',
-  '/pages/cold-email-deliverability-founders',
+  '/resources/cold-email-deliverability-founders',
   '/resources/best-cold-email-software',
   '/resources/how-to-pick-an-icp-when-you-have-zero-traction',
   '/resources/30-day-outbound-plan-first-5-customers',
   '/resources/solopreneur-outbound-stack-under-100-mo-2026',
-  '/pages/solopreneur-outbound-pipeline-routine',
+  '/resources/solopreneur-outbound-pipeline-routine',
   '/resources/replyio-setup-guide',
   '/resources/build-first-outbound-playbook',
   '/resources/crm-setup-guide',
@@ -38,8 +38,8 @@ const routes = [
   '/comparisons/reply-vs-instantly',
   '/comparisons/apollo-vs-zoominfo-vs-cognism-2026',
   '/comparisons/instantly-vs-lemlist-vs-replyio',
-  '/pages/instantly-for-beginners-safe-scaling',
-  '/pages/founder-outbound-qualify-leads',
+  '/resources/instantly-for-beginners-safe-scaling',
+  '/resources/founder-outbound-qualify-leads',
 ];
 
 console.log('Starting pre-render process with full content...\n');

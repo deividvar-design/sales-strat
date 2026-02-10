@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { AlertCircle, TrendingUp, Target, Clock, CheckCircle, BarChart3, Zap } from 'lucide-react';
-import Breadcrumb from '../components/Breadcrumb';
+import Breadcrumb from '../../components/Breadcrumb';
 
 const InstantlyForBeginnersPage = () => {
   const canonical = 'https://saleshousestack.com/pages/instantly-for-beginners-safe-scaling/';

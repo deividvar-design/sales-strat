@@ -61,6 +61,30 @@ const ResourcesListPage = () => {
       slug: 'solopreneur-outbound-stack-under-100-mo-2026',
       category: 'STACK',
       excerpt: 'A minimal budget outbound stack and what to buy first to get meetings.'
+    },
+    {
+      title: 'Solopreneur Outbound: The Daily 45-Minute Pipeline Routine',
+      slug: 'solopreneur-outbound-pipeline-routine',
+      category: 'ROUTINE',
+      excerpt: 'The exact 45-minute daily routine to maintain a healthy pipeline as a solopreneur—no chaos, no overwhelm.'
+    },
+    {
+      title: 'Cold Email Deliverability for Founders: Simple Rules That Prevent Spam',
+      slug: 'cold-email-deliverability-founders',
+      category: 'DELIVERABILITY',
+      excerpt: 'Sender reputation, warm-up, and infrastructure rules to keep your cold emails out of spam.'
+    },
+    {
+      title: 'Instantly for Beginners: Safe Scaling From 20 to 200 Emails/Day',
+      slug: 'instantly-for-beginners-safe-scaling',
+      category: 'TOOLS',
+      excerpt: 'Step-by-step guide to safely scale Instantly without blowing your sender reputation.'
+    },
+    {
+      title: 'Founder Outbound: How to Qualify Leads Without a Sales Team',
+      slug: 'founder-outbound-qualify-leads',
+      category: 'QUALIFICATION',
+      excerpt: 'A 3-stage qualification model for founders doing their own prospecting and discovery.'
     }
   ];
 

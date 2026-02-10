@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-import Breadcrumb from '../components/Breadcrumb';
+import Breadcrumb from '../../components/Breadcrumb';
 
 const ColdEmailDeliverabilityPage = () => {
   const canonical = 'https://saleshousestack.com/pages/cold-email-deliverability-founders/';
