@@ -89,7 +89,7 @@ const ColdEmailDeliverabilityPage = () => {
           </div>
 
           <div className="mt-4 pt-4 border-t border-blue-200 text-sm text-slate-600">
-            Everything else-SPF, DKIM, DMARC, SMTP setup-is table stakes. You need them all. But these three principles separate success from failure.
+            Everything else—SPF, DKIM, DMARC, SMTP setup—is table stakes. You need them all. But these three principles separate success from failure.
           </div>
         </div>
 
@@ -206,7 +206,7 @@ const ColdEmailDeliverabilityPage = () => {
 
             <div className="bg-red-50 border border-red-200 rounded-xl p-6">
               <h3 className="text-lg font-bold text-red-900 mb-2">❌ Not monitoring your metrics</h3>
-              <p className="text-red-800">Most founders discover they're blocklisted weeks later. Check metrics weekly-it takes 10 minutes and saves weeks of recovery.</p>
+              <p className="text-red-800">Most founders discover they're blocklisted weeks later. Check metrics weekly—it takes 10 minutes and saves weeks of recovery.</p>
             </div>
 
             <div className="bg-red-50 border border-red-200 rounded-xl p-6">
@@ -278,7 +278,7 @@ const ColdEmailDeliverabilityPage = () => {
 
             <div className="bg-white border border-slate-200 rounded-xl p-6">
               <h3 className="text-lg font-bold text-slate-900 mb-2">I got blocklisted. How long until I'm removed?</h3>
-              <p className="text-slate-700">Some blocklists auto-remove after 30 days of no complaints. Others require manual petition. Most responsive operators will review your case within 48 hours if you ask. Submit a formal delisting request immediately-don't wait.</p>
+              <p className="text-slate-700">Some blocklists auto-remove after 30 days of no complaints. Others require manual petition. Most responsive operators will review your case within 48 hours if you ask. Submit a formal delisting request immediately—don't wait.</p>
             </div>
 
             <div className="bg-white border border-slate-200 rounded-xl p-6">
@@ -301,7 +301,7 @@ const ColdEmailDeliverabilityPage = () => {
         {/* Final CTA */}
         <div className="mb-16 bg-slate-900 rounded-2xl p-8 text-white">
           <h2 className="text-2xl font-bold mb-3">This is step one.</h2>
-          <p className="text-slate-200 mb-6">Deliverability is the foundation. Once that's dialed, everything else-copy, timing, targeting-gets easier. But skip this, and nothing else matters.</p>
+          <p className="text-slate-200 mb-6">Deliverability is the foundation. Once that's dialed, everything else—copy, timing, targeting—gets easier. But skip this, and nothing else matters.</p>
           <div className="flex flex-wrap gap-3">
             <a href="/library" className="px-5 py-3 bg-white text-slate-900 font-bold rounded-lg hover:bg-slate-100 transition-all">
               View the Library

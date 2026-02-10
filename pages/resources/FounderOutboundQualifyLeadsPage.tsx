@@ -204,13 +204,13 @@ const FounderOutboundQualifyLeadsPage = () => {
                   <p className="text-slate-700 text-sm font-semibold mb-3">What kills a prospect at Gate 2:</p>
                   <ul className="space-y-2 text-slate-600 text-sm mb-4">
                     <li className="flex items-start gap-2">
-                      <span className="text-red-600">✗</span> "I don't really have that problem" - They're being nice. Don't pursue.
+                      <span className="text-red-600">✗</span> "I don't really have that problem" — They're being nice. Don't pursue.
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-red-600">✗</span> "Maybe in a few quarters" - Indefinite timeline. Not now.
+                      <span className="text-red-600">✗</span> "Maybe in a few quarters" — Indefinite timeline. Not now.
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-red-600">✗</span> No budget discussion, and you can't determine ability to pay - Hard no.
+                      <span className="text-red-600">✗</span> No budget discussion, and you can't determine ability to pay — Hard no.
                     </li>
                   </ul>
 
@@ -617,7 +617,7 @@ const FounderOutboundQualifyLeadsPage = () => {
               <p className="font-bold text-slate-900 mb-3">Gate 2 rejection (no urgency):</p>
               <div className="bg-white border border-slate-300 rounded-lg p-4 font-mono text-sm mb-3">
                 <p className="text-slate-700 leading-relaxed">
-                  "It sounds like you're exploring options for down the road. I'm specifically working with people who need to solve [problem] in the next 60 days. Let's stay connected-I'll reach out in Q2 when you're ready."
+                  "It sounds like you're exploring options for down the road. I'm specifically working with people who need to solve [problem] in the next 60 days. Let's stay connected—I'll reach out in Q2 when you're ready."
                 </p>
               </div>
               <p className="text-sm text-slate-600">This buys you permission to follow up later without being pushy.</p>
@@ -777,7 +777,7 @@ const FounderOutboundQualifyLeadsPage = () => {
               <p className="text-sm font-bold text-indigo-700 uppercase tracking-wider mb-2">About the author</p>
               <p className="text-slate-900 font-bold text-lg mb-2">David Varan</p>
               <p className="text-slate-700 leading-relaxed mb-4">
-                I've built and scaled outbound sales processes for B2B SaaS companies from $0-5M ARR. I've personally qualified thousands of leads-and rejected thousands more. This framework is the result of 6+ years of doing this work, not theorizing about it.
+                I've built and scaled outbound sales processes for B2B SaaS companies from $0-5M ARR. I've personally qualified thousands of leads—and rejected thousands more. This framework is the result of 6+ years of doing this work, not theorizing about it.
               </p>
               <p className="text-slate-700 mb-4">
                 I share this because the worst part of early-stage founder sales is spinning your wheels on bad leads. I want you to stop doing that.
