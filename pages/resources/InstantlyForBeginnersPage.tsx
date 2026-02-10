@@ -195,7 +195,7 @@ const InstantlyForBeginnersPage = () => {
                       <li>Heavy emphasis on timezone-aware sending</li>
                       <li>Final checkpoint: Open rate 18%+? Click rate 2-3%? Reply rate 2-5%? You're good.</li>
                     </ul>
-                    <p className="text-sm italic text-slate-600 mt-4">If all metrics stay green, you're at sustainable 200/day. Congratulations—most teams don't get here safely.</p>
+                    <p className="text-sm italic text-slate-600 mt-4">If all metrics stay green, you're at sustainable 200/day. Congratulations-most teams don't get here safely.</p>
                   </div>
                 </div>
               </div>
@@ -271,7 +271,7 @@ const InstantlyForBeginnersPage = () => {
               <h3 className="font-bold text-red-900 mb-2 flex items-center gap-2">
                 <AlertCircle className="w-5 h-5" /> Too Much Volume, Too Fast
               </h3>
-              <p className="text-sm text-slate-700">Sending 500 emails day 1 kills reputation instantly. One founder did this—domain blocked in 4 hours.</p>
+              <p className="text-sm text-slate-700">Sending 500 emails day 1 kills reputation instantly. One founder did this-domain blocked in 4 hours.</p>
               <p className="text-sm text-slate-600 mt-2"><strong>Fix:</strong> Follow the weekly ramp. 20→50→100→150→200.</p>
             </div>
 
@@ -366,13 +366,13 @@ const InstantlyForBeginnersPage = () => {
 
             <div className="border-l-4 border-indigo-600 bg-white rounded-lg p-6">
               <h3 className="font-bold text-slate-900 mb-3">Email #2: Follow-up (Day 4)</h3>
-              <p className="text-sm text-slate-600 mb-4">Different angle—acknowledge lack of reply, offer lower-barrier value</p>
+              <p className="text-sm text-slate-600 mb-4">Different angle-acknowledge lack of reply, offer lower-barrier value</p>
               <div className="bg-slate-50 p-4 rounded font-mono text-sm space-y-2">
                 <p><strong>Subject:</strong> One more thing on the [topic] side</p>
                 <p className="mt-3"><strong>Body:</strong></p>
                 <p>Hey [FirstName],</p>
                 <p>I get it, your inbox is chaos. Quick question: are you all handling [specific problem] right now, or already solved it?</p>
-                <p>No pressure either way—just curious.</p>
+                <p>No pressure either way-just curious.</p>
                 <p>[Your name]</p>
               </div>
               <p className="text-xs text-slate-600 mt-4">Length: 50-100 words. Lower barrier to reply.</p>
@@ -386,7 +386,7 @@ const InstantlyForBeginnersPage = () => {
                 <p className="mt-3"><strong>Body:</strong></p>
                 <p>Hi [FirstName],</p>
                 <p>Last attempt from me. We're running [limited program] through [date] for [benefit].</p>
-                <p>Might be relevant, might not. If it is, here's my calendar. If not, no worries—I'll stop emailing.</p>
+                <p>Might be relevant, might not. If it is, here's my calendar. If not, no worries-I'll stop emailing.</p>
                 <p>[Your name]</p>
               </div>
               <p className="text-xs text-slate-600 mt-4">Length: 50-100 words. Clear exit clause.</p>
@@ -475,7 +475,7 @@ const InstantlyForBeginnersPage = () => {
             </div>
 
             <p className="text-sm text-slate-700 italic">
-              It's not magic—it's math. 200 emails/day at 2-3% CTR and 5% of clicks setting meetings = 20-30 meetings/month compounding into deals.
+              It's not magic-it's math. 200 emails/day at 2-3% CTR and 5% of clicks setting meetings = 20-30 meetings/month compounding into deals.
             </p>
           </div>
         </div>
