@@ -90,12 +90,14 @@ try {
     console.log(`  Rendering ${route}...`);
 
     await page.goto(url, {
-      waitUntil: 'networkidle0', // Wait for all network requests including lazy chunks
-      timeout: 45000 // Increased timeout for lazy loading
+      waitUntil: 'networkidle2', // Less strict than networkidle0
+      timeout: 60000 // Increased timeout
     });
 
     // Wait for React root to render
-    await page.waitForSelector('#root > div', { timeout: 10000 });
+    await page.waitForSelector('#root > div', { timeout: 15000 }).catch(() => {
+      console.log(`    └─ Warning: #root > div not found, continuing...`);
+    });
 
     // CRITICAL: Wait for lazy-loaded chunk to finish loading
     // Check if loading spinner is present
@@ -104,14 +106,19 @@ try {
       console.log(`    └─ Waiting for lazy chunk to load...`);
       await page.waitForFunction(
         () => !document.querySelector('.animate-spin'),
-        { timeout: 10000 }
-      );
+        { timeout: 15000 }
+      ).catch(() => {
+        console.log(`    └─ Warning: Spinner timeout, continuing...`);
+      });
     }
 
-    // Wait for main page content to ensure lazy component has rendered
+    // Wait for main page content to ensure lazy component has rendered (optional)
     const hasMainContent = await page.waitForSelector('main h1, main h2, .max-w-7xl', {
-      timeout: 10000
-    }).catch(() => null);
+      timeout: 15000
+    }).catch(() => {
+      console.log(`    └─ Warning: Main content selector not found, continuing...`);
+      return null;
+    });
 
     if (!hasMainContent) {
       console.warn(`    └─ Warning: Main content selector not found for ${route}`);
