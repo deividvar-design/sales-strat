@@ -41,6 +41,7 @@ const routes = [
   '/comparisons/instantly-vs-lemlist-vs-replyio',
   '/resources/instantly-for-beginners-safe-scaling',
   '/resources/founder-outbound-qualify-leads',
+  '/resources/sales-ops-for-founder-led-sales',
 ];
 
 console.log('Starting pre-render process with full content...\n');

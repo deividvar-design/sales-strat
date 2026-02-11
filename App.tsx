@@ -86,6 +86,7 @@ const ApolloVsZoomInfoVsCognism2026Page = lazy(() => import('./pages/comparisons
 const InstantlyVsLemlistVsReplyioPage = lazy(() => import('./pages/comparisons/InstantlyVsLemlistVsReplyioPage'));
 const InstantlyForBeginnersPage = lazy(() => import('./pages/resources/InstantlyForBeginnersPage'));
 const FounderOutboundQualifyLeadsPage = lazy(() => import('./pages/resources/FounderOutboundQualifyLeadsPage'));
+const SalesOpsForFounderLedSalesPage = lazy(() => import('./pages/resources/SalesOpsForFounderLedSalesPage'));
 
 // Loading fallback component
 const PageLoadingFallback = () => (
@@ -2792,6 +2793,7 @@ const App = () => {
                 <Route path="/comparisons/instantly-vs-lemlist-vs-replyio" element={<InstantlyVsLemlistVsReplyioPage />} />
                 <Route path="/resources/instantly-for-beginners-safe-scaling" element={<InstantlyForBeginnersPage />} />
                 <Route path="/resources/founder-outbound-qualify-leads" element={<FounderOutboundQualifyLeadsPage />} />
+                <Route path="/resources/sales-ops-for-founder-led-sales" element={<SalesOpsForFounderLedSalesPage />} />
               </Routes>
             </Suspense>
         </main>
