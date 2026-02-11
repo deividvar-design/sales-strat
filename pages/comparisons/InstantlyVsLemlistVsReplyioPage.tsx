@@ -271,6 +271,35 @@ const InstantlyVsLemlistVsReplyioPage = () => {
           </a>
         </div>
 
+        {/* Related Comparisons */}
+        <div className="mb-12 bg-slate-100 border border-slate-200 rounded-xl p-8">
+          <h2 className="text-2xl font-bold text-slate-900 mb-6">Related Comparisons</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <a href="/comparisons/reply-vs-instantly/" className="bg-white border border-slate-200 rounded-xl p-6 hover:border-indigo-400 hover:shadow-md transition-all block">
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Reply.io vs Instantly (Head-to-Head)</h3>
+              <p className="text-slate-600 mb-3">Want a deeper dive into just these two? Our detailed Reply.io vs Instantly comparison breaks down the key trade-offs.</p>
+              <span className="text-indigo-600 font-semibold inline-flex items-center gap-2">
+                Read comparison
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </span>
+            </a>
+            <a href="/comparisons/pipedrive-hubspot-salesforce/" className="bg-white border border-slate-200 rounded-xl p-6 hover:border-indigo-400 hover:shadow-md transition-all block">
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Best CRM for 2026</h3>
+              <p className="text-slate-600 mb-3">Outreach tool sorted? Next step is picking a CRM. Compare Pipedrive, HubSpot, and Salesforce to close the loop.</p>
+              <span className="text-indigo-600 font-semibold inline-flex items-center gap-2">
+                Read comparison
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+
         {/* Stack Recommendation CTA */}
         <div className="mb-16 bg-slate-900 rounded-2xl p-8 text-white mt-12">
           <h2 className="text-2xl font-bold mb-3">Want the stack recommendation?</h2>

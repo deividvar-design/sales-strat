@@ -641,6 +641,27 @@ const CRMComparisonPage = () => {
             </a>
           </div>
 
+          {/* Related Comparisons */}
+          <div className="mb-12 bg-slate-100 border border-slate-200 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6">Complete Your Sales Stack</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Link to="/comparisons/apollo-vs-zoominfo-vs-cognism-2026/" className="bg-white border border-slate-200 rounded-xl p-6 hover:border-indigo-400 hover:shadow-md transition-all">
+                <h3 className="text-lg font-bold text-slate-900 mb-2">Apollo vs ZoomInfo vs Cognism</h3>
+                <p className="text-slate-600 mb-3">Before you track deals in your CRM, you need quality data. Compare the top B2B databases to build your prospecting engine.</p>
+                <span className="text-indigo-600 font-semibold flex items-center gap-2">
+                  Read comparison <ArrowRight className="w-4 h-4" />
+                </span>
+              </Link>
+              <Link to="/comparisons/reply-vs-instantly/" className="bg-white border border-slate-200 rounded-xl p-6 hover:border-indigo-400 hover:shadow-md transition-all">
+                <h3 className="text-lg font-bold text-slate-900 mb-2">Reply.io vs Instantly</h3>
+                <p className="text-slate-600 mb-3">Your CRM tracks pipeline, but you need an outreach tool to fill it. Compare the top cold email platforms.</p>
+                <span className="text-indigo-600 font-semibold flex items-center gap-2">
+                  Read comparison <ArrowRight className="w-4 h-4" />
+                </span>
+              </Link>
+            </div>
+          </div>
+
           {/* Stack Recommendation CTA */}
           <div className="mb-16 bg-slate-900 rounded-2xl p-8 text-white mt-12">
             <h2 className="text-2xl font-bold mb-3">Want the stack recommendation?</h2>

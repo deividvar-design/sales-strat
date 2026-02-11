@@ -412,6 +412,20 @@ const ClayVsApolloPage = () => {
           </div>
         </div>
 
+        {/* Next Step Callout */}
+        <div className="mb-12 bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-xl p-8">
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">✅ Data Sorted. Now Pick Your Outreach Tool.</h2>
+          <p className="text-lg text-slate-700 mb-4">
+            Once you've nailed your data strategy (Apollo for discovery, Clay for enrichment), the next step is choosing the right outreach tool.
+          </p>
+          <a 
+            href="/comparisons/reply-vs-instantly/" 
+            className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-all"
+          >
+            Compare Reply.io vs Instantly <ArrowRight className="w-5 h-5" />
+          </a>
+        </div>
+
         {/* Stack Recommendation CTA */}
         <div className="mb-16 bg-slate-900 rounded-2xl p-8 text-white mt-12">
           <h2 className="text-2xl font-bold mb-3">Want the stack recommendation?</h2>

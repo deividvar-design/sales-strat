@@ -495,6 +495,27 @@ const ReplyVsInstantlyPage = () => {
           </div>
         </div>
 
+        {/* Related Comparisons */}
+        <div className="mb-12 bg-slate-100 border border-slate-200 rounded-xl p-8">
+          <h2 className="text-2xl font-bold text-slate-900 mb-6">Related Comparisons</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link to="/comparisons/instantly-vs-lemlist-vs-replyio/" className="bg-white border border-slate-200 rounded-xl p-6 hover:border-indigo-400 hover:shadow-md transition-all">
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Instantly vs Lemlist vs Reply.io</h3>
+              <p className="text-slate-600 mb-3">Want to see how Lemlist fits into the mix? Get the full three-way comparison.</p>
+              <span className="text-indigo-600 font-semibold flex items-center gap-2">
+                Read comparison <ArrowRight className="w-4 h-4" />
+              </span>
+            </Link>
+            <Link to="/comparisons/pipedrive-hubspot-salesforce/" className="bg-white border border-slate-200 rounded-xl p-6 hover:border-indigo-400 hover:shadow-md transition-all">
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Best CRM for 2026</h3>
+              <p className="text-slate-600 mb-3">Once your outreach is dialed in, you'll need a CRM to track pipeline. Compare Pipedrive, HubSpot, and Salesforce.</p>
+              <span className="text-indigo-600 font-semibold flex items-center gap-2">
+                Read comparison <ArrowRight className="w-4 h-4" />
+              </span>
+            </Link>
+          </div>
+        </div>
+
         {/* Stack Recommendation CTA */}
         <div className="mb-16 bg-slate-900 rounded-2xl p-8 text-white mt-12">
           <h2 className="text-2xl font-bold mb-3">Want the stack recommendation?</h2>

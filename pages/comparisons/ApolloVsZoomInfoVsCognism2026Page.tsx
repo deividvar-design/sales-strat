@@ -200,6 +200,11 @@ const ApolloVsZoomInfoVsCognism2026Page = () => {
                 <li>- You want value for SMB/MM outbound</li>
                 <li>- You can tolerate some data variability</li>
               </ul>
+              <div className="mt-4 pt-4 border-t border-slate-200">
+                <p className="text-sm text-slate-600">
+                  💡 <strong>Pro tip:</strong> Pair Apollo with Clay for deeper enrichment. See our <a href="/comparisons/clay-vs-apollo/" className="text-indigo-600 hover:text-indigo-700 font-semibold underline">Clay vs Apollo comparison</a> to learn when you'd use both.
+                </p>
+              </div>
             </div>
 
             <div className="bg-white border border-slate-200 rounded-xl p-6">
