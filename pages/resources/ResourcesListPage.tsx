@@ -85,6 +85,12 @@ const ResourcesListPage = () => {
       slug: 'founder-outbound-qualify-leads',
       category: 'QUALIFICATION',
       excerpt: 'A 3-stage qualification model for founders doing their own prospecting and discovery.'
+    },
+    {
+      title: 'Sales Ops for Founder-Led Sales: Data, Workflows, and Tech Stack',
+      slug: 'sales-ops-for-founder-led-sales',
+      category: 'SALES OPS',
+      excerpt: 'Track 4 core metrics, build lightweight workflows, and use a minimal tech stack ($96/mo) to turn outbound chaos into a repeatable system.'
     }
   ];
 
