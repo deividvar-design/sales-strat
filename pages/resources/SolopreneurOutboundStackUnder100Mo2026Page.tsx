@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { ExternalLink } from 'lucide-react';
 
 import Breadcrumb from '../../components/Breadcrumb';
@@ -164,6 +165,25 @@ const SolopreneurOutboundStackUnder100Mo2026Page = () => {
               <h3 className="text-xl font-bold text-slate-900 mb-2">3) Run a 2-week sprint</h3>
               <p className="text-slate-700">Send daily, reply fast, and fix the message weekly. Consistency beats intensity.</p>
             </div>
+          </div>
+        </div>
+
+        {/* Related Comparisons */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-bold text-slate-900 mb-6">Compare Tools Before You Buy</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link to="/comparisons/apollo-vs-zoominfo-vs-cognism-2026" className="bg-white border-2 border-indigo-200 rounded-xl p-6 hover:shadow-lg hover:border-indigo-300 transition-all">
+              <h4 className="text-lg font-bold text-slate-900 mb-2">🆚 Apollo vs ZoomInfo vs Cognism</h4>
+              <p className="text-slate-600 text-sm">Which B2B database fits your budget and ICP?</p>
+            </Link>
+            <Link to="/comparisons/instantly-vs-lemlist-vs-replyio" className="bg-white border-2 border-purple-200 rounded-xl p-6 hover:shadow-lg hover:border-purple-300 transition-all">
+              <h4 className="text-lg font-bold text-slate-900 mb-2">🆚 Instantly vs Lemlist vs Reply.io</h4>
+              <p className="text-slate-600 text-sm">Cold email platforms compared: scale vs features</p>
+            </Link>
+            <Link to="/comparisons/clay-vs-apollo" className="bg-white border-2 border-emerald-200 rounded-xl p-6 hover:shadow-lg hover:border-emerald-300 transition-all">
+              <h4 className="text-lg font-bold text-slate-900 mb-2">🆚 Clay vs Apollo</h4>
+              <p className="text-slate-600 text-sm">AI enrichment vs traditional B2B data: which wins?</p>
+            </Link>
           </div>
         </div>
 

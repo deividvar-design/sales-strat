@@ -1164,7 +1164,11 @@ const CRMSetupGuidePage = () => {
         {/* Related Resources */}
         <section className="mt-16 pt-8 border-t border-slate-200">
           <h3 className="text-2xl font-bold text-slate-900 mb-6">Related Resources</h3>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link to="/comparisons/pipedrive-hubspot-salesforce" className="bg-gradient-to-br from-indigo-50 to-purple-50 border-2 border-indigo-200 rounded-xl p-6 hover:shadow-lg hover:border-indigo-300 transition-all">
+              <h4 className="text-lg font-bold text-slate-900 mb-2">🆚 Pipedrive vs HubSpot vs Salesforce</h4>
+              <p className="text-slate-600 text-sm">Compare CRMs side-by-side: features, pricing, who they're for</p>
+            </Link>
             <Link to="/resources/build-first-outbound-playbook" className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg hover:border-emerald-200 transition-all">
               <h4 className="text-lg font-bold text-slate-900 mb-2">Build-First Outbound Playbook</h4>
               <p className="text-slate-600 text-sm">Systems-first outbound for technical founders</p>

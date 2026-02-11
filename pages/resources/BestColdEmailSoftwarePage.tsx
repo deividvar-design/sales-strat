@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { ExternalLink } from 'lucide-react';
 
 import Breadcrumb from '../../components/Breadcrumb';
@@ -195,6 +196,24 @@ const BestColdEmailSoftwarePage = () => {
                 {' '}<a className="text-indigo-600 font-semibold" href={dripify.website} target="_blank" rel="noopener noreferrer">Dripify link</a>.
               </span>
             ) : null}
+          </div>
+        </div>
+
+        {/* Detailed Comparisons */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-slate-900 mb-6">Compare Cold Email Tools Side-by-Side</h2>
+          <p className="text-slate-700 mb-6">
+            Need more detail? Check out our in-depth tool comparisons with pricing, features, and real-world use cases:
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link to="/comparisons/instantly-vs-lemlist-vs-replyio" className="bg-white border-2 border-indigo-200 rounded-xl p-6 hover:shadow-lg hover:border-indigo-300 transition-all">
+              <h4 className="text-lg font-bold text-slate-900 mb-2">🆚 Instantly vs Lemlist vs Reply.io</h4>
+              <p className="text-slate-600 text-sm">Scale-first vs creative personalization vs multichannel: which strategy wins for your ICP?</p>
+            </Link>
+            <Link to="/comparisons/reply-vs-instantly" className="bg-white border-2 border-purple-200 rounded-xl p-6 hover:shadow-lg hover:border-purple-300 transition-all">
+              <h4 className="text-lg font-bold text-slate-900 mb-2">🆚 Reply.io vs Instantly</h4>
+              <p className="text-slate-600 text-sm">Multichannel powerhouse vs email simplicity: pricing, features, and when to pick each</p>
+            </Link>
           </div>
         </div>
 
