@@ -76,6 +76,7 @@ const SolopreneurOutboundStackUnder100Mo2026Page = lazy(() => import('./pages/re
 const SolopreneurOutboundDailyPipelineRoutinePage = lazy(() => import('./pages/resources/SolopreneurOutboundDailyPipelineRoutinePage'));
 const ReplyioSetupGuidePage = lazy(() => import('./pages/resources/ReplyioSetupGuidePage'));
 const BuildFirstOutboundPlaybookPage = lazy(() => import('./pages/resources/BuildFirstOutboundPlaybookPage'));
+const BuildingAsyncOutreachSequencesPage = lazy(() => import('./pages/resources/BuildingAsyncOutreachSequencesPage'));
 const CRMSetupGuidePage = lazy(() => import('./pages/resources/CRMSetupGuidePage'));
 const CRMComparisonPage = lazy(() => import('./pages/comparisons/CRMComparisonPage'));
 const MixmaxReviewPage = lazy(() => import('./pages/reviews/MixmaxReviewPage'));
@@ -2773,6 +2774,7 @@ const App = () => {
                 <Route path="/resources/solopreneur-outbound-pipeline-routine" element={<SolopreneurOutboundDailyPipelineRoutinePage />} />
                 <Route path="/resources/replyio-setup-guide" element={<ReplyioSetupGuidePage />} />
                 <Route path="/resources/build-first-outbound-playbook" element={<BuildFirstOutboundPlaybookPage />} />
+                <Route path="/resources/building-async-outreach-sequences" element={<BuildingAsyncOutreachSequencesPage />} />
                 <Route path="/resources/crm-setup-guide" element={<CRMSetupGuidePage />} />
                 <Route path="/faq" element={<FAQPage />} />
                 <Route path="/privacy" element={<PrivacyPolicyPage />} />
