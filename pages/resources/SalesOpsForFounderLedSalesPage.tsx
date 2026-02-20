@@ -160,7 +160,7 @@ const SalesOpsForFounderLedSalesPage = () => {
           </p>
           <ul>
             <li>"Follow-ups due this week"</li>
-            <li>"Leads contacted >30 days ago with no follow-up"</li>
+            <li>"Leads contacted &gt;30 days ago with no follow-up"</li>
           </ul>
           <p>
             This alone will 2-3x your close rate because most deals die from neglect, not objections.
@@ -287,7 +287,7 @@ const SalesOpsForFounderLedSalesPage = () => {
           <p>Every Monday (or Friday), spend 15 minutes reviewing:</p>
           <ul>
             <li>Leads with follow-ups due this week</li>
-            <li>Leads in "Contacted" status for >14 days (nudge or move to nurture)</li>
+            <li>Leads in "Contacted" status for &gt;14 days (nudge or move to nurture)</li>
             <li>Deals in "Qualified" or "Negotiating" (what's blocking them?)</li>
           </ul>
           <p>
@@ -515,7 +515,7 @@ const SalesOpsForFounderLedSalesPage = () => {
             <strong>Signs you're ready to hire ops help:</strong>
           </p>
           <ul>
-            <li>You have 3+ reps and spend >10 hours/week on ops tasks (data cleanup, reporting, tool setup)</li>
+            <li>You have 3+ reps and spend &gt;10 hours/week on ops tasks (data cleanup, reporting, tool setup)</li>
             <li>Your CRM is a mess and deals are falling through cracks</li>
             <li>You need custom reporting (conversion rates by rep, funnel analysis)</li>
             <li>You're integrating multiple tools (CRM + email + calendar + analytics) and need someone to manage the tech stack</li>
