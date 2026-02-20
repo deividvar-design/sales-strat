@@ -91,6 +91,12 @@ const ResourcesListPage = () => {
       slug: 'sales-ops-for-founder-led-sales',
       category: 'SALES OPS',
       excerpt: 'Track 4 core metrics, build lightweight workflows, and use a minimal tech stack ($96/mo) to turn outbound chaos into a repeatable system.'
+    },
+    {
+      title: 'Clay Workflows for B2B Lead Enrichment: 5 Real Examples',
+      slug: 'clay-workflows-lead-enrichment',
+      category: 'DATA & ENRICHMENT',
+      excerpt: '5 tactical Clay workflows for LinkedIn enrichment, company research, multi-source aggregation, intent signals, and CRM integration.'
     }
   ];
 

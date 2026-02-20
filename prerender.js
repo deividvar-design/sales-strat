@@ -39,9 +39,11 @@ const routes = [
   '/comparisons/reply-vs-instantly',
   '/comparisons/apollo-vs-zoominfo-vs-cognism-2026',
   '/comparisons/instantly-vs-lemlist-vs-replyio',
+  '/comparisons/lusha-vs-apollo-vs-zoominfo-2026',
   '/resources/instantly-for-beginners-safe-scaling',
   '/resources/founder-outbound-qualify-leads',
   '/resources/sales-ops-for-founder-led-sales',
+  '/resources/clay-workflows-lead-enrichment',
 ];
 
 console.log('Starting pre-render process with full content...\n');

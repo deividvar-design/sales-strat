@@ -74,6 +74,7 @@ const HowToPickAnICPWhenYouHaveZeroTractionPage = lazy(() => import('./pages/res
 const ThirtyDayOutboundPlanFirst5CustomersPage = lazy(() => import('./pages/resources/ThirtyDayOutboundPlanFirst5CustomersPage'));
 const SolopreneurOutboundStackUnder100Mo2026Page = lazy(() => import('./pages/resources/SolopreneurOutboundStackUnder100Mo2026Page'));
 const SolopreneurOutboundDailyPipelineRoutinePage = lazy(() => import('./pages/resources/SolopreneurOutboundDailyPipelineRoutinePage'));
+const ClayWorkflowsLeadEnrichmentPage = lazy(() => import('./pages/resources/ClayWorkflowsLeadEnrichmentPage'));
 const ReplyioSetupGuidePage = lazy(() => import('./pages/resources/ReplyioSetupGuidePage'));
 const BuildFirstOutboundPlaybookPage = lazy(() => import('./pages/resources/BuildFirstOutboundPlaybookPage'));
 const BuildingAsyncOutreachSequencesPage = lazy(() => import('./pages/resources/BuildingAsyncOutreachSequencesPage'));
@@ -84,6 +85,7 @@ const ClayVsApolloPage = lazy(() => import('./pages/comparisons/ClayVsApolloPage
 const ReplyVsInstantlyPage = lazy(() => import('./pages/comparisons/ReplyVsInstantlyPage'));
 const ApolloVsZoomInfoVsCognism2026Page = lazy(() => import('./pages/comparisons/ApolloVsZoomInfoVsCognism2026Page'));
 const InstantlyVsLemlistVsReplyioPage = lazy(() => import('./pages/comparisons/InstantlyVsLemlistVsReplyioPage'));
+const LushaVsApolloVsZoomInfo2026Page = lazy(() => import('./pages/comparisons/LushaVsApolloVsZoomInfo2026Page'));
 const InstantlyForBeginnersPage = lazy(() => import('./pages/resources/InstantlyForBeginnersPage'));
 const FounderOutboundQualifyLeadsPage = lazy(() => import('./pages/resources/FounderOutboundQualifyLeadsPage'));
 const SalesOpsForFounderLedSalesPage = lazy(() => import('./pages/resources/SalesOpsForFounderLedSalesPage'));
@@ -1600,6 +1602,12 @@ const ComparisonsListPage = () => {
       name: 'Instantly vs Lemlist vs Reply.io',
       category: 'Cold Email & Outreach',
       excerpt: 'Email-first scale vs creative personalization vs true sales engagement. Pick the tool that matches your channel mix and workflow.'
+    },
+    {
+      slug: 'lusha-vs-apollo-vs-zoominfo-2026',
+      name: 'Lusha vs Apollo vs ZoomInfo',
+      category: 'B2B Data & Intelligence',
+      excerpt: 'Mobile number accuracy vs database breadth vs enterprise depth. Which B2B contact data tool fits your budget and use case?'
     }
   ];
 
@@ -2791,9 +2799,11 @@ const App = () => {
                 <Route path="/comparisons/reply-vs-instantly" element={<ReplyVsInstantlyPage />} />
                 <Route path="/comparisons/apollo-vs-zoominfo-vs-cognism-2026" element={<ApolloVsZoomInfoVsCognism2026Page />} />
                 <Route path="/comparisons/instantly-vs-lemlist-vs-replyio" element={<InstantlyVsLemlistVsReplyioPage />} />
+                <Route path="/comparisons/lusha-vs-apollo-vs-zoominfo-2026" element={<LushaVsApolloVsZoomInfo2026Page />} />
                 <Route path="/resources/instantly-for-beginners-safe-scaling" element={<InstantlyForBeginnersPage />} />
                 <Route path="/resources/founder-outbound-qualify-leads" element={<FounderOutboundQualifyLeadsPage />} />
                 <Route path="/resources/sales-ops-for-founder-led-sales" element={<SalesOpsForFounderLedSalesPage />} />
+                <Route path="/resources/clay-workflows-lead-enrichment" element={<ClayWorkflowsLeadEnrichmentPage />} />
               </Routes>
             </Suspense>
         </main>
